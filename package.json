@@ -1,0 +1,32 @@
+{
+  "name": "weiwei-zipper-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@vercel/speed-insights": "^1.2.0",
+    "gray-matter": "^4.0.3",
+    "next": "15.2.8",
+    "next-intl": "^4.8.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "resend": "^6.4.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/google.maps": "^3.58.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,12 @@
+export const SITE_URL = 'https://www.weiweizipper.com';
+export const SITE_NAME_EN = 'Weiwei Zipper';
+export const SITE_NAME_ZH = '伟伟拉链';
+export const COMPANY_NAME_EN = 'Yiwu Weiwei Zipper Co., Ltd.';
+export const COMPANY_NAME_ZH = '义乌市伟伟拉链有限公司';
+export const CONTACT_EMAIL = 'twilightvoyager777@gmail.com';
+export const CONTACT_PHONE = '+86 13906892467';
+export const WHATSAPP_NUMBER = '+8613906892467';
+export const WHATSAPP_URL = 'https://wa.me/8613906892467';
+export const COMPANY_ADDRESS_EN = 'Yiwu International Trade City, H3-27449, Gate 59, Yiwu, Zhejiang, China';
+export const COMPANY_ADDRESS_ZH = '浙江省义乌市国际商贸城三区59门三楼2街27449';
+export const FOUNDED_YEAR = '1992';

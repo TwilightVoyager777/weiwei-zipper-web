@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Respect user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Improve touch targets and tap behavior on mobile */
+@media (pointer: coarse) {
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+
+  /* Prevent tap highlight flash on iOS */
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Responsive table wrapper */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize font rendering */
+body {
+  font-family: "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent layout shifts from scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Custom animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+  outline: 2px solid #1e40af;
+  outline-offset: 2px;
+}
+
+/* Remove focus ring for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Improve image rendering */
+img {
+  content-visibility: auto;
+}

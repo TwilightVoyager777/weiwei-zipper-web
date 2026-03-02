@@ -1,0 +1,12 @@
+# Weiwei Zipper
+
+> Weiwei Zipper focuses on resin zippers, nylon zippers, and metal zippers for garment, bag, footwear, and sun-protective apparel projects. The site keeps the original layout while the content has been replaced with the current Chinese business copy.
+
+## Core Pages
+
+- Home: Brand overview, category highlights, use-cases, and direct inquiry CTA
+- Products: Resin / nylon / metal zipper categories and 3 / 5 / 8 size details
+- Use Cases: Garments, bags, and footwear applications
+- Solutions: Includes a sun-protective jacket zipper solution
+- Contact: Phone, WhatsApp, WeChat QR placeholder, business hours, and address notes
+- FAQ: Common sizing, sampling, and inquiry questions
