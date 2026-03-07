@@ -1,13 +1,14 @@
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import { getAllBlogPosts } from '@/site-data/blog-posts';
-import { blogContent } from '@/site-data/site-content';
+import { getBlogContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const blogContent = getBlogContent(locale);
   return {
     title: blogContent.metadata.title,
     description: blogContent.metadata.description,
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
+  const blogContent = getBlogContent(locale);
   const posts = getAllBlogPosts(locale);
 
   return (
@@ -59,11 +61,22 @@ export default async function BlogPage({ params }: Props) {
           </div>
         </section>
 
+        <section className="mt-12 bg-white border border-gray-200 rounded-lg p-8 text-center">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">{blogContent.faq.title}</h2>
+          <p className="text-gray-600 mb-6">{blogContent.faq.description}</p>
+          <Link
+            href="/faq"
+            className="inline-block border border-blue-800 text-blue-800 px-6 py-3 rounded font-medium hover:bg-blue-50 transition-colors"
+          >
+            {blogContent.faq.button}
+          </Link>
+        </section>
+
         <section className="mt-16 bg-blue-50 border border-blue-100 rounded-lg p-8 text-center">
           <h2 className="text-xl font-bold text-gray-900 mb-2">{blogContent.cta.title}</h2>
           <p className="text-gray-600 mb-6">{blogContent.cta.description}</p>
           <Link
-            href="/contact"
+            href="/quote"
             className="inline-block bg-blue-800 text-white px-6 py-3 rounded font-medium hover:bg-blue-900 transition-colors"
           >
             {blogContent.cta.button}

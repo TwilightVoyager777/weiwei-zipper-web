@@ -1,10 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLocale } from 'next-intl';
 import { CheckCircleIcon } from '@/components/Icons';
-import { inquiryFormContent } from '@/site-data/site-content';
+import { getInquiryFormContent } from '@/site-data/site-content';
 
 export default function ContactForm() {
+  const locale = useLocale();
+  const inquiryFormContent = getInquiryFormContent(locale);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,7 +19,6 @@ export default function ContactForm() {
     productSize: '',
     quantity: '',
     application: '',
-    incoterms: '',
     message: '',
     honeypot: '',
   });
@@ -72,7 +74,6 @@ export default function ContactForm() {
           productSize: formData.productSize,
           quantity: formData.quantity,
           application: formData.application,
-          incoterms: formData.incoterms,
           message: formData.message,
           ...trackingData,
         }),
@@ -91,7 +92,6 @@ export default function ContactForm() {
           productSize: '',
           quantity: '',
           application: '',
-          incoterms: '',
           message: '',
           honeypot: '',
         });
@@ -247,12 +247,6 @@ export default function ContactForm() {
               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
             />
           </div>
-        </div>
-      </fieldset>
-
-      <fieldset className="space-y-4 border-t border-gray-100 pt-4">
-        <legend className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{inquiryFormContent.sectionOrder}</legend>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">{inquiryFormContent.fields.quantity}</label>
             <input
@@ -264,21 +258,6 @@ export default function ContactForm() {
               placeholder={inquiryFormContent.placeholders.quantity}
               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
             />
-          </div>
-          <div>
-            <label htmlFor="incoterms" className="block text-sm font-medium text-gray-700 mb-1">{inquiryFormContent.fields.incoterms}</label>
-            <select
-              id="incoterms"
-              name="incoterms"
-              value={formData.incoterms}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white"
-            >
-              <option value="">{inquiryFormContent.selectIncoterms}</option>
-              {inquiryFormContent.incotermsOptions.map((option) => (
-                <option key={option.value} value={option.value}>{option.label}</option>
-              ))}
-            </select>
           </div>
         </div>
       </fieldset>

@@ -1,11 +1,12 @@
 import { alternatesForPath } from '@/seo/localized-urls';
-import { faqPageContent } from '@/site-data/faq-content';
+import { getFaqPageContent } from '@/site-data/faq-content';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const faqPageContent = getFaqPageContent(locale);
   return {
     title: faqPageContent.metadata.title,
     description: faqPageContent.metadata.description,
@@ -13,7 +14,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function FAQPage() {
+export default async function FAQPage({ params }: Props) {
+  const { locale } = await params;
+  const faqPageContent = getFaqPageContent(locale);
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

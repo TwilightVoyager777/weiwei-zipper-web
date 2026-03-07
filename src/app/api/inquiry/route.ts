@@ -12,7 +12,6 @@ interface InquiryData {
   productSize?: string;
   quantity?: string;
   application?: string;
-  incoterms?: string;
   message?: string;
   // UTM tracking fields
   utmSource?: string;
@@ -70,7 +69,6 @@ function buildEmailHtml(inquiry: Record<string, string>): string {
     { label: 'Size / Length', value: inquiry.productSize },
     { label: 'Quantity', value: inquiry.quantity },
     { label: 'Use Case', value: inquiry.application },
-    { label: 'Incoterms', value: inquiry.incoterms },
     { label: 'Message', value: inquiry.message },
     { label: '── Attribution ──', value: '' },
     { label: 'UTM Source', value: inquiry.utmSource },
@@ -186,7 +184,6 @@ export async function POST(request: NextRequest) {
       productSize: data.productSize || '',
       quantity: data.quantity || '',
       application: data.application || '',
-      incoterms: data.incoterms || '',
       message: data.message || '',
       utmSource: data.utmSource || '',
       utmMedium: data.utmMedium || '',

@@ -2,7 +2,7 @@ import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import { getBlogPost, getBlogSlugs } from '@/site-data/blog-posts';
 import { notFound } from 'next/navigation';
-import { blogContent } from '@/site-data/site-content';
+import { getBlogContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 import BlogArticleContent from './BlogArticleContent';
 
@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogArticlePage({ params }: Props) {
   const { locale, slug } = await params;
+  const blogContent = getBlogContent(locale);
   const post = getBlogPost(slug, locale);
   if (!post) notFound();
 
@@ -67,7 +68,7 @@ export default async function BlogArticlePage({ params }: Props) {
           <p className="text-gray-600 mb-6">{blogContent.cta.description}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/contact"
+              href="/quote"
               className="inline-block bg-blue-800 text-white px-6 py-3 rounded font-medium hover:bg-blue-900 transition-colors"
             >
               {blogContent.cta.button}

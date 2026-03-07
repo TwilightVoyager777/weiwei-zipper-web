@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Link } from '@/localization/navigation';
-import { homeContent, useCasesContent } from '@/site-data/site-content';
-import { categoryOrder, categoryContent, CATEGORY_IMAGES } from '@/site-data/product-catalog';
+import { getHomeContent, getUseCasesContent } from '@/site-data/site-content';
+import { categoryOrder, getCategoryContent, CATEGORY_IMAGES } from '@/site-data/product-catalog';
 
 const trustIcons: Record<number, string> = {
   0: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
@@ -10,39 +10,74 @@ const trustIcons: Record<number, string> = {
   3: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
 };
 
-export default function HomePage() {
+type Props = { params: Promise<{ locale: string }> };
+
+export default async function HomePage({ params }: Props) {
+  const { locale } = await params;
+  const homeContent = getHomeContent(locale);
+  const useCasesContent = getUseCasesContent(locale);
+  const categoryContent = getCategoryContent(locale);
+  const heroVisualPath = homeContent.hero.visualPath?.trim();
+  const viewAllLabel = locale === 'zh' ? '查看全部 →' : 'View all →';
+
   return (
     <>
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
-        <div className="container mx-auto px-4 py-20 md:py-28">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
-              {homeContent.hero.badges.map((badge) => (
-                <span key={badge} className="bg-white/15 text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20">
-                  {badge}
-                </span>
-              ))}
+      <section className="overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+        <div className="container mx-auto px-4 py-20 md:py-24 lg:py-28">
+          <div className={`grid items-center gap-12 ${heroVisualPath ? 'lg:grid-cols-[minmax(0,1fr)_minmax(320px,460px)] lg:gap-16' : ''}`}>
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
+                {homeContent.hero.badges.map((badge) => (
+                  <span key={badge} className="bg-white/15 text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20">
+                    {badge}
+                  </span>
+                ))}
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                {homeContent.hero.title}
+              </h1>
+              <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
+                {homeContent.hero.subtitle}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/products"
+                  className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-3.5 rounded font-semibold text-center transition-colors"
+                >
+                  {homeContent.hero.primaryCta}
+                </Link>
+                <Link
+                  href="/quote"
+                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-3.5 rounded font-semibold text-center transition-colors"
+                >
+                  {homeContent.hero.secondaryCta}
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              {homeContent.hero.title}
-            </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
-              {homeContent.hero.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/products"
-                className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-3.5 rounded font-semibold text-center transition-colors"
-              >
-                {homeContent.hero.primaryCta}
-              </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white/10 px-8 py-3.5 rounded font-semibold text-center transition-colors"
-              >
-                {homeContent.hero.secondaryCta}
-              </Link>
-            </div>
+
+            {heroVisualPath ? (
+              <div className="relative mx-auto hidden w-full max-w-[520px] overflow-visible lg:block">
+                <div className="absolute inset-x-12 bottom-8 top-20 rounded-full bg-blue-300/20 blur-3xl" />
+                <div className="relative flex h-[360px] items-center justify-center xl:h-[400px]">
+                  <Image
+                    src={heroVisualPath}
+                    alt=""
+                    aria-hidden="true"
+                    width={1024}
+                    height={1024}
+                    className="pointer-events-none absolute max-h-full w-auto max-w-none scale-[1.18] object-contain opacity-28 blur-[18px] saturate-75 xl:scale-[1.24]"
+                  />
+                  <Image
+                    src={heroVisualPath}
+                    alt={homeContent.hero.visualAlt}
+                    width={1024}
+                    height={1024}
+                    priority
+                    className="relative max-h-full w-auto max-w-none scale-[1.16] object-contain drop-shadow-[0_28px_56px_rgba(8,47,73,0.38)] xl:scale-[1.22]"
+                  />
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
@@ -141,7 +176,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-8">
             <Link href="/industries" className="text-blue-800 font-medium hover:underline">
-              查看全部 →
+              {viewAllLabel}
             </Link>
           </div>
         </div>
@@ -152,7 +187,7 @@ export default function HomePage() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">{homeContent.bottomCta.title}</h2>
           <p className="text-blue-100 mb-6 sm:mb-8 max-w-xl mx-auto text-sm sm:text-base">{homeContent.bottomCta.description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-blue-900 px-6 sm:px-8 py-3 rounded font-semibold hover:bg-blue-50 active:bg-blue-100 transition-colors">
+            <Link href="/quote" className="bg-white text-blue-900 px-6 sm:px-8 py-3 rounded font-semibold hover:bg-blue-50 active:bg-blue-100 transition-colors">
               {homeContent.bottomCta.primaryCta}
             </Link>
             <Link href="/products" className="border-2 border-white px-6 sm:px-8 py-3 rounded font-semibold hover:bg-white/10 active:bg-white/20 transition-colors">

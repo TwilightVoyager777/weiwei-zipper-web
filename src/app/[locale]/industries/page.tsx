@@ -1,12 +1,14 @@
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
-import { useCasesContent } from '@/site-data/site-content';
+import { getUseCasesContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const useCasesContent = getUseCasesContent(locale);
   return {
     title: useCasesContent.metadata.title,
     description: useCasesContent.metadata.description,
@@ -14,7 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function IndustriesPage() {
+export default async function IndustriesPage({ params }: Props) {
+  const { locale } = await params;
+  const useCasesContent = getUseCasesContent(locale);
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mb-12">
@@ -32,6 +37,20 @@ export default function IndustriesPage() {
               <h3 className="text-sm font-semibold text-gray-800 mb-2">{useCasesContent.keyLabel}</h3>
               <p className="text-sm text-gray-500 leading-relaxed">{item.focus}</p>
             </div>
+            {item.imagePath ? (
+              <div className="relative mt-5 overflow-hidden rounded-lg border border-gray-100 bg-gray-50">
+                <div className="relative aspect-[16/9] w-full">
+                  <Image
+                    src={item.imagePath}
+                    alt={item.imageAlt}
+                    fill
+                    className="object-cover"
+                    style={{ objectPosition: item.imagePosition }}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
+              </div>
+            ) : null}
           </div>
         ))}
       </div>
@@ -52,7 +71,7 @@ export default function IndustriesPage() {
         <h2 className="text-2xl font-bold mb-3">{useCasesContent.ctaTitle}</h2>
         <p className="text-blue-100 mb-6 max-w-xl mx-auto">{useCasesContent.ctaDescription}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-white text-blue-900 px-8 py-3 rounded font-semibold hover:bg-blue-50 transition-colors">
+          <Link href="/quote" className="bg-white text-blue-900 px-8 py-3 rounded font-semibold hover:bg-blue-50 transition-colors">
             {useCasesContent.ctaPrimary}
           </Link>
           <Link href="/products" className="border border-white/30 px-8 py-3 rounded font-medium hover:bg-white/10 transition-colors">

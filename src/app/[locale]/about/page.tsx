@@ -1,11 +1,13 @@
+import Image from 'next/image';
 import { alternatesForPath } from '@/seo/localized-urls';
-import { aboutContent } from '@/site-data/site-content';
+import { getAboutContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const aboutContent = getAboutContent(locale);
   return {
     title: aboutContent.metadata.title,
     description: aboutContent.metadata.description,
@@ -13,7 +15,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+  const aboutContent = getAboutContent(locale);
+  const imageAlt = locale === 'zh' ? '伟伟拉链义乌国际商贸城摊位实拍' : 'Weiwei Zipper booth at Yiwu International Trade City';
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
@@ -26,6 +32,16 @@ export default function AboutPage() {
             {aboutContent.story.paragraphs.map((paragraph) => (
               <p key={paragraph} className="text-gray-700 leading-relaxed">{paragraph}</p>
             ))}
+          </div>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <Image
+              src="/hero/tanwei.png"
+              alt={imageAlt}
+              width={3024}
+              height={1614}
+              priority
+              className="w-full h-auto object-cover"
+            />
           </div>
         </section>
 

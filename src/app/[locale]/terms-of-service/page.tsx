@@ -1,5 +1,5 @@
 import { COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/config/site-constants';
-import { siteBrand } from '@/site-data/site-content';
+import { getSiteBrand } from '@/site-data/site-content';
 import { alternatesForPath } from '@/seo/localized-urls';
 import type { Metadata } from 'next';
 
@@ -21,6 +21,7 @@ export default async function TermsOfServicePage({ params }: Props) {
   const { locale } = await params;
   const isZh = locale === 'zh';
   const companyName = isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN;
+  const siteBrand = getSiteBrand(locale);
 
   return (
     <div className="container mx-auto px-4 py-12">

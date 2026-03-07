@@ -1,12 +1,14 @@
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
-import { solutionsPageContent } from '@/site-data/solution-content';
+import { getSolutionsPageContent } from '@/site-data/solution-content';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  const solutionsPageContent = getSolutionsPageContent(locale);
   return {
     title: solutionsPageContent.metadata.title,
     description: solutionsPageContent.metadata.description,
@@ -14,7 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ServicesPage() {
+export default async function ServicesPage({ params }: Props) {
+  const { locale } = await params;
+  const solutionsPageContent = getSolutionsPageContent(locale);
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
@@ -39,6 +44,19 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
+              {item.imagePath ? (
+                <div className="relative mt-5 overflow-hidden rounded-lg border border-gray-100 bg-gray-50">
+                  <div className="relative aspect-[16/8] w-full">
+                    <Image
+                      src={item.imagePath}
+                      alt={item.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 896px, 100vw"
+                    />
+                  </div>
+                </div>
+              ) : null}
             </div>
           ))}
         </div>
@@ -58,7 +76,7 @@ export default function ServicesPage() {
 
         <div className="mt-10 text-center">
           <p className="text-gray-600 mb-4">{solutionsPageContent.ctaText}</p>
-          <Link href="/contact" className="bg-blue-800 text-white px-8 py-3 rounded font-semibold hover:bg-blue-900 transition-colors inline-block">
+          <Link href="/quote" className="bg-blue-800 text-white px-8 py-3 rounded font-semibold hover:bg-blue-900 transition-colors inline-block">
             {solutionsPageContent.ctaButton}
           </Link>
         </div>

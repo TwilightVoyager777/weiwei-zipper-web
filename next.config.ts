@@ -66,6 +66,7 @@ const nextConfig: NextConfig = {
           "img-src 'self' data: https:",
           "font-src 'self'",
           "connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com",
+          "frame-src 'self' https://www.google.com https://maps.google.com",
           "frame-ancestors 'none'",
           "base-uri 'self'",
           "form-action 'self'",

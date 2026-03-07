@@ -6,13 +6,8 @@ import { useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/localization/navigation';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/site-constants';
 import { MenuIcon } from '@/components/Icons';
-import { navigationContent, siteBrand } from '@/site-data/site-content';
-import { categoryOrder, categoryContent } from '@/site-data/product-catalog';
-
-const PRODUCT_CATEGORIES = categoryOrder.map((key) => ({
-  href: `/products/${categoryContent[key].slug}`,
-  name: categoryContent[key].name,
-}));
+import { getNavigationContent, getSiteBrand } from '@/site-data/site-content';
+import { categoryOrder, getCategoryContent } from '@/site-data/product-catalog';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,16 +20,31 @@ export default function Header() {
   const router = useRouter();
 
   const isZh = locale === 'zh';
+  const brand = getSiteBrand(locale);
+  const navigationContent = getNavigationContent(locale);
+  const localizedCategories = getCategoryContent(locale);
+  const productCategories = categoryOrder.map((key) => ({
+    href: `/products/${localizedCategories[key].slug}`,
+    name: localizedCategories[key].name,
+  }));
+  const ui = isZh
+    ? {
+        tagline: '3 / 5 / 8 号金属、树脂、尼龙拉链',
+        viewAllProducts: '查看全部产品 →',
+        menuAria: '切换菜单',
+        productsAria: '切换产品分类',
+      }
+    : {
+        tagline: 'Size 3 / 5 / 8 Metal, Resin, and Nylon Zippers',
+        viewAllProducts: 'View all products →',
+        menuAria: 'Toggle menu',
+        productsAria: 'Toggle product categories',
+      };
 
-  const navItems = [
-    { href: '/' as const, label: '首页' },
-    { href: '/products' as const, label: '产品中心', hasDropdown: true },
-    { href: '/industries' as const, label: '应用场景' },
-    { href: '/services' as const, label: '解决方案' },
-    { href: '/about' as const, label: '关于我们' },
-    { href: '/blog' as const, label: '资讯' },
-    { href: '/contact' as const, label: '联系我们' },
-  ];
+  const navItems = navigationContent.main.map((item) => ({
+    ...item,
+    hasDropdown: item.href === '/products',
+  }));
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
@@ -80,7 +90,7 @@ export default function Header() {
             </a>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-gray-400 text-xs">{siteBrand.responseTime}</span>
+            <span className="text-gray-400 text-xs">{brand.responseTime}</span>
             <span className="text-gray-400">|</span>
             <button
               onClick={() => switchLocale('en')}
@@ -104,8 +114,8 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative h-11 w-16 shrink-0 overflow-hidden">
               <Image
-                src={siteBrand.logoPath}
-                alt={siteBrand.logoAlt}
+                src={brand.logoPath}
+                alt={brand.logoAlt}
                 fill
                 priority
                 unoptimized
@@ -115,10 +125,10 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-lg md:text-xl font-bold text-blue-900 leading-tight">
-                {siteBrand.siteName}
+                {brand.siteName}
               </span>
               <span className="text-[10px] text-gray-500 hidden sm:block leading-tight">
-                3 / 5 / 8 号树脂、尼龙、金属拉链
+                {ui.tagline}
               </span>
             </div>
           </Link>
@@ -156,9 +166,9 @@ export default function Header() {
                         href="/products"
                         className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 font-medium border-b border-gray-100"
                       >
-                        查看全部产品 →
+                        {ui.viewAllProducts}
                       </Link>
-                      {PRODUCT_CATEGORIES.map(({ href: catHref, name }) => (
+                      {productCategories.map(({ href: catHref, name }) => (
                         <Link
                           key={catHref}
                           href={catHref as any}
@@ -185,7 +195,7 @@ export default function Header() {
               )
             ))}
             <Link
-              href="/contact"
+              href="/quote"
               className="ml-3 bg-blue-800 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-900 transition-colors"
             >
               {navigationContent.primaryCta}
@@ -202,7 +212,7 @@ export default function Header() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-700 active:bg-gray-100 rounded transition-colors"
-              aria-label="切换菜单"
+              aria-label={ui.menuAria}
               aria-expanded={isMenuOpen}
             >
               <MenuIcon isOpen={isMenuOpen} />
@@ -238,7 +248,7 @@ export default function Header() {
                   <button
                     onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
                     className="px-4 py-3.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-500 hover:bg-gray-50 active:bg-gray-100 rounded-r transition-colors"
-                    aria-label="切换产品分类"
+                    aria-label={ui.productsAria}
                     aria-expanded={isMobileProductsOpen}
                   >
                     <svg className={`w-4 h-4 transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -248,7 +258,7 @@ export default function Header() {
                 </div>
                 <div className={`overflow-hidden transition-all duration-200 ease-in-out ${isMobileProductsOpen ? 'max-h-[220px] opacity-100' : 'max-h-0 opacity-0'}`}>
                   <div className="pl-6 space-y-0.5 pb-1">
-                    {PRODUCT_CATEGORIES.map(({ href: catHref, name }) => (
+                    {productCategories.map(({ href: catHref, name }) => (
                       <Link
                         key={catHref}
                         href={catHref as any}
@@ -278,7 +288,7 @@ export default function Header() {
           ))}
           <div className="px-3 py-3">
             <Link
-              href="/contact"
+              href="/quote"
               onClick={closeMenu}
               className="block w-full text-center bg-blue-800 text-white px-4 py-3 min-h-[44px] rounded text-sm font-medium hover:bg-blue-900 active:bg-blue-950 transition-colors"
             >

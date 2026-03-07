@@ -11,16 +11,30 @@ import {
   CATEGORY_SLUG_TO_KEY,
   PRODUCT_IMAGES,
   PRODUCT_SLUGS,
-  categoryContent,
+  getCategoryContent,
+  getProductDetailLabels,
+  getProductItems,
+  getProductSpecLabels,
   isCategorySlug,
   isProductSlug,
-  productDetailLabels,
-  productItems,
-  productSpecLabels,
 } from '@/site-data/product-catalog';
 import type { CategorySlug, ProductSlug, ProductSpecKey } from '@/site-data/product-catalog';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
+
+function getProductPageUi(locale: string) {
+  return locale === 'zh'
+    ? {
+        home: '首页',
+        products: '产品中心',
+        quoteDescription: '通过伟伟拉链报价页面提交需求',
+      }
+    : {
+        home: 'Home',
+        products: 'Products',
+        quoteDescription: 'Submit your requirements through the Weiwei Zipper quote page',
+      };
+}
 
 export function generateStaticParams() {
   return ALL_PRODUCT_PAGE_SLUGS.map((slug) => ({ slug }));
@@ -28,6 +42,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
+  const categoryContent = getCategoryContent(locale);
+  const productItems = getProductItems(locale);
 
   if (isCategorySlug(slug)) {
     const catKey = CATEGORY_SLUG_TO_KEY[slug];
@@ -52,6 +68,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySlug }) {
+  const categoryContent = getCategoryContent(locale);
+  const productItems = getProductItems(locale);
+  const productDetailLabels = getProductDetailLabels(locale);
+  const ui = getProductPageUi(locale);
   const catKey = CATEGORY_SLUG_TO_KEY[slug];
   const category = categoryContent[catKey];
   const productSlugs = CATEGORY_PRODUCTS[slug];
@@ -60,13 +80,13 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '首页', item: localizedUrl(locale) },
-      { '@type': 'ListItem', position: 2, name: '产品中心', item: localizedUrl(locale, '/products') },
+      { '@type': 'ListItem', position: 1, name: ui.home, item: localizedUrl(locale) },
+      { '@type': 'ListItem', position: 2, name: ui.products, item: localizedUrl(locale, '/products') },
       { '@type': 'ListItem', position: 3, name: category.name },
     ],
   };
 
-  const itemListSchema = {
+  const itemListSchema = productSlugs.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: category.name,
@@ -78,19 +98,21 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
       name: productItems[productSlug].name,
       url: localizedUrl(locale, `/products/${productSlug}`),
     })),
-  };
+  } : null;
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      {itemListSchema ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+      ) : null}
 
       <div className="container mx-auto px-4 py-8 sm:py-12">
         <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
           <ol className="flex items-center gap-2 flex-wrap">
-            <li><Link href="/" className="hover:text-blue-800">首页</Link></li>
+            <li><Link href="/" className="hover:text-blue-800">{ui.home}</Link></li>
             <li>/</li>
-            <li><Link href="/products" className="hover:text-blue-800">产品中心</Link></li>
+            <li><Link href="/products" className="hover:text-blue-800">{ui.products}</Link></li>
             <li>/</li>
             <li className="text-gray-900 font-medium">{category.name}</li>
           </ol>
@@ -117,31 +139,33 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           </ul>
         </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
-          {productSlugs.map((productSlug: ProductSlug) => (
-            <Link
-              key={productSlug}
-              href={`/products/${productSlug}` as any}
-              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
-            >
-              <div className="h-40 sm:h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
-                <Image
-                  src={PRODUCT_IMAGES[productSlug]}
-                  alt={productItems[productSlug].name}
-                  width={300}
-                  height={200}
-                  className="object-contain max-h-[160px] w-auto group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-4 sm:p-5">
-                <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
-                  {productItems[productSlug].name}
-                </h2>
-                <p className="text-sm text-gray-600 line-clamp-2">{productItems[productSlug].description}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        {productSlugs.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
+            {productSlugs.map((productSlug: ProductSlug) => (
+              <Link
+                key={productSlug}
+                href={`/products/${productSlug}` as any}
+                className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
+              >
+                <div className="h-40 sm:h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={PRODUCT_IMAGES[productSlug]}
+                    alt={productItems[productSlug].name}
+                    width={300}
+                    height={200}
+                    className="object-contain max-h-[160px] w-auto group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 sm:p-5">
+                  <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
+                    {productItems[productSlug].name}
+                  </h2>
+                  <p className="text-sm text-gray-600 line-clamp-2">{productItems[productSlug].description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        ) : null}
 
         {category.applications && (
           <section className="mb-12">
@@ -197,8 +221,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
               <h2 className="text-lg font-bold text-gray-900 mb-1">{productDetailLabels.inquiryCta}</h2>
               <p className="text-sm text-gray-600">{productDetailLabels.inquiryCtaDescription}</p>
             </div>
-            <Link href="/contact" className="bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
-              {productDetailLabels.requestQuote}
+            <Link href="/quote" className="bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
+              {productDetailLabels.inquiryButton}
             </Link>
           </div>
         </section>
@@ -224,7 +248,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           <h2 className="text-xl sm:text-2xl font-bold mb-3">{productDetailLabels.ctaTitle}</h2>
           <p className="text-blue-100 mb-6 max-w-lg mx-auto text-sm sm:text-base">{productDetailLabels.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="bg-white text-blue-900 px-6 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors">
+            <Link href="/quote" className="bg-white text-blue-900 px-6 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors">
               {productDetailLabels.requestQuote}
             </Link>
             <Link href="/products" className="border border-white/30 px-6 py-2.5 rounded font-medium text-sm hover:bg-white/10 transition-colors">
@@ -238,6 +262,10 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
 }
 
 async function ProductDetailPage({ locale, slug }: { locale: string; slug: ProductSlug }) {
+  const productItems = getProductItems(locale);
+  const productDetailLabels = getProductDetailLabels(locale);
+  const productSpecLabels = getProductSpecLabels(locale);
+  const ui = getProductPageUi(locale);
   const product = productItems[slug];
 
   const productSchema = {
@@ -263,8 +291,8 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
         '@type': 'Organization',
         name: 'Yiwu Weiwei Zipper Co., Ltd.',
       },
-      url: localizedUrl(locale, '/contact'),
-      description: '联系伟伟拉链获取报价',
+      url: localizedUrl(locale, '/quote'),
+      description: ui.quoteDescription,
     },
   };
 
@@ -272,8 +300,8 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '首页', item: localizedUrl(locale) },
-      { '@type': 'ListItem', position: 2, name: '产品中心', item: localizedUrl(locale, '/products') },
+      { '@type': 'ListItem', position: 1, name: ui.home, item: localizedUrl(locale) },
+      { '@type': 'ListItem', position: 2, name: ui.products, item: localizedUrl(locale, '/products') },
       { '@type': 'ListItem', position: 3, name: product.name },
     ],
   };
@@ -286,9 +314,9 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
       <div className="container mx-auto px-4 py-8">
         <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
           <ol className="flex items-center gap-2 flex-wrap">
-            <li><Link href="/" className="hover:text-blue-800">首页</Link></li>
+            <li><Link href="/" className="hover:text-blue-800">{ui.home}</Link></li>
             <li>/</li>
-            <li><Link href="/products" className="hover:text-blue-800">产品中心</Link></li>
+            <li><Link href="/products" className="hover:text-blue-800">{ui.products}</Link></li>
             <li>/</li>
             <li className="text-gray-900 font-medium">{product.name}</li>
           </ol>
@@ -377,7 +405,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
               <h3 className="text-lg font-bold mb-2">{productDetailLabels.ctaTitle}</h3>
               <p className="text-blue-100 text-sm mb-4">{productDetailLabels.ctaDescription}</p>
               <Link
-                href="/contact"
+                href="/quote"
                 className="block w-full text-center bg-white text-blue-900 px-4 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors mb-3"
               >
                 {productDetailLabels.requestQuote}

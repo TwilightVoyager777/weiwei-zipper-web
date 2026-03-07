@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { useLocale } from 'next-intl';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Link } from '@/localization/navigation';
@@ -31,10 +32,12 @@ function TableOfContents({
   items,
   activeId,
   progress,
+  title,
 }: {
   items: TOCItem[];
   activeId: string;
   progress: number;
+  title: string;
 }) {
   if (items.length === 0) return null;
 
@@ -54,9 +57,7 @@ function TableOfContents({
           </span>
         </div>
 
-        <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">
-          On this page
-        </h4>
+        <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">{title}</h4>
         <ul className="space-y-0.5 text-sm border-l border-gray-200">
           {items.map((item) => (
             <li key={item.id}>
@@ -90,6 +91,8 @@ function TableOfContents({
 }
 
 export default function BlogArticleContent({ content }: { content: string }) {
+  const locale = useLocale();
+  const tocTitle = locale === 'zh' ? '本页目录' : 'On this page';
   const tocItems = useMemo(() => generateTOC(content), [content]);
   const [activeId, setActiveId] = useState('');
   const [progress, setProgress] = useState(0);
@@ -219,7 +222,7 @@ export default function BlogArticleContent({ content }: { content: string }) {
 
       {/* Sidebar TOC — visible on lg+ screens */}
       <aside className="hidden lg:block w-56 flex-shrink-0 sticky top-28">
-        <TableOfContents items={tocItems} activeId={activeId} progress={progress} />
+        <TableOfContents items={tocItems} activeId={activeId} progress={progress} title={tocTitle} />
       </aside>
     </div>
   );

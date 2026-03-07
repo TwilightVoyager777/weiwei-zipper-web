@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { routing, type Locale } from '@/localization/routing';
 import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/config/site-constants';
-import { homeContent, siteBrand } from '@/site-data/site-content';
+import { getHomeContent, getSiteBrand } from '@/site-data/site-content';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
@@ -29,9 +29,11 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const isZh = locale === 'zh';
+  const homeContent = getHomeContent(locale);
+  const siteBrand = getSiteBrand(locale);
   const defaultTitle = homeContent.metadata.title;
   const description = homeContent.metadata.description;
-  const siteName = isZh ? siteBrand.siteName : siteBrand.siteNameEn;
+  const siteName = siteBrand.siteName;
   const companyName = isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN;
 
   return {
@@ -42,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: isZh
       ? ['伟伟拉链', '树脂拉链', '尼龙拉链', '金属拉链', '3号拉链', '5号拉链', '8号拉链', '服装拉链', '箱包拉链', '防晒衣拉链']
-      : ['Weiwei Zipper', 'resin zipper', 'nylon zipper', 'metal zipper', 'size 3 zipper', 'size 5 zipper', 'size 8 zipper', 'garment zipper', 'bag zipper', 'sun protective jacket zipper'],
+      : ['Weiwei Zipper', 'metal zipper', 'resin zipper', 'nylon zipper', 'size 3 zipper', 'size 5 zipper', 'size 8 zipper', 'garment zipper', 'bag zipper', 'sun protective jacket zipper'],
     authors: [{ name: companyName }],
     creator: companyName,
     publisher: companyName,
@@ -108,8 +110,10 @@ export function generateStaticParams() {
 // Organization + WebSite JSON-LD structured data
 function StructuredData({ locale }: { locale: string }) {
   const isZh = locale === 'zh';
+  const homeContent = getHomeContent(locale);
+  const siteBrand = getSiteBrand(locale);
   const companyName = isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN;
-  const siteName = isZh ? siteBrand.siteName : siteBrand.siteNameEn;
+  const siteName = siteBrand.siteName;
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -145,7 +149,7 @@ function StructuredData({ locale }: { locale: string }) {
       contactType: 'sales',
       availableLanguage: ['English', 'Chinese'],
     },
-    knowsAbout: ['resin zipper', 'nylon zipper', 'metal zipper', 'garment accessories', 'zipper manufacturing'],
+    knowsAbout: ['metal zipper', 'resin zipper', 'nylon zipper', 'garment accessories', 'zipper manufacturing'],
     areaServed: {
       '@type': 'Place',
       name: 'Worldwide',
