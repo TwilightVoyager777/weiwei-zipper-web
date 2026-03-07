@@ -1,3 +1,5 @@
+import { getLocalizedContent, type AppLocale } from '@/localization/content';
+
 export const PRODUCT_SPEC_KEYS = [
   'type',
   'size',
@@ -606,16 +608,16 @@ export function isProductSlug(slug: string): slug is ProductSlug {
 const productDetailLabelsEn = {
   overview: 'Product Overview',
   features: 'Key Features',
-  specifications: 'Specification Reference',
+  specifications: 'Specifications',
   property: 'Item',
   value: 'Details',
   applications: 'Applications',
   faqTitle: 'FAQ',
-  inquiryCta: 'Do You Have Samples, Reference Images, or Specs?',
-  inquiryCtaDescription: 'You are welcome to share the application, required specifications, or reference images first. We can help narrow the selection direction before moving into regular solution and quotation discussion.',
-  inquiryButton: 'Submit Inquiry',
+  inquiryCta: 'Do You Have Samples, Reference Images, or Specifications?',
+  inquiryCtaDescription: 'You are welcome to share the application, target specifications, or reference images first. We can help narrow the selection direction before moving into solution and quotation discussion.',
+  inquiryButton: 'Send Inquiry',
   ctaTitle: 'Need to Confirm Pricing, Samples, or Lead Time First?',
-  ctaDescription: 'After you submit your requirements, we will reply with more suitable suggestions based on common specifications and existing supply experience.',
+  ctaDescription: 'After you submit your requirements, we will reply with more suitable suggestions based on common specifications and supply experience.',
   qualityNote: 'The information shown here reflects common sizes and typical applications. The final solution should still be confirmed against the actual style, use requirements, and purchasing schedule.',
   backToProducts: 'Back to Products',
   otherCategories: 'Other Categories',
@@ -646,8 +648,8 @@ const productsPageContentEn = {
     description: 'Explore six core product directions from Weiwei Zipper: metal zippers, resin zippers, nylon zippers, and the corresponding metal, resin, and nylon zipper rolls.',
   },
   title: 'Products',
-  subtitle: 'The product center is organized around six main categories: metal, resin, and nylon zippers, plus the corresponding zipper rolls. We recommend confirming the product direction first, then discussing size, structure, and quantity in more detail.',
-  productsTitle: 'Common Size & Zipper Roll Products',
+  subtitle: 'The product center is organized around six main categories: metal, resin, and nylon zippers, together with the corresponding zipper rolls. We recommend confirming the product direction first, then discussing size, structure, and quantity in more detail.',
+  productsTitle: 'Common Products and Zipper Rolls',
 } as const;
 
 const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
@@ -655,8 +657,8 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'resinZippers',
     slug: 'resin-zippers',
     name: 'Resin Zippers',
-    description: 'Focused on common size 3 / 5 / 8 demand for garments, kidswear, footwear, and other lightweight projects.',
-    overview: 'Resin zippers are one of Weiwei Zipper’s core supply directions and are widely used in garments and lightweight accessory projects. Common size 3, 5, and 8 options are organized in a way that makes it easier to confirm color, length, and slider matching for development, bulk purchasing, and repeat orders.',
+    description: 'Built around common size 3 / 5 / 8 demand for garments, kidswear, footwear, and other lightweight projects.',
+    overview: 'Resin zippers are one of Weiwei Zipper’s core product lines and are widely used in garments and lightweight accessory projects. Common size 3, 5, and 8 options are organized in a way that makes it easier to confirm color, length, and slider matching for development, bulk purchasing, and repeat orders.',
     keyFeatures: ['Flexible color matching for routine garment projects', 'Clear coverage across size 3 / 5 / 8 demand', 'Closed-end, open-end, and two-way options can all be supported', 'Suitable for garments, footwear, and other lighter-use scenarios'],
     applications: {
       title: 'Typical Solutions',
@@ -741,7 +743,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'metalZippers',
     slug: 'metal-zippers',
     name: 'Metal Zippers',
-    description: 'More suitable for bags, footwear, workwear, and styles that require stronger texture and durability, usually around size 3 / 5 / 8 demand.',
+    description: 'More suitable for bags, footwear, workwear, and styles that require stronger texture and durability, usually within the size 3 / 5 / 8 range.',
     overview: 'Metal zippers are more suitable for applications that emphasize durability and visual texture. Weiwei Zipper mainly supports common size 3, 5, and 8 options in this category, making them useful for bags, workwear, boots, and projects that need stronger decorative presence and long-term reuse.',
     keyFeatures: ['Stronger decorative appearance and visual texture', 'Better suited to durable-use scenarios', 'Can be matched with different slider styles for stronger style variation', 'Suitable for fixed styles with repeat-order potential'],
     applications: {
@@ -784,7 +786,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'metalRolls',
     slug: 'metal-zipper-rolls',
     name: 'Metal Zipper Rolls',
-    description: 'Suitable for bags, footwear, workwear, and other projects that use zipper chain by the roll and cut it as needed, mainly around size 3 / 5 / 8 demand.',
+    description: 'Suitable for bags, footwear, workwear, and other projects that use zipper chain by the roll and cut it as needed, mainly within the size 3 / 5 / 8 range.',
     overview: 'Metal zipper rolls are mainly used for later cutting, slider fitting, and product assembly, making them suitable for projects that need metal texture together with more flexible length control. Weiwei Zipper organizes common size 3, 5, and 8 options here so customers can confirm tooth color, tape, and slider direction before moving into post-processing.',
     keyFeatures: ['Supplied by the roll for easier batch cutting', 'Keeps metal texture and durability', 'Suitable for later slider fitting and product processing', 'Useful for bags, footwear, and workwear projects'],
   },
@@ -792,7 +794,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'resinRolls',
     slug: 'resin-zipper-rolls',
     name: 'Resin Zipper Rolls',
-    description: 'Suitable for garments, kidswear, footwear, and similar projects that use zipper chain by the roll and cut to length later, mainly around size 3 / 5 / 8 demand.',
+    description: 'Suitable for garments, kidswear, footwear, and similar projects that use zipper chain by the roll and cut to length later, mainly within the size 3 / 5 / 8 range.',
     overview: 'Resin zipper rolls are used mainly for later cutting, slider fitting, and product processing rather than as fixed-length finished zippers. Weiwei Zipper organizes common size 3, 5, and 8 options here so customers can confirm tooth type, color, and tape direction before final processing arrangements.',
     keyFeatures: ['Supplied by the roll for easier batch cutting', 'Suitable for later slider fitting and cut-to-length processing', 'Flexible color matching for repeated series development', 'Suitable for garments, footwear, and other lighter-use scenarios'],
   },
@@ -800,7 +802,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'nylonRolls',
     slug: 'nylon-zipper-rolls',
     name: 'Nylon Zipper Rolls',
-    description: 'Suitable for garments, bags, and sun-protective outerwear projects that use zipper chain by the roll and cut it as needed, balancing smoothness and flexibility.',
+    description: 'Suitable for garments, bags, and sun-protective outerwear projects that use zipper chain by the roll and cut it as needed, balancing smooth operation and flexibility.',
     overview: 'Nylon zipper rolls are mainly used for later cutting, slider fitting, and product processing, especially where smooth operation and flexible length handling are both important. Weiwei Zipper organizes common size 3, 5, and 8 options in this category so customers can confirm size direction first, then proceed into sampling or quotation around length, sliders, and post-processing requirements.',
     keyFeatures: ['Supplied by the roll for easier custom cutting', 'Stable smoothness for high-frequency opening and closing', 'Suitable for later slider fitting and finished product processing', 'Useful for garments, bags, and sun-protective outerwear projects'],
   },
@@ -1055,26 +1057,56 @@ const productsPagePrimaryCardsEn = [
   },
 ] as const;
 
+const productDetailLabelsByLocale = {
+  zh: productDetailLabels,
+  en: productDetailLabelsEn,
+} satisfies Record<AppLocale, unknown>;
+
+const productSpecLabelsByLocale = {
+  zh: productSpecLabels,
+  en: productSpecLabelsEn,
+} satisfies Record<AppLocale, unknown>;
+
+const productsPageContentByLocale = {
+  zh: productsPageContent,
+  en: productsPageContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const categoryContentByLocale = {
+  zh: categoryContent,
+  en: categoryContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const productItemsByLocale = {
+  zh: productItems,
+  en: productItemsEn,
+} satisfies Record<AppLocale, unknown>;
+
+const productsPagePrimaryCardsByLocale = {
+  zh: productsPagePrimaryCards,
+  en: productsPagePrimaryCardsEn,
+} satisfies Record<AppLocale, unknown>;
+
 export function getProductDetailLabels(locale: string) {
-  return locale === 'zh' ? productDetailLabels : productDetailLabelsEn;
+  return getLocalizedContent(productDetailLabelsByLocale, locale);
 }
 
 export function getProductSpecLabels(locale: string) {
-  return locale === 'zh' ? productSpecLabels : productSpecLabelsEn;
+  return getLocalizedContent(productSpecLabelsByLocale, locale);
 }
 
 export function getProductsPageContent(locale: string) {
-  return locale === 'zh' ? productsPageContent : productsPageContentEn;
+  return getLocalizedContent(productsPageContentByLocale, locale);
 }
 
 export function getCategoryContent(locale: string) {
-  return locale === 'zh' ? categoryContent : categoryContentEn;
+  return getLocalizedContent(categoryContentByLocale, locale);
 }
 
 export function getProductItems(locale: string) {
-  return locale === 'zh' ? productItems : productItemsEn;
+  return getLocalizedContent(productItemsByLocale, locale);
 }
 
 export function getProductsPagePrimaryCards(locale: string) {
-  return locale === 'zh' ? productsPagePrimaryCards : productsPagePrimaryCardsEn;
+  return getLocalizedContent(productsPagePrimaryCardsByLocale, locale);
 }

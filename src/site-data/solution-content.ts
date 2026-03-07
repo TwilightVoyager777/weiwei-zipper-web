@@ -1,3 +1,5 @@
+import { getLocalizedContent, type AppLocale } from '@/localization/content';
+
 export const solutionsPageContent = {
   metadata: {
     title: '解决方案 | 伟伟拉链',
@@ -49,35 +51,35 @@ export const solutionsPageContent = {
 const solutionsPageContentEn = {
   metadata: {
     title: 'Solutions | Weiwei Zipper',
-    description: 'Explore zipper supply solutions built by Weiwei Zipper around sampling, bulk purchasing, and repeat-order supply so projects can move more smoothly through confirmation, quotation, and delivery.',
+    description: 'Explore how Weiwei Zipper supports sampling, bulk purchasing, and repeat-order supply so projects can move more smoothly through confirmation, quotation, and delivery.',
   },
   title: 'Solutions',
-  subtitle: 'We support three common cooperation stages: sampling and development, bulk purchasing, and repeat-order supply.',
-  introText: 'Weiwei Zipper does not treat solutions as a simple matter of recommending one zipper type. We organize support around the stages where customers most often need clearer coordination: early selection and development, sample confirmation, bulk purchasing, and later repeat orders. The goal is to sort out material direction, size, structure, length, color, slider matching, and delivery rhythm earlier so communication stays more efficient throughout the project.',
+  subtitle: 'We support three common project stages: sampling and development, bulk purchasing, and repeat-order supply.',
+  introText: 'At Weiwei Zipper, a solution is not just about recommending one zipper type. We organize our support around the stages where customers usually need clearer coordination: early selection and development, sample confirmation, bulk purchasing, and later repeat orders. The goal is to sort out material direction, size, structure, length, color, slider matching, and delivery planning earlier so communication stays more efficient throughout the project.',
   whatWeOffer: 'Support Highlights',
   items: [
     {
       title: 'Sampling & Development Support',
       imagePath: '/products/fsf.png',
       imageAlt: 'Zipper product detail visual',
-      description: 'We help customers confirm material, size, and structure direction more quickly during new development and sample preparation.',
-      detail: 'At the development stage, the key issue is usually not simply whether a zipper can be made, but whether the basic parameters can be clarified early enough: material, size, structure, length, and color. Around common garment, bag, and footwear uses, and especially around size 3, 5, and 8 demand, Weiwei Zipper helps narrow the practical direction faster so the project can move into sampling and quotation more smoothly.',
+      description: 'We help customers confirm the right material, size, and structure direction more quickly during new development and sample preparation.',
+      detail: 'At the development stage, the key issue is usually not simply whether a zipper can be made, but whether the basic parameters can be clarified early enough: material, size, structure, length, and color. Around common garment, bag, and footwear applications, and especially around size 3, 5, and 8 demand, Weiwei Zipper helps narrow the practical direction faster so the project can move into sampling and quotation more smoothly.',
       points: ['Direction can be judged from sample photos, old references, or basic specification notes', 'Selection suggestions can be narrowed around common metal, resin, and nylon solutions', 'Structure can be discussed according to front opening, pocket, main compartment, or accessory position', 'Helps shorten the path from first communication to sample confirmation'],
     },
     {
       title: 'Bulk Purchasing Support',
       imagePath: '/products/fsf.png',
       imageAlt: 'Zipper product detail visual',
-      description: 'For regular orders and stable purchasing demand, we support clearer bulk confirmation and more consistent matching arrangements.',
-      detail: 'Once a project enters the bulk purchasing stage, customers usually focus more on specification accuracy, color consistency, slider matching, and whether delivery rhythm remains stable. Weiwei Zipper helps organize those key details around common sizes and previously confirmed records so the project can enter production planning with a clearer purchasing basis and lower confirmation cost.',
+      description: 'For regular orders and steady purchasing demand, we support clearer bulk confirmation and more consistent matching arrangements.',
+      detail: 'Once a project enters the bulk purchasing stage, customers usually focus more on specification accuracy, color consistency, slider matching, and whether delivery remains stable. Weiwei Zipper helps organize those key details around common sizes and previously confirmed records so the project can enter production planning with a clearer purchasing basis and lower confirmation cost.',
       points: ['Purchasing plans can be organized around common sizes and historical records', 'Helps confirm length, color, sliders, and packing details earlier', 'Suitable for garments, bags, footwear, and other routine end-use projects', 'Makes it easier to connect sample confirmation into bulk ordering and production scheduling'],
     },
     {
       title: 'Repeat Orders & Ongoing Supply',
       imagePath: '/products/fsf.png',
       imageAlt: 'Zipper product detail visual',
-      description: 'For replenishment, repeat programs, and long-term cooperation, we help preserve clearer specification records and supply continuity.',
-      detail: 'For repeat orders, the real need is usually not to start the confirmation process from zero again, but to continue with the same size, color, and structure logic already in use. Weiwei Zipper places more emphasis on organizing common solutions, confirmation records, and frequent specifications clearly so replenishment and long-term supply projects can keep higher communication efficiency and steadier delivery rhythm.',
+      description: 'For replenishment, repeat programs, and long-term cooperation, we help preserve clear specification records and supply continuity.',
+      detail: 'For repeat orders, the real need is usually not to start the confirmation process from zero again, but to continue with the same size, color, and structure logic already in use. Weiwei Zipper places more emphasis on keeping common solutions, confirmation records, and frequent specifications clearly organized so replenishment and long-term supply projects can maintain better communication efficiency and steadier delivery.',
       points: ['Suitable for ongoing projects with fixed specifications or recurring product programs', 'Makes replenishment easier to handle on the basis of prior confirmation', 'Improves communication efficiency and continuity during repeat-order stages', 'Fits long-term cooperation models that need stable matching and delivery'],
     },
   ],
@@ -90,10 +92,15 @@ const solutionsPageContentEn = {
       { title: 'Bulk Delivery', description: 'After samples and specifications are confirmed, the project can move into scheduling, production, and later repeat-order supply.' },
     ],
   },
-  ctaText: 'If your project is already clear, you are welcome to share size, length, color, quantity, and use-case information so we can move more quickly into solution confirmation and quotation.',
+  ctaText: 'If your project is already clear, you are welcome to share size, length, color, quantity, and application details so we can move more quickly into solution confirmation and quotation.',
   ctaButton: 'Get Quote',
 } as const;
 
+const solutionsPageContentByLocale = {
+  zh: solutionsPageContent,
+  en: solutionsPageContentEn,
+} satisfies Record<AppLocale, unknown>;
+
 export function getSolutionsPageContent(locale: string) {
-  return locale === 'zh' ? solutionsPageContent : solutionsPageContentEn;
+  return getLocalizedContent(solutionsPageContentByLocale, locale);
 }

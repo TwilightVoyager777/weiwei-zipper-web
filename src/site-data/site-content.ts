@@ -1,3 +1,5 @@
+import { getLocalizedContent, type AppLocale } from '@/localization/content';
+
 export const siteBrand = {
   packageName: 'weiwei-zipper-web',
   siteName: '伟伟拉链',
@@ -338,13 +340,13 @@ const navigationContentEn = {
 
 const homeContentEn = {
   metadata: {
-    title: 'Weiwei Zipper | Metal, Resin, and Nylon Zipper Factory in Sizes 3 / 5 / 8',
-    description: 'Weiwei Zipper focuses on metal, resin, and nylon zipper supply and customization, covering common size 3, 5, and 8 specifications for garments, bags, footwear, and sun-protective outerwear projects.',
+    title: 'Weiwei Zipper | Factory for Metal, Resin, and Nylon Zippers in Sizes 3 / 5 / 8',
+    description: 'Weiwei Zipper supplies and customizes metal, resin, and nylon zippers in common size 3, 5, and 8 specifications for garments, bags, footwear, and sun-protective outerwear.',
   },
   hero: {
-    badges: ['Factory Supply', 'Sampling Support', 'Custom Development'],
+    badges: ['Factory Direct Supply', 'Sampling Support', 'Custom Development'],
     title: 'Weiwei Zipper',
-    subtitle: 'Weiwei Zipper supports garment, bag, and footwear customers with metal, resin, and nylon zipper supply, covering common size 3, 5, and 8 specifications for sampling, bulk purchasing, and repeat orders.',
+    subtitle: 'Weiwei Zipper supplies metal, resin, and nylon zippers for garment, bag, and footwear projects, with common size 3, 5, and 8 options suited to sampling, bulk purchasing, and repeat orders.',
     visualPath: '/hero/profile.png',
     visualAlt: 'Main visual of a partially open metal zipper',
     primaryCta: 'View Products',
@@ -359,38 +361,38 @@ const homeContentEn = {
     title: 'Why Buyers Work with Weiwei Zipper',
     items: [
       {
-        title: 'Stable Supply of Common Sizes',
-        description: 'We build standardized supply plans around the high-frequency size 3, 5, and 8 range, making development, bulk purchasing, and replenishment easier to manage.',
-        points: ['Finished zippers and zipper rolls can both be supported', 'Closed-end, open-end, and two-way structures can be confirmed as needed', 'Colors and sliders can be matched to the style direction', 'Helps reduce repeated back-and-forth during confirmation'],
+        title: 'Reliable Supply of Standard Sizes',
+        description: 'We organize supply around the most commonly used size 3, 5, and 8 range, making development, bulk purchasing, and repeat orders easier to coordinate.',
+        points: ['Supports both finished zippers and zipper rolls', 'Closed-end, open-end, and two-way structures can be matched as needed', 'Colors and sliders can be aligned with the style direction', 'Helps reduce repeated back-and-forth during confirmation'],
       },
       {
-        title: 'Efficient Sampling Process',
-        description: 'Samples can be confirmed against color cards, sample cards, garments, or old references so key details are aligned before bulk scheduling.',
-        points: ['Supports color checking and basic sample review', 'Can reference old samples for common structures', 'Suitable for small-batch development sampling', 'Shortens the path from selection to sample confirmation'],
+        title: 'Efficient Sample Confirmation',
+        description: 'Samples can be reviewed against color cards, reference cards, garments, or old samples so key details are aligned before bulk scheduling.',
+        points: ['Supports color checking and basic sample review', 'Can follow old samples for common structures', 'Suitable for small-batch development sampling', 'Shortens the path from selection to sample approval'],
       },
       {
-        title: 'More Controllable Delivery Rhythm',
-        description: 'For standard options, materials and production slots can be coordinated earlier after specifications are confirmed, which fits quick-turn projects and repeat orders well.',
-        points: ['Common colors and sizes are easier to arrange quickly', 'Repeat orders can reuse prior confirmation records', 'Urgent requests can be coordinated around production availability', 'Key milestones can be shared in time'],
+        title: 'More Predictable Delivery',
+        description: 'For standard options, materials and production slots can be coordinated earlier once specifications are confirmed, which works well for quick-turn projects and repeat orders.',
+        points: ['Common colors and sizes are easier to arrange quickly', 'Repeat orders can reuse prior confirmation records', 'Urgent requests can be coordinated around production availability', 'Key milestones can be shared in a timely way'],
       },
       {
-        title: 'Responsive Multi-Channel Communication',
-        description: 'Phone, WeChat, and WhatsApp communication can run in parallel, making it easier to confirm specifications, colors, samples, and delivery details quickly.',
-        points: ['One contact path helps keep records aligned', 'Priority response during working hours', 'Supports image and video communication for detail checks', 'Useful for long-term projects across regions'],
+        title: 'Responsive Communication Across Channels',
+        description: 'Phone, WeChat, and WhatsApp can be used side by side, making it easier to confirm specifications, colors, samples, and delivery details quickly.',
+        points: ['A consistent contact path helps keep records aligned', 'Priority response during working hours', 'Supports image and video communication for detail checks', 'Useful for long-term projects across regions'],
       },
     ],
   },
   featuredProducts: {
     title: 'Product Categories',
-    subtitle: 'Our product structure is organized around common purchasing needs for metal, resin, and nylon zippers, making it easier to confirm the material direction before discussing size, structure, color, and delivery requirements.',
+    subtitle: 'Our product range is organized around common purchasing needs for metal, resin, and nylon zippers, making it easier to confirm the material direction before discussing size, structure, color, and delivery requirements.',
   },
   useCasesPreview: {
     title: 'Common Applications',
-    subtitle: 'We organize common supporting directions around garments, bags, and footwear so the right zipper type, size, and structure can be narrowed down from the actual end use.',
+    subtitle: 'We organize common zipper solutions around garments, bags, and footwear so the right type, size, and structure can be narrowed down from the actual end use.',
   },
   bottomCta: {
-    title: 'Do You Already Have Samples or Purchasing Needs?',
-    description: 'You are welcome to share sizes, lengths, colors, quantities, and use cases so we can help confirm the right direction and move into quotation more efficiently.',
+    title: 'Do You Already Have Samples or Purchasing Requirements?',
+    description: 'You are welcome to share size, length, color, quantity, and application details so we can help confirm the right direction and move into quotation more efficiently.',
     primaryCta: 'Get Quote',
     secondaryCta: 'View Products',
   },
@@ -402,8 +404,8 @@ const useCasesContentEn = {
     description: 'Weiwei Zipper supports garments, bags, and footwear projects with more stable metal, resin, and nylon zipper options and sizing guidance.',
   },
   title: 'Applications',
-  subtitle: 'Starting from the finished product use case makes it easier to confirm the right material, size, structure, and delivery requirements.',
-  introText: 'Weiwei Zipper currently focuses on garment, bag, and footwear applications. Different end uses place different demands on smoothness, durability, color consistency, handling feel, and bulk stability. For that reason, we usually recommend confirming the end use first, then narrowing down the most suitable metal, resin, or nylon direction together with size, structure, and length planning.',
+  subtitle: 'Starting with the end use makes it easier to confirm the right material, size, structure, and delivery requirements.',
+  introText: 'Weiwei Zipper currently focuses on garment, bag, and footwear applications. Different end uses place different demands on smooth operation, durability, color consistency, handling feel, and batch-to-batch stability. For that reason, we usually recommend confirming the end use first, then narrowing down the most suitable metal, resin, or nylon direction together with size, structure, and length planning.',
   keyLabel: 'Key consideration:',
   items: [
     {
@@ -412,7 +414,7 @@ const useCasesContentEn = {
       imagePath: '/products/cloth.png',
       imageAlt: 'Garment zipper application',
       imagePosition: 'center 10%',
-      description: 'Suitable for jackets, hoodies, trousers, kidswear, and sun-protective outerwear, where buyers usually pay close attention to smoothness, lightweight feel, color matching, and stable repeated opening and closing.',
+      description: 'Suitable for jackets, hoodies, trousers, kidswear, and sun-protective outerwear, where buyers usually pay close attention to smooth operation, lightweight feel, color matching, and reliable repeated use.',
       focus: 'Common sizes are mainly 3 and 5. Resin and nylon options are widely used and can be further confirmed by front opening, pocket position, and whether the structure should be closed-end, open-end, or two-way.',
     },
     {
@@ -421,7 +423,7 @@ const useCasesContentEn = {
       imagePath: '/products/bag.png',
       imageAlt: 'Bag zipper application',
       imagePosition: 'center center',
-      description: 'Suitable for school bags, travel bags, organizers, and tool bags, where durability, tooth engagement stability, and consistency across batches are often more important.',
+      description: 'Suitable for school bags, travel bags, organizers, and tool bags, where durability, secure tooth engagement, and consistency across batches are often more important.',
       focus: 'Common sizes are mainly 5 and 8. Nylon and metal options are often preferred, with the final choice depending on whether the zipper is used for the main compartment, side pocket, or internal pocket position.',
     },
     {
@@ -430,7 +432,7 @@ const useCasesContentEn = {
       imagePath: '/products/boost.jpg',
       imageAlt: 'Footwear zipper application',
       imagePosition: 'center center',
-      description: 'Suitable for boots, functional footwear, and accessory parts where abrasion resistance, ease of use, and assembly efficiency during production are all important.',
+      description: 'Suitable for boots, functional footwear, and accessory parts where abrasion resistance, ease of use, and assembly efficiency are all important.',
       focus: 'Common sizes are mainly 3 and 5. Metal and resin options are often used for decorative positions, functional openings, and smaller accessory sections.',
     },
   ],
@@ -447,12 +449,12 @@ const useCasesContentEn = {
       },
       {
         title: 'Global Supply',
-        description: 'Based on stable quality, technical consistency, and reliable delivery rhythm, we continue to support projects serving overseas markets and long-term supply arrangements.',
+        description: 'Built on stable quality, technical consistency, and reliable delivery, we continue to support export-oriented projects and long-term supply programs.',
       },
     ],
   },
-  ctaTitle: 'Do You Already Have Samples or Purchasing Needs?',
-  ctaDescription: 'You are welcome to share sizes, lengths, colors, quantities, and use cases so we can help confirm the right direction and move into quotation more efficiently.',
+  ctaTitle: 'Do You Already Have Samples or Purchasing Requirements?',
+  ctaDescription: 'You are welcome to share size, length, color, quantity, and application details so we can help confirm the right direction and move into quotation more efficiently.',
   ctaPrimary: 'Get Quote',
   ctaSecondary: 'View Products',
 } as const;
@@ -463,14 +465,14 @@ const aboutContentEn = {
     description: 'Learn how Weiwei Zipper has supported metal, resin, and nylon zipper projects since 1992 from Yiwu International Trade City, serving garment, bag, and footwear customers.',
   },
   title: 'About Us',
-  subtitle: 'Founded in 1992, Weiwei Zipper has long focused on metal, resin, and nylon zipper supply, supporting garment, bag, and footwear customers through development, sampling, purchasing, and repeat orders.',
+  subtitle: 'Founded in 1992, Weiwei Zipper has long focused on metal, resin, and nylon zipper supply for garment, bag, and footwear customers across development, sampling, purchasing, and repeat orders.',
   story: {
     title: 'About Weiwei Zipper',
     paragraphs: [
-      'Weiwei Zipper was founded in 1992 and operates from Yiwu International Trade City. Over the years, we have continued to focus on three core zipper directions: metal, resin, and nylon. By serving garment, bag, and footwear customers over the long term, we have built up practical experience that stays close to real purchasing and development requirements.',
-      'In day-to-day cooperation, we pay closer attention to the details customers actually need to confirm early in the process, such as material direction, size, structure, length, color matching, and slider selection. Around those frequent requirements, we continue to organize more stable and reusable solutions based on common size 3, 5, and 8 demand.',
-      'We have remained consistent in our focus on product quality, technical precision, and reliable delivery. That long-term discipline has helped Weiwei Zipper establish ongoing cooperation with customers serving Southeast Asia, the Middle East, Europe, and the Americas. For us, stable quality, clear communication, and sustainable delivery capability matter more than one-time transactions.',
-      'Whether the project is a repeat order, a new development, or an early-stage discussion based on an old sample or reference image, we aim to help customers confirm direction, move sampling forward, and connect into purchasing more smoothly and more efficiently for long-term reuse.',
+      'Weiwei Zipper was founded in 1992 and operates from Yiwu International Trade City. Over the years, we have stayed focused on three core product lines: metal, resin, and nylon zippers. By serving garment, bag, and footwear customers over the long term, we have built practical experience that stays close to real purchasing, development, and repeat-order needs.',
+      'In day-to-day cooperation, we pay close attention to the details customers usually need to confirm early, including material direction, size, structure, length, color matching, and slider selection. Around those frequent requirements, we continue to organize more stable and reusable solutions based on the common size 3, 5, and 8 range.',
+      'We have remained consistent in our focus on product quality, technical precision, and reliable delivery. That long-term discipline has helped Weiwei Zipper establish ongoing cooperation with customers serving Southeast Asia, the Middle East, Europe, and the Americas. To us, steady quality, clear communication, and dependable supply matter more than one-time transactions.',
+      'Whether the project is a repeat order, a new development, or an early-stage discussion based on an old sample or reference image, our goal is to help customers confirm direction, move sampling forward, and connect into purchasing more smoothly and efficiently.',
     ],
   },
   capabilities: {
@@ -489,7 +491,7 @@ const aboutContentEn = {
     items: [
       {
         title: 'Requirement Alignment',
-        description: 'We begin by aligning application, material direction, size, structure, length, color, and slider details so sampling and quotation can follow a clear basis.',
+        description: 'We begin by aligning application, material direction, size, structure, length, color, and slider details so sampling and quotation can proceed on a clear basis.',
       },
       {
         title: 'Sample Confirmation',
@@ -509,9 +511,9 @@ const contactContentEn = {
     description: 'Contact Weiwei Zipper by phone, WeChat, WhatsApp, or email, and view the company address and map location.',
   },
   title: 'Contact Us',
-  subtitle: 'You are welcome to reach us by phone, WeChat, WhatsApp, or email. If you already have a clear inquiry, you can also go to the quote page to submit it directly.',
+  subtitle: 'You are welcome to contact us by phone, WeChat, WhatsApp, or email. If your inquiry is already clear, you can also go directly to the quote page and submit it there.',
   cardTitle: 'Contact Information',
-  responseNote: 'During working hours, WeChat, phone, WhatsApp, and email can all be used for synchronized communication on visits, contact, or basic project needs.',
+  responseNote: 'During working hours, WeChat, phone, WhatsApp, and email can all be used for faster coordination on visits, contact requests, and basic project details.',
   addressTitle: 'Visit Information',
   addressDescription: 'If you need an on-site visit or map reference, you can use the address and location details below.',
   mapTitle: 'Map Location',
@@ -525,18 +527,18 @@ const contactContentEn = {
 const quoteContentEn = {
   metadata: {
     title: 'Get Quote | Weiwei Zipper',
-    description: 'Submit your request to Weiwei Zipper by form, WeChat, phone, or WhatsApp to receive suggestions and quotations for metal, resin, and nylon zippers.',
+  description: 'Submit your inquiry to Weiwei Zipper by form, WeChat, phone, or WhatsApp to receive suggestions and quotations for metal, resin, and nylon zippers.',
   },
   title: 'Get Quote',
-  subtitle: 'To move into effective quotation more quickly, please include the application, size, length, color, and required quantity whenever possible.',
+  subtitle: 'To move into quotation more efficiently, please include the application, size, length, color, and required quantity whenever possible.',
   cardTitle: 'Contact Information',
-  responseNote: 'WeChat, phone, and WhatsApp can be used together to confirm colors, specifications, sample arrangements, and lead time more efficiently.',
+  responseNote: 'WeChat, phone, and WhatsApp can all be used to confirm colors, specifications, sample arrangements, and lead time more efficiently.',
   wechatLabel: 'WeChat',
   wechatScan: 'Scan to add on WeChat',
 } as const;
 
 const footerContentEn = {
-  description: 'Weiwei Zipper focuses on the supply and customization of metal, resin, and nylon zippers, organized around common size 3, 5, and 8 demand for more efficient sampling, quotation, and bulk purchasing.',
+  description: 'Weiwei Zipper focuses on the supply and customization of metal, resin, and nylon zippers, with common size 3, 5, and 8 options that support more efficient sampling, quotation, and bulk purchasing.',
   quickLinksTitle: 'Quick Links',
   contactInfoTitle: 'Contact Information',
   privacy: 'Privacy Policy',
@@ -545,13 +547,13 @@ const footerContentEn = {
 
 const faqSectionIntroEn = {
   title: 'FAQ',
-  subtitle: 'Clarifying high-frequency questions early helps reduce repeated confirmation and keeps quotation and communication moving more smoothly.',
+  subtitle: 'Clarifying common questions early helps reduce repeated confirmation and keeps communication and quotation moving more smoothly.',
 } as const;
 
 const blogContentEn = {
   metadata: {
     title: 'Insights | Weiwei Zipper',
-    description: 'Practical articles from Weiwei Zipper on size 3 / 5 / 8 selection, closed-end and open-end structures, inquiry preparation, and purchasing communication.',
+    description: 'Practical articles from Weiwei Zipper on choosing size 3 / 5 / 8 zippers, understanding closed-end and open-end structures, preparing inquiries, and improving purchasing communication.',
   },
   title: 'Insights',
   subtitle: 'Practical content focused on size selection, structure decisions, inquiry preparation, and purchasing communication for zipper projects.',
@@ -567,11 +569,11 @@ const blogContentEn = {
   },
   faq: {
     title: 'FAQ',
-    description: 'If you are still confirming sizes, structure types, zipper rolls, sampling schedules, or quotation preparation, the FAQ is a good place to review the most common points first.',
+    description: 'If you are still confirming size, structure, zipper rolls, sampling schedules, or quotation requirements, the FAQ is a good place to review the most common points first.',
     button: 'View FAQ',
   },
   cta: {
-    title: 'Do You Have a Specific Project to Match?',
+    title: 'Do You Have a Specific Project in Mind?',
     description: 'You are welcome to share your product requirements. Based on common specifications and supply experience, we can help move your project into quotation and sampling more quickly.',
     button: 'Get Quote',
     secondary: 'View Products',
@@ -608,55 +610,108 @@ const inquiryFormContentEn = {
     { value: 'resin-zipper', label: 'Resin Zipper' },
     { value: 'nylon-zipper', label: 'Nylon Zipper' },
     { value: 'metal-zipper', label: 'Metal Zipper' },
-    { value: 'custom-zipper', label: 'Custom Sampling' },
+    { value: 'custom-zipper', label: 'Custom Development' },
   ],
   privacyNote: 'After submission, the information will only be used for quotation, sampling communication, and project follow-up, and will not be used for unrelated purposes.',
   submit: 'Get Quote',
   submitting: 'Submitting...',
 } as const;
 
-const isZhLocale = (locale: string) => locale === 'zh';
+const siteBrandByLocale = {
+  zh: siteBrand,
+  en: siteBrandEn,
+} satisfies Record<AppLocale, unknown>;
+
+const navigationContentByLocale = {
+  zh: navigationContent,
+  en: navigationContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const homeContentByLocale = {
+  zh: homeContent,
+  en: homeContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const useCasesContentByLocale = {
+  zh: useCasesContent,
+  en: useCasesContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const aboutContentByLocale = {
+  zh: aboutContent,
+  en: aboutContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const contactContentByLocale = {
+  zh: contactContent,
+  en: contactContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const quoteContentByLocale = {
+  zh: quoteContent,
+  en: quoteContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const footerContentByLocale = {
+  zh: footerContent,
+  en: footerContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const faqSectionIntroByLocale = {
+  zh: faqSectionIntro,
+  en: faqSectionIntroEn,
+} satisfies Record<AppLocale, unknown>;
+
+const blogContentByLocale = {
+  zh: blogContent,
+  en: blogContentEn,
+} satisfies Record<AppLocale, unknown>;
+
+const inquiryFormContentByLocale = {
+  zh: inquiryFormContent,
+  en: inquiryFormContentEn,
+} satisfies Record<AppLocale, unknown>;
 
 export function getSiteBrand(locale: string) {
-  return isZhLocale(locale) ? siteBrand : siteBrandEn;
+  return getLocalizedContent(siteBrandByLocale, locale);
 }
 
 export function getNavigationContent(locale: string) {
-  return isZhLocale(locale) ? navigationContent : navigationContentEn;
+  return getLocalizedContent(navigationContentByLocale, locale);
 }
 
 export function getHomeContent(locale: string) {
-  return isZhLocale(locale) ? homeContent : homeContentEn;
+  return getLocalizedContent(homeContentByLocale, locale);
 }
 
 export function getUseCasesContent(locale: string) {
-  return isZhLocale(locale) ? useCasesContent : useCasesContentEn;
+  return getLocalizedContent(useCasesContentByLocale, locale);
 }
 
 export function getAboutContent(locale: string) {
-  return isZhLocale(locale) ? aboutContent : aboutContentEn;
+  return getLocalizedContent(aboutContentByLocale, locale);
 }
 
 export function getContactContent(locale: string) {
-  return isZhLocale(locale) ? contactContent : contactContentEn;
+  return getLocalizedContent(contactContentByLocale, locale);
 }
 
 export function getQuoteContent(locale: string) {
-  return isZhLocale(locale) ? quoteContent : quoteContentEn;
+  return getLocalizedContent(quoteContentByLocale, locale);
 }
 
 export function getFooterContent(locale: string) {
-  return isZhLocale(locale) ? footerContent : footerContentEn;
+  return getLocalizedContent(footerContentByLocale, locale);
 }
 
 export function getFaqSectionIntro(locale: string) {
-  return isZhLocale(locale) ? faqSectionIntro : faqSectionIntroEn;
+  return getLocalizedContent(faqSectionIntroByLocale, locale);
 }
 
 export function getBlogContent(locale: string) {
-  return isZhLocale(locale) ? blogContent : blogContentEn;
+  return getLocalizedContent(blogContentByLocale, locale);
 }
 
 export function getInquiryFormContent(locale: string) {
-  return isZhLocale(locale) ? inquiryFormContent : inquiryFormContentEn;
+  return getLocalizedContent(inquiryFormContentByLocale, locale);
 }

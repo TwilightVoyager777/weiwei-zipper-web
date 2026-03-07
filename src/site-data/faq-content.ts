@@ -1,3 +1,5 @@
+import { getLocalizedContent, type AppLocale } from '@/localization/content';
+
 export const faqPageContent = {
   metadata: {
     title: '常见问题 | 伟伟拉链',
@@ -56,22 +58,22 @@ export const faqPageContent = {
 const faqPageContentEn = {
   metadata: {
     title: 'FAQ | Weiwei Zipper',
-    description: 'Read common questions about size 3 / 5 / 8 selection, closed-end and open-end structures, zipper rolls, sampling, lead time, color confirmation, and quotation preparation.',
+    description: 'Read common questions about choosing size 3 / 5 / 8 zippers, understanding closed-end and open-end structures, ordering zipper rolls, sampling, lead time, color approval, and quotation preparation.',
   },
   title: 'FAQ',
-  subtitle: 'This page summarizes the questions customers ask most often around zipper selection, sampling, quotation, zipper rolls, lead time, and color confirmation.',
+  subtitle: 'This page summarizes the questions customers ask most often around zipper selection, sampling, quotations, zipper rolls, lead time, and color confirmation.',
   items: [
     {
       question: 'How should I choose between size 3, 5, and 8?',
-      answer: 'The first step is usually to judge from the finished product and use position. Size 3 is more common for lightweight garments, pocket positions, and kidswear. Size 5 covers the broadest range, including jackets, hoodies, trousers, and daily-use bags. Size 8 is more suitable for luggage, heavy-duty bags, workwear, and positions that need stronger durability. If you are not sure yet, an old sample, product photo, or use case is often enough to help narrow the direction down.',
+      answer: 'The first step is usually to judge based on the finished product and where the zipper will be used. Size 3 is more common for lightweight garments, pockets, and kidswear. Size 5 covers the broadest range, including jackets, hoodies, trousers, and everyday bags. Size 8 is more suitable for luggage, heavy-duty bags, workwear, and positions that require greater durability. If you are not sure yet, an old sample, product photo, or use case is often enough to help narrow the direction down.',
     },
     {
       question: 'What is the difference between closed-end and open-end zippers?',
-      answer: 'A closed-end zipper has a fixed bottom and is commonly used for pockets, trousers, inner bags, and sections that do not need to separate completely. An open-end zipper can separate fully at the bottom and is more often used for jackets, hoodies, vests, and front-opening apparel. If the project also involves two-way opening or special sliders, it is better to mention that at the same time.',
+      answer: 'A closed-end zipper has a fixed bottom and is commonly used for pockets, trousers, inner bags, and other positions that do not need to separate completely. An open-end zipper can separate fully at the bottom and is more often used for jackets, hoodies, vests, and front-opening apparel. If the project also involves two-way opening or special sliders, it is better to mention that at the same time.',
     },
     {
       question: 'What is the difference between zipper rolls and finished zippers?',
-      answer: 'Finished zippers are already processed to a fixed length and structure, making them suitable for direct assembly into garments or finished products. Zipper rolls are supplied by the roll and are more suitable when the customer will cut lengths, add sliders, or do post-processing later. The right choice depends on whether the zipper will be installed directly or further processed in the next production step.',
+      answer: 'Finished zippers are already processed to a fixed length and structure, making them suitable for direct installation into garments or finished products. Zipper rolls are supplied by the roll and are more suitable when the customer will cut lengths, add sliders, or do post-processing later. The right choice depends on whether the zipper will be installed directly or processed further in the next production step.',
     },
     {
       question: 'What information should be confirmed before ordering zipper rolls?',
@@ -83,23 +85,23 @@ const faqPageContentEn = {
     },
     {
       question: 'How is the sampling cycle usually arranged?',
-      answer: 'Sampling timing depends on the complexity of the specification, the color confirmation method, whether special sliders are needed, and the current sample schedule. Standard solutions are usually faster, while special colors or structures can take longer. The clearest way is to share the use case, size, color, and sample requirements first, then confirm the actual sample timing against that information.',
+      answer: 'Sampling timing depends on the complexity of the specification, the color confirmation method, whether special sliders are needed, and the current sample schedule. Standard solutions are usually faster, while special colors or structures can take longer. The clearest way is to share the use case, size, color, and sample requirements first, then confirm the actual sample timing based on that information.',
     },
     {
       question: 'Is there a fixed MOQ?',
-      answer: 'MOQ is usually not judged by one single number alone. It often depends on the zipper type, size, color, whether it is a standard item, and whether special accessories are involved. Communication is usually easier for common sizes and standard solutions. If the project requires new colors, special structures, or special matching parts, it is better to provide the estimated quantity early so the arrangement can be evaluated more accurately.',
+      answer: 'MOQ is usually not judged by one single number alone. It often depends on the zipper type, size, color, whether it is a standard item, and whether special accessories are involved. Communication is usually easier for common sizes and standard solutions. If the project requires new colors, special structures, or matching parts, it is better to provide the estimated quantity early so the arrangement can be evaluated more accurately.',
     },
     {
       question: 'How is lead time usually judged?',
-      answer: 'Lead time is influenced by size, color, quantity, whether sampling is required, and the current production schedule. Standard sizes are usually easier to arrange. Special colors, structures, or multi-style orders may take longer and need to be confirmed against the actual project. It is always better to share your target timing during the quotation stage so the delivery rhythm can be assessed together.',
+      answer: 'Lead time is influenced by size, color, quantity, whether sampling is required, and the current production schedule. Standard sizes are usually easier to arrange. Special colors, structures, or multi-style orders may take longer and need to be confirmed against the actual project. It is always better to share your target timing during the quotation stage so the delivery schedule can be assessed together.',
     },
     {
       question: 'How should color usually be confirmed?',
-      answer: 'If the project has higher requirements for color consistency, it is best to provide a color card number, fabric swatch, old sample color, or another physical reference whenever possible. Color is hard to confirm reliably through verbal description alone, especially for garments and sun-protective outerwear. The more complete the color reference is, the smoother sampling and bulk follow-up usually become.',
+      answer: 'If the project has higher requirements for color consistency, it is best to provide a color card number, fabric swatch, old sample color, or another physical reference whenever possible. Color is difficult to confirm reliably through verbal description alone, especially for garments and sun-protective outerwear. The more complete the color reference is, the smoother sampling and bulk follow-up usually become.',
     },
     {
       question: 'Can we still discuss the project if the specification is not fully clear yet?',
-      answer: 'Yes. Many projects do not begin with a complete size and structure list. You can start with a sample photo, old sample, product type, use position, or estimated quantity, and we can first help narrow the direction among metal, resin, and nylon options together with the common 3, 5, and 8 range.',
+      answer: 'Yes. Many projects do not begin with a complete size and structure list. You can start with a sample photo, old sample, product type, use position, or estimated quantity, and we can help narrow the direction among metal, resin, and nylon options within the common size 3, 5, and 8 range.',
     },
     {
       question: 'What information helps quotation move faster?',
@@ -108,6 +110,11 @@ const faqPageContentEn = {
   ],
 } as const;
 
+const faqPageContentByLocale = {
+  zh: faqPageContent,
+  en: faqPageContentEn,
+} satisfies Record<AppLocale, unknown>;
+
 export function getFaqPageContent(locale: string) {
-  return locale === 'zh' ? faqPageContent : faqPageContentEn;
+  return getLocalizedContent(faqPageContentByLocale, locale);
 }
