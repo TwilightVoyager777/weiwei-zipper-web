@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing';
+import { routing } from './localization/routing';
 
 // www → non-www redirect should be handled at the DNS/hosting level
 // (e.g., Vercel domain settings or Cloudflare page rules),

@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
-import { alternatesForPath, localizedUrl } from '@/lib/url';
-import { SITE_URL } from '@/lib/constants';
+import { Link } from '@/localization/navigation';
+import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
+import { SITE_URL } from '@/config/site-constants';
 import { permanentRedirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import {
@@ -17,8 +17,8 @@ import {
   productDetailLabels,
   productItems,
   productSpecLabels,
-} from '@/content/products';
-import type { CategorySlug, ProductSlug, ProductSpecKey } from '@/content/products';
+} from '@/site-data/product-catalog';
+import type { CategorySlug, ProductSlug, ProductSpecKey } from '@/site-data/product-catalog';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 

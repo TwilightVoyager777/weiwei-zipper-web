@@ -1,5 +1,5 @@
-import { alternatesForPath } from '@/lib/url';
-import { aboutContent } from '@/content/site';
+import { alternatesForPath } from '@/seo/localized-urls';
+import { aboutContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };

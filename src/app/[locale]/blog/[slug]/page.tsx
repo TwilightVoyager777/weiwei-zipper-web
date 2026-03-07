@@ -1,8 +1,8 @@
-import { Link } from '@/i18n/navigation';
-import { alternatesForPath } from '@/lib/url';
-import { getBlogPost, getBlogSlugs } from '@/lib/blog';
+import { Link } from '@/localization/navigation';
+import { alternatesForPath } from '@/seo/localized-urls';
+import { getBlogPost, getBlogSlugs } from '@/site-data/blog-posts';
 import { notFound } from 'next/navigation';
-import { blogContent } from '@/content/site';
+import { blogContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 import BlogArticleContent from './BlogArticleContent';
 

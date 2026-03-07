@@ -1,6 +1,6 @@
 'use client';
 
-import { WHATSAPP_URL } from '@/lib/constants';
+import { WHATSAPP_URL } from '@/config/site-constants';
 
 export default function WhatsAppFloat() {
   const handleClick = () => {

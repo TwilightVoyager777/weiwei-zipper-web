@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { alternatesForPath } from '@/lib/url';
-import { WHATSAPP_URL } from '@/lib/constants';
-import { contactContent, siteBrand } from '@/content/site';
+import { alternatesForPath } from '@/seo/localized-urls';
+import { WHATSAPP_URL } from '@/config/site-constants';
+import { contactContent, siteBrand } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 
 const ContactForm = dynamic(() => import('@/components/ContactForm'), {

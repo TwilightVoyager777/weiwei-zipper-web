@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
-import { SITE_URL } from '@/lib/constants';
-import { PRODUCT_SLUGS, CATEGORY_SLUGS } from '@/lib/products';
-import { BLOG_SLUGS } from '@/lib/blog';
+import { SITE_URL } from '@/config/site-constants';
+import { PRODUCT_SLUGS, CATEGORY_SLUGS } from '@/site-data/product-catalog';
+import { BLOG_SLUGS } from '@/site-data/blog-posts';
 
 // Helper: English (default locale) has no prefix, Chinese uses /zh
 function localizedUrl(locale: string, path: string) {

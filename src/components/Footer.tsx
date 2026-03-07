@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/localization/navigation';
 import { LocationIcon, EmailIcon, PhoneIcon, WhatsAppIcon, WeChatIcon } from '@/components/Icons';
-import { WHATSAPP_URL } from '@/lib/constants';
-import { footerContent, navigationContent, siteBrand } from '@/content/site';
-import { categoryOrder, categoryContent } from '@/content/products';
+import { WHATSAPP_URL } from '@/config/site-constants';
+import { footerContent, navigationContent, siteBrand } from '@/site-data/site-content';
+import { categoryOrder, categoryContent } from '@/site-data/product-catalog';
 
 export default function Footer() {
   const productLinks = categoryOrder.map((key) => ({

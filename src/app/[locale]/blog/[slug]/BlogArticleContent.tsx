@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/localization/navigation';
 
 interface TOCItem {
   id: string;

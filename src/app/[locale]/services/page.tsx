@@ -1,6 +1,6 @@
-import { Link } from '@/i18n/navigation';
-import { alternatesForPath } from '@/lib/url';
-import { solutionsPageContent } from '@/content/solutions';
+import { Link } from '@/localization/navigation';
+import { alternatesForPath } from '@/seo/localized-urls';
+import { solutionsPageContent } from '@/site-data/solution-content';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };

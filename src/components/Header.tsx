@@ -3,11 +3,11 @@
 import Image from 'next/image';
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useLocale } from 'next-intl';
-import { Link, usePathname, useRouter } from '@/i18n/navigation';
-import { CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants';
+import { Link, usePathname, useRouter } from '@/localization/navigation';
+import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/site-constants';
 import { MenuIcon } from '@/components/Icons';
-import { navigationContent, siteBrand } from '@/content/site';
-import { categoryOrder, categoryContent } from '@/content/products';
+import { navigationContent, siteBrand } from '@/site-data/site-content';
+import { categoryOrder, categoryContent } from '@/site-data/product-catalog';
 
 const PRODUCT_CATEGORIES = categoryOrder.map((key) => ({
   href: `/products/${categoryContent[key].slug}`,

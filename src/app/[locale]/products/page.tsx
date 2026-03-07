@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
-import { alternatesForPath } from '@/lib/url';
+import { Link } from '@/localization/navigation';
+import { alternatesForPath } from '@/seo/localized-urls';
 import {
   CATEGORY_IMAGES,
   categoryOrder,
@@ -9,7 +9,7 @@ import {
   PRODUCT_SLUGS,
   PRODUCT_IMAGES,
   productsPageContent,
-} from '@/content/products';
+} from '@/site-data/product-catalog';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };

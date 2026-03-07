@@ -1,6 +1,6 @@
-import { COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/lib/constants';
-import { siteBrand } from '@/content/site';
-import { alternatesForPath } from '@/lib/url';
+import { COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/config/site-constants';
+import { siteBrand } from '@/site-data/site-content';
+import { alternatesForPath } from '@/seo/localized-urls';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { CheckCircleIcon } from '@/components/Icons';
-import { inquiryFormContent } from '@/content/site';
+import { inquiryFormContent } from '@/site-data/site-content';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

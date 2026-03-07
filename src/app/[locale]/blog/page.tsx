@@ -1,7 +1,7 @@
-import { Link } from '@/i18n/navigation';
-import { alternatesForPath } from '@/lib/url';
-import { getAllBlogPosts } from '@/lib/blog';
-import { blogContent } from '@/content/site';
+import { Link } from '@/localization/navigation';
+import { alternatesForPath } from '@/seo/localized-urls';
+import { getAllBlogPosts } from '@/site-data/blog-posts';
+import { blogContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
