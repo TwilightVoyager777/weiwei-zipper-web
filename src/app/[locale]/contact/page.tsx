@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import {
@@ -46,31 +47,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
-  const isZh = locale === 'zh';
+  const t = await getTranslations('ContactPage');
   const contactContent = getContactContent(locale);
   const siteBrand = getSiteBrand(locale);
   const contactCards: ContactCard[] = [
     {
-      title: isZh ? '电话联系' : 'Phone',
+      title: t('cards.phone'),
       value: CONTACT_PHONE,
       href: `tel:${CONTACT_PHONE.replace(/[^\d+]/g, '')}`,
       icon: PhoneIcon,
     },
     {
-      title: isZh ? '邮箱联系' : 'Email',
+      title: t('cards.email'),
       value: CONTACT_EMAIL,
       href: `mailto:${CONTACT_EMAIL}`,
       icon: EmailIcon,
     },
     {
-      title: 'WhatsApp',
+      title: t('cards.whatsapp'),
       value: siteBrand.whatsapp,
       href: WHATSAPP_URL,
       icon: WhatsAppIcon,
       external: true,
     },
     {
-      title: isZh ? '工作时间' : 'Business Hours',
+      title: t('cards.businessHours'),
       value: siteBrand.businessHours,
       icon: ClockIcon,
     },
@@ -80,18 +81,6 @@ export default async function ContactPage({ params }: Props) {
     [contactCards[0], contactCards[2]],
     [contactCards[1], contactCards[3]],
   ] as const;
-  const ui = isZh
-    ? {
-        wechatId: '微信号',
-        zhAddress: '中文地址',
-        enAddress: 'English Address',
-      }
-    : {
-        wechatId: 'WeChat ID',
-        zhAddress: 'Chinese Address',
-        enAddress: 'English Address',
-      };
-
   return (
     <div className="container mx-auto px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
@@ -174,7 +163,7 @@ export default async function ContactPage({ params }: Props) {
                 className="mx-auto rounded-lg"
               />
               <p className="text-sm text-gray-600 mt-4">{contactContent.wechatScan}</p>
-              <p className="text-sm text-gray-400 mt-1">{ui.wechatId}: {siteBrand.wechatId}</p>
+              <p className="text-sm text-gray-400 mt-1">{t('labels.wechatId')}: {siteBrand.wechatId}</p>
             </div>
           </aside>
         </div>
@@ -189,11 +178,11 @@ export default async function ContactPage({ params }: Props) {
 
             <div className="space-y-5">
               <div>
-                <p className="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-2">{ui.zhAddress}</p>
+                <p className="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-2">{t('labels.zhAddress')}</p>
                 <p className="text-sm text-gray-700 leading-relaxed">{COMPANY_ADDRESS_ZH}</p>
               </div>
               <div>
-                <p className="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-2">{ui.enAddress}</p>
+                <p className="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-2">{t('labels.enAddress')}</p>
                 <p className="text-sm text-gray-700 leading-relaxed">{COMPANY_ADDRESS_EN}</p>
               </div>
             </div>
@@ -211,7 +200,7 @@ export default async function ContactPage({ params }: Props) {
           <section className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5">
             <div className="flex items-center justify-between gap-4 px-2 pb-4">
               <h2 className="text-xl font-bold text-gray-900">{contactContent.mapTitle}</h2>
-              <span className="text-xs text-gray-400">Google Maps</span>
+              <span className="text-xs text-gray-400">{t('labels.mapProvider')}</span>
             </div>
             <div className="overflow-hidden rounded-xl border border-gray-200">
               <iframe

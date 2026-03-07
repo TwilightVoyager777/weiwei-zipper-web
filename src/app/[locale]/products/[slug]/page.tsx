@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
 import { SITE_URL } from '@/config/site-constants';
@@ -21,19 +22,21 @@ import {
 import type { CategorySlug, ProductSlug, ProductSpecKey } from '@/site-data/product-catalog';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
+type ProductPageUi = {
+  home: string;
+  products: string;
+  quoteDescription: string;
+  breadcrumbAria: string;
+};
 
-function getProductPageUi(locale: string) {
-  return locale === 'zh'
-    ? {
-        home: '首页',
-        products: '产品中心',
-        quoteDescription: '通过伟伟拉链报价页面提交需求',
-      }
-    : {
-        home: 'Home',
-        products: 'Products',
-        quoteDescription: 'Submit your requirements through the Weiwei Zipper quote page',
-      };
+async function getProductPageUi(locale: string): Promise<ProductPageUi> {
+  const t = await getTranslations({ locale, namespace: 'ProductPage' });
+  return {
+    home: t('home'),
+    products: t('products'),
+    quoteDescription: t('quoteDescription'),
+    breadcrumbAria: t('breadcrumbAria'),
+  };
 }
 
 export function generateStaticParams() {
@@ -71,7 +74,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
   const categoryContent = getCategoryContent(locale);
   const productItems = getProductItems(locale);
   const productDetailLabels = getProductDetailLabels(locale);
-  const ui = getProductPageUi(locale);
+  const ui = await getProductPageUi(locale);
   const catKey = CATEGORY_SLUG_TO_KEY[slug];
   const category = categoryContent[catKey];
   const productSlugs = CATEGORY_PRODUCTS[slug];
@@ -108,7 +111,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
       ) : null}
 
       <div className="container mx-auto px-4 py-8 sm:py-12">
-        <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+        <nav className="text-sm text-gray-500 mb-6" aria-label={ui.breadcrumbAria}>
           <ol className="flex items-center gap-2 flex-wrap">
             <li><Link href="/" className="hover:text-blue-800">{ui.home}</Link></li>
             <li>/</li>
@@ -265,7 +268,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
   const productItems = getProductItems(locale);
   const productDetailLabels = getProductDetailLabels(locale);
   const productSpecLabels = getProductSpecLabels(locale);
-  const ui = getProductPageUi(locale);
+  const ui = await getProductPageUi(locale);
   const product = productItems[slug];
 
   const productSchema = {
@@ -312,7 +315,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="container mx-auto px-4 py-8">
-        <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+        <nav className="text-sm text-gray-500 mb-6" aria-label={ui.breadcrumbAria}>
           <ol className="flex items-center gap-2 flex-wrap">
             <li><Link href="/" className="hover:text-blue-800">{ui.home}</Link></li>
             <li>/</li>

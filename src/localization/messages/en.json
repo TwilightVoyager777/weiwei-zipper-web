@@ -1,1 +1,258 @@
-{}
+{
+  "Header": {
+    "tagline": "Size 3 / 5 / 8 Metal, Resin, and Nylon Zippers",
+    "viewAllProducts": "View all products →",
+    "menuAria": "Toggle menu",
+    "productsAria": "Toggle product categories",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation"
+  },
+  "Footer": {
+    "productsTitle": "Products",
+    "wechatTitle": "WeChat ID: {wechatId}",
+    "wechatLabel": "WeChat",
+    "businessHours": "Business Hours",
+    "whatsappAria": "WhatsApp",
+    "wechatQrAria": "WeChat QR",
+    "companyLinks": {
+      "about": "About",
+      "applications": "Applications",
+      "solutions": "Solutions",
+      "insights": "Insights",
+      "faq": "FAQ"
+    }
+  },
+  "Home": {
+    "viewAll": "View all →"
+  },
+  "WhatsAppFloat": {
+    "ariaLabel": "Contact Weiwei Zipper via WhatsApp"
+  },
+  "NotFound": {
+    "message": "Page not found. Redirecting to the homepage..."
+  },
+  "InquiryPage": {
+    "wechatId": "WeChat ID"
+  },
+  "BlogArticle": {
+    "tocTitle": "On this page",
+    "tocAriaLabel": "Table of contents"
+  },
+  "ContactPage": {
+    "cards": {
+      "phone": "Phone",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "businessHours": "Business Hours"
+    },
+    "labels": {
+      "wechatId": "WeChat ID",
+      "zhAddress": "Chinese Address",
+      "enAddress": "English Address",
+      "mapProvider": "Google Maps"
+    }
+  },
+  "PrivacyPolicy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "Privacy Policy for Weiwei Zipper. Learn how we collect, use, and protect your information."
+    },
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2026",
+    "overview": {
+      "title": "Overview",
+      "paragraph1": "{companyName} respects your privacy. This policy explains how we collect, use, and protect your personal data.",
+      "paragraph2": "By using our website, you agree to the data practices described here."
+    },
+    "informationWeCollect": {
+      "title": "Information We Collect",
+      "intro": "We collect the following through inquiry forms and direct communications:",
+      "items": {
+        "personal": "Personal information — name, email, phone, company name, and job title",
+        "business": "Business information — country, product needs, zipper type, size details, quantities, and delivery timelines",
+        "technical": "Technical information — IP address, browser type, pages visited, and access time"
+      },
+      "outro": "We only collect data necessary to provide our services."
+    },
+    "howWeUse": {
+      "title": "How We Use Your Information",
+      "intro": "We use your information to:",
+      "items": [
+        "Respond to zipper inquiries and provide matching suggestions",
+        "Process and fulfill orders (sampling, production scheduling, shipping)",
+        "Provide after-sales support (repeat orders, replenishment, and issue follow-up)",
+        "Send order-related updates (shipping confirmations, delivery status)",
+        "Analyze website data to improve performance and content",
+        "Comply with applicable laws and regulations"
+      ]
+    },
+    "cookies": {
+      "title": "Cookies and Tracking",
+      "paragraph1": "We use cookies to improve your browsing experience. Cookies are small text files stored in your browser.",
+      "items": {
+        "essential": "Essential cookies — ensure basic site functions (e.g., language selection)",
+        "analytics": "Analytics cookies — help us understand visitor behavior and improve experience"
+      },
+      "paragraph2": "You can manage cookies in your browser settings, but disabling them may affect some features."
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "intro": "We protect your data through:",
+      "items": [
+        "SSL/TLS encryption for data transmission",
+        "Restricted employee access to personal data",
+        "Regular review and update of security practices"
+      ],
+      "outro": "We never sell your data. We only share it with third parties when necessary (e.g., logistics partners for shipping), and require them to follow equivalent protection standards."
+    },
+    "dataRetention": {
+      "title": "Data Retention",
+      "items": [
+        "Inquiry and business records are kept for three years",
+        "Order records are retained per tax and commercial regulations"
+      ],
+      "outro": "You may request deletion at any time. We will process your request promptly, except where retention is required by law."
+    },
+    "internationalTransfers": {
+      "title": "International Data Transfers",
+      "paragraph": "As a global exporter, your data may be transferred between China and other countries. We ensure proper safeguards during all transfers. By submitting inquiries, you consent to such transfers."
+    },
+    "thirdPartyLinks": {
+      "title": "Third-Party Links",
+      "paragraph": "Our site may link to platforms like WhatsApp and WeChat. These have their own privacy policies, and we are not responsible for them. Review their policies before sharing personal data."
+    },
+    "yourRights": {
+      "title": "Your Rights",
+      "intro": "Under applicable laws, you have the right to:",
+      "items": [
+        "Access personal data we hold about you",
+        "Correct inaccurate or incomplete data",
+        "Request deletion of your data",
+        "Object to or restrict our data processing",
+        "Data portability"
+      ]
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "paragraph": "We may update this policy to reflect business changes or legal requirements. Updates will be posted here with a new date. We encourage periodic review."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "intro": "For privacy-related questions, we respond within two business days.",
+      "emailLabel": "Email: ",
+      "addressLabel": "Address: "
+    }
+  },
+  "TermsOfService": {
+    "meta": {
+      "title": "Terms of Service",
+      "description": "Terms of Service for Weiwei Zipper. Understand our website usage conditions, product information, intellectual property, and transaction terms."
+    },
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: January 2026",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "paragraph1": "Welcome to the website of {companyName}.",
+      "paragraph2": "By using this site, you agree to these terms. If you disagree, please stop using the site. We may update these terms at any time, effective upon posting."
+    },
+    "termsOfUse": {
+      "title": "Terms of Use",
+      "paragraph1": "Website content is for information and business communication only. You may browse content and send inquiries.",
+      "intro": "You agree not to:",
+      "items": [
+        "Use the site for unlawful purposes",
+        "Attempt unauthorized access to our systems",
+        "Use automated tools to scrape content in bulk",
+        "Impair normal website operation in any way"
+      ]
+    },
+    "productInfo": {
+      "title": "Product Information & Quotations",
+      "paragraph": "We strive for accuracy in product information. However, specs may change without notice due to ongoing improvements.",
+      "items": [
+        "Product images are for reference only; the current pages focus on category and size communication",
+        "All quotes are preliminary; final pricing is per the signed contract or Proforma Invoice",
+        "Quotes are typically valid for 30 days unless otherwise stated in writing"
+      ]
+    },
+    "orders": {
+      "title": "Orders & Transaction Terms",
+      "paragraph": "Website inquiries are not formal orders. Orders are established after both parties confirm specs, pricing, quantity, delivery, and payment terms.",
+      "paymentMethodsTitle": "Payment Methods",
+      "paymentMethods": [
+        "Wire transfer (T/T)",
+        "Letter of credit (L/C)",
+        "Western Union"
+      ],
+      "paymentTerms": "Standard terms: 30% deposit after order confirmation, balance before shipment. Prices exclude bank charges."
+    },
+    "shipping": {
+      "title": "Shipping & Delivery",
+      "paragraph": "Delivery times start from order confirmation and deposit receipt.",
+      "leadTimesTitle": "Lead Times",
+      "leadTimes": [
+        "Standard projects: confirmed according to the live production schedule",
+        "Sample and bulk timing depends on complexity"
+      ],
+      "tradeTermsTitle": "Trade Terms",
+      "tradeTerms": [
+        "FOB, CIF, CFR, DDP, EXW"
+      ],
+      "packagingTitle": "Packaging",
+      "packaging": "Packaging is arranged according to zipper type and quantity for both samples and bulk shipment.",
+      "forceMajeure": "Delays from force majeure (natural disasters, regulations, logistics disruptions) are not considered breach of contract."
+    },
+    "quality": {
+      "title": "Quality Assurance & Claims",
+      "paragraph": "All products follow the confirmed specifications, with focus on consistency across batches.",
+      "claimsTitle": "Claims Process",
+      "claims": [
+        "Notify us in writing within 14 days of receipt",
+        "Provide defect description and photo evidence",
+        "After verification: replacement, supplementary shipment, or credit adjustment"
+      ],
+      "notCoveredTitle": "Not Covered Under Warranty",
+      "notCovered": [
+        "Damage from improper installation",
+        "Operation beyond rated conditions",
+        "Product modification",
+        "Normal wear and tear"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "paragraph": "All website content (text, images, logos, code, etc.) is protected by Chinese and international IP laws.",
+      "items": [
+        "Commercial use requires prior written permission",
+        "Personal reference downloads are permitted with copyright notices retained"
+      ]
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "paragraph1": "Website content is provided \"as is\" without warranties. We do not guarantee uninterrupted or error-free operation.",
+      "paragraph2": "Technical advice and recommendations are for reference only. Final zipper selection should be based on your actual project requirements. We are not liable for damages from website use."
+    },
+    "governingLaw": {
+      "title": "Governing Law & Disputes",
+      "paragraph": "These terms are governed by the laws of the People's Republic of China.",
+      "stepsTitle": "Dispute Resolution Steps",
+      "steps": [
+        "Friendly negotiation between parties",
+        "If unresolved, submit to the competent court at the company's location",
+        "International trade disputes may go to CIETAC arbitration"
+      ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "intro": "For questions about these terms, we respond within two business days.",
+      "emailLabel": "Email: ",
+      "addressLabel": "Address: "
+    }
+  },
+  "ProductPage": {
+    "home": "Home",
+    "products": "Products",
+    "quoteDescription": "Submit your requirements through the Weiwei Zipper quote page",
+    "breadcrumbAria": "Breadcrumb"
+  }
+}

@@ -1,1 +1,258 @@
-{}
+{
+  "Header": {
+    "tagline": "3 / 5 / 8 号金属、树脂、尼龙拉链",
+    "viewAllProducts": "查看全部产品 →",
+    "menuAria": "切换菜单",
+    "productsAria": "切换产品分类",
+    "mainNavigation": "主导航",
+    "mobileNavigation": "移动端导航"
+  },
+  "Footer": {
+    "productsTitle": "产品中心",
+    "wechatTitle": "微信号：{wechatId}",
+    "wechatLabel": "微信",
+    "businessHours": "工作时间",
+    "whatsappAria": "WhatsApp",
+    "wechatQrAria": "微信二维码",
+    "companyLinks": {
+      "about": "关于我们",
+      "applications": "应用场景",
+      "solutions": "解决方案",
+      "insights": "资讯",
+      "faq": "常见问题"
+    }
+  },
+  "Home": {
+    "viewAll": "查看全部 →"
+  },
+  "WhatsAppFloat": {
+    "ariaLabel": "通过 WhatsApp 联系伟伟拉链"
+  },
+  "NotFound": {
+    "message": "页面不存在，正在返回首页..."
+  },
+  "InquiryPage": {
+    "wechatId": "微信号"
+  },
+  "BlogArticle": {
+    "tocTitle": "本页目录",
+    "tocAriaLabel": "文章目录"
+  },
+  "ContactPage": {
+    "cards": {
+      "phone": "电话联系",
+      "email": "邮箱联系",
+      "whatsapp": "WhatsApp",
+      "businessHours": "工作时间"
+    },
+    "labels": {
+      "wechatId": "微信号",
+      "zhAddress": "中文地址",
+      "enAddress": "English Address",
+      "mapProvider": "Google Maps"
+    }
+  },
+  "PrivacyPolicy": {
+    "meta": {
+      "title": "隐私政策",
+      "description": "伟伟拉链隐私政策。了解我们如何收集、使用和保护您的信息。"
+    },
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2026年1月",
+    "overview": {
+      "title": "概述",
+      "paragraph1": "{companyName}重视您的隐私权。本政策说明我们如何收集、使用和保护您的个人信息。",
+      "paragraph2": "访问或使用本网站，即表示您同意本政策所述的数据处理方式。"
+    },
+    "informationWeCollect": {
+      "title": "信息收集",
+      "intro": "我们通过询价表单和直接通信收集以下信息：",
+      "items": {
+        "personal": "个人信息 — 姓名、邮箱、电话、公司名称及职位",
+        "business": "业务信息 — 国家/地区、产品需求、拉链品类、规格、数量及交期",
+        "technical": "技术信息 — IP地址、浏览器类型、访问页面及访问时间"
+      },
+      "outro": "我们仅收集提供服务所必需的信息。"
+    },
+    "howWeUse": {
+      "title": "信息使用",
+      "intro": "我们将您的信息用于：",
+      "items": [
+        "回复拉链询盘并提供配套建议",
+        "处理和履行订单（打样、排产、发货）",
+        "提供售后支持（返单、补单与问题追踪）",
+        "发送订单相关通知（发货确认、交期更新）",
+        "分析网站数据以改善性能和内容",
+        "遵守适用法律法规"
+      ]
+    },
+    "cookies": {
+      "title": "Cookies与追踪技术",
+      "paragraph1": "我们使用Cookies来增强浏览体验。Cookies是存储在浏览器中的小型文本文件。",
+      "items": {
+        "essential": "必要Cookies — 确保网站基本功能（如语言选择）",
+        "analytics": "分析Cookies — 帮助我们了解访问者行为并优化体验"
+      },
+      "paragraph2": "您可通过浏览器设置管理Cookies，但禁用可能影响部分功能。"
+    },
+    "dataProtection": {
+      "title": "信息保护",
+      "intro": "我们采取以下措施保护您的信息：",
+      "items": [
+        "SSL/TLS加密保护数据传输",
+        "限制员工对个人数据的访问权限",
+        "定期审查和更新安全措施"
+      ],
+      "outro": "我们不会出售您的信息。仅在必要时（如物流合作伙伴需要发货信息）共享给第三方，且要求其遵守同等保护标准。"
+    },
+    "dataRetention": {
+      "title": "数据保留",
+      "items": [
+        "询价和业务通信保留三年",
+        "订单记录按税务和商业法规要求保留"
+      ],
+      "outro": "您可随时要求删除个人信息。我们将在合理时间内处理，法律要求保留的除外。"
+    },
+    "internationalTransfers": {
+      "title": "国际数据传输",
+      "paragraph": "作为全球出口企业，您的信息可能在中国及其他国家间传输。我们确保在所有传输中采取适当保护措施。提交询价即表示您同意此类传输。"
+    },
+    "thirdPartyLinks": {
+      "title": "第三方链接",
+      "paragraph": "本网站可能链接至WhatsApp、微信等第三方平台。这些平台有各自的隐私政策，我们对其不承担责任。建议您在提交信息前查阅其政策。"
+    },
+    "yourRights": {
+      "title": "您的权利",
+      "intro": "根据适用法律，您有权：",
+      "items": [
+        "访问我们持有的您的个人信息",
+        "更正不准确或不完整的信息",
+        "请求删除您的个人信息",
+        "反对或限制我们的数据处理",
+        "数据可携带性"
+      ]
+    },
+    "changes": {
+      "title": "政策变更",
+      "paragraph": "我们可能更新本政策以反映业务变化或法律要求。更新将发布于本页面并标注新日期。建议您定期查阅。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "intro": "如有隐私相关问题，我们将在两个工作日内回复。",
+      "emailLabel": "邮箱：",
+      "addressLabel": "地址："
+    }
+  },
+  "TermsOfService": {
+    "meta": {
+      "title": "服务条款",
+      "description": "伟伟拉链服务条款。了解我们网站的使用条件、产品信息、知识产权及交易条款。"
+    },
+    "title": "服务条款",
+    "lastUpdated": "最后更新：2026年1月",
+    "acceptance": {
+      "title": "接受条款",
+      "paragraph1": "欢迎访问{companyName}官方网站。",
+      "paragraph2": "使用本网站即表示您同意受这些条款约束。如不同意，请停止使用。我们可能随时更新条款，更新自发布之日起生效。"
+    },
+    "termsOfUse": {
+      "title": "使用条款",
+      "paragraph1": "网站内容仅供信息参考和业务沟通。您可以浏览内容并发送询盘。",
+      "intro": "您同意不会：",
+      "items": [
+        "将网站用于非法目的",
+        "尝试未经授权访问我们的系统",
+        "使用自动化工具大量抓取内容",
+        "以任何方式损害网站正常运行"
+      ]
+    },
+    "productInfo": {
+      "title": "产品信息与报价",
+      "paragraph": "我们尽力确保产品信息准确。但由于持续改进，规格可能变更，恕不另行通知。",
+      "items": [
+        "产品图片仅供参考，当前页面重点用于展示品类和规格信息",
+        "所有报价均为初步报价，以正式合同或形式发票为准",
+        "报价有效期通常为30天，除非另行书面说明"
+      ]
+    },
+    "orders": {
+      "title": "订单与交易条款",
+      "paragraph": "网站询价不构成正式订单。正式订单须经双方确认规格、价格、数量、交期和付款条件。",
+      "paymentMethodsTitle": "付款方式",
+      "paymentMethods": [
+        "电汇（T/T）",
+        "信用证（L/C）",
+        "西联汇款"
+      ],
+      "paymentTerms": "标准条款：订单确认后 30% 定金，出货前结清尾款。价格不含银行手续费。"
+    },
+    "shipping": {
+      "title": "发货与交付",
+      "paragraph": "交货期自订单确认和定金到账之日起计算。",
+      "leadTimesTitle": "交货期",
+      "leadTimes": [
+        "常规项目：按实际排产回复",
+        "打样与大货时间会根据规格复杂度调整"
+      ],
+      "tradeTermsTitle": "贸易条款",
+      "tradeTerms": [
+        "FOB, CIF, CFR, DDP, EXW"
+      ],
+      "packagingTitle": "包装",
+      "packaging": "按拉链品类和数量安排常规内外包装，适合样品与大货发出。",
+      "forceMajeure": "不可抗力（自然灾害、政府管制、物流中断等）导致的延迟不视为违约。"
+    },
+    "quality": {
+      "title": "质量保证与索赔",
+      "paragraph": "所有产品会按确认后的规格执行，重点控制规格一致性与批次稳定性。",
+      "claimsTitle": "索赔流程",
+      "claims": [
+        "收货后14天内书面通知",
+        "提供缺陷描述和照片证据",
+        "核实后提供换货、补货或信用调整"
+      ],
+      "notCoveredTitle": "不在保修范围内",
+      "notCovered": [
+        "安装不当造成的损坏",
+        "超出额定工况使用",
+        "产品改装",
+        "正常磨损"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "知识产权",
+      "paragraph": "网站所有内容（文字、图片、标志、代码等）均受中国和国际知识产权法保护。",
+      "items": [
+        "未经书面许可不得用于商业目的",
+        "允许为个人参考目的下载和打印，但须保留版权声明"
+      ]
+    },
+    "liability": {
+      "title": "免责声明",
+      "paragraph1": "网站内容按\"现状\"提供，不附带任何保证。我们不保证网站不间断运行或完全无错。",
+      "paragraph2": "技术建议和产品推荐仅供参考。最终的拉链选型应以实际项目需求为准。对因使用本网站导致的任何损失，本公司不承担责任。"
+    },
+    "governingLaw": {
+      "title": "适用法律与争议解决",
+      "paragraph": "本条款受中华人民共和国法律管辖。",
+      "stepsTitle": "争议解决步骤",
+      "steps": [
+        "双方友好协商",
+        "协商不成，提交本公司所在地法院",
+        "国际贸易争议可提交CIETAC仲裁"
+      ]
+    },
+    "contact": {
+      "title": "联系我们",
+      "intro": "如有条款相关问题，我们将在两个工作日内回复。",
+      "emailLabel": "邮箱：",
+      "addressLabel": "地址："
+    }
+  },
+  "ProductPage": {
+    "home": "首页",
+    "products": "产品中心",
+    "quoteDescription": "通过伟伟拉链报价页面提交需求",
+    "breadcrumbAria": "面包屑导航"
+  }
+}

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import { getHomeContent, getUseCasesContent } from '@/site-data/site-content';
 import { categoryOrder, getCategoryContent, CATEGORY_IMAGES } from '@/site-data/product-catalog';
@@ -14,11 +15,12 @@ type Props = { params: Promise<{ locale: string }> };
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
+  const t = await getTranslations('Home');
   const homeContent = getHomeContent(locale);
   const useCasesContent = getUseCasesContent(locale);
   const categoryContent = getCategoryContent(locale);
   const heroVisualPath = homeContent.hero.visualPath?.trim();
-  const viewAllLabel = locale === 'zh' ? '查看全部 →' : 'View all →';
+  const viewAllLabel = t('viewAll');
 
   return (
     <>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import { useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Link } from '@/localization/navigation';
@@ -33,16 +33,18 @@ function TableOfContents({
   activeId,
   progress,
   title,
+  ariaLabel,
 }: {
   items: TOCItem[];
   activeId: string;
   progress: number;
   title: string;
+  ariaLabel: string;
 }) {
   if (items.length === 0) return null;
 
   return (
-    <nav aria-label="Table of contents">
+    <nav aria-label={ariaLabel}>
       <div>
         {/* Reading progress bar */}
         <div className="flex items-center gap-2 mb-4">
@@ -91,8 +93,9 @@ function TableOfContents({
 }
 
 export default function BlogArticleContent({ content }: { content: string }) {
-  const locale = useLocale();
-  const tocTitle = locale === 'zh' ? '本页目录' : 'On this page';
+  const t = useTranslations('BlogArticle');
+  const tocTitle = t('tocTitle');
+  const tocAriaLabel = t('tocAriaLabel');
   const tocItems = useMemo(() => generateTOC(content), [content]);
   const [activeId, setActiveId] = useState('');
   const [progress, setProgress] = useState(0);
@@ -222,7 +225,7 @@ export default function BlogArticleContent({ content }: { content: string }) {
 
       {/* Sidebar TOC — visible on lg+ screens */}
       <aside className="hidden lg:block w-56 flex-shrink-0 sticky top-28">
-        <TableOfContents items={tocItems} activeId={activeId} progress={progress} title={tocTitle} />
+        <TableOfContents items={tocItems} activeId={activeId} progress={progress} title={tocTitle} ariaLabel={tocAriaLabel} />
       </aside>
     </div>
   );

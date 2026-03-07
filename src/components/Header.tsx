@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/localization/navigation';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/site-constants';
 import { MenuIcon } from '@/components/Icons';
@@ -18,6 +18,7 @@ export default function Header() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const t = useTranslations('Header');
 
   const isZh = locale === 'zh';
   const brand = getSiteBrand(locale);
@@ -27,20 +28,6 @@ export default function Header() {
     href: `/products/${localizedCategories[key].slug}`,
     name: localizedCategories[key].name,
   }));
-  const ui = isZh
-    ? {
-        tagline: '3 / 5 / 8 号金属、树脂、尼龙拉链',
-        viewAllProducts: '查看全部产品 →',
-        menuAria: '切换菜单',
-        productsAria: '切换产品分类',
-      }
-    : {
-        tagline: 'Size 3 / 5 / 8 Metal, Resin, and Nylon Zippers',
-        viewAllProducts: 'View all products →',
-        menuAria: 'Toggle menu',
-        productsAria: 'Toggle product categories',
-      };
-
   const navItems = navigationContent.main.map((item) => ({
     ...item,
     hasDropdown: item.href === '/products',
@@ -128,12 +115,12 @@ export default function Header() {
                 {brand.siteName}
               </span>
               <span className="text-[10px] text-gray-500 hidden sm:block leading-tight">
-                {ui.tagline}
+                {t('tagline')}
               </span>
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1" role="navigation" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-1" role="navigation" aria-label={t('mainNavigation')}>
             {navItems.map(({ href, label, hasDropdown }) => (
               hasDropdown ? (
                 <div
@@ -166,7 +153,7 @@ export default function Header() {
                         href="/products"
                         className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 font-medium border-b border-gray-100"
                       >
-                        {ui.viewAllProducts}
+                        {t('viewAllProducts')}
                       </Link>
                       {productCategories.map(({ href: catHref, name }) => (
                         <Link
@@ -212,7 +199,7 @@ export default function Header() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-700 active:bg-gray-100 rounded transition-colors"
-              aria-label={ui.menuAria}
+              aria-label={t('menuAria')}
               aria-expanded={isMenuOpen}
             >
               <MenuIcon isOpen={isMenuOpen} />
@@ -226,7 +213,7 @@ export default function Header() {
           isMenuOpen ? 'max-h-[720px] opacity-100' : 'max-h-0 opacity-0'
         }`}
         role="navigation"
-        aria-label="Mobile navigation"
+        aria-label={t('mobileNavigation')}
         aria-hidden={!isMenuOpen}
       >
         <div className="container mx-auto px-4 py-2">
@@ -248,7 +235,7 @@ export default function Header() {
                   <button
                     onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
                     className="px-4 py-3.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-500 hover:bg-gray-50 active:bg-gray-100 rounded-r transition-colors"
-                    aria-label={ui.productsAria}
+                    aria-label={t('productsAria')}
                     aria-expanded={isMobileProductsOpen}
                   >
                     <svg className={`w-4 h-4 transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { WHATSAPP_URL } from '@/config/site-constants';
 import { getSiteBrand } from '@/site-data/site-content';
 
@@ -35,9 +35,8 @@ type InquiryPageContent = {
 
 export default function InquiryPageLayout({ content }: { content: InquiryPageContent }) {
   const locale = useLocale();
+  const t = useTranslations('InquiryPage');
   const brand = getSiteBrand(locale);
-  const isZh = locale === 'zh';
-  const ui = isZh ? { wechatId: '微信号' } : { wechatId: 'WeChat ID' };
 
   return (
     <div className="container mx-auto px-4 py-10 sm:py-12">
@@ -110,7 +109,7 @@ export default function InquiryPageLayout({ content }: { content: InquiryPageCon
                 className="mx-auto rounded"
               />
               <p className="text-xs text-gray-500 mt-2">{content.wechatScan}</p>
-              <p className="text-xs text-gray-400 mt-1">{ui.wechatId}: {brand.wechatId}</p>
+              <p className="text-xs text-gray-400 mt-1">{t('wechatId')}: {brand.wechatId}</p>
             </div>
           </div>
 

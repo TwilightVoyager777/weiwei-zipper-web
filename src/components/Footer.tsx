@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/localization/navigation';
 import { ClockIcon, LocationIcon, EmailIcon, PhoneIcon, WhatsAppIcon, WeChatIcon } from '@/components/Icons';
 import { WHATSAPP_URL } from '@/config/site-constants';
@@ -10,7 +10,7 @@ import { categoryOrder, getCategoryContent } from '@/site-data/product-catalog';
 
 export default function Footer() {
   const locale = useLocale();
-  const isZh = locale === 'zh';
+  const t = useTranslations('Footer');
   const footerContent = getFooterContent(locale);
   const navigationContent = getNavigationContent(locale);
   const brand = getSiteBrand(locale);
@@ -22,25 +22,12 @@ export default function Footer() {
   }));
 
   const companyLinks = [
-    { href: '/about' as const, label: isZh ? '关于我们' : 'About' },
-    { href: '/industries' as const, label: isZh ? '应用场景' : 'Applications' },
-    { href: '/services' as const, label: isZh ? '解决方案' : 'Solutions' },
-    { href: '/blog' as const, label: isZh ? '资讯' : 'Insights' },
-    { href: '/faq' as const, label: isZh ? '常见问题' : 'FAQ' },
+    { href: '/about' as const, label: t('companyLinks.about') },
+    { href: '/industries' as const, label: t('companyLinks.applications') },
+    { href: '/services' as const, label: t('companyLinks.solutions') },
+    { href: '/blog' as const, label: t('companyLinks.insights') },
+    { href: '/faq' as const, label: t('companyLinks.faq') },
   ];
-  const ui = isZh
-    ? {
-        productsTitle: '产品中心',
-        wechatTitle: `微信号：${brand.wechatId}`,
-        wechatLabel: '微信',
-        businessHours: '工作时间',
-      }
-    : {
-        productsTitle: 'Products',
-        wechatTitle: `WeChat ID: ${brand.wechatId}`,
-        wechatLabel: 'WeChat',
-        businessHours: 'Business Hours',
-      };
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -65,15 +52,15 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors"
-                aria-label="WhatsApp"
+                aria-label={t('whatsappAria')}
               >
                 <WhatsAppIcon />
               </a>
               <a
                 href={brand.wechatQrPath}
                 className="text-gray-400 hover:text-green-300 transition-colors"
-                aria-label="WeChat QR"
-                title={ui.wechatTitle}
+                aria-label={t('wechatQrAria')}
+                title={t('wechatTitle', { wechatId: brand.wechatId })}
               >
                 <WeChatIcon />
               </a>
@@ -81,7 +68,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">{ui.productsTitle}</h3>
+            <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">{t('productsTitle')}</h3>
             <ul className="space-y-2">
               {productLinks.map(({ href, label }) => (
                 <li key={href}>
@@ -157,11 +144,11 @@ export default function Footer() {
                 </li>
                 <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
                   <WeChatIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                  <span className="min-w-0 break-words">{ui.wechatLabel}: {brand.wechatId}</span>
+                  <span className="min-w-0 break-words">{t('wechatLabel')}: {brand.wechatId}</span>
                 </li>
                 <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 text-sm text-gray-500 leading-5">
                   <ClockIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                  <span className="min-w-0 break-words">{ui.businessHours}: {brand.businessHours}</span>
+                  <span className="min-w-0 break-words">{t('businessHours')}: {brand.businessHours}</span>
                 </li>
               </ul>
             </address>
