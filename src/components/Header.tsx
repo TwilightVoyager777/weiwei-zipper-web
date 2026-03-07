@@ -109,10 +109,10 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-4 py-2.5 sm:py-3">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-11 w-16 shrink-0 overflow-hidden">
+            <div className="relative h-10 w-14 shrink-0 overflow-hidden sm:h-11 sm:w-16">
               <Image
                 src={brand.logoPath}
                 alt={brand.logoAlt}
@@ -124,7 +124,7 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg md:text-xl font-bold text-blue-900 leading-tight">
+              <span className="text-base sm:text-lg md:text-xl font-bold text-blue-900 leading-tight">
                 {brand.siteName}
               </span>
               <span className="text-[10px] text-gray-500 hidden sm:block leading-tight">
@@ -223,7 +223,7 @@ export default function Header() {
 
       <nav
         className={`lg:hidden border-t border-gray-200 bg-white overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-[640px] opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-[720px] opacity-100' : 'max-h-0 opacity-0'
         }`}
         role="navigation"
         aria-label="Mobile navigation"

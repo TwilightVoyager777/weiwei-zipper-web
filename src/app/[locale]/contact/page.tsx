@@ -93,17 +93,17 @@ export default async function ContactPage({ params }: Props) {
       };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{contactContent.title}</h1>
-          <p className="text-lg text-gray-600 leading-relaxed">{contactContent.subtitle}</p>
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed">{contactContent.subtitle}</p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-10">
           <Link
             href="/quote"
-            className="bg-blue-800 text-white px-6 py-3 rounded font-semibold hover:bg-blue-900 transition-colors text-center"
+            className="w-full sm:w-auto bg-blue-800 text-white px-6 py-3 rounded font-semibold hover:bg-blue-900 transition-colors text-center"
           >
             {contactContent.quoteButton}
           </Link>
@@ -111,14 +111,14 @@ export default async function ContactPage({ params }: Props) {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-green-600 text-green-700 px-6 py-3 rounded font-semibold hover:bg-green-50 transition-colors text-center"
+            className="w-full sm:w-auto border border-green-600 text-green-700 px-6 py-3 rounded font-semibold hover:bg-green-50 transition-colors text-center"
           >
             {contactContent.whatsappButton}
           </a>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] gap-8 mb-10">
-          <section className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
+          <section className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-8">
             <h2 className="text-xl font-bold text-gray-900 mb-6">{contactContent.cardTitle}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-4 items-start">
               {contactCardColumns.map((column, columnIndex) => (
@@ -160,7 +160,7 @@ export default async function ContactPage({ params }: Props) {
             </div>
           </section>
 
-          <aside className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
+          <aside className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-8">
             <div className="flex items-center gap-2 mb-4">
               <WeChatIcon className="w-5 h-5 text-green-600" />
               <h2 className="text-xl font-bold text-gray-900">{contactContent.wechatLabel}</h2>
@@ -180,7 +180,7 @@ export default async function ContactPage({ params }: Props) {
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-[minmax(300px,0.8fr)_minmax(0,1.2fr)] gap-8">
-          <section className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
+          <section className="bg-white border border-gray-200 rounded-2xl p-5 sm:p-8">
             <div className="flex items-center gap-2 mb-4">
               <LocationIcon className="w-5 h-5 text-blue-800" />
               <h2 className="text-xl font-bold text-gray-900">{contactContent.addressTitle}</h2>
@@ -218,10 +218,9 @@ export default async function ContactPage({ params }: Props) {
                 title={contactContent.mapTitle}
                 src={mapEmbedUrl}
                 width="100%"
-                height="460"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="block border-0"
+                className="block h-[320px] w-full border-0 sm:h-[420px] lg:h-[460px]"
               />
             </div>
           </section>

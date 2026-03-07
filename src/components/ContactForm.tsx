@@ -113,7 +113,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-lg p-6 space-y-5">
+    <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-lg p-5 sm:p-6 space-y-5">
       <h2 className="text-xl font-bold text-gray-900 mb-1">{inquiryFormContent.title}</h2>
 
       {status === 'error' && (

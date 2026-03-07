@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import { Link } from '@/localization/navigation';
-import { LocationIcon, EmailIcon, PhoneIcon, WhatsAppIcon, WeChatIcon } from '@/components/Icons';
+import { ClockIcon, LocationIcon, EmailIcon, PhoneIcon, WhatsAppIcon, WeChatIcon } from '@/components/Icons';
 import { WHATSAPP_URL } from '@/config/site-constants';
 import { getFooterContent, getNavigationContent, getSiteBrand } from '@/site-data/site-content';
 import { categoryOrder, getCategoryContent } from '@/site-data/product-catalog';
@@ -44,7 +44,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-10 sm:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="relative h-14 w-24 mb-3">
@@ -112,48 +112,67 @@ export default function Footer() {
             <h3 className="text-white text-sm font-semibold uppercase tracking-wider mb-4">
               {footerContent.contactInfoTitle}
             </h3>
-            <address className="not-italic text-sm text-gray-400 space-y-3">
-              <p className="flex items-start gap-2">
-                <LocationIcon className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>
-                  {brand.currentAddress}
-                  {brand.historicalAddressNote ? (
-                    <span className="block text-xs text-gray-500 mt-1">{brand.historicalAddressNote}</span>
-                  ) : null}
-                </span>
-              </p>
-              <p className="flex items-center gap-2">
-                <EmailIcon className="w-4 h-4 flex-shrink-0" />
-                <a href={`mailto:${brand.email}`} className="hover:text-white transition-colors">
-                  {brand.email}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <PhoneIcon className="w-4 h-4 flex-shrink-0" />
-                <a href={`tel:${brand.phone}`} className="hover:text-white transition-colors">
-                  {brand.phone}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <WhatsAppIcon className="w-4 h-4 flex-shrink-0" />
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  WhatsApp: {brand.whatsapp}
-                </a>
-              </p>
-              <p className="flex items-start gap-2">
-                <WeChatIcon className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>{ui.wechatLabel}: {brand.wechatId}</span>
-              </p>
-              <p className="text-xs text-gray-500">{ui.businessHours}: {brand.businessHours}</p>
+            <address className="not-italic">
+              <ul className="space-y-2.5 text-sm text-gray-400">
+                <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
+                  <LocationIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <span className="min-w-0 break-words">
+                    {brand.currentAddress}
+                    {brand.historicalAddressNote ? (
+                      <span className="mt-1 block text-xs text-gray-500">{brand.historicalAddressNote}</span>
+                    ) : null}
+                  </span>
+                </li>
+                <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
+                  <EmailIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <span className="break-all sm:hidden">{brand.email}</span>
+                    <a href={`mailto:${brand.email}`} className="hidden min-h-0 break-all hover:text-white transition-colors sm:inline">
+                      {brand.email}
+                    </a>
+                  </div>
+                </li>
+                <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
+                  <PhoneIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <span className="break-words sm:hidden">{brand.phone}</span>
+                    <a href={`tel:${brand.phone}`} className="hidden min-h-0 break-words hover:text-white transition-colors sm:inline">
+                      {brand.phone}
+                    </a>
+                  </div>
+                </li>
+                <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
+                  <WhatsAppIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <span className="break-words sm:hidden">WhatsApp: {brand.whatsapp}</span>
+                    <a
+                      href={WHATSAPP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hidden min-h-0 break-words hover:text-white transition-colors sm:inline"
+                    >
+                      WhatsApp: {brand.whatsapp}
+                    </a>
+                  </div>
+                </li>
+                <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
+                  <WeChatIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <span className="min-w-0 break-words">{ui.wechatLabel}: {brand.wechatId}</span>
+                </li>
+                <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 text-sm text-gray-500 leading-5">
+                  <ClockIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                  <span className="min-w-0 break-words">{ui.businessHours}: {brand.businessHours}</span>
+                </li>
+              </ul>
             </address>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-gray-400 text-center md:text-left">
             &copy; {new Date().getFullYear()} {brand.companyName}
           </p>
-          <div className="flex gap-6 text-xs text-gray-400">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs text-gray-400">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">{footerContent.privacy}</Link>
             <Link href="/terms-of-service" className="hover:text-white transition-colors">{footerContent.terms}</Link>
             <Link href="/quote" className="hover:text-white transition-colors">{navigationContent.primaryCta}</Link>

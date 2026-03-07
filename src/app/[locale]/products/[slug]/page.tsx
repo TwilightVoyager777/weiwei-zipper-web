@@ -119,12 +119,12 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
         </nav>
 
         <div className="max-w-3xl mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
-          <p className="text-gray-600 text-lg leading-relaxed">{category.description}</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">{category.description}</p>
         </div>
 
         <section className="max-w-3xl mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
           <p className="text-gray-700 leading-relaxed mb-6">{category.overview}</p>
           <h3 className="text-lg font-semibold text-gray-900 mb-3">{productDetailLabels.features}</h3>
           <ul className="space-y-2">
@@ -169,7 +169,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
 
         {category.applications && (
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{category.applications.title}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">{category.applications.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {category.applications.items.map((item: { title: string; description: string }) => (
                 <div key={item.title} className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-sm transition-shadow">
@@ -183,7 +183,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
 
         {category.selectionGuide && (
           <section className="mb-12 bg-gray-50 rounded-lg p-6 sm:p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">{category.selectionGuide.title}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{category.selectionGuide.title}</h2>
             <p className="text-gray-600 mb-6 max-w-3xl">{category.selectionGuide.description}</p>
             <div className="space-y-4">
               {category.selectionGuide.factors.map((factor: { title: string; description: string }, index: number) => (
@@ -221,7 +221,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
               <h2 className="text-lg font-bold text-gray-900 mb-1">{productDetailLabels.inquiryCta}</h2>
               <p className="text-sm text-gray-600">{productDetailLabels.inquiryCtaDescription}</p>
             </div>
-            <Link href="/quote" className="bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
+            <Link href="/quote" className="w-full md:w-auto bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
               {productDetailLabels.inquiryButton}
             </Link>
           </div>
@@ -248,10 +248,10 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           <h2 className="text-xl sm:text-2xl font-bold mb-3">{productDetailLabels.ctaTitle}</h2>
           <p className="text-blue-100 mb-6 max-w-lg mx-auto text-sm sm:text-base">{productDetailLabels.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/quote" className="bg-white text-blue-900 px-6 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors">
+            <Link href="/quote" className="w-full sm:w-auto bg-white text-blue-900 px-6 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors">
               {productDetailLabels.requestQuote}
             </Link>
-            <Link href="/products" className="border border-white/30 px-6 py-2.5 rounded font-medium text-sm hover:bg-white/10 transition-colors">
+            <Link href="/products" className="w-full sm:w-auto border border-white/30 px-6 py-2.5 rounded font-medium text-sm hover:bg-white/10 transition-colors">
               {productDetailLabels.viewProducts}
             </Link>
           </div>
@@ -323,32 +323,32 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
         </nav>
 
         <div className="mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{product.name}</h1>
-          <p className="text-gray-600 text-lg max-w-3xl">{product.description}</p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">{product.name}</h1>
+          <p className="text-gray-600 text-base sm:text-lg max-w-3xl">{product.description}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
           <div className="lg:col-span-2 space-y-10">
             <section>
-              <div className="bg-gray-50 rounded-lg p-6 sm:p-8 flex items-center justify-center border border-gray-200">
+              <div className="bg-gray-50 rounded-lg p-4 sm:p-8 flex items-center justify-center border border-gray-200">
                 <Image
                   src={PRODUCT_IMAGES[slug]}
                   alt={product.name}
                   width={500}
                   height={500}
-                  className="object-contain max-h-[400px] w-auto"
+                  className="object-contain max-h-[280px] w-auto sm:max-h-[400px]"
                   priority
                 />
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
               <p className="text-gray-700 leading-relaxed">{product.overview}</p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.features}</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.features}</h2>
               <ul className="space-y-2">
                 {product.features.map((feature: string) => (
                   <li key={feature} className="flex items-start gap-3">
@@ -362,20 +362,20 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.specifications}</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.specifications}</h2>
               <div className="overflow-x-auto -mx-4 sm:mx-0 border border-gray-200 rounded-lg">
                 <table className="w-full text-sm min-w-[400px]">
                   <thead>
                     <tr className="bg-gray-50">
-                      <th className="text-left px-4 py-3 font-semibold text-gray-900 w-1/3">{productDetailLabels.property}</th>
-                      <th className="text-left px-4 py-3 font-semibold text-gray-900">{productDetailLabels.value}</th>
+                      <th className="text-left px-3 py-3 font-semibold text-gray-900 w-1/3 sm:px-4">{productDetailLabels.property}</th>
+                      <th className="text-left px-3 py-3 font-semibold text-gray-900 sm:px-4">{productDetailLabels.value}</th>
                     </tr>
                   </thead>
                   <tbody>
                     {(Object.entries(product.specifications) as [ProductSpecKey, string][]).map(([key, value], index: number) => (
                       <tr key={key} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                        <td className="px-4 py-3 font-medium text-gray-700">{productSpecLabels[key]}</td>
-                        <td className="px-4 py-3 text-gray-600">{value}</td>
+                        <td className="px-3 py-3 font-medium text-gray-700 sm:px-4">{productSpecLabels[key]}</td>
+                        <td className="px-3 py-3 text-gray-600 sm:px-4">{value}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -384,7 +384,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.applications}</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.applications}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {product.applications.map((application: string) => (
                   <div key={application} className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">

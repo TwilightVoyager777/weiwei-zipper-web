@@ -40,14 +40,14 @@ export default function InquiryPageLayout({ content }: { content: InquiryPageCon
   const ui = isZh ? { wechatId: '微信号' } : { wechatId: 'WeChat ID' };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-10 sm:py-12">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{content.title}</h1>
-        <p className="text-lg text-gray-600 mb-10">{content.subtitle}</p>
+        <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10">{content.subtitle}</p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="space-y-6">
-            <div className="bg-blue-900 text-white rounded-lg p-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="order-2 space-y-4 sm:space-y-6 lg:order-1">
+            <div className="bg-blue-900 text-white rounded-lg p-5 sm:p-6">
               <h2 className="text-lg font-bold mb-4">{content.cardTitle}</h2>
               <div className="space-y-4 text-sm">
                 <div className="flex items-start gap-3">
@@ -114,7 +114,7 @@ export default function InquiryPageLayout({ content }: { content: InquiryPageCon
             </div>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="order-1 lg:order-2 lg:col-span-2">
             <ContactForm />
           </div>
         </div>

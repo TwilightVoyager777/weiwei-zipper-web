@@ -29,13 +29,13 @@ export default async function ProductsPage({ params }: Props) {
   const productItems = getProductItems(locale);
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mb-10">
+    <div className="container mx-auto px-4 py-10 sm:py-12">
+      <div className="max-w-3xl mb-8 sm:mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{productsPageContent.title}</h1>
-        <p className="text-gray-600 text-lg">{productsPageContent.subtitle}</p>
+        <p className="text-gray-600 text-base sm:text-lg">{productsPageContent.subtitle}</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
         {productsPagePrimaryCards.map((card) => (
           <Link
             key={card.href}
@@ -51,7 +51,7 @@ export default async function ProductsPage({ params }: Props) {
                 className="object-contain max-h-[200px] w-auto group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="p-5">
+            <div className="p-4 sm:p-5">
               <h2 className="text-lg font-semibold text-blue-900 mb-1 group-hover:text-blue-800">
                 {card.name}
               </h2>
@@ -63,8 +63,8 @@ export default async function ProductsPage({ params }: Props) {
 
       {productsPageProductOrder.length > 0 ? (
         <>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">{productsPageContent.productsTitle}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5 sm:mb-6">{productsPageContent.productsTitle}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {productsPageProductOrder.map((slug) => (
               <Link
                 key={slug}
@@ -80,7 +80,7 @@ export default async function ProductsPage({ params }: Props) {
                     className="object-contain max-h-[150px] w-auto group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-5">
+                <div className="p-4 sm:p-5">
                   <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-blue-800">
                     {productItems[slug].name}
                   </h3>

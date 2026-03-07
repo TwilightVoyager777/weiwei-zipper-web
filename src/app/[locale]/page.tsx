@@ -23,8 +23,8 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <section className="overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
-        <div className="container mx-auto px-4 py-20 md:py-24 lg:py-28">
-          <div className={`grid items-center gap-12 ${heroVisualPath ? 'lg:grid-cols-[minmax(0,1fr)_minmax(320px,460px)] lg:gap-16' : ''}`}>
+        <div className="container mx-auto px-4 py-14 sm:py-16 md:py-24 lg:py-28">
+          <div className={`grid items-center gap-10 lg:gap-16 ${heroVisualPath ? 'lg:grid-cols-[minmax(0,1fr)_minmax(320px,460px)]' : ''}`}>
             <div className="max-w-3xl">
               <div className="flex flex-wrap gap-2 sm:gap-3 mb-6">
                 {homeContent.hero.badges.map((badge) => (
@@ -33,22 +33,22 @@ export default async function HomePage({ params }: Props) {
                   </span>
                 ))}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 {homeContent.hero.title}
               </h1>
-              <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
                 {homeContent.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/products"
-                  className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-3.5 rounded font-semibold text-center transition-colors"
+                  className="w-full sm:w-auto bg-white text-blue-900 hover:bg-blue-50 px-8 py-3.5 rounded font-semibold text-center transition-colors"
                 >
                   {homeContent.hero.primaryCta}
                 </Link>
                 <Link
                   href="/quote"
-                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-3.5 rounded font-semibold text-center transition-colors"
+                  className="w-full sm:w-auto border-2 border-white text-white hover:bg-white/10 px-8 py-3.5 rounded font-semibold text-center transition-colors"
                 >
                   {homeContent.hero.secondaryCta}
                 </Link>
@@ -56,16 +56,16 @@ export default async function HomePage({ params }: Props) {
             </div>
 
             {heroVisualPath ? (
-              <div className="relative mx-auto hidden w-full max-w-[520px] overflow-visible lg:block">
-                <div className="absolute inset-x-12 bottom-8 top-20 rounded-full bg-blue-300/20 blur-3xl" />
-                <div className="relative flex h-[360px] items-center justify-center xl:h-[400px]">
+              <div className="relative mx-auto w-full max-w-[320px] overflow-visible sm:max-w-[380px] lg:max-w-[520px]">
+                <div className="absolute inset-x-6 bottom-4 top-14 rounded-full bg-blue-300/20 blur-3xl sm:inset-x-10 sm:bottom-6 sm:top-18 lg:inset-x-12 lg:bottom-8 lg:top-20" />
+                <div className="relative flex h-[220px] items-center justify-center sm:h-[280px] lg:h-[360px] xl:h-[400px]">
                   <Image
                     src={heroVisualPath}
                     alt=""
                     aria-hidden="true"
                     width={1024}
                     height={1024}
-                    className="pointer-events-none absolute max-h-full w-auto max-w-none scale-[1.18] object-contain opacity-28 blur-[18px] saturate-75 xl:scale-[1.24]"
+                    className="pointer-events-none absolute max-h-full w-auto max-w-none scale-[1.08] object-contain opacity-28 blur-[16px] saturate-75 sm:scale-[1.14] lg:scale-[1.18] xl:scale-[1.24]"
                   />
                   <Image
                     src={heroVisualPath}
@@ -73,7 +73,7 @@ export default async function HomePage({ params }: Props) {
                     width={1024}
                     height={1024}
                     priority
-                    className="relative max-h-full w-auto max-w-none scale-[1.16] object-contain drop-shadow-[0_28px_56px_rgba(8,47,73,0.38)] xl:scale-[1.22]"
+                    className="relative max-h-full w-auto max-w-none scale-[1.06] object-contain drop-shadow-[0_24px_48px_rgba(8,47,73,0.34)] sm:scale-[1.1] lg:scale-[1.16] xl:scale-[1.22]"
                   />
                 </div>
               </div>
@@ -84,20 +84,20 @@ export default async function HomePage({ params }: Props) {
 
       <section className="bg-gray-900 text-white py-4 sm:py-6">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 gap-3 sm:gap-6 text-center">
+          <div className="grid grid-cols-3 gap-2 sm:gap-6 text-center">
             {homeContent.hero.stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">{stat.value}</div>
-                <div className="text-[10px] sm:text-xs md:text-sm text-gray-400 mt-1">{stat.label}</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold text-blue-400">{stat.value}</div>
+                <div className="text-[11px] leading-snug sm:text-xs md:text-sm text-gray-400 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
             {homeContent.trust.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -187,10 +187,10 @@ export default async function HomePage({ params }: Props) {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">{homeContent.bottomCta.title}</h2>
           <p className="text-blue-100 mb-6 sm:mb-8 max-w-xl mx-auto text-sm sm:text-base">{homeContent.bottomCta.description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/quote" className="bg-white text-blue-900 px-6 sm:px-8 py-3 rounded font-semibold hover:bg-blue-50 active:bg-blue-100 transition-colors">
+            <Link href="/quote" className="w-full sm:w-auto bg-white text-blue-900 px-6 sm:px-8 py-3 rounded font-semibold hover:bg-blue-50 active:bg-blue-100 transition-colors">
               {homeContent.bottomCta.primaryCta}
             </Link>
-            <Link href="/products" className="border-2 border-white px-6 sm:px-8 py-3 rounded font-semibold hover:bg-white/10 active:bg-white/20 transition-colors">
+            <Link href="/products" className="w-full sm:w-auto border-2 border-white px-6 sm:px-8 py-3 rounded font-semibold hover:bg-white/10 active:bg-white/20 transition-colors">
               {homeContent.bottomCta.secondaryCta}
             </Link>
           </div>
