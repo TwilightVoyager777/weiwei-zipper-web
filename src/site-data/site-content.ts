@@ -363,7 +363,7 @@ const navigationContentEs = {
     { href: '/industries' as const, label: 'Aplicaciones' },
     { href: '/services' as const, label: 'Soluciones' },
     { href: '/about' as const, label: 'Nosotros' },
-    { href: '/blog' as const, label: 'Insights' },
+    { href: '/blog' as const, label: 'Articulos' },
     { href: '/contact' as const, label: 'Contacto' },
   ],
   primaryCta: 'Solicitar cotizacion',
@@ -1239,7 +1239,7 @@ const faqSectionIntroAr = {
 } as const;
 
 const faqSectionIntroRu = {
-  title: 'FAQ',
+  title: 'Частые вопросы',
   subtitle: 'Раннее прояснение типовых вопросов помогает сократить число повторных согласований и сделать коммуникацию и расчет цены более плавными.',
 } as const;
 
@@ -1275,15 +1275,15 @@ const blogContentEn = {
 
 const blogContentEs = {
   metadata: {
-    title: 'Insights | Weiwei Zipper',
+    title: 'Articulos | Weiwei Zipper',
     description: 'Articulos practicos de Weiwei Zipper sobre la seleccion de tamanos 3 / 5 / 8, estructuras abiertas y cerradas, preparacion de consultas y mejora de la comunicacion de compra.',
   },
-  title: 'Insights',
+  title: 'Articulos',
   subtitle: 'Contenido practico centrado en seleccion de tamanos, decisiones de estructura, preparacion de consultas y comunicacion de compra para proyectos de cremalleras.',
   allArticles: 'Todos los articulos',
   readTimeLabel: 'min de lectura',
   readMoreLabel: 'Leer mas',
-  backToBlog: 'Volver a Insights',
+  backToBlog: 'Volver a articulos',
   authorLabel: 'Autor',
   categories: {
     guide: 'Guia de seleccion',

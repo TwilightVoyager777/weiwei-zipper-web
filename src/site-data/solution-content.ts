@@ -20,7 +20,7 @@ export const solutionsPageContent = {
     },
     {
       title: '批量采购配套',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/pf.png',
       imageAlt: '拉链产品细节展示图',
       description: '围绕常规订单和稳定采购需求，提供更适合批量确认、集中下单与统一配套的解决方案。',
       detail: '当项目进入批量采购阶段后，客户通常更关注规格准确性、颜色一致性、拉头搭配统一以及交付节奏是否稳定。伟伟拉链会围绕常用规格和历史确认记录，协助客户在量产前进一步梳理关键细节，帮助项目在正式排单前建立更清晰的采购依据，从而降低批量阶段的重复确认成本。',
@@ -28,7 +28,7 @@ export const solutionsPageContent = {
     },
     {
       title: '返单与持续供货',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/fd.jpeg',
       imageAlt: '拉链产品细节展示图',
       description: '围绕常规补单、系列化采购和长期合作项目，提供更便于复用的规格沉淀与供货衔接支持。',
       detail: '返单项目真正需要的，往往不是重新从头确认，而是能否在原有基础上延续既有规格、颜色和结构逻辑。伟伟拉链更重视把常用方案、确认记录和高频规格整理得更清楚，帮助客户在后续补单、长期供货和系列化开发中维持更高的沟通效率与更稳定的交付节奏。',
@@ -68,7 +68,7 @@ const solutionsPageContentEn = {
     },
     {
       title: 'Bulk Purchasing Support',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/pf.png',
       imageAlt: 'Zipper product detail visual',
       description: 'For regular orders and steady purchasing demand, we support clearer bulk confirmation and more consistent matching arrangements.',
       detail: 'Once a project enters the bulk purchasing stage, customers usually focus more on specification accuracy, color consistency, slider matching, and whether delivery remains stable. Weiwei Zipper helps organize those key details around common sizes and previously confirmed records so the project can enter production planning with a clearer purchasing basis and lower confirmation cost.',
@@ -76,7 +76,7 @@ const solutionsPageContentEn = {
     },
     {
       title: 'Repeat Orders & Ongoing Supply',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/fd.jpeg',
       imageAlt: 'Zipper product detail visual',
       description: 'For replenishment, repeat programs, and long-term cooperation, we help preserve clear specification records and supply continuity.',
       detail: 'For repeat orders, the real need is usually not to start the confirmation process from zero again, but to continue with the same size, color, and structure logic already in use. Weiwei Zipper places more emphasis on keeping common solutions, confirmation records, and frequent specifications clearly organized so replenishment and long-term supply projects can maintain better communication efficiency and steadier delivery.',
@@ -116,7 +116,7 @@ const solutionsPageContentEs = {
     },
     {
       title: 'Soporte para compras al por mayor',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/pf.png',
       imageAlt: 'Visual de detalle de producto de cremallera',
       description: 'Para pedidos regulares y necesidades de compra estables, apoyamos una confirmacion mas clara y una coordinacion mas consistente en volumen.',
       detail: 'Una vez que el proyecto entra en la fase de compra al por mayor, los clientes suelen centrarse mas en la precision de las especificaciones, la consistencia del color, la combinacion del cursor y la estabilidad de la entrega. Weiwei Zipper ayuda a organizar esos puntos clave alrededor de tamanos comunes y registros previamente confirmados para que el proyecto entre en planificacion con una base de compra mas clara y menor costo de confirmacion.',
@@ -124,7 +124,7 @@ const solutionsPageContentEs = {
     },
     {
       title: 'Reposiciones y suministro continuo',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/fd.jpeg',
       imageAlt: 'Visual de detalle de producto de cremallera',
       description: 'Para reposiciones, programas recurrentes y cooperacion a largo plazo, ayudamos a mantener registros claros de especificaciones y continuidad de suministro.',
       detail: 'En los pedidos repetidos, la necesidad real no suele ser empezar la confirmacion desde cero, sino continuar con la misma logica de tamano, color y estructura ya utilizada. Weiwei Zipper pone mas enfasis en mantener organizadas las soluciones comunes, los registros de confirmacion y las especificaciones frecuentes para que las reposiciones y los proyectos de suministro a largo plazo mantengan una mejor eficiencia de comunicacion y una entrega mas estable.',
@@ -164,7 +164,7 @@ const solutionsPageContentAr = {
     },
     {
       title: 'دعم الشراء بالجملة',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/pf.png',
       imageAlt: 'صورة تفصيلية لمنتج سحاب',
       description: 'في الطلبات المنتظمة والاحتياجات المستقرة، ندعم تأكيدا أوضح وترتيبات أكثر اتساقا للشراء بالجملة.',
       detail: 'عندما يدخل المشروع في مرحلة الشراء بالجملة، يركز العملاء عادة بشكل أكبر على دقة المواصفات وثبات اللون وتطابق السحاب واستقرار التسليم. وتساعد Weiwei Zipper على تنظيم هذه النقاط الأساسية بالاعتماد على المقاسات الشائعة والسجلات المؤكدة سابقا، بحيث يدخل المشروع إلى التخطيط بمرجعية شراء أوضح وتكلفة أقل في التأكيد.',
@@ -172,7 +172,7 @@ const solutionsPageContentAr = {
     },
     {
       title: 'إعادة الطلب والتوريد المستمر',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/fd.jpeg',
       imageAlt: 'صورة تفصيلية لمنتج سحاب',
       description: 'لبرامج إعادة الطلب والتعاون طويل الأجل، نساعد على الحفاظ على سجلات واضحة للمواصفات واستمرارية التوريد.',
       detail: 'في إعادة الطلب، لا تكون الحاجة الحقيقية غالبا إلى البدء من الصفر، بل إلى الاستمرار بنفس منطق المقاس واللون والبنية المستخدم سابقا. وتضع Weiwei Zipper تركيزا أكبر على إبقاء الحلول الشائعة وسجلات التأكيد والمواصفات المتكررة منظمة بوضوح حتى تحافظ مشاريع إعادة الطلب والتوريد طويل الأجل على كفاءة أفضل في التواصل واستقرار أعلى في التسليم.',
@@ -212,7 +212,7 @@ const solutionsPageContentRu = {
     },
     {
       title: 'Поддержка оптовых закупок',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/pf.png',
       imageAlt: 'Детальное изображение молнии',
       description: 'Для регулярных заказов и стабильного спроса мы поддерживаем более понятное подтверждение и более согласованную организацию оптовой партии.',
       detail: 'Когда проект входит в стадию оптовой закупки, клиентов обычно больше интересуют точность спецификации, стабильность цвета, подбор бегунка и надежность поставки. Weiwei Zipper помогает организовать эти ключевые моменты вокруг популярных размеров и ранее подтвержденных записей, чтобы проект переходил к планированию партии с более понятной закупочной базой и меньшими затратами на повторные согласования.',
@@ -220,7 +220,7 @@ const solutionsPageContentRu = {
     },
     {
       title: 'Повторные заказы и непрерывные поставки',
-      imagePath: '/products/fsf.png',
+      imagePath: '/products/fd.jpeg',
       imageAlt: 'Детальное изображение молнии',
       description: 'Для пополнения, повторных программ и долгосрочного сотрудничества мы помогаем сохранять четкие записи спецификаций и непрерывность поставок.',
       detail: 'В повторных заказах реальная задача обычно состоит не в том, чтобы начинать все подтверждение заново, а в том, чтобы продолжать работать с той же логикой размера, цвета и конструкции, которая уже используется. Поэтому Weiwei Zipper уделяет больше внимания тому, чтобы типовые решения, записи подтверждения и часто используемые спецификации были четко организованы, а повторные заказы и долгосрочные поставки проходили с лучшей эффективностью общения и более стабильной логистикой.',
