@@ -5,7 +5,8 @@
     "menuAria": "Toggle menu",
     "productsAria": "Toggle product categories",
     "mainNavigation": "Main navigation",
-    "mobileNavigation": "Mobile navigation"
+    "mobileNavigation": "Mobile navigation",
+    "languageSwitcher": "Select language"
   },
   "Footer": {
     "productsTitle": "Products",

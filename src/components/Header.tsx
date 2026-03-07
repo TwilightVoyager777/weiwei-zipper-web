@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/localization/navigation';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/site-constants';
 import { MenuIcon } from '@/components/Icons';
+import { routing, localeDisplayNames, localeSwitcherOrder, type Locale } from '@/localization/routing';
 import { getNavigationContent, getSiteBrand } from '@/site-data/site-content';
 import { categoryOrder, getCategoryContent } from '@/site-data/product-catalog';
 
@@ -20,7 +21,6 @@ export default function Header() {
   const router = useRouter();
   const t = useTranslations('Header');
 
-  const isZh = locale === 'zh';
   const brand = getSiteBrand(locale);
   const navigationContent = getNavigationContent(locale);
   const localizedCategories = getCategoryContent(locale);
@@ -38,7 +38,7 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
-  const switchLocale = useCallback((newLocale: 'en' | 'zh') => {
+  const switchLocale = useCallback((newLocale: Locale) => {
     router.replace(pathname, { locale: newLocale });
   }, [router, pathname]);
 
@@ -79,19 +79,17 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <span className="text-gray-400 text-xs">{brand.responseTime}</span>
             <span className="text-gray-400">|</span>
-            <button
-              onClick={() => switchLocale('en')}
-              className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center ${locale === 'en' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}
-            >
-              EN
-            </button>
-            <span className="text-gray-400">/</span>
-            <button
-              onClick={() => switchLocale('zh')}
-              className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center ${locale === 'zh' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}
-            >
-              中文
-            </button>
+            <div className="flex items-center gap-1">
+              {localeSwitcherOrder.map((localeOption) => (
+                <button
+                  key={localeOption}
+                  onClick={() => switchLocale(localeOption)}
+                  className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center rounded ${locale === localeOption ? 'text-white font-semibold bg-white/10' : 'text-gray-400 hover:text-white'}`}
+                >
+                  {localeDisplayNames[localeOption]}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -190,12 +188,18 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <button
-              onClick={() => switchLocale(isZh ? 'en' : 'zh')}
-              className="text-xs px-3 py-2 min-h-[44px] min-w-[44px] flex items-center justify-center border border-gray-300 rounded text-gray-600 hover:bg-gray-50 active:bg-gray-100 transition-colors"
+            <select
+              value={locale}
+              onChange={(event) => switchLocale(event.target.value as Locale)}
+              aria-label={t('languageSwitcher')}
+              className="text-xs h-[44px] rounded border border-gray-300 bg-white px-2 text-gray-600 hover:bg-gray-50"
             >
-              {isZh ? 'EN' : '中文'}
-            </button>
+              {localeSwitcherOrder.map((localeOption) => (
+                <option key={localeOption} value={localeOption}>
+                  {localeDisplayNames[localeOption]}
+                </option>
+              ))}
+            </select>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-700 active:bg-gray-100 rounded transition-colors"

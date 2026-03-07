@@ -1,23 +1,30 @@
 import { SITE_URL } from '@/config/site-constants';
+import { routing } from '@/localization/routing';
 
 /**
  * Generate locale-aware URL for metadata (canonical, alternates, etc.)
- * English (default locale) has no prefix; Chinese uses /zh.
+ * Default locale has no prefix; all others use /{locale}.
  */
 export function localizedUrl(locale: string, path: string = '') {
-  return locale === 'en' ? `${SITE_URL}${path}` : `${SITE_URL}/zh${path}`;
+  const normalizedLocale = routing.locales.includes(locale as any) ? locale : routing.defaultLocale;
+  return normalizedLocale === routing.defaultLocale
+    ? `${SITE_URL}${path}`
+    : `${SITE_URL}/${normalizedLocale}${path}`;
 }
 
 /**
  * Generate standard alternates metadata for a given path.
  */
 export function alternatesForPath(locale: string, path: string = '') {
+  const languages = Object.fromEntries(
+    routing.locales.map((item) => [item, localizedUrl(item, path)]),
+  ) as Record<string, string>;
+
   return {
     canonical: localizedUrl(locale, path),
     languages: {
-      en: `${SITE_URL}${path}`,
-      zh: `${SITE_URL}/zh${path}`,
-      'x-default': `${SITE_URL}${path}`,
+      ...languages,
+      'x-default': localizedUrl(routing.defaultLocale, path),
     },
   };
 }

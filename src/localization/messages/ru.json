@@ -1,0 +1,259 @@
+{
+  "Header": {
+    "tagline": "Металлические, смоляные и нейлоновые молнии размеров 3 / 5 / 8",
+    "viewAllProducts": "Смотреть всю продукцию →",
+    "menuAria": "Открыть или закрыть меню",
+    "productsAria": "Открыть или закрыть категории продукции",
+    "mainNavigation": "Основная навигация",
+    "mobileNavigation": "Мобильная навигация",
+    "languageSwitcher": "Выбрать язык"
+  },
+  "Footer": {
+    "productsTitle": "Продукция",
+    "wechatTitle": "WeChat ID: {wechatId}",
+    "wechatLabel": "WeChat",
+    "businessHours": "Рабочее время",
+    "whatsappAria": "WhatsApp",
+    "wechatQrAria": "QR-код WeChat",
+    "companyLinks": {
+      "about": "О нас",
+      "applications": "Применение",
+      "solutions": "Решения",
+      "insights": "Статьи",
+      "faq": "FAQ"
+    }
+  },
+  "Home": {
+    "viewAll": "Смотреть все →"
+  },
+  "WhatsAppFloat": {
+    "ariaLabel": "Связаться с Weiwei Zipper через WhatsApp"
+  },
+  "NotFound": {
+    "message": "Страница не найдена. Перенаправляем на главную..."
+  },
+  "InquiryPage": {
+    "wechatId": "WeChat ID"
+  },
+  "BlogArticle": {
+    "tocTitle": "На этой странице",
+    "tocAriaLabel": "Содержание"
+  },
+  "ContactPage": {
+    "cards": {
+      "phone": "Телефон",
+      "email": "Эл. почта",
+      "whatsapp": "WhatsApp",
+      "businessHours": "Рабочее время"
+    },
+    "labels": {
+      "wechatId": "WeChat ID",
+      "zhAddress": "Адрес на китайском",
+      "enAddress": "Адрес на английском",
+      "mapProvider": "Google Maps"
+    }
+  },
+  "PrivacyPolicy": {
+    "meta": {
+      "title": "Политика конфиденциальности",
+      "description": "Политика конфиденциальности Weiwei Zipper. Узнайте, как мы собираем, используем и защищаем вашу информацию."
+    },
+    "title": "Политика конфиденциальности",
+    "lastUpdated": "Последнее обновление: январь 2026",
+    "overview": {
+      "title": "Обзор",
+      "paragraph1": "{companyName} уважает вашу конфиденциальность. Эта политика объясняет, как мы собираем, используем и защищаем ваши персональные данные.",
+      "paragraph2": "Используя наш сайт, вы соглашаетесь с описанными здесь практиками обработки данных."
+    },
+    "informationWeCollect": {
+      "title": "Какие данные мы собираем",
+      "intro": "Мы собираем следующую информацию через формы запросов и прямое общение:",
+      "items": {
+        "personal": "Персональная информация — имя, электронная почта, телефон, название компании и должность",
+        "business": "Коммерческая информация — страна, потребность в продукции, тип молнии, детали размера, количества и сроки поставки",
+        "technical": "Техническая информация — IP-адрес, тип браузера, посещенные страницы и время доступа"
+      },
+      "outro": "Мы собираем только те данные, которые необходимы для оказания наших услуг."
+    },
+    "howWeUse": {
+      "title": "Как мы используем вашу информацию",
+      "intro": "Мы используем вашу информацию для того, чтобы:",
+      "items": [
+        "Отвечать на запросы по молниям и предлагать подходящие решения",
+        "Обрабатывать и выполнять заказы (образцы, планирование производства, отгрузка)",
+        "Обеспечивать послепродажную поддержку (повторные заказы, пополнение и сопровождение вопросов)",
+        "Отправлять обновления по заказам (подтверждение отгрузки, статус доставки)",
+        "Анализировать данные сайта для улучшения работы и контента",
+        "Соблюдать применимые законы и нормативные требования"
+      ]
+    },
+    "cookies": {
+      "title": "Cookies and Tracking",
+      "paragraph1": "We use cookies to improve your browsing experience. Cookies are small text files stored in your browser.",
+      "items": {
+        "essential": "Essential cookies — ensure basic site functions (e.g., language selection)",
+        "analytics": "Analytics cookies — help us understand visitor behavior and improve experience"
+      },
+      "paragraph2": "You can manage cookies in your browser settings, but disabling them may affect some features."
+    },
+    "dataProtection": {
+      "title": "Data Protection",
+      "intro": "We protect your data through:",
+      "items": [
+        "SSL/TLS encryption for data transmission",
+        "Restricted employee access to personal data",
+        "Regular review and update of security practices"
+      ],
+      "outro": "We never sell your data. We only share it with third parties when necessary (e.g., logistics partners for shipping), and require them to follow equivalent protection standards."
+    },
+    "dataRetention": {
+      "title": "Data Retention",
+      "items": [
+        "Inquiry and business records are kept for three years",
+        "Order records are retained per tax and commercial regulations"
+      ],
+      "outro": "You may request deletion at any time. We will process your request promptly, except where retention is required by law."
+    },
+    "internationalTransfers": {
+      "title": "International Data Transfers",
+      "paragraph": "As a global exporter, your data may be transferred between China and other countries. We ensure proper safeguards during all transfers. By submitting inquiries, you consent to such transfers."
+    },
+    "thirdPartyLinks": {
+      "title": "Third-Party Links",
+      "paragraph": "Our site may link to platforms like WhatsApp and WeChat. These have their own privacy policies, and we are not responsible for them. Review their policies before sharing personal data."
+    },
+    "yourRights": {
+      "title": "Your Rights",
+      "intro": "Under applicable laws, you have the right to:",
+      "items": [
+        "Access personal data we hold about you",
+        "Correct inaccurate or incomplete data",
+        "Request deletion of your data",
+        "Object to or restrict our data processing",
+        "Data portability"
+      ]
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "paragraph": "We may update this policy to reflect business changes or legal requirements. Updates will be posted here with a new date. We encourage periodic review."
+    },
+    "contact": {
+      "title": "Связаться с нами",
+      "intro": "По вопросам конфиденциальности мы отвечаем в течение двух рабочих дней.",
+      "emailLabel": "Эл. почта: ",
+      "addressLabel": "Адрес: "
+    }
+  },
+  "TermsOfService": {
+    "meta": {
+      "title": "Условия обслуживания",
+      "description": "Условия обслуживания Weiwei Zipper. Ознакомьтесь с правилами использования сайта, информацией о продукции, интеллектуальной собственностью и условиями сделок."
+    },
+    "title": "Условия обслуживания",
+    "lastUpdated": "Последнее обновление: январь 2026",
+    "acceptance": {
+      "title": "Принятие условий",
+      "paragraph1": "Добро пожаловать на сайт {companyName}.",
+      "paragraph2": "Используя этот сайт, вы соглашаетесь с настоящими условиями. Если вы не согласны, пожалуйста, прекратите использование сайта. Мы можем обновлять эти условия в любое время, и они вступают в силу после публикации."
+    },
+    "termsOfUse": {
+      "title": "Условия использования",
+      "paragraph1": "Содержимое сайта предназначено только для информации и деловой коммуникации. Вы можете просматривать материалы и отправлять запросы.",
+      "intro": "Вы соглашаетесь не:",
+      "items": [
+        "Использовать сайт в незаконных целях",
+        "Пытаться получить несанкционированный доступ к нашим системам",
+        "Использовать автоматизированные инструменты для массового сбора контента",
+        "Нарушать нормальную работу сайта каким-либо образом"
+      ]
+    },
+    "productInfo": {
+      "title": "Информация о продукции и расчет цены",
+      "paragraph": "Мы стремимся к точности информации о продукции. Однако спецификации могут изменяться без предварительного уведомления в связи с постоянными улучшениями.",
+      "items": [
+        "Изображения продукции носят справочный характер; текущие страницы сфокусированы на категориях и размерах",
+        "Все расчеты являются предварительными; окончательная цена определяется подписанным контрактом или проформой",
+        "Срок действия расчета обычно составляет 30 дней, если иное не указано письменно"
+      ]
+    },
+    "orders": {
+      "title": "Заказы и условия сделки",
+      "paragraph": "Запросы с сайта не являются официальными заказами. Заказ считается оформленным после того, как обе стороны подтвердят спецификации, цену, количество, сроки поставки и условия оплаты.",
+      "paymentMethodsTitle": "Способы оплаты",
+      "paymentMethods": [
+        "Банковский перевод (T/T)",
+        "Аккредитив (L/C)",
+        "Western Union"
+      ],
+      "paymentTerms": "Стандартные условия: 30% предоплаты после подтверждения заказа, остаток перед отгрузкой. Цены не включают банковские комиссии."
+    },
+    "shipping": {
+      "title": "Отгрузка и поставка",
+      "paragraph": "Сроки поставки отсчитываются с момента подтверждения заказа и получения предоплаты.",
+      "leadTimesTitle": "Сроки",
+      "leadTimes": [
+        "Стандартные проекты: подтверждаются в соответствии с текущим производственным графиком",
+        "Сроки образцов и партии зависят от сложности проекта"
+      ],
+      "tradeTermsTitle": "Торговые условия",
+      "tradeTerms": [
+        "FOB, CIF, CFR, DDP, EXW"
+      ],
+      "packagingTitle": "Упаковка",
+      "packaging": "Упаковка организуется в зависимости от типа молнии и количества как для образцов, так и для оптовых отгрузок.",
+      "forceMajeure": "Задержки, вызванные форс-мажором, включая стихийные бедствия, нормативные ограничения и логистические сбои, не считаются нарушением договора."
+    },
+    "quality": {
+      "title": "Гарантия качества и рекламации",
+      "paragraph": "Вся продукция изготавливается в соответствии с подтвержденными спецификациями с акцентом на стабильность между партиями.",
+      "claimsTitle": "Порядок рекламации",
+      "claims": [
+        "Сообщите нам письменно в течение 14 дней после получения",
+        "Предоставьте описание дефекта и фото-подтверждение",
+        "После проверки возможны замена, досылка или корректировка кредита"
+      ],
+      "notCoveredTitle": "Не покрывается гарантией",
+      "notCovered": [
+        "Повреждение из-за неправильной установки",
+        "Эксплуатация вне допустимых условий",
+        "Модификация изделия",
+        "Естественный износ"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Интеллектуальная собственность",
+      "paragraph": "Все материалы сайта, включая тексты, изображения, логотипы, код и прочее, защищены законами Китая и международными нормами об интеллектуальной собственности.",
+      "items": [
+        "Коммерческое использование требует предварительного письменного разрешения",
+        "Скачивание для личного ознакомления допускается при сохранении уведомлений об авторских правах"
+      ]
+    },
+    "liability": {
+      "title": "Ограничение ответственности",
+      "paragraph1": "Содержимое сайта предоставляется «как есть» без каких-либо гарантий. Мы не гарантируем бесперебойную и безошибочную работу сайта.",
+      "paragraph2": "Технические рекомендации и советы носят справочный характер. Окончательный выбор молнии должен основываться на фактических требованиях вашего проекта. Мы не несем ответственности за убытки, возникшие в связи с использованием сайта."
+    },
+    "governingLaw": {
+      "title": "Применимое право и споры",
+      "paragraph": "Настоящие условия регулируются законодательством Китайской Народной Республики.",
+      "stepsTitle": "Порядок урегулирования споров",
+      "steps": [
+        "Дружественные переговоры между сторонами",
+        "Если спор не урегулирован, обращение в компетентный суд по месту нахождения компании",
+        "Международные торговые споры могут передаваться в арбитраж CIETAC"
+      ]
+    },
+    "contact": {
+      "title": "Связаться с нами",
+      "intro": "По вопросам, связанным с этими условиями, мы отвечаем в течение двух рабочих дней.",
+      "emailLabel": "Эл. почта: ",
+      "addressLabel": "Адрес: "
+    }
+  },
+  "ProductPage": {
+    "home": "Главная",
+    "products": "Продукция",
+    "quoteDescription": "Отправьте свои требования через страницу запроса цены Weiwei Zipper",
+    "breadcrumbAria": "Навигационная цепочка"
+  }
+}

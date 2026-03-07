@@ -1,0 +1,259 @@
+{
+  "Header": {
+    "tagline": "Cremalleras metalicas, de resina y de nylon en tamanos 3 / 5 / 8",
+    "viewAllProducts": "Ver todos los productos →",
+    "menuAria": "Abrir o cerrar menu",
+    "productsAria": "Abrir o cerrar categorias de producto",
+    "mainNavigation": "Navegacion principal",
+    "mobileNavigation": "Navegacion movil",
+    "languageSwitcher": "Seleccionar idioma"
+  },
+  "Footer": {
+    "productsTitle": "Productos",
+    "wechatTitle": "ID de WeChat: {wechatId}",
+    "wechatLabel": "WeChat",
+    "businessHours": "Horario laboral",
+    "whatsappAria": "WhatsApp",
+    "wechatQrAria": "Codigo QR de WeChat",
+    "companyLinks": {
+      "about": "Nosotros",
+      "applications": "Aplicaciones",
+      "solutions": "Soluciones",
+      "insights": "Insights",
+      "faq": "Preguntas frecuentes"
+    }
+  },
+  "Home": {
+    "viewAll": "Ver todo →"
+  },
+  "WhatsAppFloat": {
+    "ariaLabel": "Contactar con Weiwei Zipper por WhatsApp"
+  },
+  "NotFound": {
+    "message": "Pagina no encontrada. Redirigiendo al inicio..."
+  },
+  "InquiryPage": {
+    "wechatId": "ID de WeChat"
+  },
+  "BlogArticle": {
+    "tocTitle": "En esta pagina",
+    "tocAriaLabel": "Tabla de contenido"
+  },
+  "ContactPage": {
+    "cards": {
+      "phone": "Telefono",
+      "email": "Correo electronico",
+      "whatsapp": "WhatsApp",
+      "businessHours": "Horario laboral"
+    },
+    "labels": {
+      "wechatId": "ID de WeChat",
+      "zhAddress": "Direccion en chino",
+      "enAddress": "Direccion en ingles",
+      "mapProvider": "Google Maps"
+    }
+  },
+  "PrivacyPolicy": {
+    "meta": {
+      "title": "Politica de privacidad",
+      "description": "Politica de privacidad de Weiwei Zipper. Conozca como recopilamos, usamos y protegemos su informacion."
+    },
+    "title": "Politica de privacidad",
+    "lastUpdated": "Ultima actualizacion: enero de 2026",
+    "overview": {
+      "title": "Resumen",
+      "paragraph1": "{companyName} respeta su privacidad. Esta politica explica como recopilamos, usamos y protegemos sus datos personales.",
+      "paragraph2": "Al utilizar nuestro sitio web, usted acepta las practicas de tratamiento de datos descritas aqui."
+    },
+    "informationWeCollect": {
+      "title": "Informacion que recopilamos",
+      "intro": "Recopilamos la siguiente informacion a traves de formularios de consulta y comunicaciones directas:",
+      "items": {
+        "personal": "Informacion personal — nombre, correo electronico, telefono, nombre de la empresa y cargo",
+        "business": "Informacion comercial — pais, necesidades de producto, tipo de cremallera, detalles de tamano, cantidades y plazos de entrega",
+        "technical": "Informacion tecnica — direccion IP, tipo de navegador, paginas visitadas y hora de acceso"
+      },
+      "outro": "Solo recopilamos los datos necesarios para prestar nuestros servicios."
+    },
+    "howWeUse": {
+      "title": "Como usamos su informacion",
+      "intro": "Utilizamos su informacion para:",
+      "items": [
+        "Responder consultas sobre cremalleras y ofrecer sugerencias de combinacion",
+        "Gestionar y cumplir pedidos (muestras, programacion de produccion y envio)",
+        "Ofrecer soporte posventa (reposiciones, reabastecimiento y seguimiento de incidencias)",
+        "Enviar actualizaciones relacionadas con pedidos (confirmaciones de envio y estado de entrega)",
+        "Analizar datos del sitio web para mejorar rendimiento y contenido",
+        "Cumplir con las leyes y normativas aplicables"
+      ]
+    },
+    "cookies": {
+      "title": "Cookies y seguimiento",
+      "paragraph1": "Utilizamos cookies para mejorar su experiencia de navegacion. Las cookies son pequenos archivos de texto almacenados en su navegador.",
+      "items": {
+        "essential": "Cookies esenciales — garantizan funciones basicas del sitio, como la seleccion de idioma",
+        "analytics": "Cookies de analitica — nos ayudan a entender el comportamiento de los visitantes y mejorar la experiencia"
+      },
+      "paragraph2": "Puede gestionar las cookies desde la configuracion de su navegador, aunque desactivarlas puede afectar algunas funciones."
+    },
+    "dataProtection": {
+      "title": "Proteccion de datos",
+      "intro": "Protegemos sus datos mediante:",
+      "items": [
+        "Cifrado SSL/TLS para la transmision de datos",
+        "Acceso restringido de empleados a datos personales",
+        "Revision y actualizacion periodica de las practicas de seguridad"
+      ],
+      "outro": "Nunca vendemos sus datos. Solo los compartimos con terceros cuando es necesario, por ejemplo socios logisticos para el envio, y les exigimos seguir niveles equivalentes de proteccion."
+    },
+    "dataRetention": {
+      "title": "Conservacion de datos",
+      "items": [
+        "Los registros de consultas y negocio se conservan durante tres anos",
+        "Los registros de pedidos se conservan segun la normativa fiscal y comercial"
+      ],
+      "outro": "Puede solicitar la eliminacion en cualquier momento. Procesaremos su solicitud con rapidez, salvo cuando la ley exija conservar la informacion."
+    },
+    "internationalTransfers": {
+      "title": "Transferencias internacionales de datos",
+      "paragraph": "Como exportador global, sus datos pueden transferirse entre China y otros paises. Aplicamos medidas de proteccion adecuadas durante todas las transferencias. Al enviar una consulta, usted acepta dichas transferencias."
+    },
+    "thirdPartyLinks": {
+      "title": "Enlaces de terceros",
+      "paragraph": "Nuestro sitio puede enlazar con plataformas como WhatsApp y WeChat. Estas plataformas tienen sus propias politicas de privacidad y no somos responsables de ellas. Revise sus politicas antes de compartir datos personales."
+    },
+    "yourRights": {
+      "title": "Sus derechos",
+      "intro": "Segun la normativa aplicable, usted tiene derecho a:",
+      "items": [
+        "Acceder a los datos personales que conservamos sobre usted",
+        "Corregir datos inexactos o incompletos",
+        "Solicitar la eliminacion de sus datos",
+        "Oponerse o limitar nuestro tratamiento de datos",
+        "Portabilidad de datos"
+      ]
+    },
+    "changes": {
+      "title": "Cambios en esta politica",
+      "paragraph": "Podemos actualizar esta politica para reflejar cambios del negocio o requisitos legales. Las actualizaciones se publicaran aqui con una nueva fecha. Recomendamos revisarla periodicamente."
+    },
+    "contact": {
+      "title": "Contactenos",
+      "intro": "Para consultas relacionadas con privacidad, respondemos dentro de dos dias habiles.",
+      "emailLabel": "Correo electronico: ",
+      "addressLabel": "Direccion: "
+    }
+  },
+  "TermsOfService": {
+    "meta": {
+      "title": "Terminos del servicio",
+      "description": "Terminos del servicio de Weiwei Zipper. Conozca las condiciones de uso del sitio, la informacion de producto, la propiedad intelectual y las condiciones de transaccion."
+    },
+    "title": "Terminos del servicio",
+    "lastUpdated": "Ultima actualizacion: enero de 2026",
+    "acceptance": {
+      "title": "Aceptacion de los terminos",
+      "paragraph1": "Bienvenido al sitio web de {companyName}.",
+      "paragraph2": "Al utilizar este sitio, usted acepta estos terminos. Si no esta de acuerdo, deje de utilizar el sitio. Podemos actualizar estos terminos en cualquier momento y entraran en vigor desde su publicacion."
+    },
+    "termsOfUse": {
+      "title": "Condiciones de uso",
+      "paragraph1": "El contenido del sitio se ofrece solo con fines informativos y de comunicacion comercial. Puede navegar por el contenido y enviar consultas.",
+      "intro": "Usted acepta no:",
+      "items": [
+        "Utilizar el sitio con fines ilegales",
+        "Intentar acceder sin autorizacion a nuestros sistemas",
+        "Utilizar herramientas automatizadas para extraer contenido en masa",
+        "Perjudicar de cualquier forma el funcionamiento normal del sitio"
+      ]
+    },
+    "productInfo": {
+      "title": "Informacion de producto y cotizaciones",
+      "paragraph": "Procuramos que la informacion de producto sea precisa. Sin embargo, las especificaciones pueden cambiar sin previo aviso debido a mejoras continuas.",
+      "items": [
+        "Las imagenes de producto son solo de referencia; las paginas actuales se centran en la comunicacion de categoria y tamano",
+        "Todas las cotizaciones son preliminares; el precio final se rige por el contrato firmado o la factura proforma",
+        "Las cotizaciones suelen ser validas durante 30 dias salvo indicacion escrita en contrario"
+      ]
+    },
+    "orders": {
+      "title": "Pedidos y condiciones de transaccion",
+      "paragraph": "Las consultas del sitio web no constituyen pedidos formales. Los pedidos se establecen despues de que ambas partes confirmen especificaciones, precio, cantidad, entrega y condiciones de pago.",
+      "paymentMethodsTitle": "Metodos de pago",
+      "paymentMethods": [
+        "Transferencia bancaria (T/T)",
+        "Carta de credito (L/C)",
+        "Western Union"
+      ],
+      "paymentTerms": "Condiciones estandar: 30% de deposito tras la confirmacion del pedido y saldo antes del envio. Los precios no incluyen comisiones bancarias."
+    },
+    "shipping": {
+      "title": "Envio y entrega",
+      "paragraph": "Los plazos de entrega empiezan a contar desde la confirmacion del pedido y la recepcion del deposito.",
+      "leadTimesTitle": "Plazos de entrega",
+      "leadTimes": [
+        "Proyectos estandar: se confirman segun la programacion real de produccion",
+        "El plazo de muestras y produccion en volumen depende de la complejidad"
+      ],
+      "tradeTermsTitle": "Incoterms",
+      "tradeTerms": [
+        "FOB, CIF, CFR, DDP, EXW"
+      ],
+      "packagingTitle": "Embalaje",
+      "packaging": "El embalaje se organiza segun el tipo de cremallera y la cantidad, tanto para muestras como para envios en volumen.",
+      "forceMajeure": "Los retrasos debidos a fuerza mayor, como desastres naturales, normativas o interrupciones logisticas, no se consideran incumplimiento contractual."
+    },
+    "quality": {
+      "title": "Aseguramiento de calidad y reclamaciones",
+      "paragraph": "Todos los productos siguen las especificaciones confirmadas, con especial atencion a la consistencia entre lotes.",
+      "claimsTitle": "Proceso de reclamacion",
+      "claims": [
+        "Notificarnos por escrito dentro de los 14 dias siguientes a la recepcion",
+        "Proporcionar descripcion del defecto y evidencia fotografica",
+        "Tras la verificacion: reposicion, envio complementario o ajuste de credito"
+      ],
+      "notCoveredTitle": "No cubierto por garantia",
+      "notCovered": [
+        "Danos causados por instalacion incorrecta",
+        "Uso fuera de las condiciones previstas",
+        "Modificacion del producto",
+        "Desgaste normal"
+      ]
+    },
+    "intellectualProperty": {
+      "title": "Propiedad intelectual",
+      "paragraph": "Todo el contenido del sitio web, incluidos textos, imagenes, logotipos y codigo, esta protegido por las leyes chinas e internacionales de propiedad intelectual.",
+      "items": [
+        "El uso comercial requiere autorizacion previa por escrito",
+        "Se permite la descarga para referencia personal manteniendo los avisos de derechos de autor"
+      ]
+    },
+    "liability": {
+      "title": "Limitacion de responsabilidad",
+      "paragraph1": "El contenido del sitio web se ofrece \"tal cual\", sin garantias. No garantizamos un funcionamiento ininterrumpido ni libre de errores.",
+      "paragraph2": "Las recomendaciones y observaciones tecnicas son solo de referencia. La seleccion final de la cremallera debe basarse en los requisitos reales de su proyecto. No asumimos responsabilidad por danos derivados del uso del sitio."
+    },
+    "governingLaw": {
+      "title": "Ley aplicable y disputas",
+      "paragraph": "Estos terminos se rigen por las leyes de la Republica Popular China.",
+      "stepsTitle": "Pasos para la resolucion de disputas",
+      "steps": [
+        "Negociacion amistosa entre las partes",
+        "Si no se resuelve, presentacion ante el tribunal competente del lugar de la empresa",
+        "Las disputas de comercio internacional pueden someterse a arbitraje ante CIETAC"
+      ]
+    },
+    "contact": {
+      "title": "Contactenos",
+      "intro": "Para preguntas sobre estos terminos, respondemos dentro de dos dias habiles.",
+      "emailLabel": "Correo electronico: ",
+      "addressLabel": "Direccion: "
+    }
+  },
+  "ProductPage": {
+    "home": "Inicio",
+    "products": "Productos",
+    "quoteDescription": "Envíe sus requisitos a traves de la pagina de cotizacion de Weiwei Zipper",
+    "breadcrumbAria": "Ruta de navegacion"
+  }
+}

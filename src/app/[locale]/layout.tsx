@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { routing, type Locale } from '@/localization/routing';
 import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/config/site-constants';
+import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
 import { getHomeContent, getSiteBrand } from '@/site-data/site-content';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,6 +14,21 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../globals.css';
 
 const ICON_CACHE_BUST = '20260302a';
+const LOCALE_METADATA = {
+  en: { htmlLang: 'en', dir: 'ltr', ogLocale: 'en_US', companyName: COMPANY_NAME_EN },
+  zh: { htmlLang: 'zh-CN', dir: 'ltr', ogLocale: 'zh_CN', companyName: COMPANY_NAME_ZH },
+  ru: { htmlLang: 'ru', dir: 'ltr', ogLocale: 'ru_RU', companyName: COMPANY_NAME_EN },
+  es: { htmlLang: 'es', dir: 'ltr', ogLocale: 'es_ES', companyName: COMPANY_NAME_EN },
+  ar: { htmlLang: 'ar', dir: 'rtl', ogLocale: 'ar_AR', companyName: COMPANY_NAME_EN },
+} as const;
+
+const LOCALE_KEYWORDS = {
+  zh: ['伟伟拉链', '树脂拉链', '尼龙拉链', '金属拉链', '3号拉链', '5号拉链', '8号拉链', '服装拉链', '箱包拉链', '防晒衣拉链'],
+  en: ['Weiwei Zipper', 'metal zipper', 'resin zipper', 'nylon zipper', 'size 3 zipper', 'size 5 zipper', 'size 8 zipper', 'garment zipper', 'bag zipper', 'sun protective jacket zipper'],
+  ru: ['Weiwei Zipper', 'металлическая молния', 'смоляная молния', 'нейлоновая молния', 'молния размер 3', 'молния размер 5', 'молния размер 8', 'молния для одежды', 'молния для сумок', 'молния для солнцезащитной куртки'],
+  es: ['Weiwei Zipper', 'cremallera metalica', 'cremallera de resina', 'cremallera de nylon', 'cremallera tamano 3', 'cremallera tamano 5', 'cremallera tamano 8', 'cremallera para prendas', 'cremallera para bolsos', 'cremallera para ropa con proteccion solar'],
+  ar: ['Weiwei Zipper', 'سحاب معدني', 'سحاب راتنج', 'سحاب نايلون', 'سحاب مقاس 3', 'سحاب مقاس 5', 'سحاب مقاس 8', 'سحاب للملابس', 'سحاب للحقائب', 'سحاب للملابس الواقية من الشمس'],
+} as const;
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -28,13 +44,16 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const isZh = locale === 'zh';
   const homeContent = getHomeContent(locale);
   const siteBrand = getSiteBrand(locale);
   const defaultTitle = homeContent.metadata.title;
   const description = homeContent.metadata.description;
   const siteName = siteBrand.siteName;
-  const companyName = isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN;
+  const localeMeta = LOCALE_METADATA[(locale as Locale) ?? 'en'] ?? LOCALE_METADATA.en;
+  const companyName = localeMeta.companyName;
+  const alternateLocales = routing.locales
+    .filter((item) => item !== locale)
+    .map((item) => LOCALE_METADATA[item].ogLocale);
 
   return {
     title: {
@@ -42,9 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: `%s | ${siteName}`,
     },
     description,
-    keywords: isZh
-      ? ['伟伟拉链', '树脂拉链', '尼龙拉链', '金属拉链', '3号拉链', '5号拉链', '8号拉链', '服装拉链', '箱包拉链', '防晒衣拉链']
-      : ['Weiwei Zipper', 'metal zipper', 'resin zipper', 'nylon zipper', 'size 3 zipper', 'size 5 zipper', 'size 8 zipper', 'garment zipper', 'bag zipper', 'sun protective jacket zipper'],
+    keywords: [...(LOCALE_KEYWORDS[(locale as keyof typeof LOCALE_KEYWORDS)] ?? LOCALE_KEYWORDS.en)],
     authors: [{ name: companyName }],
     creator: companyName,
     publisher: companyName,
@@ -58,12 +75,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       type: 'website',
-      locale: isZh ? 'zh_CN' : 'en_US',
-      alternateLocale: isZh ? 'en_US' : 'zh_CN',
+      locale: localeMeta.ogLocale,
+      alternateLocale: alternateLocales,
       title: defaultTitle,
       description,
       siteName,
-      url: isZh ? `${SITE_URL}/zh` : SITE_URL,
+      url: localizedUrl(locale),
       images: [
         {
           url: `${SITE_URL}${siteBrand.logoPath}`,
@@ -90,12 +107,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: isZh ? `${SITE_URL}/zh` : SITE_URL,
-      languages: {
-        en: SITE_URL,
-        zh: `${SITE_URL}/zh`,
-        'x-default': SITE_URL,
-      },
+      ...alternatesForPath(locale),
     },
     verification: {
       google: process.env.GOOGLE_SITE_VERIFICATION || '',
@@ -109,10 +121,10 @@ export function generateStaticParams() {
 
 // Organization + WebSite JSON-LD structured data
 function StructuredData({ locale }: { locale: string }) {
-  const isZh = locale === 'zh';
   const homeContent = getHomeContent(locale);
   const siteBrand = getSiteBrand(locale);
-  const companyName = isZh ? COMPANY_NAME_ZH : COMPANY_NAME_EN;
+  const localeMeta = LOCALE_METADATA[(locale as Locale) ?? 'en'] ?? LOCALE_METADATA.en;
+  const companyName = localeMeta.companyName;
   const siteName = siteBrand.siteName;
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -147,7 +159,7 @@ function StructuredData({ locale }: { locale: string }) {
       telephone: CONTACT_PHONE,
       email: CONTACT_EMAIL,
       contactType: 'sales',
-      availableLanguage: ['English', 'Chinese'],
+      availableLanguage: ['English', 'Chinese', 'Russian', 'Spanish', 'Arabic'],
     },
     knowsAbout: ['metal zipper', 'resin zipper', 'nylon zipper', 'garment accessories', 'zipper manufacturing'],
     areaServed: {
@@ -162,7 +174,7 @@ function StructuredData({ locale }: { locale: string }) {
     name: siteName,
     alternateName: [siteBrand.siteName, siteBrand.siteNameEn],
     url: SITE_URL,
-    inLanguage: isZh ? 'zh-CN' : 'en',
+    inLanguage: localeMeta.htmlLang,
     publisher: {
       '@type': 'Organization',
       name: companyName,
@@ -192,9 +204,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   const messages = await getMessages();
+  const localeMeta = LOCALE_METADATA[(locale as Locale) ?? 'en'] ?? LOCALE_METADATA.en;
 
   return (
-    <html lang={locale === 'zh' ? 'zh-CN' : 'en'} suppressHydrationWarning>
+    <html lang={localeMeta.htmlLang} dir={localeMeta.dir} suppressHydrationWarning>
       <head>
         <link rel="icon" href={`/favicon-tab.ico?v=${ICON_CACHE_BUST}`} sizes="any" />
         <link rel="icon" href={`/favicon-tab.png?v=${ICON_CACHE_BUST}`} type="image/png" sizes="512x512" />

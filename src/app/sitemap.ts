@@ -1,15 +1,11 @@
 import { MetadataRoute } from 'next';
-import { SITE_URL } from '@/config/site-constants';
+import { routing } from '@/localization/routing';
+import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
 import { PRODUCT_SLUGS, CATEGORY_SLUGS } from '@/site-data/product-catalog';
 import { BLOG_SLUGS } from '@/site-data/blog-posts';
 
-// Helper: English (default locale) has no prefix, Chinese uses /zh
-function localizedUrl(locale: string, path: string) {
-  return locale === 'en' ? `${SITE_URL}${path}` : `${SITE_URL}/zh${path}`;
-}
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const locales = ['en', 'zh'];
+  const locales = routing.locales;
   const routes = ['', '/products', '/about', '/contact', '/quote', '/industries', '/services', '/faq', '/blog', '/privacy-policy', '/terms-of-service'];
   const now = new Date();
 
@@ -23,13 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: route === '' ? 'weekly' : 'monthly',
         priority: route === '' ? 1.0 : route === '/products' ? 0.9 : 0.8,
-        alternates: {
-          languages: {
-            en: `${SITE_URL}${route}`,
-            zh: `${SITE_URL}/zh${route}`,
-            'x-default': `${SITE_URL}${route}`,
-          },
-        },
+        alternates: alternatesForPath(locale, route).languages ? { languages: alternatesForPath(locale, route).languages } : undefined,
       });
     }
 
@@ -40,13 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: 'weekly',
         priority: 0.85,
-        alternates: {
-          languages: {
-            en: `${SITE_URL}/products/${slug}`,
-            zh: `${SITE_URL}/zh/products/${slug}`,
-            'x-default': `${SITE_URL}/products/${slug}`,
-          },
-        },
+        alternates: alternatesForPath(locale, `/products/${slug}`).languages ? { languages: alternatesForPath(locale, `/products/${slug}`).languages } : undefined,
       });
     }
 
@@ -57,13 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.7,
-        alternates: {
-          languages: {
-            en: `${SITE_URL}/blog/${slug}`,
-            zh: `${SITE_URL}/zh/blog/${slug}`,
-            'x-default': `${SITE_URL}/blog/${slug}`,
-          },
-        },
+        alternates: alternatesForPath(locale, `/blog/${slug}`).languages ? { languages: alternatesForPath(locale, `/blog/${slug}`).languages } : undefined,
       });
     }
 
@@ -74,13 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.7,
-        alternates: {
-          languages: {
-            en: `${SITE_URL}/products/${slug}`,
-            zh: `${SITE_URL}/zh/products/${slug}`,
-            'x-default': `${SITE_URL}/products/${slug}`,
-          },
-        },
+        alternates: alternatesForPath(locale, `/products/${slug}`).languages ? { languages: alternatesForPath(locale, `/products/${slug}`).languages } : undefined,
       });
     }
   }

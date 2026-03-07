@@ -18,7 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   const aboutContent = getAboutContent(locale);
-  const imageAlt = locale === 'zh' ? '伟伟拉链义乌国际商贸城摊位实拍' : 'Weiwei Zipper booth at Yiwu International Trade City';
+  const imageAlt = locale === 'zh'
+    ? '伟伟拉链义乌国际商贸城摊位实拍'
+    : locale === 'ru'
+      ? 'Фотография стенда Weiwei Zipper в Yiwu International Trade City'
+    : locale === 'ar'
+      ? 'صورة جناح Weiwei Zipper في مدينة ييوو التجارية الدولية'
+    : locale === 'es'
+      ? 'Puesto de Weiwei Zipper en Yiwu International Trade City'
+      : 'Weiwei Zipper booth at Yiwu International Trade City';
 
   return (
     <div className="container mx-auto px-4 py-10 sm:py-12">

@@ -5,7 +5,8 @@
     "menuAria": "切换菜单",
     "productsAria": "切换产品分类",
     "mainNavigation": "主导航",
-    "mobileNavigation": "移动端导航"
+    "mobileNavigation": "移动端导航",
+    "languageSwitcher": "选择语言"
   },
   "Footer": {
     "productsTitle": "产品中心",
