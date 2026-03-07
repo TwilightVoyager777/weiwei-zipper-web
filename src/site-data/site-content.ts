@@ -39,12 +39,12 @@ export const navigationContent = {
 export const homeContent = {
   metadata: {
     title: '伟伟拉链 | 3/5/8 号金属、树脂、尼龙拉链工厂',
-    description: '伟伟拉链专注金属拉链、树脂拉链、尼龙拉链现货与定制，覆盖 3 号 / 5 号 / 8 号规格，适用于服装、箱包、鞋帽及防晒衣项目打样与量产。',
+    description: '伟伟拉链位于义乌国际商贸城三区，专注金属拉链、树脂拉链、尼龙拉链现货与定制，覆盖 3 号 / 5 号 / 8 号规格，适用于服装、箱包、鞋帽及防晒衣项目打样与量产。',
   },
   hero: {
     badges: ['工厂直供', '支持打样', '支持来样定制'],
     title: '伟伟拉链',
-    subtitle: '伟伟拉链长期面向服装、箱包、鞋帽客户提供金属拉链、树脂拉链、尼龙拉链配套服务，覆盖 3 号 / 5 号 / 8 号常用规格，可配合打样确认、批量采购与后续返单需求。',
+    subtitle: '伟伟拉链位于义乌国际商贸城三区，长期面向服装、箱包、鞋帽客户提供金属拉链、树脂拉链、尼龙拉链配套服务，覆盖 3 号 / 5 号 / 8 号常用规格，可配合打样确认、批量采购与后续返单需求。',
     visualPath: '/hero/profile.png',
     visualAlt: '半开状态金属拉链透明背景主视觉图',
     primaryCta: '查看产品',
@@ -160,16 +160,16 @@ export const useCasesContent = {
 export const aboutContent = {
   metadata: {
     title: '关于我们 | 伟伟拉链',
-    description: '了解伟伟拉链自 1992 年以来在义乌国际商贸城围绕金属、树脂、尼龙拉链建立的配套经验，以及服务服装、箱包、鞋帽客户的合作方式。',
+    description: '了解伟伟拉链自 1992 年以来在义乌国际商贸城三区围绕金属、树脂、尼龙拉链建立的配套经验，以及服务服装、箱包、鞋帽客户的合作方式。',
   },
   title: '关于我们',
   subtitle: '伟伟拉链成立于 1992 年，长期围绕金属、树脂、尼龙拉链开展配套服务，重点配合服装、箱包、鞋帽等客户在开发、打样、采购与返单中的常见需求。',
   story: {
     title: '关于伟伟拉链',
     paragraphs: [
-      '伟伟拉链成立于 1992 年，经营地址位于浙江省义乌市国际商贸城三区59门三楼2街27449。多年来我们一直围绕金属拉链、树脂拉链、尼龙拉链三大常用品类开展配套服务，面向服装、箱包、鞋帽等客户持续积累更贴近实际采购需求的合作经验。',
+      '伟伟拉链成立于 1992 年，经营地址位于浙江省义乌市国际商贸城三区59门三楼2街27449。作为长期扎根义乌国际商贸城的拉链厂家，我们多年来一直围绕金属拉链、树脂拉链、尼龙拉链三大常用品类开展配套服务，面向服装、箱包、鞋帽等客户持续积累更贴近实际采购需求的合作经验。',
       '在日常合作中，我们更重视客户在开发和采购过程中真正需要优先确认的内容，例如材质方向、规格大小、结构方式、长度安排、颜色匹配以及拉头搭配。围绕这些高频需求，我们长期把 3 号、5 号、8 号等常用规格作为配套重点，不断整理更稳定、更便于复用的常用方案。',
-      '我们对产品质量、技术精度和可靠交付始终保持稳定要求，也正因为这种长期坚持，伟伟拉链逐步与东南亚、中东、欧洲及美洲等市场的客户建立起持续合作关系。对我们来说，稳定的品质表现、清晰的沟通效率和可持续的交付能力，往往比一次性的成交更重要。',
+      '对于许多来到义乌国际商贸城寻找拉链批发和长期配套资源的客户来说，真正重要的不只是价格本身，而是规格是否清楚、样品是否顺利、批量是否稳定。我们对产品质量、技术精度和可靠交付始终保持稳定要求，也正因为这种长期坚持，伟伟拉链逐步与东南亚、中东、欧洲及美洲等市场的客户建立起持续合作关系。对我们来说，稳定的品质表现、清晰的沟通效率和可持续的交付能力，往往比一次性的成交更重要。',
       '无论是常规补单、新款开发，还是先拿旧样、参考图做初步沟通，我们都希望让客户在更短时间内完成方向确认、打样推进与后续采购衔接，使合作过程更顺畅，也更适合长期复用。'
     ],
   },
@@ -885,13 +885,13 @@ const aboutContentEn = {
     description: 'Learn how Weiwei Zipper has supported metal, resin, and nylon zipper projects since 1992 from Yiwu International Trade City, serving garment, bag, and footwear customers.',
   },
   title: 'About Us',
-  subtitle: 'Founded in 1992, Weiwei Zipper has long focused on metal, resin, and nylon zipper supply for garment, bag, and footwear customers across development, sampling, purchasing, and repeat orders.',
+  subtitle: 'Founded in 1992, Weiwei Zipper has long focused on metal, resin, and nylon zipper supply from Yiwu International Trade City for garment, bag, and footwear customers across development, sampling, purchasing, and repeat orders.',
   story: {
     title: 'About Weiwei Zipper',
     paragraphs: [
-      'Weiwei Zipper was founded in 1992 and operates from Yiwu International Trade City. Over the years, we have stayed focused on three core product lines: metal, resin, and nylon zippers. By serving garment, bag, and footwear customers over the long term, we have built practical experience that stays close to real purchasing, development, and repeat-order needs.',
+      'Weiwei Zipper was founded in 1992 and operates from District 3 of Yiwu International Trade City. As a long-term zipper supplier based in Yiwu, we have stayed focused on three core product lines: metal, resin, and nylon zippers. By serving garment, bag, and footwear customers over the long term, we have built practical experience that stays close to real purchasing, development, and repeat-order needs.',
       'In day-to-day cooperation, we pay close attention to the details customers usually need to confirm early, including material direction, size, structure, length, color matching, and slider selection. Around those frequent requirements, we continue to organize more stable and reusable solutions based on the common size 3, 5, and 8 range.',
-      'We have remained consistent in our focus on product quality, technical precision, and reliable delivery. That long-term discipline has helped Weiwei Zipper establish ongoing cooperation with customers serving Southeast Asia, the Middle East, Europe, and the Americas. To us, steady quality, clear communication, and dependable supply matter more than one-time transactions.',
+      'For many buyers looking for a zipper manufacturer or zipper wholesale source in Yiwu, what matters is not only price, but whether specifications are clear, samples move smoothly, and later supply stays stable. We have remained consistent in our focus on product quality, technical precision, and reliable delivery. That long-term discipline has helped Weiwei Zipper establish ongoing cooperation with customers serving Southeast Asia, the Middle East, Europe, and the Americas. To us, steady quality, clear communication, and dependable supply matter more than one-time transactions.',
       'Whether the project is a repeat order, a new development, or an early-stage discussion based on an old sample or reference image, our goal is to help customers confirm direction, move sampling forward, and connect into purchasing more smoothly and efficiently.',
     ],
   },
@@ -928,16 +928,16 @@ const aboutContentEn = {
 const aboutContentEs = {
   metadata: {
     title: 'Nosotros | Weiwei Zipper',
-    description: 'Descubra como Weiwei Zipper ha apoyado proyectos de cremalleras metalicas, de resina y de nylon desde 1992 desde Yiwu International Trade City, sirviendo a clientes de prendas, bolsos y calzado.',
+    description: 'Descubra como Weiwei Zipper ha apoyado proyectos de cremalleras metalicas, de resina y de nylon desde 1992 desde el Distrito 3 de Yiwu International Trade City, sirviendo a clientes de prendas, bolsos y calzado.',
   },
   title: 'Nosotros',
-  subtitle: 'Fundada en 1992, Weiwei Zipper se ha centrado durante muchos anos en el suministro de cremalleras metalicas, de resina y de nylon para clientes de prendas, bolsos y calzado en desarrollo, muestreo, compras y reposiciones.',
+  subtitle: 'Fundada en 1992, Weiwei Zipper se ha centrado durante muchos anos en el suministro de cremalleras metalicas, de resina y de nylon desde Yiwu International Trade City para clientes de prendas, bolsos y calzado en desarrollo, muestreo, compras y reposiciones.',
   story: {
     title: 'Sobre Weiwei Zipper',
     paragraphs: [
-      'Weiwei Zipper fue fundada en 1992 y opera desde Yiwu International Trade City. A lo largo de los anos nos hemos mantenido enfocados en tres lineas principales: cremalleras metalicas, de resina y de nylon. Al trabajar de forma continua con clientes de prendas, bolsos y calzado, hemos acumulado una experiencia practica muy cercana a las necesidades reales de compra, desarrollo y reposicion.',
+      'Weiwei Zipper fue fundada en 1992 y opera desde el Distrito 3 de Yiwu International Trade City. Como proveedor de cremalleras con base en Yiwu, a lo largo de los anos nos hemos mantenido enfocados en tres lineas principales: cremalleras metalicas, de resina y de nylon. Al trabajar de forma continua con clientes de prendas, bolsos y calzado, hemos acumulado una experiencia practica muy cercana a las necesidades reales de compra, desarrollo y reposicion.',
       'En la cooperacion diaria prestamos especial atencion a los puntos que normalmente deben confirmarse al principio, como el material, el tamano, la estructura, la longitud, la combinacion de color y la seleccion del cursor. Sobre esas necesidades frecuentes seguimos organizando soluciones mas estables y reutilizables basadas en los tamanos comunes 3, 5 y 8.',
-      'Nos hemos mantenido constantes en nuestro enfoque sobre calidad del producto, precision tecnica y entrega fiable. Esa disciplina a largo plazo ha ayudado a Weiwei Zipper a mantener cooperacion continua con clientes que atienden el Sudeste Asiatico, Oriente Medio, Europa y America. Para nosotros, la calidad estable, la comunicacion clara y el suministro fiable importan mas que las operaciones de una sola vez.',
+      'Para muchos compradores que buscan un proveedor de cremalleras o una fuente de compra al por mayor en Yiwu, lo importante no es solo el precio, sino tambien si las especificaciones quedan claras, si las muestras avanzan con fluidez y si el suministro posterior se mantiene estable. Nos hemos mantenido constantes en nuestro enfoque sobre calidad del producto, precision tecnica y entrega fiable. Esa disciplina a largo plazo ha ayudado a Weiwei Zipper a mantener cooperacion continua con clientes que atienden el Sudeste Asiatico, Oriente Medio, Europa y America. Para nosotros, la calidad estable, la comunicacion clara y el suministro fiable importan mas que las operaciones de una sola vez.',
       'Tanto si el proyecto es una reposicion, un nuevo desarrollo o una conversacion inicial basada en una muestra antigua o una imagen de referencia, nuestro objetivo es ayudar a los clientes a confirmar la direccion, avanzar en las muestras y conectar con las compras de una forma mas fluida y eficiente.',
     ],
   },
@@ -974,16 +974,16 @@ const aboutContentEs = {
 const aboutContentAr = {
   metadata: {
     title: 'من نحن | Weiwei Zipper',
-    description: 'تعرف على كيفية دعم Weiwei Zipper لمشاريع السحابات المعدنية والراتنجية والنايلون منذ عام 1992 من مدينة ييوو التجارية الدولية، مع خدمة عملاء الملابس والحقائب والأحذية.',
+    description: 'تعرف على كيفية دعم Weiwei Zipper لمشاريع السحابات المعدنية والراتنجية والنايلون منذ عام 1992 من المنطقة الثالثة في مدينة ييوو التجارية الدولية، مع خدمة عملاء الملابس والحقائب والأحذية.',
   },
   title: 'من نحن',
-  subtitle: 'تأسست Weiwei Zipper في عام 1992، وركزت لسنوات طويلة على توريد السحابات المعدنية والراتنجية والنايلون لعملاء الملابس والحقائب والأحذية في مراحل التطوير والعينات والشراء وإعادة الطلب.',
+  subtitle: 'تأسست Weiwei Zipper في عام 1992، وركزت لسنوات طويلة على توريد السحابات المعدنية والراتنجية والنايلون من مدينة ييوو التجارية الدولية لعملاء الملابس والحقائب والأحذية في مراحل التطوير والعينات والشراء وإعادة الطلب.',
   story: {
     title: 'عن Weiwei Zipper',
     paragraphs: [
-      'تأسست Weiwei Zipper في عام 1992، وتعمل من داخل مدينة ييوو التجارية الدولية. وعلى مدى سنوات طويلة، حافظنا على تركيز واضح على ثلاث فئات رئيسية: السحابات المعدنية والراتنجية والنايلون. ومن خلال خدمة عملاء الملابس والحقائب والأحذية بشكل مستمر، تراكمت لدينا خبرة عملية مرتبطة مباشرة باحتياجات التطوير والشراء وإعادة الطلب.',
+      'تأسست Weiwei Zipper في عام 1992، وتعمل من داخل المنطقة الثالثة في مدينة ييوو التجارية الدولية. وبصفتنا موردا للسحابات في ييوو، حافظنا على تركيز واضح على ثلاث فئات رئيسية: السحابات المعدنية والراتنجية والنايلون. ومن خلال خدمة عملاء الملابس والحقائب والأحذية بشكل مستمر، تراكمت لدينا خبرة عملية مرتبطة مباشرة باحتياجات التطوير والشراء وإعادة الطلب.',
       'في التعاون اليومي، نولي اهتماما كبيرا للنقاط التي يحتاج العملاء عادة إلى تأكيدها مبكرا، مثل اتجاه الخامة والمقاس والبنية والطول ومطابقة اللون واختيار السحاب. وانطلاقا من هذه الاحتياجات المتكررة، نواصل تنظيم حلول أكثر استقرارا وقابلية لإعادة الاستخدام حول المقاسات الشائعة 3 و5 و8.',
-      'حافظنا باستمرار على التركيز على جودة المنتج والدقة التقنية والتسليم الموثوق. وقد ساعد هذا الانضباط طويل الأجل Weiwei Zipper على بناء تعاون مستمر مع عملاء يخدمون جنوب شرق آسيا والشرق الأوسط وأوروبا والأمريكتين. بالنسبة لنا، تبقى الجودة المستقرة والتواصل الواضح والتوريد الموثوق أهم من التعاملات المؤقتة.',
+      'بالنسبة للعديد من المشترين الذين يبحثون في ييوو عن مورد سحابات أو عن قناة شراء بالجملة، فإن الأمر لا يتعلق بالسعر فقط، بل بوضوح المواصفات وسهولة العينات واستقرار التوريد اللاحق. حافظنا باستمرار على التركيز على جودة المنتج والدقة التقنية والتسليم الموثوق. وقد ساعد هذا الانضباط طويل الأجل Weiwei Zipper على بناء تعاون مستمر مع عملاء يخدمون جنوب شرق آسيا والشرق الأوسط وأوروبا والأمريكتين. بالنسبة لنا، تبقى الجودة المستقرة والتواصل الواضح والتوريد الموثوق أهم من التعاملات المؤقتة.',
       'سواء كان المشروع إعادة طلب أو تطويرا جديدا أو مناقشة أولية بناء على عينة قديمة أو صورة مرجعية، فإن هدفنا هو مساعدة العميل على تأكيد الاتجاه، ودفع العينات إلى الأمام، وربط المشروع بمرحلة الشراء بشكل أكثر سلاسة وكفاءة.',
     ],
   },
@@ -1020,16 +1020,16 @@ const aboutContentAr = {
 const aboutContentRu = {
   metadata: {
     title: 'О нас | Weiwei Zipper',
-    description: 'Узнайте, как Weiwei Zipper с 1992 года поддерживает проекты по металлическим, смоляным и нейлоновым молниям из Yiwu International Trade City для клиентов в одежде, сумках и обуви.',
+    description: 'Узнайте, как Weiwei Zipper с 1992 года поддерживает проекты по металлическим, смоляным и нейлоновым молниям из района 3 Yiwu International Trade City для клиентов в одежде, сумках и обуви.',
   },
   title: 'О нас',
-  subtitle: 'Компания Weiwei Zipper была основана в 1992 году и уже много лет специализируется на поставках металлических, смоляных и нейлоновых молний для клиентов из сегментов одежды, сумок и обуви на этапах разработки, образцов, закупок и повторных заказов.',
+  subtitle: 'Компания Weiwei Zipper была основана в 1992 году и уже много лет специализируется на поставках металлических, смоляных и нейлоновых молний из Yiwu International Trade City для клиентов из сегментов одежды, сумок и обуви на этапах разработки, образцов, закупок и повторных заказов.',
   story: {
     title: 'О Weiwei Zipper',
     paragraphs: [
-      'Weiwei Zipper была основана в 1992 году и работает из Yiwu International Trade City. На протяжении многих лет мы сохраняем фокус на трех основных направлениях: металлические, смоляные и нейлоновые молнии. Долгосрочная работа с клиентами из сегментов одежды, сумок и обуви позволила нам накопить практический опыт, тесно связанный с реальными задачами разработки, закупок и повторных заказов.',
+      'Weiwei Zipper была основана в 1992 году и работает из района 3 Yiwu International Trade City. Как поставщик молний в Иу, мы на протяжении многих лет сохраняем фокус на трех основных направлениях: металлические, смоляные и нейлоновые молнии. Долгосрочная работа с клиентами из сегментов одежды, сумок и обуви позволила нам накопить практический опыт, тесно связанный с реальными задачами разработки, закупок и повторных заказов.',
       'В ежедневной работе мы уделяем особое внимание тем деталям, которые клиенты обычно хотят подтвердить заранее: материал, размер, конструкция, длина, цвет и выбор бегунка. На основе этих часто повторяющихся потребностей мы продолжаем выстраивать более стабильные и удобные для повторного использования решения вокруг распространенных размеров 3, 5 и 8.',
-      'Мы последовательно придерживаемся требований к качеству продукции, технической точности и надежности поставок. Такая дисциплина помогла Weiwei Zipper выстроить долгосрочное сотрудничество с клиентами, работающими в Юго-Восточной Азии, на Ближнем Востоке, в Европе и Америке. Для нас стабильное качество, понятная коммуникация и надежное снабжение важнее разовых сделок.',
+      'Для многих покупателей, которые ищут в Иу поставщика молний или оптовый источник, важна не только цена, но и понятность спецификаций, плавность работы с образцами и стабильность дальнейших поставок. Мы последовательно придерживаемся требований к качеству продукции, технической точности и надежности поставок. Такая дисциплина помогла Weiwei Zipper выстроить долгосрочное сотрудничество с клиентами, работающими в Юго-Восточной Азии, на Ближнем Востоке, в Европе и Америке. Для нас стабильное качество, понятная коммуникация и надежное снабжение важнее разовых сделок.',
       'Независимо от того, идет ли речь о повторном заказе, новой разработке или первой дискуссии на основе старого образца или референсного изображения, наша задача состоит в том, чтобы помочь клиенту определить направление, продвинуть этап образцов и связать проект с закупкой более плавно и эффективно.',
     ],
   },
