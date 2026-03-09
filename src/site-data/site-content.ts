@@ -8,7 +8,7 @@ export const siteBrand = {
   companyNameEn: 'Yiwu Weiwei Zipper Co., Ltd.',
   shortBrand: 'Weiwei Zipper',
   siteUrl: 'https://www.weiweizipper.com',
-  email: 'twilightvoyager777@gmail.com',
+  email: 'weiweizipper@gmail.com',
   phone: '+86 13906892467',
   whatsapp: '+1 6506295275',
   whatsappUrl: 'https://wa.me/16506295275',
@@ -39,12 +39,12 @@ export const navigationContent = {
 export const homeContent = {
   metadata: {
     title: '伟伟拉链 | 3/5/8 号金属、树脂、尼龙拉链工厂',
-    description: '伟伟拉链位于义乌国际商贸城三区，专注金属拉链、树脂拉链、尼龙拉链现货与定制，覆盖 3 号 / 5 号 / 8 号规格，适用于服装、箱包、鞋帽及防晒衣项目打样与量产。',
+    description: '伟伟拉链专注金属拉链、树脂拉链、尼龙拉链现货与定制，覆盖 3 号 / 5 号 / 8 号规格，适用于服装、箱包、鞋帽及防晒衣项目打样与量产。',
   },
   hero: {
     badges: ['工厂直供', '支持打样', '支持来样定制'],
     title: '伟伟拉链',
-    subtitle: '伟伟拉链位于义乌国际商贸城三区，长期面向服装、箱包、鞋帽客户提供金属拉链、树脂拉链、尼龙拉链配套服务，覆盖 3 号 / 5 号 / 8 号常用规格，可配合打样确认、批量采购与后续返单需求。',
+    subtitle: '伟伟拉链长期面向服装、箱包、鞋帽客户提供金属拉链、树脂拉链、尼龙拉链配套服务，覆盖 3 号 / 5 号 / 8 号常用规格，可配合打样确认、批量采购与后续返单需求。',
     visualPath: '/hero/profile.png',
     visualAlt: '半开状态金属拉链透明背景主视觉图',
     primaryCta: '查看产品',

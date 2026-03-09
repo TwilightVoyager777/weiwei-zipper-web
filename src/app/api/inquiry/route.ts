@@ -413,7 +413,7 @@ async function sendAutoReplyEmail(
 
 async function sendEmail(inquiry: Record<string, string>): Promise<void> {
   const resendApiKey = process.env.RESEND_API_KEY;
-  const notifyEmail = process.env.NOTIFY_EMAIL || 'twilightvoyager777@gmail.com';
+  const notifyEmail = process.env.NOTIFY_EMAIL || 'weiweizipper@gmail.com';
 
   if (!resendApiKey) {
     console.warn('[Inquiry] RESEND_API_KEY not configured. Skipping email notification.');
