@@ -18,6 +18,65 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   const aboutContent = getAboutContent(locale);
+  const socialContent = locale === 'zh'
+    ? {
+        title: '社媒入口',
+        subtitle: '也可以通过社交平台了解我们的日常更新、产品展示和短视频内容。',
+        cta: '前往查看',
+        items: [
+          { name: 'TikTok', note: '查看短视频', href: 'https://www.tiktok.com/@weiweizipper', style: 'border-black bg-[radial-gradient(circle_at_top_left,_rgba(37,244,238,0.28),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(254,44,85,0.24),_transparent_35%),linear-gradient(135deg,#111111_0%,#050505_100%)] text-white', chipStyle: 'bg-white/10 text-white/80 border-white/10', image: '/social/tiktok.png?v=20260309b', imagePosition: 'right bottom' },
+          { name: 'YouTube', note: '观看视频', href: 'https://www.youtube.com/@weiweizipper', style: 'border-[#FF0033] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.26),_transparent_32%),linear-gradient(135deg,#991b1b_0%,#dc2626_42%,#ff0033_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/youtube.png?v=20260309b', imagePosition: 'right bottom' },
+          { name: 'Instagram', note: '浏览内容', href: 'https://www.instagram.com/weiweizipper', style: 'border-transparent bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.28),_transparent_30%),linear-gradient(135deg,#4f46e5_0%,#8b5cf6_20%,#ec4899_55%,#f97316_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/ins.png?v=20260309b', imagePosition: 'right bottom' },
+          { name: 'Facebook', note: '关注动态', href: 'https://www.facebook.com/weiweizipper', style: 'border-[#1877F2] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.25),_transparent_30%),linear-gradient(135deg,#1d4ed8_0%,#1877F2_45%,#0f3fae_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/facebook.png?v=20260309b', imagePosition: 'right bottom' },
+        ],
+      }
+    : locale === 'ru'
+      ? {
+          title: 'Социальные сети',
+          subtitle: 'Вы также можете перейти в наши соцсети, чтобы посмотреть короткие видео, обновления и материалы по продукции.',
+          cta: 'Перейти',
+          items: [
+            { name: 'TikTok', note: 'Короткие видео', href: 'https://www.tiktok.com/@weiweizipper', style: 'border-black bg-[radial-gradient(circle_at_top_left,_rgba(37,244,238,0.28),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(254,44,85,0.24),_transparent_35%),linear-gradient(135deg,#111111_0%,#050505_100%)] text-white', chipStyle: 'bg-white/10 text-white/80 border-white/10', image: '/social/tiktok.png?v=20260309b', imagePosition: 'right bottom' },
+            { name: 'YouTube', note: 'Видео', href: 'https://www.youtube.com/@weiweizipper', style: 'border-[#FF0033] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.26),_transparent_32%),linear-gradient(135deg,#991b1b_0%,#dc2626_42%,#ff0033_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/youtube.png?v=20260309b', imagePosition: 'right bottom' },
+            { name: 'Instagram', note: 'Контент', href: 'https://www.instagram.com/weiweizipper', style: 'border-transparent bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.28),_transparent_30%),linear-gradient(135deg,#4f46e5_0%,#8b5cf6_20%,#ec4899_55%,#f97316_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/ins.png?v=20260309b', imagePosition: 'right bottom' },
+            { name: 'Facebook', note: 'Обновления', href: 'https://www.facebook.com/weiweizipper', style: 'border-[#1877F2] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.25),_transparent_30%),linear-gradient(135deg,#1d4ed8_0%,#1877F2_45%,#0f3fae_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/facebook.png?v=20260309b', imagePosition: 'right bottom' },
+          ],
+        }
+      : locale === 'ar'
+        ? {
+            title: 'منصات التواصل',
+            subtitle: 'يمكنك ايضا زيارة حساباتنا الاجتماعية لمشاهدة الفيديوهات القصيرة وتحديثات المنتجات والمحتوى اليومي.',
+            cta: 'عرض الحساب',
+            items: [
+              { name: 'TikTok', note: 'فيديوهات قصيرة', href: 'https://www.tiktok.com/@weiweizipper', style: 'border-black bg-[radial-gradient(circle_at_top_left,_rgba(37,244,238,0.28),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(254,44,85,0.24),_transparent_35%),linear-gradient(135deg,#111111_0%,#050505_100%)] text-white', chipStyle: 'bg-white/10 text-white/80 border-white/10', image: '/social/tiktok.png?v=20260309b', imagePosition: 'right bottom' },
+              { name: 'YouTube', note: 'فيديوهات', href: 'https://www.youtube.com/@weiweizipper', style: 'border-[#FF0033] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.26),_transparent_32%),linear-gradient(135deg,#991b1b_0%,#dc2626_42%,#ff0033_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/youtube.png?v=20260309b', imagePosition: 'right bottom' },
+              { name: 'Instagram', note: 'محتوى مرئي', href: 'https://www.instagram.com/weiweizipper', style: 'border-transparent bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.28),_transparent_30%),linear-gradient(135deg,#4f46e5_0%,#8b5cf6_20%,#ec4899_55%,#f97316_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/ins.png?v=20260309b', imagePosition: 'right bottom' },
+              { name: 'Facebook', note: 'تحديثات', href: 'https://www.facebook.com/weiweizipper', style: 'border-[#1877F2] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.25),_transparent_30%),linear-gradient(135deg,#1d4ed8_0%,#1877F2_45%,#0f3fae_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/facebook.png?v=20260309b', imagePosition: 'right bottom' },
+            ],
+          }
+        : locale === 'es'
+          ? {
+              title: 'Redes sociales',
+              subtitle: 'Tambien puede visitar nuestras redes para ver videos cortos, actualizaciones y contenido de productos.',
+              cta: 'Ver cuenta',
+              items: [
+                { name: 'TikTok', note: 'Videos cortos', href: 'https://www.tiktok.com/@weiweizipper', style: 'border-black bg-[radial-gradient(circle_at_top_left,_rgba(37,244,238,0.28),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(254,44,85,0.24),_transparent_35%),linear-gradient(135deg,#111111_0%,#050505_100%)] text-white', chipStyle: 'bg-white/10 text-white/80 border-white/10', image: '/social/tiktok.png?v=20260309b', imagePosition: 'right bottom' },
+                { name: 'YouTube', note: 'Videos', href: 'https://www.youtube.com/@weiweizipper', style: 'border-[#FF0033] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.26),_transparent_32%),linear-gradient(135deg,#991b1b_0%,#dc2626_42%,#ff0033_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/youtube.png?v=20260309b', imagePosition: 'right bottom' },
+                { name: 'Instagram', note: 'Contenido', href: 'https://www.instagram.com/weiweizipper', style: 'border-transparent bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.28),_transparent_30%),linear-gradient(135deg,#4f46e5_0%,#8b5cf6_20%,#ec4899_55%,#f97316_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/ins.png?v=20260309b', imagePosition: 'right bottom' },
+                { name: 'Facebook', note: 'Actualizaciones', href: 'https://www.facebook.com/weiweizipper', style: 'border-[#1877F2] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.25),_transparent_30%),linear-gradient(135deg,#1d4ed8_0%,#1877F2_45%,#0f3fae_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/facebook.png?v=20260309b', imagePosition: 'right bottom' },
+              ],
+            }
+          : {
+              title: 'Social Channels',
+              subtitle: 'You can also visit our social channels to watch short videos, product updates, and day-to-day content.',
+              cta: 'Visit channel',
+              items: [
+                { name: 'TikTok', note: 'Short videos', href: 'https://www.tiktok.com/@weiweizipper', style: 'border-black bg-[radial-gradient(circle_at_top_left,_rgba(37,244,238,0.28),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(254,44,85,0.24),_transparent_35%),linear-gradient(135deg,#111111_0%,#050505_100%)] text-white', chipStyle: 'bg-white/10 text-white/80 border-white/10', image: '/social/tiktok.png?v=20260309b', imagePosition: 'right bottom' },
+                { name: 'YouTube', note: 'Videos', href: 'https://www.youtube.com/@weiweizipper', style: 'border-[#FF0033] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.26),_transparent_32%),linear-gradient(135deg,#991b1b_0%,#dc2626_42%,#ff0033_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/youtube.png?v=20260309b', imagePosition: 'right bottom' },
+                { name: 'Instagram', note: 'Visual content', href: 'https://www.instagram.com/weiweizipper', style: 'border-transparent bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.28),_transparent_30%),linear-gradient(135deg,#4f46e5_0%,#8b5cf6_20%,#ec4899_55%,#f97316_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/ins.png?v=20260309b', imagePosition: 'right bottom' },
+                { name: 'Facebook', note: 'Updates', href: 'https://www.facebook.com/weiweizipper', style: 'border-[#1877F2] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.25),_transparent_30%),linear-gradient(135deg,#1d4ed8_0%,#1877F2_45%,#0f3fae_100%)] text-white', chipStyle: 'bg-white/12 text-white/85 border-white/10', image: '/social/facebook.png?v=20260309b', imagePosition: 'right bottom' },
+              ],
+            };
   const imageAlt = locale === 'zh'
     ? '伟伟拉链义乌国际商贸城摊位实拍'
     : locale === 'ru'
@@ -50,6 +109,41 @@ export default async function AboutPage({ params }: Props) {
               priority
               className="w-full h-auto object-cover"
             />
+          </div>
+          <div className="mt-6 rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-5 shadow-sm">
+            <div className="mb-4">
+              <h3 className="text-lg font-semibold text-gray-900">{socialContent.title}</h3>
+              <p className="mt-1 text-sm text-gray-600">{socialContent.subtitle}</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {socialContent.items.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`group relative overflow-hidden rounded-3xl border p-4 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${item.style}`}
+                >
+                  <div className="pointer-events-none absolute -right-5 -top-5 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
+                  <div className="pointer-events-none absolute -bottom-8 -left-6 h-28 w-28 rounded-full bg-black/10 blur-2xl" />
+                  <div
+                    className="pointer-events-none absolute -bottom-3 -right-3 h-full w-28 opacity-45 mix-blend-screen bg-contain bg-no-repeat sm:-bottom-4 sm:-right-4 sm:w-32"
+                    style={{ backgroundImage: `url(${item.image})`, backgroundPosition: item.imagePosition }}
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/45 via-black/16 to-black/0" />
+                  <div className="relative flex items-start justify-between gap-4">
+                    <div>
+                      <span className={`inline-flex rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] ${item.chipStyle}`}>{item.name}</span>
+                      <div className="mt-3 text-lg font-semibold leading-snug">{item.note}</div>
+                      <div className="mt-6 text-[11px] uppercase tracking-[0.26em] opacity-30">{item.name}</div>
+                    </div>
+                    <span className={`inline-flex rounded-full px-3 py-1.5 text-xs font-semibold shadow-sm backdrop-blur ${item.chipStyle}`}>
+                      {socialContent.cta}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 
