@@ -18,7 +18,7 @@ export const siteBrand = {
   logoAlt: '伟伟拉链商标',
   currentAddress: '浙江省义乌市国际商贸城三区59门三楼2街27449',
   historicalAddressNote: '',
-  wechatQrPath: '/brand/wechat-qr-code.png',
+  wechatQrPath: '/brand/wechat-qr-code.jpg',
   wechatId: 'x13906892467',
   foundedYear: '1992',
 } as const;
