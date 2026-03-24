@@ -15,6 +15,7 @@ import '../globals.css';
 
 const ICON_CACHE_BUST = '20260302a';
 const BAIDU_SITE_VERIFICATION = process.env.BAIDU_SITE_VERIFICATION || 'codeva-K6Q4UfkUrb';
+const QIHOO_SITE_VERIFICATION = process.env.QIHOO_SITE_VERIFICATION || 'c4dd98193d4a3e7c38e2dbbde8166f81';
 const LOCALE_METADATA = {
   en: { htmlLang: 'en', dir: 'ltr', ogLocale: 'en_US', companyName: COMPANY_NAME_EN },
   zh: { htmlLang: 'zh-CN', dir: 'ltr', ogLocale: 'zh_CN', companyName: COMPANY_NAME_ZH },
@@ -215,6 +216,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="shortcut icon" href={`/favicon-tab.ico?v=${ICON_CACHE_BUST}`} />
         <link rel="apple-touch-icon" href={`/apple-icon-tab.png?v=${ICON_CACHE_BUST}`} />
         <meta name="baidu-site-verification" content={BAIDU_SITE_VERIFICATION} />
+        <meta name="360-site-verification" content={QIHOO_SITE_VERIFICATION} />
         <StructuredData locale={locale} />
       </head>
       <body
