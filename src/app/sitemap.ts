@@ -6,7 +6,7 @@ import { BLOG_SLUGS } from '@/site-data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
-  const routes = ['', '/products', '/about', '/contact', '/quote', '/industries', '/services', '/faq', '/blog', '/privacy-policy', '/terms-of-service'];
+  const routes = ['', '/products', '/about', '/contact', '/quote', '/industries', '/services', '/faq', '/blog', '/yiwu-zipper-supplier', '/privacy-policy', '/terms-of-service'];
   const now = new Date();
 
   const entries: MetadataRoute.Sitemap = [];

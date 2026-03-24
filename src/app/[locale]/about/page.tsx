@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import { getAboutContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
@@ -86,6 +87,35 @@ export default async function AboutPage({ params }: Props) {
     : locale === 'es'
       ? 'Puesto de Weiwei Zipper en Yiwu International Trade City'
       : 'Weiwei Zipper booth at Yiwu International Trade City';
+  const yiwuLanding = locale === 'zh'
+    ? {
+        title: '了解义乌拉链厂家与批发配套',
+        description: '如果你想进一步了解义乌国际商贸城的拉链采购、批发配套和常见确认重点，可以查看这张专门页面。',
+        button: '查看义乌拉链配套页',
+      }
+    : locale === 'ru'
+      ? {
+          title: 'Подробнее о поставщике молний в Иу',
+          description: 'Если вам нужна отдельная страница о закупке, оптовой поставке и типовых моментах согласования в Иу, перейдите по ссылке ниже.',
+          button: 'Открыть страницу по Иу',
+        }
+      : locale === 'ar'
+        ? {
+            title: 'تعرف أكثر على مورد السحابات في ييوو',
+            description: 'إذا كنت تريد صفحة مخصصة حول شراء السحابات بالجملة في ييوو والنقاط الشائعة قبل الطلب، يمكنك الاطلاع عليها هنا.',
+            button: 'عرض صفحة ييوو',
+          }
+        : locale === 'es'
+          ? {
+              title: 'Conozca mejor nuestra coordinacion en Yiwu',
+              description: 'Si quiere una pagina dedicada a compra mayorista, coordinacion y puntos clave de confirmacion en Yiwu, puede verla aqui.',
+              button: 'Ver pagina de Yiwu',
+            }
+          : {
+              title: 'See our Yiwu zipper supplier page',
+              description: 'If you want a dedicated page focused on zipper sourcing, wholesale coordination, and common confirmation points in Yiwu, you can view it here.',
+              button: 'View Yiwu supplier page',
+            };
 
   return (
     <div className="container mx-auto px-4 py-10 sm:py-12">
@@ -144,6 +174,16 @@ export default async function AboutPage({ params }: Props) {
                 </a>
               ))}
             </div>
+          </div>
+          <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-5 shadow-sm">
+            <h3 className="text-lg font-semibold text-blue-950">{yiwuLanding.title}</h3>
+            <p className="mt-2 text-sm leading-6 text-blue-900/75">{yiwuLanding.description}</p>
+            <Link
+              href="/yiwu-zipper-supplier"
+              className="mt-4 inline-flex items-center rounded-lg border border-blue-200 bg-white px-4 py-2 text-sm font-semibold text-blue-800 transition hover:border-blue-300 hover:bg-blue-100/60"
+            >
+              {yiwuLanding.button}
+            </Link>
           </div>
         </section>
 
