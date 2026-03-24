@@ -14,6 +14,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../globals.css';
 
 const ICON_CACHE_BUST = '20260302a';
+const BAIDU_SITE_VERIFICATION = process.env.BAIDU_SITE_VERIFICATION || 'codeva-K6Q4UfkUrb';
 const LOCALE_METADATA = {
   en: { htmlLang: 'en', dir: 'ltr', ogLocale: 'en_US', companyName: COMPANY_NAME_EN },
   zh: { htmlLang: 'zh-CN', dir: 'ltr', ogLocale: 'zh_CN', companyName: COMPANY_NAME_ZH },
@@ -213,6 +214,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="icon" href={`/favicon-tab.png?v=${ICON_CACHE_BUST}`} type="image/png" sizes="512x512" />
         <link rel="shortcut icon" href={`/favicon-tab.ico?v=${ICON_CACHE_BUST}`} />
         <link rel="apple-touch-icon" href={`/apple-icon-tab.png?v=${ICON_CACHE_BUST}`} />
+        <meta name="baidu-site-verification" content={BAIDU_SITE_VERIFICATION} />
         <StructuredData locale={locale} />
       </head>
       <body
