@@ -22,6 +22,8 @@ interface InquiryData {
   quantity?: string;
   application?: string;
   message?: string;
+  // Anti-spam honeypot — must be empty for a legitimate human submission.
+  honeypot?: string;
   // UTM tracking fields
   utmSource?: string;
   utmMedium?: string;
@@ -30,6 +32,27 @@ interface InquiryData {
   utmTerm?: string;
   referrer?: string;
   landingPage?: string;
+}
+
+// Escape user-supplied values before interpolating them into HTML emails,
+// preventing HTML/markup injection into both the team notification and the
+// auto-reply sent back to the submitter.
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Return a copy of the inquiry record with every value HTML-escaped.
+function escapeInquiry(inquiry: Record<string, string>): Record<string, string> {
+  const safe: Record<string, string> = {};
+  for (const [key, value] of Object.entries(inquiry)) {
+    safe[key] = escapeHtml(value ?? '');
+  }
+  return safe;
 }
 
 type SupportedLocale = 'zh' | 'en' | 'es' | 'ar' | 'ru';
@@ -76,7 +99,8 @@ function cleanupRateLimitMap() {
   }
 }
 
-function buildEmailHtml(inquiry: Record<string, string>): string {
+function buildEmailHtml(rawInquiry: Record<string, string>): string {
+  const inquiry = escapeInquiry(rawInquiry);
   const rows = [
     { label: 'Inquiry ID', value: inquiry.id },
     { label: 'Timestamp', value: inquiry.timestamp },
@@ -123,7 +147,8 @@ function buildEmailHtml(inquiry: Record<string, string>): string {
   `;
 }
 
-function buildAutoReplyHtml(inquiry: Record<string, string>, locale: SupportedLocale): string {
+function buildAutoReplyHtml(rawInquiry: Record<string, string>, locale: SupportedLocale): string {
+  const inquiry = escapeInquiry(rawInquiry);
   const contentByLocale: Record<
     SupportedLocale,
     {
@@ -444,6 +469,12 @@ export async function POST(request: NextRequest) {
     cleanupRateLimitMap();
 
     const data: InquiryData = await request.json();
+
+    // Honeypot: a filled hidden field means a bot. Respond 200 so the bot
+    // believes it succeeded, but silently drop the submission (no email).
+    if (data.honeypot && data.honeypot.trim() !== '') {
+      return NextResponse.json({ success: true, id: `INQ-${Date.now()}` });
+    }
 
     // Server-side validation — only name and email are required
     if (!data.name || !data.email) {
