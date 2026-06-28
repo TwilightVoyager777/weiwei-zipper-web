@@ -58,3 +58,8 @@ Env vars: `RESEND_API_KEY` (required for email; absent → email skipped with a 
 - Path alias `@/*` → `src/*`.
 - `next.config.ts` defines strict security headers including a CSP (`script-src` allows Vercel analytics + inline). New external scripts, frames, or connect origins must be added to the CSP there or they will be blocked.
 - Server Components by default; pages call the `getX(locale)` content accessors and `getTranslations`. Interactive pieces (`ContactForm`, `Header` menu, `WhatsAppFloat`) are client components.
+
+## Git workflow
+
+- **Auto-commit and push at meaningful milestones.** When a feature, fix, or other self-contained unit of work is complete and verified (build/lint pass), commit it and push to `origin` without waiting to be asked each time. Group related changes into logically scoped commits. The repo's normal workflow commits directly to `master` (which tracks `origin/master`).
+- **Never add an AI co-author trailer.** Commit messages and PR bodies must NOT contain `Co-Authored-By: Claude ...` or any other Claude/AI co-author line. Write plain messages that read as the author's own.
