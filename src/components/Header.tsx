@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/localization/navigation';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/site-constants';
 import { MenuIcon } from '@/components/Icons';
-import { routing, localeDisplayNames, localeSwitcherOrder, type Locale } from '@/localization/routing';
+import { localeDisplayNames, localeSwitcherOrder, type Locale } from '@/localization/routing';
 import { getNavigationContent, getSiteBrand } from '@/site-data/site-content';
 import { categoryOrder, getCategoryContent } from '@/site-data/product-catalog';
 

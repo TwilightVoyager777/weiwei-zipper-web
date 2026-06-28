@@ -11,7 +11,6 @@ import {
   CATEGORY_SLUGS,
   CATEGORY_SLUG_TO_KEY,
   PRODUCT_IMAGES,
-  PRODUCT_SLUGS,
   getCategoryContent,
   getProductDetailLabels,
   getProductItems,
