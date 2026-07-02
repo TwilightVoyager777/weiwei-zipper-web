@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
+import ProductGallery from '@/components/ProductGallery';
 import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
 import { SITE_URL } from '@/config/site-constants';
 import { permanentRedirect } from 'next/navigation';
@@ -140,6 +141,34 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
             ))}
           </ul>
         </section>
+
+        {category.gallery ? (
+          <section className="mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">{category.gallery.title}</h2>
+            {category.gallery.description ? (
+              <p className="text-gray-600 mb-6 max-w-3xl">{category.gallery.description}</p>
+            ) : null}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {category.gallery.items.map((item) => (
+                <div key={item.image} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                  <div className="bg-gray-50">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {productSlugs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
@@ -332,22 +361,56 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
           <div className="lg:col-span-2 space-y-10">
             <section>
-              <div className="bg-gray-50 rounded-lg p-4 sm:p-8 flex items-center justify-center border border-gray-200">
-                <Image
-                  src={PRODUCT_IMAGES[slug]}
-                  alt={product.name}
-                  width={500}
-                  height={500}
-                  className="object-contain max-h-[280px] w-auto sm:max-h-[400px]"
-                  priority
+              {product.gallery && product.gallery.length > 0 ? (
+                <ProductGallery
+                  images={product.gallery.map((item) => ({ src: item.image, alt: item.title }))}
                 />
-              </div>
+              ) : (
+                <div className="bg-gray-50 rounded-lg p-4 sm:p-8 flex items-center justify-center border border-gray-200">
+                  <Image
+                    src={PRODUCT_IMAGES[slug]}
+                    alt={product.name}
+                    width={500}
+                    height={500}
+                    className="object-contain max-h-[280px] w-auto sm:max-h-[400px]"
+                    priority
+                  />
+                </div>
+              )}
             </section>
 
             <section>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
               <p className="text-gray-700 leading-relaxed">{product.overview}</p>
             </section>
+
+            {product.gallery && product.gallery.length > 0 ? (
+              <section>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.galleryTitle}</h2>
+                <div className="space-y-5">
+                  {product.gallery.map((item) => (
+                    <div
+                      key={item.image}
+                      className="grid grid-cols-1 sm:grid-cols-2 bg-white border border-gray-200 rounded-lg overflow-hidden"
+                    >
+                      <div className="bg-gray-50">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          width={800}
+                          height={534}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-5 sm:p-6 flex flex-col justify-center">
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                        <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             <section>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.features}</h2>

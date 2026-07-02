@@ -17,6 +17,18 @@ export const PRODUCT_SPEC_KEYS = [
 
 export type ProductSpecKey = (typeof PRODUCT_SPEC_KEYS)[number];
 
+export type ProductGalleryItem = {
+  image: string;
+  title: string;
+  description: string;
+};
+
+export type CategoryGallery = {
+  title: string;
+  description?: string;
+  items: ProductGalleryItem[];
+};
+
 export const productDetailLabels = {
   overview: '产品概览',
   features: '核心特点',
@@ -24,6 +36,7 @@ export const productDetailLabels = {
   property: '项目',
   value: '内容',
   applications: '适用场景',
+  galleryTitle: '产品实拍',
   faqTitle: '常见问题',
   inquiryCta: '已有样品、参考图或规格信息？',
   inquiryCtaDescription: '欢迎提供使用场景、规格要求及参考图，我们可先协助确认选型方向，再进一步沟通常用方案与报价安排。',
@@ -81,6 +94,7 @@ export const PRODUCT_SLUGS = [
   'resin-zipper-3-5-8',
   'nylon-zipper-3-5-8',
   'metal-no-5-closed-end-zipper',
+  'metal-no-5-open-end-zipper',
   'resin-no-5-closed-end-zipper',
   'resin-no-5-open-end-zipper',
   'nylon-no-5-closed-end-zipper',
@@ -108,6 +122,7 @@ export type ProductCategoryContent = {
     factors: { title: string; description: string }[];
   };
   faq?: { question: string; answer: string }[];
+  gallery?: CategoryGallery;
 };
 
 export type ProductItemContent = {
@@ -119,6 +134,7 @@ export type ProductItemContent = {
   features: string[];
   applications: string[];
   specifications: Record<ProductSpecKey, string>;
+  gallery?: ProductGalleryItem[];
 };
 
 export const productsPageContent = {
@@ -272,6 +288,32 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
         {
           title: '最后确认拉头与长度',
           description: '规格和牙色确定后，再结合拉头样式、长度与结构安排打样，会更便于后续批量复用。',
+        },
+      ],
+    },
+    gallery: {
+      title: '齿色与工艺实拍',
+      description: '金属拉链的风格差异主要来自齿色。以下为常用四种齿色的实拍参考，均可结合织带颜色与拉头样式进一步确认。',
+      items: [
+        {
+          image: '/products/metal/black-silver-open-end.webp',
+          title: '银齿',
+          description: '电镀亮银齿面，通用性最强，是服装与箱包项目的主流选择。',
+        },
+        {
+          image: '/products/metal/black-golden-open-end.webp',
+          title: '金齿',
+          description: '金色电镀齿面，整体质感更强，常用于箱包与偏高端定位的款式。',
+        },
+        {
+          image: '/products/metal/black-antique-brass-open-end.webp',
+          title: '古铜齿',
+          description: '做旧复古色齿面，牛仔、工装类风格的常见搭配。',
+        },
+        {
+          image: '/products/metal/navy-antique-bronze-open-end.webp',
+          title: '青古铜齿',
+          description: '枪色系齿面，低调耐看，适合深色面料与复古风格款式。',
         },
       ],
     },
@@ -509,6 +551,83 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
       applicationScope: '箱包口袋 / 鞋履配件 / 工装配件',
       notes: '如需特殊长度、牙色或拉头方式，可结合样品进一步确认',
     },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-closed-end.webp',
+        title: '黑带银齿闭口',
+        description: '经典黑织带配亮银齿，闭口结构适合裤装口袋、箱包内袋等固定开合位，电镀均匀、拉合顺滑。',
+      },
+      {
+        image: '/products/metal/mint-green-golden-closed-end.webp',
+        title: '薄荷绿带金齿闭口',
+        description: '织带可按色卡定染，浅彩织带搭配金齿，适合女装与童装等需要细节亮点的配件位。',
+      },
+      {
+        image: '/products/metal/khaki-antique-brass-closed-end.webp',
+        title: '卡其带古铜齿闭口',
+        description: '古铜做旧齿色配卡其织带，是工装与休闲裤口袋的常见组合，风格复古耐看。',
+      },
+      {
+        image: '/products/metal/yellow-lace-silver-closed-end.webp',
+        title: '蕾丝花边带闭口',
+        description: '特殊蕾丝织带工艺，装饰性更强，适合童装、女装及家居布艺等强调设计感的用途。',
+      },
+    ],
+  },
+  'metal-no-5-open-end-zipper': {
+    slug: 'metal-no-5-open-end-zipper',
+    category: 'metalZippers',
+    name: '五号金属开口拉链',
+    description: '适合外套、工装、箱包等常见开口结构，可选银齿、金齿、古铜齿、青古铜齿等多种齿色。',
+    overview: '五号金属开口拉链适合前中门襟等需要完全分开的开合位置，兼顾五金质感与耐用度。伟伟拉链可提供银齿、金齿、古铜齿、青古铜齿等常用齿色，并围绕长度、织带颜色与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
+    features: ['5 号规格适合常规外套与中等厚度款式', '开口结构适合前中门襟与需要完全分开的开合位', '银齿 / 金齿 / 古铜齿 / 青古铜齿多种齿色可选', '支持常规颜色、长度与拉头搭配确认'],
+    applications: ['外套门襟', '工装前中', '箱包配件'],
+    specifications: {
+      type: '金属开口拉链',
+      size: '5 号',
+      length: '可按需求长度定制',
+      structure: '开口',
+      material: '金属牙链配套常规织带',
+      sliderStyle: '可按款式搭配常规或装饰型拉头',
+      colorOption: '支持织带颜色与五金齿色确认',
+      samplingCycle: '常规样品可优先安排',
+      productionLeadTime: '确认样品后进入批量排单',
+      orderType: '适合开发单、常规批量与返单',
+      applicationScope: '外套 / 工装 / 箱包',
+      notes: '如需特殊长度、齿色或拉头方式，可结合样品进一步确认',
+    },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-open-end.webp',
+        title: '黑带银齿开口',
+        description: '经典黑织带配亮银齿，电镀均匀、拉合顺滑，是外套与夹克前中门襟的主流选择。',
+      },
+      {
+        image: '/products/metal/red-silver-open-end.webp',
+        title: '红带银齿开口',
+        description: '织带可按色卡定染，亮色织带与银齿搭配，适合童装与运动款式的撞色设计。',
+      },
+      {
+        image: '/products/metal/denim-blue-silver-open-end.webp',
+        title: '牛仔蓝带银齿开口',
+        description: '蓝灰色织带贴近牛仔与休闲面料色系，便于与成衣主色保持统一。',
+      },
+      {
+        image: '/products/metal/black-golden-open-end.webp',
+        title: '黑带金齿开口',
+        description: '金色电镀齿提升整体质感，常用于箱包与偏高端定位的服饰款式。',
+      },
+      {
+        image: '/products/metal/off-white-golden-open-end.webp',
+        title: '米白带金齿开口',
+        description: '浅色织带配金齿，适合浅色系风衣、羽绒服等对细节质感有要求的款式。',
+      },
+      {
+        image: '/products/metal/navy-antique-bronze-open-end.webp',
+        title: '藏青带青古铜齿开口',
+        description: '青古铜（枪色系）齿面低调耐看，适合深色工装与复古风格款式。',
+      },
+    ],
   },
   'metal-zipper-roll-3-5-8': {
     slug: 'metal-zipper-roll-3-5-8',
@@ -545,7 +664,7 @@ export const CATEGORY_SLUG_TO_KEY: Record<CategorySlug, ProductCategory> = {
 };
 
 export const CATEGORY_PRODUCTS: Record<CategorySlug, ProductSlug[]> = {
-  'metal-zippers': ['metal-no-5-closed-end-zipper'],
+  'metal-zippers': ['metal-no-5-closed-end-zipper', 'metal-no-5-open-end-zipper'],
   'resin-zippers': ['resin-no-5-closed-end-zipper', 'resin-no-5-open-end-zipper'],
   'nylon-zippers': ['nylon-no-5-closed-end-zipper'],
   'metal-zipper-rolls': [],
@@ -555,7 +674,8 @@ export const CATEGORY_PRODUCTS: Record<CategorySlug, ProductSlug[]> = {
 
 export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
   'metal-zipper-3-5-8': '/products/metal-zipper-main.png?v=20260302b',
-  'metal-no-5-closed-end-zipper': '/products/metal-zipper-main.png?v=20260302b',
+  'metal-no-5-closed-end-zipper': '/products/metal/black-silver-closed-end.webp',
+  'metal-no-5-open-end-zipper': '/products/metal/black-silver-open-end.webp',
   'metal-zipper-roll-3-5-8': '/products/metal-zipper-main.png?v=20260302b',
   'resin-zipper-3-5-8': '/products/resin-zipper-main.png?v=20260302b',
   'resin-no-5-closed-end-zipper': '/products/resin-zipper-main.png?v=20260302b',
@@ -567,9 +687,9 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
 };
 
 export const CATEGORY_IMAGES: Record<ProductCategory, string> = {
-  metalZippers: '/products/metal-zipper-main.png?v=20260302b',
-  resinZippers: '/products/resin-zipper-main.png?v=20260302b',
-  nylonZippers: '/products/nylon-zipper-main.png?v=20260302b',
+  metalZippers: '/products/metal/black-golden-open-end.webp',
+  resinZippers: '/products/resin/multicolor-collection.webp',
+  nylonZippers: '/products/nylon/multicolor-collection.webp',
   metalRolls: '/products/metal-zipper-main.png?v=20260302b',
   resinRolls: '/products/resin-zipper-main.png?v=20260302b',
   nylonRolls: '/products/nylon-zipper-main.png?v=20260302b',
@@ -616,6 +736,7 @@ export const productsPagePrimaryCards = [
 
 export const productsPageProductOrder: ProductSlug[] = [
   'metal-no-5-closed-end-zipper',
+  'metal-no-5-open-end-zipper',
   'resin-no-5-closed-end-zipper',
   'resin-no-5-open-end-zipper',
   'nylon-no-5-closed-end-zipper',
@@ -638,6 +759,7 @@ const productDetailLabelsEn = {
   property: 'Item',
   value: 'Details',
   applications: 'Applications',
+  galleryTitle: 'Product Photos',
   faqTitle: 'FAQ',
   inquiryCta: 'Do You Have Samples, Reference Images, or Specifications?',
   inquiryCtaDescription: 'You are welcome to share the application, target specifications, or reference images first. We can help narrow the selection direction before moving into solution and quotation discussion.',
@@ -660,6 +782,7 @@ const productDetailLabelsEs = {
   property: 'Elemento',
   value: 'Detalles',
   applications: 'Aplicaciones',
+  galleryTitle: 'Fotos del producto',
   faqTitle: 'Preguntas frecuentes',
   inquiryCta: 'Tiene muestras, imagenes de referencia o especificaciones?',
   inquiryCtaDescription: 'Puede compartir primero el uso previsto, las especificaciones objetivo o imagenes de referencia. Le ayudaremos a acotar la direccion de seleccion antes de avanzar hacia la solucion y la cotizacion.',
@@ -712,6 +835,7 @@ const productDetailLabelsAr = {
   property: 'البند',
   value: 'التفاصيل',
   applications: 'الاستخدامات',
+  galleryTitle: 'صور المنتج',
   faqTitle: 'الأسئلة الشائعة',
   inquiryCta: 'هل لديك عينات أو صور مرجعية أو مواصفات؟',
   inquiryCtaDescription: 'يمكنك مشاركة الاستخدام أو المواصفات المستهدفة أو الصور المرجعية أولا، وسنساعدك على تضييق اتجاه الاختيار قبل الانتقال إلى الحل والتسعير.',
@@ -749,6 +873,7 @@ const productDetailLabelsRu = {
   property: 'Параметр',
   value: 'Содержание',
   applications: 'Применение',
+  galleryTitle: 'Фотографии продукта',
   faqTitle: 'Частые вопросы',
   inquiryCta: 'У вас есть образцы, референсные изображения или спецификация?',
   inquiryCtaDescription: 'Вы можете сначала прислать сферу применения, целевые характеристики или референсные изображения. Мы поможем сузить направление выбора до перехода к решению и расчету цены.',
@@ -948,6 +1073,32 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    gallery: {
+      title: 'Tooth Colors and Finishes',
+      description: 'Most of the style variation in metal zippers comes from the tooth color. Below are photos of the four most common finishes, all of which can be further matched with tape colors and slider styles.',
+      items: [
+        {
+          image: '/products/metal/black-silver-open-end.webp',
+          title: 'Silver Teeth',
+          description: 'Bright electroplated silver finish with the widest compatibility — the mainstream choice for garment and bag projects.',
+        },
+        {
+          image: '/products/metal/black-golden-open-end.webp',
+          title: 'Golden Teeth',
+          description: 'Gold electroplated finish with a stronger premium feel, often used on bags and higher-positioned styles.',
+        },
+        {
+          image: '/products/metal/black-antique-brass-open-end.webp',
+          title: 'Antique Brass Teeth',
+          description: 'A vintage, distressed finish commonly paired with denim and workwear styles.',
+        },
+        {
+          image: '/products/metal/navy-antique-bronze-open-end.webp',
+          title: 'Antique Bronze Teeth',
+          description: 'A gunmetal-leaning finish that stays understated, well suited to dark fabrics and retro styles.',
+        },
+      ],
+    },
   },
   metalRolls: {
     key: 'metalRolls',
@@ -980,6 +1131,32 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     ...categoryContentEn.metalZippers,
     name: 'Cremalleras metalicas',
     description: 'Mas adecuadas para bolsos, calzado, ropa de trabajo y estilos que requieren mayor textura y durabilidad, normalmente dentro de los tamanos 3 / 5 / 8.',
+    gallery: {
+      title: 'Colores de dientes y acabados',
+      description: 'La mayor parte de la variacion de estilo en las cremalleras metalicas proviene del color de los dientes. A continuacion se muestran fotos de los cuatro acabados mas comunes, que pueden combinarse con colores de cinta y estilos de cursor.',
+      items: [
+        {
+          image: '/products/metal/black-silver-open-end.webp',
+          title: 'Dientes plateados',
+          description: 'Acabado plateado brillante galvanizado, el mas versatil y la opcion principal para proyectos de prendas y bolsos.',
+        },
+        {
+          image: '/products/metal/black-golden-open-end.webp',
+          title: 'Dientes dorados',
+          description: 'Acabado dorado galvanizado con una sensacion mas premium, habitual en bolsos y estilos de posicionamiento mas alto.',
+        },
+        {
+          image: '/products/metal/black-antique-brass-open-end.webp',
+          title: 'Dientes de laton envejecido',
+          description: 'Acabado vintage envejecido, combinacion habitual para estilos denim y de ropa de trabajo.',
+        },
+        {
+          image: '/products/metal/navy-antique-bronze-open-end.webp',
+          title: 'Dientes de bronce envejecido',
+          description: 'Acabado tipo gunmetal, discreto y duradero, adecuado para telas oscuras y estilos retro.',
+        },
+      ],
+    },
   },
   resinZippers: {
     ...categoryContentEn.resinZippers,
@@ -1013,6 +1190,32 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     ...categoryContentEn.metalZippers,
     name: 'سحابات معدنية',
     description: 'أنسب للحقائب والأحذية وملابس العمل والتصاميم التي تحتاج إلى ملمس أقوى ومتانة أعلى، وغالبا ضمن المقاسات 3 / 5 / 8.',
+    gallery: {
+      title: 'ألوان الأسنان واللمسات النهائية',
+      description: 'يأتي معظم التنوع في أسلوب السحابات المعدنية من لون الأسنان. فيما يلي صور لأكثر أربع لمسات نهائية شيوعا، ويمكن تنسيقها جميعا مع ألوان الأشرطة وأنماط السحابات.',
+      items: [
+        {
+          image: '/products/metal/black-silver-open-end.webp',
+          title: 'أسنان فضية',
+          description: 'طلاء فضي لامع بالجلفنة، وهو الأكثر تنوعا والخيار الرئيسي لمشاريع الملابس والحقائب.',
+        },
+        {
+          image: '/products/metal/black-golden-open-end.webp',
+          title: 'أسنان ذهبية',
+          description: 'طلاء ذهبي بالجلفنة يمنح إحساسا أكثر فخامة، ويستخدم غالبا في الحقائب والتصاميم ذات التموضع الأعلى.',
+        },
+        {
+          image: '/products/metal/black-antique-brass-open-end.webp',
+          title: 'أسنان نحاس عتيق',
+          description: 'لمسة نهائية كلاسيكية بمظهر قديم، وهي تركيبة شائعة مع أنماط الدنيم وملابس العمل.',
+        },
+        {
+          image: '/products/metal/navy-antique-bronze-open-end.webp',
+          title: 'أسنان برونز عتيق',
+          description: 'لمسة نهائية تميل إلى لون معدن السلاح، هادئة وأنيقة، مناسبة للأقمشة الداكنة والأنماط الكلاسيكية.',
+        },
+      ],
+    },
   },
   resinZippers: {
     ...categoryContentEn.resinZippers,
@@ -1046,6 +1249,32 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     ...categoryContentEn.metalZippers,
     name: 'Металлические молнии',
     description: 'Лучше подходят для сумок, обуви, рабочей одежды и моделей, где важны фактура и высокая износостойкость, обычно в размерах 3 / 5 / 8.',
+    gallery: {
+      title: 'Цвета зубьев и покрытия',
+      description: 'Основное стилевое разнообразие металлических молний определяется цветом зубьев. Ниже показаны четыре самых распространенных покрытия; каждое можно дополнительно сочетать с цветом тесьмы и стилем бегунка.',
+      items: [
+        {
+          image: '/products/metal/black-silver-open-end.webp',
+          title: 'Серебристые зубья',
+          description: 'Яркое гальваническое серебристое покрытие с самой широкой совместимостью — основной выбор для одежды и сумок.',
+        },
+        {
+          image: '/products/metal/black-golden-open-end.webp',
+          title: 'Золотистые зубья',
+          description: 'Золотистое гальваническое покрытие с более премиальным ощущением, часто используется в сумках и моделях более высокого позиционирования.',
+        },
+        {
+          image: '/products/metal/black-antique-brass-open-end.webp',
+          title: 'Зубья под античную латунь',
+          description: 'Винтажное состаренное покрытие, распространенное сочетание для денима и рабочей одежды.',
+        },
+        {
+          image: '/products/metal/navy-antique-bronze-open-end.webp',
+          title: 'Зубья под античную бронзу',
+          description: 'Сдержанное покрытие оттенка ганметал, хорошо подходит к темным тканям и ретро-моделям.',
+        },
+      ],
+    },
   },
   resinZippers: {
     ...categoryContentEn.resinZippers,
@@ -1281,6 +1510,83 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Bag pockets / Footwear accessories / Workwear accessories',
       notes: 'If special lengths, tooth colors, or sliders are needed, they can be confirmed against the sample in more detail',
     },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-closed-end.webp',
+        title: 'Black Tape with Silver Teeth, Closed-End',
+        description: 'Classic black tape with bright silver teeth. The closed-end structure suits fixed openings such as trouser pockets and bag interior pockets, with even plating and smooth operation.',
+      },
+      {
+        image: '/products/metal/mint-green-golden-closed-end.webp',
+        title: 'Mint Green Tape with Golden Teeth, Closed-End',
+        description: 'Tape can be dyed to color cards. Light-colored tape paired with golden teeth works well for womenswear and kidswear accessory positions that need a detail highlight.',
+      },
+      {
+        image: '/products/metal/khaki-antique-brass-closed-end.webp',
+        title: 'Khaki Tape with Antique Brass Teeth, Closed-End',
+        description: 'Distressed antique brass teeth on khaki tape — a common combination for workwear and casual trouser pockets with a durable vintage look.',
+      },
+      {
+        image: '/products/metal/yellow-lace-silver-closed-end.webp',
+        title: 'Lace Tape, Closed-End',
+        description: 'A special lace tape construction with a stronger decorative character, suitable for kidswear, womenswear, and home textile uses that emphasize design detail.',
+      },
+    ],
+  },
+  'metal-no-5-open-end-zipper': {
+    slug: 'metal-no-5-open-end-zipper',
+    category: 'metalZippers',
+    name: 'No. 5 Metal Open-End Zipper',
+    description: 'Suitable for jackets, workwear, and bag positions that use open-end structures, with silver, golden, antique brass, and antique bronze tooth colors available.',
+    overview: 'The No. 5 metal open-end zipper suits center-front openings and other positions that need to separate completely, balancing hardware texture with durability. Weiwei Zipper offers common tooth colors including silver, golden, antique brass, and antique bronze, and can coordinate routine matching around length, tape color, and slider combinations so customers can complete sample confirmation first and then move into bulk purchasing and repeat orders.',
+    features: ['Size 5 suits routine jackets and medium-thickness styles', 'Open-end structure suits center-front plackets and fully separating openings', 'Multiple tooth colors available: silver / golden / antique brass / antique bronze', 'Routine colors, lengths, and slider combinations can be confirmed'],
+    applications: ['Jacket plackets', 'Workwear center fronts', 'Bag accessories'],
+    specifications: {
+      type: 'Metal Open-End Zipper',
+      size: 'No. 5',
+      length: 'Can be customized to required lengths',
+      structure: 'Open-end',
+      material: 'Metal teeth with routine zipper tape',
+      sliderStyle: 'Routine or decorative sliders can be matched by style',
+      colorOption: 'Supports coordination around tape color and hardware tooth color',
+      samplingCycle: 'Routine samples can usually be arranged first',
+      productionLeadTime: 'Bulk scheduling starts after sample confirmation',
+      orderType: 'Suitable for development orders, routine bulk, and repeat orders',
+      applicationScope: 'Jackets / Workwear / Bags',
+      notes: 'If special lengths, tooth colors, or sliders are needed, they can be confirmed against the sample in more detail',
+    },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-open-end.webp',
+        title: 'Black Tape with Silver Teeth, Open-End',
+        description: 'Classic black tape with bright silver teeth, evenly plated and smooth to operate — the mainstream choice for jacket center-front plackets.',
+      },
+      {
+        image: '/products/metal/red-silver-open-end.webp',
+        title: 'Red Tape with Silver Teeth, Open-End',
+        description: 'Tape can be dyed to color cards. Bright tape with silver teeth suits contrast-color designs in kidswear and sportswear.',
+      },
+      {
+        image: '/products/metal/denim-blue-silver-open-end.webp',
+        title: 'Denim Blue Tape with Silver Teeth, Open-End',
+        description: 'A blue-gray tape tone close to denim and casual fabric palettes, making it easier to stay consistent with the main garment color.',
+      },
+      {
+        image: '/products/metal/black-golden-open-end.webp',
+        title: 'Black Tape with Golden Teeth, Open-End',
+        description: 'Gold electroplated teeth lift the overall texture, often used on bags and higher-positioned garment styles.',
+      },
+      {
+        image: '/products/metal/off-white-golden-open-end.webp',
+        title: 'Off-White Tape with Golden Teeth, Open-End',
+        description: 'Light tape paired with golden teeth, suitable for light-colored trench coats, down jackets, and other styles where detail texture matters.',
+      },
+      {
+        image: '/products/metal/navy-antique-bronze-open-end.webp',
+        title: 'Navy Tape with Antique Bronze Teeth, Open-End',
+        description: 'An understated gunmetal-leaning finish that wears well, suited to dark workwear and retro styles.',
+      },
+    ],
   },
   'metal-zipper-roll-3-5-8': {
     slug: 'metal-zipper-roll-3-5-8',
@@ -1514,6 +1820,83 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Bolsillos de bolsos / accesorios de calzado / accesorios de ropa de trabajo',
       notes: 'Si se necesitan longitudes, colores de diente o cursores especiales, pueden confirmarse con mas detalle a partir de la muestra',
     },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-closed-end.webp',
+        title: 'Cinta negra con dientes plateados, cerrada',
+        description: 'Cinta negra clasica con dientes plateados brillantes. La estructura cerrada se adapta a aperturas fijas como bolsillos de pantalon y bolsillos interiores de bolsos, con galvanizado uniforme y deslizamiento suave.',
+      },
+      {
+        image: '/products/metal/mint-green-golden-closed-end.webp',
+        title: 'Cinta verde menta con dientes dorados, cerrada',
+        description: 'La cinta puede tenirse segun carta de colores. La cinta clara con dientes dorados funciona bien en posiciones de accesorios de ropa femenina e infantil que buscan un detalle destacado.',
+      },
+      {
+        image: '/products/metal/khaki-antique-brass-closed-end.webp',
+        title: 'Cinta caqui con dientes de laton envejecido, cerrada',
+        description: 'Dientes de laton envejecido sobre cinta caqui: una combinacion habitual para bolsillos de ropa de trabajo y pantalones casuales con un aspecto vintage duradero.',
+      },
+      {
+        image: '/products/metal/yellow-lace-silver-closed-end.webp',
+        title: 'Cinta de encaje, cerrada',
+        description: 'Construccion especial con cinta de encaje y caracter mas decorativo, adecuada para ropa infantil, ropa femenina y textiles del hogar que destacan el detalle de diseno.',
+      },
+    ],
+  },
+  'metal-no-5-open-end-zipper': {
+    slug: 'metal-no-5-open-end-zipper',
+    category: 'metalZippers',
+    name: 'Cremallera abierta metalica No. 5',
+    description: 'Adecuada para chaquetas, ropa de trabajo y posiciones de bolsos con estructura abierta, con dientes plateados, dorados, de laton envejecido y de bronce envejecido disponibles.',
+    overview: 'La cremallera abierta metalica No. 5 se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando la textura del herraje con la durabilidad. Weiwei Zipper ofrece colores de diente comunes como plateado, dorado, laton envejecido y bronce envejecido, y puede coordinar longitud, color de cinta y combinacion de cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposicion.',
+    features: ['El tamano 5 se adapta a chaquetas habituales y estilos de grosor medio', 'La estructura abierta funciona bien en aperturas centrales delanteras y posiciones de separacion completa', 'Varios colores de diente disponibles: plateado / dorado / laton envejecido / bronce envejecido', 'Pueden confirmarse colores, longitudes y cursores habituales'],
+    applications: ['Aperturas de chaquetas', 'Frentes de ropa de trabajo', 'Accesorios de bolsos'],
+    specifications: {
+      type: 'Cremallera abierta metalica',
+      size: 'No. 5',
+      length: 'Puede personalizarse a la longitud requerida',
+      structure: 'Abierta',
+      material: 'Dientes metalicos con cinta textil convencional',
+      sliderStyle: 'Se pueden combinar cursores habituales o decorativos segun el estilo',
+      colorOption: 'Compatible con coordinacion entre color de cinta y color de diente metalico',
+      samplingCycle: 'Las muestras habituales suelen poder organizarse primero',
+      productionLeadTime: 'La programacion en volumen comienza despues de confirmar la muestra',
+      orderType: 'Adecuada para desarrollo, volumen habitual y reposicion',
+      applicationScope: 'Chaquetas / ropa de trabajo / bolsos',
+      notes: 'Si se necesitan longitudes, colores de diente o cursores especiales, pueden confirmarse con mas detalle a partir de la muestra',
+    },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-open-end.webp',
+        title: 'Cinta negra con dientes plateados, abierta',
+        description: 'Cinta negra clasica con dientes plateados brillantes, galvanizado uniforme y deslizamiento suave: la opcion principal para aperturas centrales de chaquetas.',
+      },
+      {
+        image: '/products/metal/red-silver-open-end.webp',
+        title: 'Cinta roja con dientes plateados, abierta',
+        description: 'La cinta puede tenirse segun carta de colores. La cinta de color vivo con dientes plateados se adapta a disenos de contraste en ropa infantil y deportiva.',
+      },
+      {
+        image: '/products/metal/denim-blue-silver-open-end.webp',
+        title: 'Cinta azul denim con dientes plateados, abierta',
+        description: 'Un tono azul grisaceo cercano a las paletas de denim y telas casuales, que facilita mantener la coherencia con el color principal de la prenda.',
+      },
+      {
+        image: '/products/metal/black-golden-open-end.webp',
+        title: 'Cinta negra con dientes dorados, abierta',
+        description: 'Los dientes dorados galvanizados elevan la textura general, habituales en bolsos y estilos de posicionamiento mas alto.',
+      },
+      {
+        image: '/products/metal/off-white-golden-open-end.webp',
+        title: 'Cinta crudo con dientes dorados, abierta',
+        description: 'Cinta clara con dientes dorados, adecuada para gabardinas claras, plumiferos y otros estilos donde importa el detalle.',
+      },
+      {
+        image: '/products/metal/navy-antique-bronze-open-end.webp',
+        title: 'Cinta azul marino con dientes de bronce envejecido, abierta',
+        description: 'Acabado discreto tipo gunmetal y duradero, adecuado para ropa de trabajo oscura y estilos retro.',
+      },
+    ],
   },
   'metal-zipper-roll-3-5-8': {
     slug: 'metal-zipper-roll-3-5-8',
@@ -1747,6 +2130,83 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'جيوب الحقائب / إكسسوارات الأحذية / إكسسوارات ملابس العمل',
       notes: 'إذا كانت هناك حاجة إلى أطوال أو ألوان أسنان أو سحابات خاصة، فيمكن تأكيدها بمزيد من التفصيل اعتمادا على العينة',
     },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-closed-end.webp',
+        title: 'شريط أسود بأسنان فضية، مغلق',
+        description: 'شريط أسود كلاسيكي بأسنان فضية لامعة. البنية المغلقة مناسبة للفتحات الثابتة مثل جيوب البناطيل والجيوب الداخلية للحقائب، مع طلاء متجانس وانزلاق سلس.',
+      },
+      {
+        image: '/products/metal/mint-green-golden-closed-end.webp',
+        title: 'شريط أخضر نعناعي بأسنان ذهبية، مغلق',
+        description: 'يمكن صباغة الشريط حسب بطاقة الألوان. الشريط الفاتح مع الأسنان الذهبية مناسب لمواضع إكسسوارات الملابس النسائية وملابس الأطفال التي تحتاج إلى لمسة مميزة.',
+      },
+      {
+        image: '/products/metal/khaki-antique-brass-closed-end.webp',
+        title: 'شريط كاكي بأسنان نحاس عتيق، مغلق',
+        description: 'أسنان نحاس عتيق على شريط كاكي: تركيبة شائعة لجيوب ملابس العمل والبناطيل الكاجوال بمظهر كلاسيكي متين.',
+      },
+      {
+        image: '/products/metal/yellow-lace-silver-closed-end.webp',
+        title: 'شريط دانتيل، مغلق',
+        description: 'بنية خاصة بشريط دانتيل ذات طابع زخرفي أقوى، مناسبة لملابس الأطفال والملابس النسائية والمنسوجات المنزلية التي تهتم بتفاصيل التصميم.',
+      },
+    ],
+  },
+  'metal-no-5-open-end-zipper': {
+    slug: 'metal-no-5-open-end-zipper',
+    category: 'metalZippers',
+    name: 'سحاب معدني مفتوح رقم 5',
+    description: 'مناسب للسترات وملابس العمل ومواضع الحقائب ذات البنية المفتوحة، مع توفر أسنان فضية وذهبية ونحاس عتيق وبرونز عتيق.',
+    overview: 'يناسب السحاب المعدني المفتوح رقم 5 الفتحات الأمامية الوسطى وغيرها من المواضع التي تحتاج إلى فصل كامل، مع توازن بين الملمس المعدني والمتانة. وتوفر Weiwei Zipper ألوان أسنان شائعة تشمل الفضي والذهبي والنحاس العتيق والبرونز العتيق، ويمكنها تنسيق الطول ولون الشريط وتركيبة السحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
+    features: ['المقاس 5 مناسب للسترات الشائعة والتصاميم متوسطة السماكة', 'البنية المفتوحة مناسبة للفتحات الأمامية الوسطى ومواضع الفصل الكامل', 'ألوان أسنان متعددة متاحة: فضي / ذهبي / نحاس عتيق / برونز عتيق', 'يمكن تأكيد الألوان والأطوال والسحابات الشائعة'],
+    applications: ['فتحات السترات', 'الفتحات الأمامية لملابس العمل', 'إكسسوارات الحقائب'],
+    specifications: {
+      type: 'سحاب معدني مفتوح',
+      size: 'رقم 5',
+      length: 'يمكن تخصيصه حسب الطول المطلوب',
+      structure: 'مفتوح',
+      material: 'أسنان معدنية مع شريط سحاب قياسي',
+      sliderStyle: 'يمكن تنسيق سحابات قياسية أو زخرفية حسب النمط',
+      colorOption: 'يدعم التنسيق بين لون الشريط ولون الأسنان المعدني',
+      samplingCycle: 'يمكن غالبا ترتيب العينات القياسية أولا',
+      productionLeadTime: 'تبدأ جدولة الإنتاج بعد تأكيد العينة',
+      orderType: 'مناسب للتطوير والطلبات القياسية وإعادة الطلب',
+      applicationScope: 'السترات / ملابس العمل / الحقائب',
+      notes: 'إذا كانت هناك حاجة إلى أطوال أو ألوان أسنان أو سحابات خاصة، فيمكن تأكيدها بمزيد من التفصيل اعتمادا على العينة',
+    },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-open-end.webp',
+        title: 'شريط أسود بأسنان فضية، مفتوح',
+        description: 'شريط أسود كلاسيكي بأسنان فضية لامعة وطلاء متجانس وانزلاق سلس، وهو الخيار الرئيسي للفتحات الأمامية الوسطى في السترات.',
+      },
+      {
+        image: '/products/metal/red-silver-open-end.webp',
+        title: 'شريط أحمر بأسنان فضية، مفتوح',
+        description: 'يمكن صباغة الشريط حسب بطاقة الألوان. الشريط الزاهي مع الأسنان الفضية مناسب لتصاميم الألوان المتباينة في ملابس الأطفال والملابس الرياضية.',
+      },
+      {
+        image: '/products/metal/denim-blue-silver-open-end.webp',
+        title: 'شريط أزرق دنيم بأسنان فضية، مفتوح',
+        description: 'درجة زرقاء رمادية قريبة من ألوان الدنيم والأقمشة الكاجوال، مما يسهل الحفاظ على الاتساق مع اللون الرئيسي للملابس.',
+      },
+      {
+        image: '/products/metal/black-golden-open-end.webp',
+        title: 'شريط أسود بأسنان ذهبية، مفتوح',
+        description: 'الأسنان الذهبية المطلية ترفع الملمس العام، وتستخدم غالبا في الحقائب والتصاميم ذات التموضع الأعلى.',
+      },
+      {
+        image: '/products/metal/off-white-golden-open-end.webp',
+        title: 'شريط أبيض مصفر بأسنان ذهبية، مفتوح',
+        description: 'شريط فاتح مع أسنان ذهبية، مناسب للمعاطف الفاتحة وسترات الريش وغيرها من التصاميم التي تهتم بتفاصيل الملمس.',
+      },
+      {
+        image: '/products/metal/navy-antique-bronze-open-end.webp',
+        title: 'شريط كحلي بأسنان برونز عتيق، مفتوح',
+        description: 'لمسة نهائية هادئة تميل إلى لون معدن السلاح، مناسبة لملابس العمل الداكنة والأنماط الكلاسيكية.',
+      },
+    ],
   },
   'metal-zipper-roll-3-5-8': {
     slug: 'metal-zipper-roll-3-5-8',
@@ -1980,6 +2440,83 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Карманы сумок / обувные аксессуары / аксессуары рабочей одежды',
       notes: 'Если нужны особая длина, цвет зуба или бегунок, это можно дополнительно подтвердить по образцу',
     },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-closed-end.webp',
+        title: 'Черная тесьма с серебристыми зубьями, неразъемная',
+        description: 'Классическая черная тесьма с яркими серебристыми зубьями. Неразъемная конструкция подходит для фиксированных зон: карманов брюк, внутренних карманов сумок. Равномерное покрытие и плавный ход.',
+      },
+      {
+        image: '/products/metal/mint-green-golden-closed-end.webp',
+        title: 'Мятная тесьма с золотистыми зубьями, неразъемная',
+        description: 'Тесьма окрашивается по цветовым картам. Светлая тесьма с золотистыми зубьями хорошо смотрится в женской и детской одежде, где нужен выразительный акцент.',
+      },
+      {
+        image: '/products/metal/khaki-antique-brass-closed-end.webp',
+        title: 'Тесьма хаки с зубьями под античную латунь, неразъемная',
+        description: 'Состаренные латунные зубья на тесьме хаки — распространенное сочетание для карманов рабочей одежды и повседневных брюк с винтажным характером.',
+      },
+      {
+        image: '/products/metal/yellow-lace-silver-closed-end.webp',
+        title: 'Кружевная тесьма, неразъемная',
+        description: 'Особая кружевная тесьма с выраженным декоративным характером, подходит для детской и женской одежды, а также домашнего текстиля с акцентом на дизайн.',
+      },
+    ],
+  },
+  'metal-no-5-open-end-zipper': {
+    slug: 'metal-no-5-open-end-zipper',
+    category: 'metalZippers',
+    name: 'Металлическая разъемная молния №5',
+    description: 'Подходит для курток, рабочей одежды и сумок с разъемной конструкцией; доступны серебристые, золотистые зубья, а также покрытия под античную латунь и бронзу.',
+    overview: 'Металлическая разъемная молния №5 подходит для центральных застежек и других зон, где нужно полное разделение, сочетая металлическую фактуру с долговечностью. Weiwei Zipper предлагает распространенные цвета зубьев — серебристый, золотистый, античную латунь и античную бронзу — и помогает координировать длину, цвет тесьмы и комбинацию бегунка, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    features: ['Размер 5 подходит для типовых курток и моделей средней плотности', 'Разъемная конструкция удобна для центральных застежек и зон полного разделения', 'Несколько цветов зубьев: серебристый / золотистый / античная латунь / античная бронза', 'Можно подтверждать типовые цвета, длины и бегунки'],
+    applications: ['Застежки курток', 'Центральные застежки рабочей одежды', 'Фурнитура для сумок'],
+    specifications: {
+      type: 'Металлическая разъемная молния',
+      size: '№5',
+      length: 'Может изготавливаться под требуемую длину',
+      structure: 'Разъемная',
+      material: 'Металлические зубья с типовой тесьмой',
+      sliderStyle: 'Можно подобрать стандартные или декоративные бегунки в зависимости от стиля',
+      colorOption: 'Поддерживается согласование цвета тесьмы и цвета металлических зубьев',
+      samplingCycle: 'Типовые образцы обычно можно организовать в приоритетном порядке',
+      productionLeadTime: 'Планирование партии начинается после подтверждения образца',
+      orderType: 'Подходит для разработки, типовых партий и повторных заказов',
+      applicationScope: 'Куртки / рабочая одежда / сумки',
+      notes: 'Если нужны особая длина, цвет зуба или бегунок, это можно дополнительно подтвердить по образцу',
+    },
+    gallery: [
+      {
+        image: '/products/metal/black-silver-open-end.webp',
+        title: 'Черная тесьма с серебристыми зубьями, разъемная',
+        description: 'Классическая черная тесьма с яркими серебристыми зубьями, равномерным покрытием и плавным ходом — основной выбор для центральных застежек курток.',
+      },
+      {
+        image: '/products/metal/red-silver-open-end.webp',
+        title: 'Красная тесьма с серебристыми зубьями, разъемная',
+        description: 'Тесьма окрашивается по цветовым картам. Яркая тесьма с серебристыми зубьями подходит для контрастных решений в детской и спортивной одежде.',
+      },
+      {
+        image: '/products/metal/denim-blue-silver-open-end.webp',
+        title: 'Тесьма деним с серебристыми зубьями, разъемная',
+        description: 'Сине-серый оттенок тесьмы близок к палитре денима и повседневных тканей, что упрощает согласование с основным цветом изделия.',
+      },
+      {
+        image: '/products/metal/black-golden-open-end.webp',
+        title: 'Черная тесьма с золотистыми зубьями, разъемная',
+        description: 'Золотистые гальванические зубья повышают общее впечатление от фактуры; часто используются в сумках и моделях более высокого позиционирования.',
+      },
+      {
+        image: '/products/metal/off-white-golden-open-end.webp',
+        title: 'Молочная тесьма с золотистыми зубьями, разъемная',
+        description: 'Светлая тесьма с золотистыми зубьями подходит для светлых плащей, пуховиков и других моделей, где важны детали.',
+      },
+      {
+        image: '/products/metal/navy-antique-bronze-open-end.webp',
+        title: 'Темно-синяя тесьма с зубьями под античную бронзу, разъемная',
+        description: 'Сдержанное покрытие оттенка ганметал, практичное и ноское, подходит для темной рабочей одежды и ретро-моделей.',
+      },
+    ],
   },
   'metal-zipper-roll-3-5-8': {
     slug: 'metal-zipper-roll-3-5-8',
