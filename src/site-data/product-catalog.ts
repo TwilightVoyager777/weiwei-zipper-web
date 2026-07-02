@@ -98,6 +98,7 @@ export const PRODUCT_SLUGS = [
   'resin-no-5-closed-end-zipper',
   'resin-no-5-open-end-zipper',
   'nylon-no-5-closed-end-zipper',
+  'nylon-no-5-open-end-zipper',
   'metal-zipper-roll-3-5-8',
   'resin-zipper-roll-3-5-8',
   'nylon-zipper-roll-3-5-8',
@@ -205,6 +206,32 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
         },
       ],
     },
+    gallery: {
+      title: '颜色与结构实拍',
+      description: '树脂拉链的优势在于配色灵活。以下为常用颜色与结构的实拍参考，链带与链齿颜色均可按色卡定染。',
+      items: [
+        {
+          image: '/products/resin/red-open-end.webp',
+          title: '开口结构',
+          description: '开口结构适合外套与童装前中门襟，图为红色树脂开口拉链实拍。',
+        },
+        {
+          image: '/products/resin/black-closed-end.webp',
+          title: '闭口结构',
+          description: '闭口结构适合口袋与内袋位，黑色为最常用的基础配色。',
+        },
+        {
+          image: '/products/resin/fluorescent-yellow-open-end.webp',
+          title: '荧光色系',
+          description: '支持荧光黄等高亮色系定染，适合户外与运动款式。',
+        },
+        {
+          image: '/products/resin/multicolor-collection.webp',
+          title: '多色定染',
+          description: '链带与链齿可按色卡成系列定染，便于服装系列化配色开发。',
+        },
+      ],
+    },
   },
   nylonZippers: {
     key: 'nylonZippers',
@@ -245,6 +272,32 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
         {
           title: '最后看颜色与拉头',
           description: '确认颜色一致性和拉头手感后，再进入打样和批量排单。',
+        },
+      ],
+    },
+    gallery: {
+      title: '颜色与工艺实拍',
+      description: '尼龙拉链顺滑轻量、配色空间大。以下为常用颜色与工艺的实拍参考，均可结合拉头样式进一步确认。',
+      items: [
+        {
+          image: '/products/nylon/black-open-end.webp',
+          title: '开口结构',
+          description: '开口结构适合外套与防晒衣前中，黑色为最常用基础色。',
+        },
+        {
+          image: '/products/nylon/black-closed-end.webp',
+          title: '闭口结构',
+          description: '闭口结构适合口袋与内袋位，链齿轻量顺滑。',
+        },
+        {
+          image: '/products/nylon/sky-blue-reflective-open-end.webp',
+          title: '反光织带',
+          description: '可选反光织带工艺，适合夜跑、户外与功能性服饰。',
+        },
+        {
+          image: '/products/nylon/multicolor-collection.webp',
+          title: '多色定染',
+          description: '链带颜色可按色卡定染，适合系列化配色开发。',
         },
       ],
     },
@@ -394,9 +447,9 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
     category: 'resinZippers',
-    name: '五号树脂闭口拉链',
+    name: '树脂闭口拉链',
     description: '适合服装、童装、鞋帽等常见闭口结构，强调轻量手感、配色灵活与稳定配套。',
-    overview: '五号树脂闭口拉链适合需要轻量感和颜色匹配的闭口结构项目。伟伟拉链可围绕长度、颜色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与后续返单安排。',
+    overview: '树脂闭口拉链适合需要轻量感和颜色匹配的闭口结构项目。伟伟拉链可围绕长度、颜色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与后续返单安排。',
     features: ['5 号规格应用范围较广', '闭口结构适合口袋与内袋位', '树脂牙链配色灵活', '支持常规颜色与拉头搭配确认'],
     applications: ['服装口袋', '童装配件', '鞋帽配件'],
     specifications: {
@@ -413,13 +466,30 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
       applicationScope: '服装口袋 / 童装配件 / 鞋帽配件',
       notes: '如需特殊长度、颜色或拉头方式，可结合样品进一步确认',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-closed-end.webp',
+        title: '红色树脂闭口',
+        description: '亮红链带配同色链齿，闭口结构适合口袋与内袋位，颜色一致性好。',
+      },
+      {
+        image: '/products/resin/black-closed-end.webp',
+        title: '黑色树脂闭口',
+        description: '最常用的基础配色，轻量顺滑，适合服装口袋与童装配件。',
+      },
+      {
+        image: '/products/resin/black-white-closed-end-combo.webp',
+        title: '黑白树脂闭口组合',
+        description: '同款不同色的组合示例，便于按成衣系列同步配色。',
+      },
+    ],
   },
   'resin-no-5-open-end-zipper': {
     slug: 'resin-no-5-open-end-zipper',
     category: 'resinZippers',
-    name: '五号树脂开口拉链',
+    name: '树脂开口拉链',
     description: '适合外套、童装、防晒衣等常见开口结构，强调轻量手感、配色灵活与常规配套效率。',
-    overview: '五号树脂开口拉链适合需要前中开合、轻量手感和颜色协调的常见成衣项目。伟伟拉链可围绕长度、颜色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与后续返单安排。',
+    overview: '树脂开口拉链适合需要前中开合、轻量手感和颜色协调的常见成衣项目。伟伟拉链可围绕长度、颜色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与后续返单安排。',
     features: ['5 号规格适合常规外套与轻量服饰项目', '开口结构适合前中门襟和常见成衣开合位', '树脂牙链配色灵活，便于系列化开发', '支持常规颜色、长度与拉头方式确认'],
     applications: ['外套门襟', '童装开口位', '防晒衣前中开合'],
     specifications: {
@@ -436,6 +506,28 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
       applicationScope: '外套 / 童装 / 防晒衣',
       notes: '如需特殊长度、颜色或拉头方式，可结合样品进一步确认',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-open-end.webp',
+        title: '红色树脂开口',
+        description: '链带链齿同色定染，开口结构适合外套与童装前中门襟。',
+      },
+      {
+        image: '/products/resin/royal-blue-open-end.webp',
+        title: '宝蓝树脂开口',
+        description: '高饱和配色示例，适合运动与童装等需要亮色的款式。',
+      },
+      {
+        image: '/products/resin/black-open-end.webp',
+        title: '黑色树脂开口',
+        description: '基础百搭配色，轻量手感适合常规外套项目。',
+      },
+      {
+        image: '/products/resin/fluorescent-yellow-open-end.webp',
+        title: '荧光黄树脂开口',
+        description: '荧光色系定染能力展示，适合户外、警示与运动款式。',
+      },
+    ],
   },
   'nylon-zipper-3-5-8': {
     slug: 'nylon-zipper-3-5-8',
@@ -463,9 +555,9 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
   'nylon-no-5-closed-end-zipper': {
     slug: 'nylon-no-5-closed-end-zipper',
     category: 'nylonZippers',
-    name: '五号尼龙闭口拉链',
+    name: '尼龙闭口拉链',
     description: '适合服装口袋、箱包内袋及轻工配件等常见闭口结构，强调顺滑度、颜色匹配与稳定配套。',
-    overview: '五号尼龙闭口拉链是当前较常见的基础规格之一，适合需要闭口结构的服装、箱包及轻工配件项目。伟伟拉链可围绕长度、颜色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与后续返单安排。',
+    overview: '尼龙闭口拉链是当前较常见的基础规格之一，适合需要闭口结构的服装、箱包及轻工配件项目。伟伟拉链可围绕长度、颜色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与后续返单安排。',
     features: ['5 号规格适用范围较广', '闭口结构适合口袋与内袋位', '尼龙牙链顺滑度稳定', '支持常规颜色与拉头搭配确认'],
     applications: ['服装口袋', '箱包内袋', '轻工配件'],
     specifications: {
@@ -482,6 +574,78 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
       applicationScope: '服装口袋 / 箱包内袋 / 轻工配件',
       notes: '如需特殊长度、颜色或拉头方式，可结合样品进一步确认',
     },
+    gallery: [
+      {
+        image: '/products/nylon/black-closed-end.webp',
+        title: '黑色尼龙闭口',
+        description: '最常用基础色，链齿顺滑，适合服装口袋与箱包内袋。',
+      },
+      {
+        image: '/products/nylon/navy-closed-end.webp',
+        title: '藏青尼龙闭口',
+        description: '深色系常用色，贴近西装、工装类面料色系。',
+      },
+      {
+        image: '/products/nylon/off-white-closed-end.webp',
+        title: '米白尼龙闭口',
+        description: '浅色系示例，适合浅色服装与家纺用途。',
+      },
+    ],
+  },
+  'nylon-no-5-open-end-zipper': {
+    slug: 'nylon-no-5-open-end-zipper',
+    category: 'nylonZippers',
+    name: '尼龙开口拉链',
+    description: '适合外套、防晒衣、运动服等常见开口结构，顺滑轻量，可选反光织带与多种颜色。',
+    overview: '尼龙开口拉链适合前中门襟等需要完全分开的开合位置，兼顾顺滑度与轻量手感。伟伟拉链可提供常规色、渐变彩虹与反光织带等多种选择，并围绕长度、颜色与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
+    features: ['顺滑轻量，适合高频开合的前中门襟', '开口结构适合需要完全分开的开合位', '常规色 / 彩虹渐变 / 反光织带多种可选', '支持常规颜色、长度与拉头搭配确认'],
+    applications: ['外套门襟', '防晒衣前中', '运动服饰'],
+    specifications: {
+      type: '尼龙开口拉链',
+      size: '5 号等常用规格',
+      length: '可按需求长度定制',
+      structure: '开口',
+      material: '尼龙牙链配套常规织带',
+      sliderStyle: '可按款式搭配常规拉头',
+      colorOption: '支持色卡、样布或旧样确认',
+      samplingCycle: '常规样品可优先安排',
+      productionLeadTime: '确认样品后进入批量排单',
+      orderType: '适合开发单、常规批量与返单',
+      applicationScope: '外套 / 防晒衣 / 运动服饰',
+      notes: '如需反光织带、渐变彩虹等特殊工艺，可结合样品进一步确认',
+    },
+    gallery: [
+      {
+        image: '/products/nylon/black-open-end.webp',
+        title: '黑色尼龙开口',
+        description: '经典基础色，轻量顺滑，是外套与防晒衣前中的主流选择。',
+      },
+      {
+        image: '/products/nylon/royal-blue-open-end.webp',
+        title: '宝蓝尼龙开口',
+        description: '高饱和亮色示例，适合运动与童装的撞色设计。',
+      },
+      {
+        image: '/products/nylon/red-open-end.webp',
+        title: '红色尼龙开口',
+        description: '亮色链带按色卡定染，颜色一致性稳定。',
+      },
+      {
+        image: '/products/nylon/off-white-open-end.webp',
+        title: '米白尼龙开口',
+        description: '浅色系配银色拉头，适合浅色风衣与防晒衣。',
+      },
+      {
+        image: '/products/nylon/rainbow-open-end.webp',
+        title: '彩虹渐变尼龙开口',
+        description: '渐变彩虹织带工艺，适合童装与潮流款式的设计亮点。',
+      },
+      {
+        image: '/products/nylon/sky-blue-reflective-open-end.webp',
+        title: '天蓝反光尼龙开口',
+        description: '反光织带工艺，夜间可视性好，适合户外与功能服饰。',
+      },
+    ],
   },
   'nylon-zipper-roll-3-5-8': {
     slug: 'nylon-zipper-roll-3-5-8',
@@ -666,7 +830,7 @@ export const CATEGORY_SLUG_TO_KEY: Record<CategorySlug, ProductCategory> = {
 export const CATEGORY_PRODUCTS: Record<CategorySlug, ProductSlug[]> = {
   'metal-zippers': ['metal-no-5-closed-end-zipper', 'metal-no-5-open-end-zipper'],
   'resin-zippers': ['resin-no-5-closed-end-zipper', 'resin-no-5-open-end-zipper'],
-  'nylon-zippers': ['nylon-no-5-closed-end-zipper'],
+  'nylon-zippers': ['nylon-no-5-closed-end-zipper', 'nylon-no-5-open-end-zipper'],
   'metal-zipper-rolls': [],
   'resin-zipper-rolls': [],
   'nylon-zipper-rolls': [],
@@ -678,11 +842,12 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
   'metal-no-5-open-end-zipper': '/products/metal/black-silver-open-end.webp',
   'metal-zipper-roll-3-5-8': '/products/metal-zipper-main.png?v=20260302b',
   'resin-zipper-3-5-8': '/products/resin-zipper-main.png?v=20260302b',
-  'resin-no-5-closed-end-zipper': '/products/resin-zipper-main.png?v=20260302b',
-  'resin-no-5-open-end-zipper': '/products/resin/5_resin_open_end_0302.jpg?v=20260307a',
+  'resin-no-5-closed-end-zipper': '/products/resin/red-closed-end.webp',
+  'resin-no-5-open-end-zipper': '/products/resin/red-open-end.webp',
   'resin-zipper-roll-3-5-8': '/products/resin-zipper-main.png?v=20260302b',
   'nylon-zipper-3-5-8': '/products/nylon-zipper-main.png?v=20260302b',
-  'nylon-no-5-closed-end-zipper': '/products/nylon-zipper-main.png?v=20260302b',
+  'nylon-no-5-closed-end-zipper': '/products/nylon/black-closed-end.webp',
+  'nylon-no-5-open-end-zipper': '/products/nylon/black-open-end.webp',
   'nylon-zipper-roll-3-5-8': '/products/nylon-zipper-main.png?v=20260302b',
 };
 
@@ -740,6 +905,7 @@ export const productsPageProductOrder: ProductSlug[] = [
   'resin-no-5-closed-end-zipper',
   'resin-no-5-open-end-zipper',
   'nylon-no-5-closed-end-zipper',
+  'nylon-no-5-open-end-zipper',
 ];
 
 export const ALL_PRODUCT_PAGE_SLUGS = [...CATEGORY_SLUGS, ...PRODUCT_SLUGS] as const;
@@ -987,6 +1153,32 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    gallery: {
+      title: 'Colors and Structures',
+      description: 'Color flexibility is the main strength of resin zippers. Below are photos of common colors and structures; tape and teeth colors can all be dyed to color cards.',
+      items: [
+        {
+          image: '/products/resin/red-open-end.webp',
+          title: 'Open-End Structure',
+          description: 'Open-end structures suit jacket and kidswear center fronts — shown here in red.',
+        },
+        {
+          image: '/products/resin/black-closed-end.webp',
+          title: 'Closed-End Structure',
+          description: 'Closed-end structures suit pockets and inner positions; black is the most-used base color.',
+        },
+        {
+          image: '/products/resin/fluorescent-yellow-open-end.webp',
+          title: 'Fluorescent Colors',
+          description: 'High-visibility tones such as fluorescent yellow can be dyed, suited to outdoor and sportswear styles.',
+        },
+        {
+          image: '/products/resin/multicolor-collection.webp',
+          title: 'Multicolor Dyeing',
+          description: 'Tape and teeth can be dyed as coordinated series against color cards for garment line development.',
+        },
+      ],
+    },
   },
   nylonZippers: {
     key: 'nylonZippers',
@@ -1027,6 +1219,32 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
         {
           title: 'Finish with color and slider',
           description: 'Once color consistency and slider feel are clear, sampling and bulk scheduling become easier to coordinate.',
+        },
+      ],
+    },
+    gallery: {
+      title: 'Colors and Finishes',
+      description: 'Nylon zippers are smooth, lightweight, and offer a wide color range. Below are photos of common colors and finishes, all of which can be matched with slider styles.',
+      items: [
+        {
+          image: '/products/nylon/black-open-end.webp',
+          title: 'Open-End Structure',
+          description: 'Open-end structures suit jacket and sun-protective outerwear fronts; black is the most-used base color.',
+        },
+        {
+          image: '/products/nylon/black-closed-end.webp',
+          title: 'Closed-End Structure',
+          description: 'Closed-end structures suit pockets and inner positions, with lightweight, smooth-running teeth.',
+        },
+        {
+          image: '/products/nylon/sky-blue-reflective-open-end.webp',
+          title: 'Reflective Tape',
+          description: 'Reflective tape options are available, suited to night running, outdoor, and functional apparel.',
+        },
+        {
+          image: '/products/nylon/multicolor-collection.webp',
+          title: 'Multicolor Dyeing',
+          description: 'Tape colors can be dyed to color cards, supporting coordinated series development.',
         },
       ],
     },
@@ -1162,11 +1380,63 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     ...categoryContentEn.resinZippers,
     name: 'Cremalleras de resina',
     description: 'Organizadas alrededor de la demanda comun de tamanos 3 / 5 / 8 para prendas, ropa infantil, calzado y otros proyectos ligeros.',
+    gallery: {
+      title: 'Colores y estructuras',
+      description: 'La flexibilidad de color es la principal fortaleza de las cremalleras de resina. A continuacion, fotos de colores y estructuras comunes; la cinta y los dientes pueden tenirse segun carta de colores.',
+      items: [
+        {
+          image: '/products/resin/red-open-end.webp',
+          title: 'Estructura abierta',
+          description: 'Las estructuras abiertas se adaptan a los frentes de chaquetas y ropa infantil; aqui en rojo.',
+        },
+        {
+          image: '/products/resin/black-closed-end.webp',
+          title: 'Estructura cerrada',
+          description: 'Las estructuras cerradas se adaptan a bolsillos y posiciones internas; el negro es el color base mas usado.',
+        },
+        {
+          image: '/products/resin/fluorescent-yellow-open-end.webp',
+          title: 'Colores fluorescentes',
+          description: 'Pueden tenirse tonos de alta visibilidad como el amarillo fluorescente, adecuados para estilos outdoor y deportivos.',
+        },
+        {
+          image: '/products/resin/multicolor-collection.webp',
+          title: 'Tenido multicolor',
+          description: 'Cinta y dientes pueden tenirse como series coordinadas segun carta de colores para el desarrollo de lineas de prenda.',
+        },
+      ],
+    },
   },
   nylonZippers: {
     ...categoryContentEn.nylonZippers,
     name: 'Cremalleras de nylon',
     description: 'Adecuadas para prendas, bolsos y ropa con proteccion solar, con opciones comunes en tamanos 3 / 5 / 8.',
+    gallery: {
+      title: 'Colores y acabados',
+      description: 'Las cremalleras de nylon son suaves, ligeras y ofrecen una amplia gama de colores. A continuacion, fotos de colores y acabados comunes.',
+      items: [
+        {
+          image: '/products/nylon/black-open-end.webp',
+          title: 'Estructura abierta',
+          description: 'Las estructuras abiertas se adaptan a frentes de chaquetas y ropa con proteccion solar; el negro es el color base mas usado.',
+        },
+        {
+          image: '/products/nylon/black-closed-end.webp',
+          title: 'Estructura cerrada',
+          description: 'Las estructuras cerradas se adaptan a bolsillos y posiciones internas, con dientes ligeros y suaves.',
+        },
+        {
+          image: '/products/nylon/sky-blue-reflective-open-end.webp',
+          title: 'Cinta reflectante',
+          description: 'Hay opciones de cinta reflectante, adecuadas para correr de noche, outdoor y ropa funcional.',
+        },
+        {
+          image: '/products/nylon/multicolor-collection.webp',
+          title: 'Tenido multicolor',
+          description: 'Los colores de cinta pueden tenirse segun carta de colores para el desarrollo de series coordinadas.',
+        },
+      ],
+    },
   },
   metalRolls: {
     ...categoryContentEn.metalRolls,
@@ -1221,11 +1491,63 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     ...categoryContentEn.resinZippers,
     name: 'سحابات راتنج',
     description: 'منظمة حول الطلب الشائع على المقاسات 3 / 5 / 8 للملابس وملابس الأطفال والأحذية والمشاريع الخفيفة الأخرى.',
+    gallery: {
+      title: 'الألوان والبنى',
+      description: 'مرونة الألوان هي أبرز مزايا سحابات الراتنج. فيما يلي صور للألوان والبنى الشائعة، ويمكن صباغة الشريط والأسنان حسب بطاقة الألوان.',
+      items: [
+        {
+          image: '/products/resin/red-open-end.webp',
+          title: 'بنية مفتوحة',
+          description: 'البنية المفتوحة مناسبة للفتحات الأمامية في الجاكيتات وملابس الأطفال، وتظهر هنا باللون الأحمر.',
+        },
+        {
+          image: '/products/resin/black-closed-end.webp',
+          title: 'بنية مغلقة',
+          description: 'البنية المغلقة مناسبة للجيوب والمواضع الداخلية، والأسود هو اللون الأساسي الأكثر استخداما.',
+        },
+        {
+          image: '/products/resin/fluorescent-yellow-open-end.webp',
+          title: 'ألوان فسفورية',
+          description: 'يمكن صباغة درجات عالية الوضوح مثل الأصفر الفسفوري، وهي مناسبة للأنماط الخارجية والرياضية.',
+        },
+        {
+          image: '/products/resin/multicolor-collection.webp',
+          title: 'صباغة متعددة الألوان',
+          description: 'يمكن صباغة الشريط والأسنان كسلاسل منسقة حسب بطاقة الألوان لتطوير خطوط الملابس.',
+        },
+      ],
+    },
   },
   nylonZippers: {
     ...categoryContentEn.nylonZippers,
     name: 'سحابات نايلون',
     description: 'مناسبة للملابس والحقائب والملابس الواقية من الشمس، مع خيارات شائعة بالمقاسات 3 / 5 / 8.',
+    gallery: {
+      title: 'الألوان واللمسات النهائية',
+      description: 'سحابات النايلون سلسة وخفيفة وتوفر نطاقا واسعا من الألوان. فيما يلي صور للألوان واللمسات الشائعة.',
+      items: [
+        {
+          image: '/products/nylon/black-open-end.webp',
+          title: 'بنية مفتوحة',
+          description: 'البنية المفتوحة مناسبة لفتحات الجاكيتات والملابس الواقية من الشمس، والأسود هو اللون الأساسي الأكثر استخداما.',
+        },
+        {
+          image: '/products/nylon/black-closed-end.webp',
+          title: 'بنية مغلقة',
+          description: 'البنية المغلقة مناسبة للجيوب والمواضع الداخلية، بأسنان خفيفة سلسة الحركة.',
+        },
+        {
+          image: '/products/nylon/sky-blue-reflective-open-end.webp',
+          title: 'شريط عاكس',
+          description: 'تتوفر خيارات الشريط العاكس المناسبة للجري الليلي والأنشطة الخارجية والملابس الوظيفية.',
+        },
+        {
+          image: '/products/nylon/multicolor-collection.webp',
+          title: 'صباغة متعددة الألوان',
+          description: 'يمكن صباغة ألوان الشريط حسب بطاقة الألوان لدعم تطوير سلاسل منسقة.',
+        },
+      ],
+    },
   },
   metalRolls: {
     ...categoryContentEn.metalRolls,
@@ -1280,11 +1602,63 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     ...categoryContentEn.resinZippers,
     name: 'Смоляные молнии',
     description: 'Организованы вокруг распространенного спроса на размеры 3 / 5 / 8 для одежды, детских изделий, обуви и других легких проектов.',
+    gallery: {
+      title: 'Цвета и конструкции',
+      description: 'Гибкость по цвету — главное преимущество смоляных молний. Ниже фотографии распространенных цветов и конструкций; тесьма и зубья окрашиваются по цветовым картам.',
+      items: [
+        {
+          image: '/products/resin/red-open-end.webp',
+          title: 'Разъемная конструкция',
+          description: 'Разъемные конструкции подходят для центральных застежек курток и детской одежды; на фото — красный вариант.',
+        },
+        {
+          image: '/products/resin/black-closed-end.webp',
+          title: 'Неразъемная конструкция',
+          description: 'Неразъемные конструкции подходят для карманов и внутренних зон; черный — самый используемый базовый цвет.',
+        },
+        {
+          image: '/products/resin/fluorescent-yellow-open-end.webp',
+          title: 'Флуоресцентные цвета',
+          description: 'Возможна окраска в яркие сигнальные тона, например флуоресцентный желтый, для спортивных и аутдор-моделей.',
+        },
+        {
+          image: '/products/resin/multicolor-collection.webp',
+          title: 'Многоцветное окрашивание',
+          description: 'Тесьма и зубья окрашиваются согласованными сериями по цветовым картам для развития линеек одежды.',
+        },
+      ],
+    },
   },
   nylonZippers: {
     ...categoryContentEn.nylonZippers,
     name: 'Нейлоновые молнии',
     description: 'Подходят для одежды, сумок и солнцезащитной верхней одежды, с распространенными вариантами размеров 3 / 5 / 8.',
+    gallery: {
+      title: 'Цвета и исполнения',
+      description: 'Нейлоновые молнии плавные, легкие и предлагают широкую цветовую гамму. Ниже фотографии распространенных цветов и исполнений.',
+      items: [
+        {
+          image: '/products/nylon/black-open-end.webp',
+          title: 'Разъемная конструкция',
+          description: 'Разъемные конструкции подходят для курток и солнцезащитной одежды; черный — самый используемый базовый цвет.',
+        },
+        {
+          image: '/products/nylon/black-closed-end.webp',
+          title: 'Неразъемная конструкция',
+          description: 'Неразъемные конструкции подходят для карманов и внутренних зон, зубья легкие и плавные.',
+        },
+        {
+          image: '/products/nylon/sky-blue-reflective-open-end.webp',
+          title: 'Светоотражающая тесьма',
+          description: 'Доступны варианты со светоотражающей тесьмой — для ночного бега, аутдора и функциональной одежды.',
+        },
+        {
+          image: '/products/nylon/multicolor-collection.webp',
+          title: 'Многоцветное окрашивание',
+          description: 'Цвета тесьмы окрашиваются по цветовым картам, поддерживая развитие согласованных серий.',
+        },
+      ],
+    },
   },
   metalRolls: {
     ...categoryContentEn.metalRolls,
@@ -1353,9 +1727,9 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
     category: 'resinZippers',
-    name: 'No. 5 Resin Closed-End Zipper',
+    name: 'Resin Closed-End Zipper',
     description: 'Suitable for garments, kidswear, and footwear accessories that use closed-end structures, emphasizing lightweight feel, color flexibility, and stable matching.',
-    overview: 'The No. 5 resin closed-end zipper suits projects that need closed-end structure together with lighter handling feel and better color coordination. Weiwei Zipper can coordinate common matching around length, color, tape, and sliders so customers can complete sample confirmation first and then move into bulk purchasing and repeat orders.',
+    overview: 'The resin closed-end zipper suits projects that need closed-end structure together with lighter handling feel and better color coordination. Weiwei Zipper can coordinate common matching around length, color, tape, and sliders so customers can complete sample confirmation first and then move into bulk purchasing and repeat orders.',
     features: ['Size 5 works across a broad range of common projects', 'Closed-end structure suits pockets and inner positions', 'Resin teeth allow flexible color coordination', 'Common colors and sliders can be confirmed routinely'],
     applications: ['Garment pockets', 'Kidswear accessories', 'Footwear accessories'],
     specifications: {
@@ -1372,13 +1746,30 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Garment pockets / Kidswear accessories / Footwear accessories',
       notes: 'If special lengths, colors, or sliders are required, they can be confirmed against the sample in more detail',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-closed-end.webp',
+        title: 'Red Resin Closed-End',
+        description: 'Bright red tape with matching teeth. The closed-end structure suits pockets and inner positions with good color consistency.',
+      },
+      {
+        image: '/products/resin/black-closed-end.webp',
+        title: 'Black Resin Closed-End',
+        description: 'The most common base color — lightweight and smooth, suited to garment pockets and kidswear accessories.',
+      },
+      {
+        image: '/products/resin/black-white-closed-end-combo.webp',
+        title: 'Black & White Closed-End Set',
+        description: 'An example of the same style in different colors, making it easy to match a garment series.',
+      },
+    ],
   },
   'resin-no-5-open-end-zipper': {
     slug: 'resin-no-5-open-end-zipper',
     category: 'resinZippers',
-    name: 'No. 5 Resin Open-End Zipper',
+    name: 'Resin Open-End Zipper',
     description: 'Suitable for jackets, kidswear, and sun-protective outerwear that use open-end structures, emphasizing lightweight feel, flexible color matching, and routine supply efficiency.',
-    overview: 'The No. 5 resin open-end zipper is suitable for common garment projects that need front openings together with lighter handling feel and coordinated colors. Weiwei Zipper can support routine matching around length, color, tape, and sliders so customers can confirm samples first and then move into bulk purchasing and repeat orders.',
+    overview: 'The resin open-end zipper is suitable for common garment projects that need front openings together with lighter handling feel and coordinated colors. Weiwei Zipper can support routine matching around length, color, tape, and sliders so customers can confirm samples first and then move into bulk purchasing and repeat orders.',
     features: ['Size 5 suits routine outerwear and lightweight apparel projects', 'Open-end structure fits front openings and common garment plackets', 'Resin teeth allow more flexible color coordination for series development', 'Routine colors, lengths, and slider styles can be confirmed efficiently'],
     applications: ['Jacket front openings', 'Kidswear opening positions', 'Sun-protective outerwear front plackets'],
     specifications: {
@@ -1395,6 +1786,28 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Jackets / Kidswear / Sun-protective outerwear',
       notes: 'If special lengths, colors, or sliders are required, they can be confirmed against the sample in more detail',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-open-end.webp',
+        title: 'Red Resin Open-End',
+        description: 'Tape and teeth dyed in the same color; the open-end structure suits jacket and kidswear center fronts.',
+      },
+      {
+        image: '/products/resin/royal-blue-open-end.webp',
+        title: 'Royal Blue Resin Open-End',
+        description: 'A high-saturation color example for sportswear and kidswear styles that need brighter tones.',
+      },
+      {
+        image: '/products/resin/black-open-end.webp',
+        title: 'Black Resin Open-End',
+        description: 'A versatile base color with a lightweight feel for routine outerwear projects.',
+      },
+      {
+        image: '/products/resin/fluorescent-yellow-open-end.webp',
+        title: 'Fluorescent Yellow Resin Open-End',
+        description: 'Shows fluorescent dyeing capability, suited to outdoor, high-visibility, and sportswear uses.',
+      },
+    ],
   },
   'nylon-zipper-3-5-8': {
     slug: 'nylon-zipper-3-5-8',
@@ -1422,9 +1835,9 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
   'nylon-no-5-closed-end-zipper': {
     slug: 'nylon-no-5-closed-end-zipper',
     category: 'nylonZippers',
-    name: 'No. 5 Nylon Closed-End Zipper',
+    name: 'Nylon Closed-End Zipper',
     description: 'Suitable for garment pockets, inner bag sections, and other common closed-end positions, emphasizing smooth operation, color matching, and stable routine supply.',
-    overview: 'The No. 5 nylon closed-end zipper is one of the most common basic choices today and is suitable for garment, bag, and light accessory projects that need closed-end structures. Weiwei Zipper can coordinate routine matching around length, color, tape, and slider options so customers can complete sample confirmation first and then move into bulk purchasing and later replenishment.',
+    overview: 'The nylon closed-end zipper is one of the most common basic choices today and is suitable for garment, bag, and light accessory projects that need closed-end structures. Weiwei Zipper can coordinate routine matching around length, color, tape, and slider options so customers can complete sample confirmation first and then move into bulk purchasing and later replenishment.',
     features: ['Size 5 works across a broad range of routine projects', 'Closed-end structure suits pockets and inner sections', 'Stable smoothness from nylon teeth', 'Routine color and slider matching can be confirmed'],
     applications: ['Garment pockets', 'Inner bag sections', 'Light accessories'],
     specifications: {
@@ -1441,6 +1854,78 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Garment pockets / Inner bag sections / Light accessories',
       notes: 'If special lengths, colors, or sliders are required, they can be confirmed against the sample in more detail',
     },
+    gallery: [
+      {
+        image: '/products/nylon/black-closed-end.webp',
+        title: 'Black Nylon Closed-End',
+        description: 'The most-used base color with smooth teeth, suited to garment pockets and inner bag sections.',
+      },
+      {
+        image: '/products/nylon/navy-closed-end.webp',
+        title: 'Navy Nylon Closed-End',
+        description: 'A common dark tone close to suiting and workwear fabric palettes.',
+      },
+      {
+        image: '/products/nylon/off-white-closed-end.webp',
+        title: 'Off-White Nylon Closed-End',
+        description: 'A light color example for light-colored garments and home textile uses.',
+      },
+    ],
+  },
+  'nylon-no-5-open-end-zipper': {
+    slug: 'nylon-no-5-open-end-zipper',
+    category: 'nylonZippers',
+    name: 'Nylon Open-End Zipper',
+    description: 'Suitable for jackets, sun-protective outerwear, and sportswear that use open-end structures — smooth and lightweight, with reflective tape and rich color options.',
+    overview: 'The nylon open-end zipper suits center-front plackets and other positions that need to separate completely, balancing smooth operation with a lightweight feel. Weiwei Zipper offers routine colors, rainbow gradients, and reflective tape options, and can coordinate matching around length, color, and sliders so customers can confirm samples first and then move into bulk purchasing and repeat orders.',
+    features: ['Smooth and lightweight for high-frequency center-front use', 'Open-end structure suits fully separating openings', 'Routine colors / rainbow gradients / reflective tape available', 'Routine colors, lengths, and slider combinations can be confirmed'],
+    applications: ['Jacket plackets', 'Sun-protective outerwear fronts', 'Sportswear'],
+    specifications: {
+      type: 'Nylon Open-End Zipper',
+      size: 'Common sizes such as No. 5',
+      length: 'Can be customized to required lengths',
+      structure: 'Open-end',
+      material: 'Nylon teeth with routine zipper tape',
+      sliderStyle: 'Routine sliders can be matched by style',
+      colorOption: 'Can be confirmed by color card, fabric swatch, or old sample',
+      samplingCycle: 'Routine samples can usually be arranged first',
+      productionLeadTime: 'Bulk scheduling starts after sample confirmation',
+      orderType: 'Suitable for development orders, routine bulk, and repeat orders',
+      applicationScope: 'Jackets / Sun-protective outerwear / Sportswear',
+      notes: 'Special processes such as reflective tape or rainbow gradients can be confirmed against samples',
+    },
+    gallery: [
+      {
+        image: '/products/nylon/black-open-end.webp',
+        title: 'Black Nylon Open-End',
+        description: 'A classic base color, smooth and lightweight — the mainstream choice for jacket and sun-protective outerwear fronts.',
+      },
+      {
+        image: '/products/nylon/royal-blue-open-end.webp',
+        title: 'Royal Blue Nylon Open-End',
+        description: 'A high-saturation example suited to contrast-color designs in sportswear and kidswear.',
+      },
+      {
+        image: '/products/nylon/red-open-end.webp',
+        title: 'Red Nylon Open-End',
+        description: 'Bright tape dyed to color cards with stable color consistency.',
+      },
+      {
+        image: '/products/nylon/off-white-open-end.webp',
+        title: 'Off-White Nylon Open-End',
+        description: 'A light color paired with a silver slider, suitable for light trench coats and sun-protective outerwear.',
+      },
+      {
+        image: '/products/nylon/rainbow-open-end.webp',
+        title: 'Rainbow Nylon Open-End',
+        description: 'A gradient rainbow tape treatment that works as a design highlight in kidswear and trend styles.',
+      },
+      {
+        image: '/products/nylon/sky-blue-reflective-open-end.webp',
+        title: 'Sky Blue Reflective Nylon Open-End',
+        description: 'Reflective tape for better night visibility, suited to outdoor and functional apparel.',
+      },
+    ],
   },
   'nylon-zipper-roll-3-5-8': {
     slug: 'nylon-zipper-roll-3-5-8',
@@ -1663,9 +2148,9 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
     category: 'resinZippers',
-    name: 'Cremallera cerrada de resina No. 5',
+    name: 'Cremallera cerrada de resina',
     description: 'Adecuada para prendas, ropa infantil y accesorios de calzado con estructura cerrada, destacando ligereza, flexibilidad de color y combinacion estable.',
-    overview: 'La cremallera cerrada de resina No. 5 es adecuada para proyectos que necesitan estructura cerrada junto con una sensacion mas ligera y mejor coordinacion de color. Weiwei Zipper puede apoyar la combinacion habitual de longitud, color, cinta y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposiciones.',
+    overview: 'La cremallera cerrada de resina es adecuada para proyectos que necesitan estructura cerrada junto con una sensacion mas ligera y mejor coordinacion de color. Weiwei Zipper puede apoyar la combinacion habitual de longitud, color, cinta y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposiciones.',
     features: ['El tamano 5 se adapta a una amplia gama de proyectos habituales', 'La estructura cerrada funciona bien en bolsillos y posiciones internas', 'Los dientes de resina permiten una coordinacion flexible del color', 'Los colores y cursores habituales pueden confirmarse de forma rutinaria'],
     applications: ['Bolsillos de prendas', 'Accesorios de ropa infantil', 'Accesorios de calzado'],
     specifications: {
@@ -1682,13 +2167,30 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Bolsillos de prendas / accesorios de ropa infantil / accesorios de calzado',
       notes: 'Si se necesitan longitudes, colores o cursores especiales, pueden confirmarse con mas detalle a partir de la muestra',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-closed-end.webp',
+        title: 'Cremallera cerrada de resina roja',
+        description: 'Cinta roja brillante con dientes a juego. La estructura cerrada se adapta a bolsillos y posiciones internas con buena consistencia de color.',
+      },
+      {
+        image: '/products/resin/black-closed-end.webp',
+        title: 'Cremallera cerrada de resina negra',
+        description: 'El color base mas comun: ligera y suave, adecuada para bolsillos de prendas y accesorios infantiles.',
+      },
+      {
+        image: '/products/resin/black-white-closed-end-combo.webp',
+        title: 'Juego cerrado en negro y blanco',
+        description: 'Ejemplo del mismo modelo en distintos colores, lo que facilita coordinar una serie de prendas.',
+      },
+    ],
   },
   'resin-no-5-open-end-zipper': {
     slug: 'resin-no-5-open-end-zipper',
     category: 'resinZippers',
-    name: 'Cremallera abierta de resina No. 5',
+    name: 'Cremallera abierta de resina',
     description: 'Adecuada para chaquetas, ropa infantil y prendas con proteccion solar que usan estructura abierta, con enfasis en ligereza, color flexible y eficiencia de suministro habitual.',
-    overview: 'La cremallera abierta de resina No. 5 es adecuada para proyectos de prenda que necesitan apertura frontal con una sensacion mas ligera y colores coordinados. Weiwei Zipper puede apoyar combinaciones habituales de longitud, color, cinta y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposiciones.',
+    overview: 'La cremallera abierta de resina es adecuada para proyectos de prenda que necesitan apertura frontal con una sensacion mas ligera y colores coordinados. Weiwei Zipper puede apoyar combinaciones habituales de longitud, color, cinta y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposiciones.',
     features: ['El tamano 5 funciona bien en chaquetas y prendas ligeras de uso habitual', 'La estructura abierta es adecuada para aperturas frontales y tapetas comunes', 'Los dientes de resina permiten una coordinacion de color mas flexible', 'Los colores, longitudes y cursores habituales pueden confirmarse con eficiencia'],
     applications: ['Aperturas frontales de chaquetas', 'Posiciones abiertas en ropa infantil', 'Tapetas frontales en ropa con proteccion solar'],
     specifications: {
@@ -1705,6 +2207,28 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Chaquetas / ropa infantil / ropa con proteccion solar',
       notes: 'Si se necesitan longitudes, colores o cursores especiales, pueden confirmarse con mas detalle a partir de la muestra',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-open-end.webp',
+        title: 'Cremallera abierta de resina roja',
+        description: 'Cinta y dientes tenidos en el mismo color; la estructura abierta se adapta a frentes de chaquetas y ropa infantil.',
+      },
+      {
+        image: '/products/resin/royal-blue-open-end.webp',
+        title: 'Cremallera abierta de resina azul royal',
+        description: 'Ejemplo de color de alta saturacion para estilos deportivos e infantiles que necesitan tonos vivos.',
+      },
+      {
+        image: '/products/resin/black-open-end.webp',
+        title: 'Cremallera abierta de resina negra',
+        description: 'Color base versatil con sensacion ligera para proyectos habituales de ropa exterior.',
+      },
+      {
+        image: '/products/resin/fluorescent-yellow-open-end.webp',
+        title: 'Cremallera abierta amarillo fluorescente',
+        description: 'Muestra la capacidad de tenido fluorescente, adecuada para usos outdoor, de alta visibilidad y deportivos.',
+      },
+    ],
   },
   'nylon-zipper-3-5-8': {
     slug: 'nylon-zipper-3-5-8',
@@ -1732,9 +2256,9 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
   'nylon-no-5-closed-end-zipper': {
     slug: 'nylon-no-5-closed-end-zipper',
     category: 'nylonZippers',
-    name: 'Cremallera cerrada de nylon No. 5',
+    name: 'Cremallera cerrada de nylon',
     description: 'Adecuada para bolsillos de prendas, compartimentos internos de bolsos y otras posiciones cerradas habituales, con prioridad en suavidad, color y suministro estable.',
-    overview: 'La cremallera cerrada de nylon No. 5 es una de las opciones basicas mas comunes y es adecuada para proyectos de prendas, bolsos y accesorios ligeros que necesitan estructura cerrada. Weiwei Zipper puede coordinar longitud, color, cinta y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposiciones posteriores.',
+    overview: 'La cremallera cerrada de nylon es una de las opciones basicas mas comunes y es adecuada para proyectos de prendas, bolsos y accesorios ligeros que necesitan estructura cerrada. Weiwei Zipper puede coordinar longitud, color, cinta y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposiciones posteriores.',
     features: ['El tamano 5 cubre una amplia gama de proyectos habituales', 'La estructura cerrada funciona bien en bolsillos y compartimentos internos', 'Suavidad estable gracias a los dientes de nylon', 'Se pueden confirmar colores y cursores habituales'],
     applications: ['Bolsillos de prendas', 'Compartimentos internos de bolsos', 'Accesorios ligeros'],
     specifications: {
@@ -1751,6 +2275,78 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Bolsillos de prendas / compartimentos internos de bolsos / accesorios ligeros',
       notes: 'Si se necesitan longitudes, colores o cursores especiales, pueden confirmarse con mas detalle a partir de la muestra',
     },
+    gallery: [
+      {
+        image: '/products/nylon/black-closed-end.webp',
+        title: 'Cremallera cerrada de nylon negra',
+        description: 'El color base mas utilizado, con dientes suaves, adecuada para bolsillos de prendas y compartimentos internos de bolsos.',
+      },
+      {
+        image: '/products/nylon/navy-closed-end.webp',
+        title: 'Cremallera cerrada de nylon azul marino',
+        description: 'Un tono oscuro habitual, cercano a las paletas de trajes y ropa de trabajo.',
+      },
+      {
+        image: '/products/nylon/off-white-closed-end.webp',
+        title: 'Cremallera cerrada de nylon crudo',
+        description: 'Ejemplo de color claro para prendas claras y usos de textil hogar.',
+      },
+    ],
+  },
+  'nylon-no-5-open-end-zipper': {
+    slug: 'nylon-no-5-open-end-zipper',
+    category: 'nylonZippers',
+    name: 'Cremallera abierta de nylon',
+    description: 'Adecuada para chaquetas, ropa con proteccion solar y ropa deportiva con estructura abierta: suave, ligera y con opciones de cinta reflectante y colores variados.',
+    overview: 'La cremallera abierta de nylon se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando suavidad y ligereza. Weiwei Zipper ofrece colores habituales, degradados arcoiris y cinta reflectante, y puede coordinar longitud, color y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposicion.',
+    features: ['Suave y ligera para aperturas centrales de uso frecuente', 'La estructura abierta se adapta a aperturas de separacion completa', 'Colores habituales / degradado arcoiris / cinta reflectante disponibles', 'Pueden confirmarse colores, longitudes y cursores habituales'],
+    applications: ['Aperturas de chaquetas', 'Frentes de ropa con proteccion solar', 'Ropa deportiva'],
+    specifications: {
+      type: 'Cremallera abierta de nylon',
+      size: 'Tamanos comunes como No. 5',
+      length: 'Puede personalizarse a la longitud requerida',
+      structure: 'Abierta',
+      material: 'Dientes de nylon con cinta textil convencional',
+      sliderStyle: 'Se pueden combinar cursores habituales segun el estilo',
+      colorOption: 'Puede confirmarse mediante carta de colores, muestra de tejido o muestra anterior',
+      samplingCycle: 'Las muestras habituales suelen poder organizarse primero',
+      productionLeadTime: 'La programacion en volumen comienza despues de confirmar la muestra',
+      orderType: 'Adecuada para desarrollo, volumen habitual y reposicion',
+      applicationScope: 'Chaquetas / ropa con proteccion solar / ropa deportiva',
+      notes: 'Procesos especiales como cinta reflectante o degradado arcoiris pueden confirmarse a partir de muestras',
+    },
+    gallery: [
+      {
+        image: '/products/nylon/black-open-end.webp',
+        title: 'Cremallera abierta de nylon negra',
+        description: 'Color base clasico, suave y ligero: la opcion principal para frentes de chaquetas y ropa con proteccion solar.',
+      },
+      {
+        image: '/products/nylon/royal-blue-open-end.webp',
+        title: 'Cremallera abierta de nylon azul royal',
+        description: 'Ejemplo de alta saturacion adecuado para disenos de contraste en ropa deportiva e infantil.',
+      },
+      {
+        image: '/products/nylon/red-open-end.webp',
+        title: 'Cremallera abierta de nylon roja',
+        description: 'Cinta de color vivo tenida segun carta de colores con consistencia estable.',
+      },
+      {
+        image: '/products/nylon/off-white-open-end.webp',
+        title: 'Cremallera abierta de nylon crudo',
+        description: 'Color claro con cursor plateado, adecuada para gabardinas claras y ropa con proteccion solar.',
+      },
+      {
+        image: '/products/nylon/rainbow-open-end.webp',
+        title: 'Cremallera abierta de nylon arcoiris',
+        description: 'Cinta con degradado arcoiris que funciona como detalle de diseno en ropa infantil y estilos de tendencia.',
+      },
+      {
+        image: '/products/nylon/sky-blue-reflective-open-end.webp',
+        title: 'Cremallera abierta reflectante azul cielo',
+        description: 'Cinta reflectante para mejor visibilidad nocturna, adecuada para ropa outdoor y funcional.',
+      },
+    ],
   },
   'nylon-zipper-roll-3-5-8': {
     slug: 'nylon-zipper-roll-3-5-8',
@@ -1973,9 +2569,9 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
     category: 'resinZippers',
-    name: 'سحاب راتنج مغلق رقم 5',
+    name: 'سحاب راتنج مغلق',
     description: 'مناسب للملابس وملابس الأطفال وإكسسوارات الأحذية ذات البنية المغلقة، مع تركيز على الخفة ومرونة اللون والتطابق المستقر.',
-    overview: 'سحاب الراتنج المغلق رقم 5 مناسب للمشاريع التي تحتاج إلى بنية مغلقة مع إحساس أخف وتنسيق أفضل للألوان. ويمكن لـ Weiwei Zipper دعم المطابقة الشائعة في الطول واللون والشريط والسحاب حتى يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
+    overview: 'سحاب الراتنج المغلق مناسب للمشاريع التي تحتاج إلى بنية مغلقة مع إحساس أخف وتنسيق أفضل للألوان. ويمكن لـ Weiwei Zipper دعم المطابقة الشائعة في الطول واللون والشريط والسحاب حتى يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
     features: ['المقاس 5 مناسب لمدى واسع من المشاريع الشائعة', 'البنية المغلقة مناسبة للجيوب والمواضع الداخلية', 'أسنان الراتنج تسمح بمرونة عالية في تنسيق اللون', 'يمكن تأكيد الألوان والسحابات الشائعة بشكل روتيني'],
     applications: ['جيوب الملابس', 'إكسسوارات ملابس الأطفال', 'إكسسوارات الأحذية'],
     specifications: {
@@ -1992,13 +2588,30 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'جيوب الملابس / إكسسوارات ملابس الأطفال / إكسسوارات الأحذية',
       notes: 'إذا كانت هناك حاجة إلى أطوال أو ألوان أو سحابات خاصة، فيمكن تأكيدها بمزيد من التفصيل اعتمادا على العينة',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-closed-end.webp',
+        title: 'سحاب راتنج مغلق أحمر',
+        description: 'شريط أحمر زاه بأسنان مطابقة اللون. البنية المغلقة مناسبة للجيوب والمواضع الداخلية مع اتساق جيد في اللون.',
+      },
+      {
+        image: '/products/resin/black-closed-end.webp',
+        title: 'سحاب راتنج مغلق أسود',
+        description: 'اللون الأساسي الأكثر شيوعا: خفيف وسلس، مناسب لجيوب الملابس وإكسسوارات ملابس الأطفال.',
+      },
+      {
+        image: '/products/resin/black-white-closed-end-combo.webp',
+        title: 'طقم مغلق بالأسود والأبيض',
+        description: 'مثال على الطراز نفسه بألوان مختلفة، مما يسهل تنسيق سلسلة الملابس.',
+      },
+    ],
   },
   'resin-no-5-open-end-zipper': {
     slug: 'resin-no-5-open-end-zipper',
     category: 'resinZippers',
-    name: 'سحاب راتنج مفتوح رقم 5',
+    name: 'سحاب راتنج مفتوح',
     description: 'مناسب للجاكيتات وملابس الأطفال والملابس الواقية من الشمس ذات البنية المفتوحة، مع تركيز على الخفة ومرونة اللون وكفاءة التوريد المعتاد.',
-    overview: 'سحاب الراتنج المفتوح رقم 5 مناسب لمشاريع الملابس التي تحتاج إلى فتح أمامي مع إحساس أخف وألوان منسقة. ويمكن لـ Weiwei Zipper دعم المطابقة المعتادة في الطول واللون والشريط والسحاب حتى يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
+    overview: 'سحاب الراتنج المفتوح مناسب لمشاريع الملابس التي تحتاج إلى فتح أمامي مع إحساس أخف وألوان منسقة. ويمكن لـ Weiwei Zipper دعم المطابقة المعتادة في الطول واللون والشريط والسحاب حتى يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
     features: ['المقاس 5 مناسب للجاكيتات والملابس الخفيفة الشائعة', 'البنية المفتوحة مناسبة للفتحات الأمامية ومواضع الأبواب الشائعة', 'أسنان الراتنج تسمح بمرونة أعلى في تنسيق الألوان', 'يمكن تأكيد الألوان والأطوال والسحابات المعتادة بكفاءة'],
     applications: ['الفتحات الأمامية للجاكيتات', 'مواضع الفتح في ملابس الأطفال', 'الفتحات الأمامية في الملابس الواقية من الشمس'],
     specifications: {
@@ -2015,6 +2628,28 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'الجاكيتات / ملابس الأطفال / الملابس الواقية من الشمس',
       notes: 'إذا كانت هناك حاجة إلى أطوال أو ألوان أو سحابات خاصة، فيمكن تأكيدها بمزيد من التفصيل اعتمادا على العينة',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-open-end.webp',
+        title: 'سحاب راتنج مفتوح أحمر',
+        description: 'شريط وأسنان مصبوغان باللون نفسه؛ البنية المفتوحة مناسبة للفتحات الأمامية في الجاكيتات وملابس الأطفال.',
+      },
+      {
+        image: '/products/resin/royal-blue-open-end.webp',
+        title: 'سحاب راتنج مفتوح أزرق ملكي',
+        description: 'مثال على لون عالي التشبع للأنماط الرياضية وملابس الأطفال التي تحتاج إلى درجات زاهية.',
+      },
+      {
+        image: '/products/resin/black-open-end.webp',
+        title: 'سحاب راتنج مفتوح أسود',
+        description: 'لون أساسي متعدد الاستخدامات بإحساس خفيف لمشاريع الملابس الخارجية المعتادة.',
+      },
+      {
+        image: '/products/resin/fluorescent-yellow-open-end.webp',
+        title: 'سحاب راتنج مفتوح أصفر فسفوري',
+        description: 'يعرض إمكانية الصباغة الفسفورية المناسبة للاستخدامات الخارجية وعالية الوضوح والرياضية.',
+      },
+    ],
   },
   'nylon-zipper-3-5-8': {
     slug: 'nylon-zipper-3-5-8',
@@ -2042,9 +2677,9 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
   'nylon-no-5-closed-end-zipper': {
     slug: 'nylon-no-5-closed-end-zipper',
     category: 'nylonZippers',
-    name: 'سحاب نايلون مغلق رقم 5',
+    name: 'سحاب نايلون مغلق',
     description: 'مناسب لجيوب الملابس والأقسام الداخلية للحقائب وغيرها من المواضع المغلقة الشائعة، مع أولوية للسلاسة واللون والتوريد المستقر.',
-    overview: 'يعد سحاب النايلون المغلق رقم 5 من أكثر الخيارات الأساسية شيوعا، وهو مناسب لمشاريع الملابس والحقائب والإكسسوارات الخفيفة التي تحتاج إلى بنية مغلقة. ويمكن لـ Weiwei Zipper تنسيق الطول واللون والشريط والسحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب اللاحقة.',
+    overview: 'يعد سحاب النايلون المغلق من أكثر الخيارات الأساسية شيوعا، وهو مناسب لمشاريع الملابس والحقائب والإكسسوارات الخفيفة التي تحتاج إلى بنية مغلقة. ويمكن لـ Weiwei Zipper تنسيق الطول واللون والشريط والسحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب اللاحقة.',
     features: ['المقاس 5 يغطي نطاقا واسعا من المشاريع الشائعة', 'البنية المغلقة مناسبة للجيوب والأقسام الداخلية', 'سلاسة مستقرة بفضل أسنان النايلون', 'يمكن تأكيد الألوان والسحابات الشائعة'],
     applications: ['جيوب الملابس', 'الأقسام الداخلية للحقائب', 'الإكسسوارات الخفيفة'],
     specifications: {
@@ -2061,6 +2696,78 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'جيوب الملابس / الأقسام الداخلية للحقائب / الإكسسوارات الخفيفة',
       notes: 'إذا كانت هناك حاجة إلى أطوال أو ألوان أو سحابات خاصة، فيمكن تأكيدها بمزيد من التفصيل اعتمادا على العينة',
     },
+    gallery: [
+      {
+        image: '/products/nylon/black-closed-end.webp',
+        title: 'سحاب نايلون مغلق أسود',
+        description: 'اللون الأساسي الأكثر استخداما بأسنان سلسة، مناسب لجيوب الملابس والأقسام الداخلية للحقائب.',
+      },
+      {
+        image: '/products/nylon/navy-closed-end.webp',
+        title: 'سحاب نايلون مغلق كحلي',
+        description: 'درجة داكنة شائعة قريبة من ألوان أقمشة البدلات وملابس العمل.',
+      },
+      {
+        image: '/products/nylon/off-white-closed-end.webp',
+        title: 'سحاب نايلون مغلق أبيض مصفر',
+        description: 'مثال على لون فاتح للملابس الفاتحة واستخدامات المنسوجات المنزلية.',
+      },
+    ],
+  },
+  'nylon-no-5-open-end-zipper': {
+    slug: 'nylon-no-5-open-end-zipper',
+    category: 'nylonZippers',
+    name: 'سحاب نايلون مفتوح',
+    description: 'مناسب للجاكيتات والملابس الواقية من الشمس والملابس الرياضية ذات البنية المفتوحة: سلس وخفيف مع خيارات شريط عاكس وألوان متنوعة.',
+    overview: 'يناسب سحاب النايلون المفتوح الفتحات الأمامية الوسطى وغيرها من المواضع التي تحتاج إلى فصل كامل، مع توازن بين سلاسة الحركة وخفة الوزن. وتوفر Weiwei Zipper ألوانا معتادة وتدرجات قوس قزح وخيارات شريط عاكس، ويمكنها تنسيق الطول واللون والسحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
+    features: ['سلس وخفيف للفتحات الأمامية عالية الاستخدام', 'البنية المفتوحة مناسبة لمواضع الفصل الكامل', 'ألوان معتادة / تدرج قوس قزح / شريط عاكس متاح', 'يمكن تأكيد الألوان والأطوال والسحابات المعتادة'],
+    applications: ['فتحات الجاكيتات', 'واجهات الملابس الواقية من الشمس', 'الملابس الرياضية'],
+    specifications: {
+      type: 'سحاب نايلون مفتوح',
+      size: 'مقاسات شائعة مثل رقم 5',
+      length: 'يمكن تخصيصه حسب الطول المطلوب',
+      structure: 'مفتوح',
+      material: 'أسنان نايلون مع شريط سحاب قياسي',
+      sliderStyle: 'يمكن تنسيق السحابات الشائعة حسب النمط',
+      colorOption: 'يمكن تأكيده عبر بطاقة ألوان أو عينة قماش أو عينة قديمة',
+      samplingCycle: 'يمكن غالبا ترتيب العينات القياسية أولا',
+      productionLeadTime: 'تبدأ جدولة الإنتاج بعد تأكيد العينة',
+      orderType: 'مناسب للتطوير والطلبات القياسية وإعادة الطلب',
+      applicationScope: 'الجاكيتات / الملابس الواقية من الشمس / الملابس الرياضية',
+      notes: 'يمكن تأكيد العمليات الخاصة مثل الشريط العاكس أو تدرج قوس قزح اعتمادا على العينات',
+    },
+    gallery: [
+      {
+        image: '/products/nylon/black-open-end.webp',
+        title: 'سحاب نايلون مفتوح أسود',
+        description: 'لون أساسي كلاسيكي سلس وخفيف، وهو الخيار الرئيسي لواجهات الجاكيتات والملابس الواقية من الشمس.',
+      },
+      {
+        image: '/products/nylon/royal-blue-open-end.webp',
+        title: 'سحاب نايلون مفتوح أزرق ملكي',
+        description: 'مثال عالي التشبع مناسب لتصاميم الألوان المتباينة في الملابس الرياضية وملابس الأطفال.',
+      },
+      {
+        image: '/products/nylon/red-open-end.webp',
+        title: 'سحاب نايلون مفتوح أحمر',
+        description: 'شريط زاه مصبوغ حسب بطاقة الألوان مع اتساق مستقر في اللون.',
+      },
+      {
+        image: '/products/nylon/off-white-open-end.webp',
+        title: 'سحاب نايلون مفتوح أبيض مصفر',
+        description: 'لون فاتح مع سحاب فضي، مناسب للمعاطف الفاتحة والملابس الواقية من الشمس.',
+      },
+      {
+        image: '/products/nylon/rainbow-open-end.webp',
+        title: 'سحاب نايلون مفتوح بألوان قوس قزح',
+        description: 'شريط بتدرج قوس قزح يعمل كلمسة تصميم مميزة في ملابس الأطفال وأنماط الموضة.',
+      },
+      {
+        image: '/products/nylon/sky-blue-reflective-open-end.webp',
+        title: 'سحاب نايلون مفتوح عاكس أزرق سماوي',
+        description: 'شريط عاكس لرؤية ليلية أفضل، مناسب للملابس الخارجية والوظيفية.',
+      },
+    ],
   },
   'nylon-zipper-roll-3-5-8': {
     slug: 'nylon-zipper-roll-3-5-8',
@@ -2283,9 +2990,9 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
     category: 'resinZippers',
-    name: 'Смоляная неразъемная молния №5',
+    name: 'Смоляная неразъемная молния',
     description: 'Подходит для одежды, детских изделий и обувных аксессуаров с неразъемной конструкцией, где важны легкость, гибкость по цвету и стабильное сочетание.',
-    overview: 'Смоляная неразъемная молния №5 подходит для проектов, где нужна закрытая конструкция вместе с более легким ощущением и удобной координацией цвета. Weiwei Zipper помогает согласовать длину, цвет, тесьму и бегунок, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    overview: 'Смоляная неразъемная молния подходит для проектов, где нужна закрытая конструкция вместе с более легким ощущением и удобной координацией цвета. Weiwei Zipper помогает согласовать длину, цвет, тесьму и бегунок, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
     features: ['Размер 5 подходит для широкого круга типовых проектов', 'Неразъемная конструкция удобна для карманов и внутренних зон', 'Смоляные зубья дают гибкость по цвету', 'Популярные цвета и бегунки можно подтверждать в рабочем порядке'],
     applications: ['Карманы одежды', 'Аксессуары детской одежды', 'Обувные аксессуары'],
     specifications: {
@@ -2302,13 +3009,30 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Карманы одежды / аксессуары детской одежды / обувные аксессуары',
       notes: 'Если нужны особая длина, цвет или бегунок, это можно дополнительно подтвердить по образцу',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-closed-end.webp',
+        title: 'Красная смоляная неразъемная молния',
+        description: 'Ярко-красная тесьма с зубьями в тон. Неразъемная конструкция подходит для карманов и внутренних зон с хорошей согласованностью цвета.',
+      },
+      {
+        image: '/products/resin/black-closed-end.webp',
+        title: 'Черная смоляная неразъемная молния',
+        description: 'Самый распространенный базовый цвет — легкая и плавная, подходит для карманов одежды и детских аксессуаров.',
+      },
+      {
+        image: '/products/resin/black-white-closed-end-combo.webp',
+        title: 'Черно-белый неразъемный комплект',
+        description: 'Пример одной модели в разных цветах — удобно согласовывать с серией одежды.',
+      },
+    ],
   },
   'resin-no-5-open-end-zipper': {
     slug: 'resin-no-5-open-end-zipper',
     category: 'resinZippers',
-    name: 'Смоляная разъемная молния №5',
+    name: 'Смоляная разъемная молния',
     description: 'Подходит для курток, детской одежды и солнцезащитной верхней одежды с разъемной конструкцией, где важны легкость, гибкость по цвету и эффективность типового снабжения.',
-    overview: 'Смоляная разъемная молния №5 подходит для проектов одежды, где нужна передняя разъемная конструкция вместе с более легким ощущением и согласованным цветом. Weiwei Zipper помогает координировать длину, цвет, тесьму и бегунок, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    overview: 'Смоляная разъемная молния подходит для проектов одежды, где нужна передняя разъемная конструкция вместе с более легким ощущением и согласованным цветом. Weiwei Zipper помогает координировать длину, цвет, тесьму и бегунок, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
     features: ['Размер 5 хорошо подходит для курток и легкой типовой одежды', 'Разъемная конструкция удобна для передних планок и типовых открывающихся зон', 'Смоляные зубья дают больше гибкости в подборе цвета', 'Популярные цвета, длины и бегунки можно подтверждать более эффективно'],
     applications: ['Передние планки курток', 'Разъемные элементы детской одежды', 'Передние застежки солнцезащитной верхней одежды'],
     specifications: {
@@ -2325,6 +3049,28 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Куртки / детская одежда / солнцезащитная верхняя одежда',
       notes: 'Если нужны особая длина, цвет или бегунок, это можно дополнительно подтвердить по образцу',
     },
+    gallery: [
+      {
+        image: '/products/resin/red-open-end.webp',
+        title: 'Красная смоляная разъемная молния',
+        description: 'Тесьма и зубья окрашены в один цвет; разъемная конструкция подходит для центральных застежек курток и детской одежды.',
+      },
+      {
+        image: '/products/resin/royal-blue-open-end.webp',
+        title: 'Ярко-синяя смоляная разъемная молния',
+        description: 'Пример насыщенного цвета для спортивных и детских моделей, где нужны яркие тона.',
+      },
+      {
+        image: '/products/resin/black-open-end.webp',
+        title: 'Черная смоляная разъемная молния',
+        description: 'Универсальный базовый цвет с легким ощущением для типовых проектов верхней одежды.',
+      },
+      {
+        image: '/products/resin/fluorescent-yellow-open-end.webp',
+        title: 'Флуоресцентно-желтая смоляная разъемная молния',
+        description: 'Демонстрирует возможности флуоресцентного окрашивания — для аутдора, сигнальной и спортивной одежды.',
+      },
+    ],
   },
   'nylon-zipper-3-5-8': {
     slug: 'nylon-zipper-3-5-8',
@@ -2352,9 +3098,9 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
   'nylon-no-5-closed-end-zipper': {
     slug: 'nylon-no-5-closed-end-zipper',
     category: 'nylonZippers',
-    name: 'Нейлоновая неразъемная молния №5',
+    name: 'Нейлоновая неразъемная молния',
     description: 'Подходит для карманов одежды, внутренних отделений сумок и других типовых неразъемных зон, где важны плавность, цвет и стабильное снабжение.',
-    overview: 'Нейлоновая неразъемная молния №5 — один из самых распространенных базовых вариантов для одежды, сумок и легких аксессуаров, где требуется неразъемная конструкция. Weiwei Zipper помогает координировать длину, цвет, тесьму и бегунок, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    overview: 'Нейлоновая неразъемная молния — один из самых распространенных базовых вариантов для одежды, сумок и легких аксессуаров, где требуется неразъемная конструкция. Weiwei Zipper помогает координировать длину, цвет, тесьму и бегунок, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
     features: ['Размер 5 покрывает широкий круг типовых проектов', 'Неразъемная конструкция подходит для карманов и внутренних отделений', 'Стабильная плавность благодаря нейлоновым зубьям', 'Популярные цвета и бегунки можно подтверждать в рабочем порядке'],
     applications: ['Карманы одежды', 'Внутренние отделения сумок', 'Легкие аксессуары'],
     specifications: {
@@ -2371,6 +3117,78 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Карманы одежды / внутренние отделения сумок / легкие аксессуары',
       notes: 'Если нужны особая длина, цвет или бегунок, это можно дополнительно подтвердить по образцу',
     },
+    gallery: [
+      {
+        image: '/products/nylon/black-closed-end.webp',
+        title: 'Черная нейлоновая неразъемная молния',
+        description: 'Самый используемый базовый цвет с плавными зубьями — для карманов одежды и внутренних отделений сумок.',
+      },
+      {
+        image: '/products/nylon/navy-closed-end.webp',
+        title: 'Темно-синяя нейлоновая неразъемная молния',
+        description: 'Распространенный темный тон, близкий к палитре костюмных и рабочих тканей.',
+      },
+      {
+        image: '/products/nylon/off-white-closed-end.webp',
+        title: 'Молочная нейлоновая неразъемная молния',
+        description: 'Пример светлого цвета для светлой одежды и домашнего текстиля.',
+      },
+    ],
+  },
+  'nylon-no-5-open-end-zipper': {
+    slug: 'nylon-no-5-open-end-zipper',
+    category: 'nylonZippers',
+    name: 'Нейлоновая разъемная молния',
+    description: 'Подходит для курток, солнцезащитной верхней одежды и спортивной одежды с разъемной конструкцией: плавная, легкая, со светоотражающей тесьмой и богатым выбором цветов.',
+    overview: 'Нейлоновая разъемная молния подходит для центральных застежек и других зон, где нужно полное разделение, сочетая плавный ход с легкостью. Weiwei Zipper предлагает типовые цвета, радужные градиенты и светоотражающую тесьму, а также помогает координировать длину, цвет и бегунок, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    features: ['Плавная и легкая для часто используемых центральных застежек', 'Разъемная конструкция подходит для полностью разделяющихся зон', 'Доступны типовые цвета / радужный градиент / светоотражающая тесьма', 'Можно подтверждать типовые цвета, длины и бегунки'],
+    applications: ['Застежки курток', 'Передние планки солнцезащитной одежды', 'Спортивная одежда'],
+    specifications: {
+      type: 'Нейлоновая разъемная молния',
+      size: 'Распространенные размеры, например №5',
+      length: 'Может изготавливаться под требуемую длину',
+      structure: 'Разъемная',
+      material: 'Нейлоновые зубья с типовой тесьмой',
+      sliderStyle: 'Можно подобрать стандартные бегунки по стилю изделия',
+      colorOption: 'Можно подтверждать по карте цветов, образцу ткани или старому образцу',
+      samplingCycle: 'Типовые образцы обычно можно организовать в приоритетном порядке',
+      productionLeadTime: 'Планирование партии начинается после подтверждения образца',
+      orderType: 'Подходит для разработки, типовых партий и повторных заказов',
+      applicationScope: 'Куртки / солнцезащитная одежда / спортивная одежда',
+      notes: 'Особые исполнения, такие как светоотражающая тесьма или радужный градиент, можно подтвердить по образцам',
+    },
+    gallery: [
+      {
+        image: '/products/nylon/black-open-end.webp',
+        title: 'Черная нейлоновая разъемная молния',
+        description: 'Классический базовый цвет, плавная и легкая — основной выбор для застежек курток и солнцезащитной одежды.',
+      },
+      {
+        image: '/products/nylon/royal-blue-open-end.webp',
+        title: 'Ярко-синяя нейлоновая разъемная молния',
+        description: 'Пример насыщенного цвета для контрастных решений в спортивной и детской одежде.',
+      },
+      {
+        image: '/products/nylon/red-open-end.webp',
+        title: 'Красная нейлоновая разъемная молния',
+        description: 'Яркая тесьма, окрашенная по цветовым картам, со стабильной согласованностью цвета.',
+      },
+      {
+        image: '/products/nylon/off-white-open-end.webp',
+        title: 'Молочная нейлоновая разъемная молния',
+        description: 'Светлый цвет с серебристым бегунком — для светлых плащей и солнцезащитной одежды.',
+      },
+      {
+        image: '/products/nylon/rainbow-open-end.webp',
+        title: 'Радужная нейлоновая разъемная молния',
+        description: 'Тесьма с радужным градиентом — дизайнерский акцент для детской одежды и трендовых моделей.',
+      },
+      {
+        image: '/products/nylon/sky-blue-reflective-open-end.webp',
+        title: 'Небесно-голубая светоотражающая разъемная молния',
+        description: 'Светоотражающая тесьма для лучшей видимости ночью — для аутдора и функциональной одежды.',
+      },
+    ],
   },
   'nylon-zipper-roll-3-5-8': {
     slug: 'nylon-zipper-roll-3-5-8',
