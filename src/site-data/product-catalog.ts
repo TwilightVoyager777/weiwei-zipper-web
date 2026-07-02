@@ -669,6 +669,13 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
       applicationScope: '服装加工 / 箱包加工 / 防晒衣加工',
       notes: '码装更适合需要后续裁切加工的项目',
     },
+    gallery: [
+      {
+        image: '/products/nylon/red-long-chain.webp',
+        title: '尼龙码装链带特写',
+        description: '卷装连续链带，不带上下止与插销，可按需求定长裁切、装配拉头后加工成成品拉链，链带颜色可按色卡定染。',
+      },
+    ],
   },
   'metal-zipper-3-5-8': {
     slug: 'metal-zipper-3-5-8',
@@ -848,7 +855,7 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
   'nylon-zipper-3-5-8': '/products/nylon-zipper-main.png?v=20260302b',
   'nylon-no-5-closed-end-zipper': '/products/nylon/black-closed-end.webp',
   'nylon-no-5-open-end-zipper': '/products/nylon/black-open-end.webp',
-  'nylon-zipper-roll-3-5-8': '/products/nylon-zipper-main.png?v=20260302b',
+  'nylon-zipper-roll-3-5-8': '/products/nylon/red-long-chain.webp',
 };
 
 export const CATEGORY_IMAGES: Record<ProductCategory, string> = {
@@ -857,7 +864,7 @@ export const CATEGORY_IMAGES: Record<ProductCategory, string> = {
   nylonZippers: '/products/nylon/multicolor-collection.webp',
   metalRolls: '/products/metal-zipper-main.png?v=20260302b',
   resinRolls: '/products/resin-zipper-main.png?v=20260302b',
-  nylonRolls: '/products/nylon-zipper-main.png?v=20260302b',
+  nylonRolls: '/products/nylon/red-long-chain.webp',
 };
 
 export const productsPagePrimaryCards = [
@@ -1949,6 +1956,13 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Garment processing / Bag processing / Sun-protective outerwear processing',
       notes: 'Zipper rolls are more suitable for projects that require later cutting and processing',
     },
+    gallery: [
+      {
+        image: '/products/nylon/red-long-chain.webp',
+        title: 'Nylon Zipper Chain Close-Up',
+        description: 'Continuous roll chain without stops or insertion parts — ready for cut-to-length processing and slider fitting, with tape colors dyed to color cards.',
+      },
+    ],
   },
   'metal-zipper-3-5-8': {
     slug: 'metal-zipper-3-5-8',
@@ -2370,6 +2384,13 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Procesamiento de prendas / bolsos / ropa con proteccion solar',
       notes: 'La cadena por rollo es mas adecuada para proyectos que requieren corte y procesamiento posterior',
     },
+    gallery: [
+      {
+        image: '/products/nylon/red-long-chain.webp',
+        title: 'Primer plano de cadena de nylon por rollo',
+        description: 'Cadena continua en rollo sin topes ni piezas de insercion, lista para corte a medida y montaje de cursor, con cinta tenida segun carta de colores.',
+      },
+    ],
   },
   'metal-zipper-3-5-8': {
     slug: 'metal-zipper-3-5-8',
@@ -2791,6 +2812,13 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'معالجة الملابس / الحقائب / الملابس الواقية من الشمس',
       notes: 'الرول أنسب للمشاريع التي تحتاج إلى قص ومعالجة لاحقة',
     },
+    gallery: [
+      {
+        image: '/products/nylon/red-long-chain.webp',
+        title: 'لقطة مقربة لسلسلة نايلون بالرول',
+        description: 'سلسلة متصلة بالرول من دون نقاط توقف أو أجزاء إدخال، جاهزة للقص حسب الطول وتركيب السحاب، مع صباغة الشريط حسب بطاقة الألوان.',
+      },
+    ],
   },
   'metal-zipper-3-5-8': {
     slug: 'metal-zipper-3-5-8',
@@ -3212,6 +3240,13 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Обработка одежды / сумок / солнцезащитной одежды',
       notes: 'Рулонный формат лучше подходит для проектов, где требуется последующая нарезка и обработка',
     },
+    gallery: [
+      {
+        image: '/products/nylon/red-long-chain.webp',
+        title: 'Нейлоновая рулонная цепочка крупным планом',
+        description: 'Непрерывная рулонная цепочка без стопоров и вставных элементов — готова к нарезке по длине и установке бегунка; тесьма окрашивается по цветовым картам.',
+      },
+    ],
   },
   'metal-zipper-3-5-8': {
     slug: 'metal-zipper-3-5-8',
