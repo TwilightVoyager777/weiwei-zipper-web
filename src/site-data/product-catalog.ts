@@ -532,9 +532,9 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-closed-end-zipper': {
     slug: 'metal-no-5-closed-end-zipper',
     category: 'metalZippers',
-    name: '五号金属闭口拉链',
+    name: '金属闭口拉链',
     description: '适合箱包、鞋履、工装配件等常见闭口结构，强调质感、耐磨度与稳定配套。',
-    overview: '五号金属闭口拉链适合需要闭口结构且更看重五金质感的款式。伟伟拉链可围绕长度、牙色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
+    overview: '金属闭口拉链适合需要闭口结构且更看重五金质感的款式。伟伟拉链可围绕长度、牙色、织带与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
     features: ['5 号规格适合常规中等厚度款式', '闭口结构适合口袋与配件位', '金属牙链质感更强且耐磨', '支持常规五金色与拉头配套确认'],
     applications: ['箱包口袋', '鞋履配件', '工装配件'],
     specifications: {
@@ -577,9 +577,9 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-open-end-zipper': {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
-    name: '五号金属开口拉链',
+    name: '金属开口拉链',
     description: '适合外套、工装、箱包等常见开口结构，可选银齿、金齿、古铜齿、青古铜齿等多种齿色。',
-    overview: '五号金属开口拉链适合前中门襟等需要完全分开的开合位置，兼顾五金质感与耐用度。伟伟拉链可提供银齿、金齿、古铜齿、青古铜齿等常用齿色，并围绕长度、织带颜色与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
+    overview: '金属开口拉链适合前中门襟等需要完全分开的开合位置，兼顾五金质感与耐用度。伟伟拉链可提供银齿、金齿、古铜齿、青古铜齿等常用齿色，并围绕长度、织带颜色与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
     features: ['5 号规格适合常规外套与中等厚度款式', '开口结构适合前中门襟与需要完全分开的开合位', '银齿 / 金齿 / 古铜齿 / 青古铜齿多种齿色可选', '支持常规颜色、长度与拉头搭配确认'],
     applications: ['外套门襟', '工装前中', '箱包配件'],
     specifications: {
@@ -1491,9 +1491,9 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-closed-end-zipper': {
     slug: 'metal-no-5-closed-end-zipper',
     category: 'metalZippers',
-    name: 'No. 5 Metal Closed-End Zipper',
+    name: 'Metal Closed-End Zipper',
     description: 'Suitable for bag, footwear, and workwear accessory positions that use closed-end structures and place more emphasis on texture, abrasion resistance, and stable matching.',
-    overview: 'The No. 5 metal closed-end zipper is suitable for styles that require a closed-end structure together with a stronger hardware feel. Weiwei Zipper can coordinate routine matching around length, tooth color, tape, and slider combinations so customers can complete sample confirmation first and then move into bulk purchasing and replenishment.',
+    overview: 'The metal closed-end zipper is suitable for styles that require a closed-end structure together with a stronger hardware feel. Weiwei Zipper can coordinate routine matching around length, tooth color, tape, and slider combinations so customers can complete sample confirmation first and then move into bulk purchasing and replenishment.',
     features: ['Size 5 suits routine medium-thickness styles', 'Closed-end structure suits pocket and accessory positions', 'Metal teeth give stronger texture and better wear resistance', 'Routine hardware colors and sliders can be confirmed'],
     applications: ['Bag pockets', 'Footwear accessories', 'Workwear accessories'],
     specifications: {
@@ -1536,9 +1536,9 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-open-end-zipper': {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
-    name: 'No. 5 Metal Open-End Zipper',
+    name: 'Metal Open-End Zipper',
     description: 'Suitable for jackets, workwear, and bag positions that use open-end structures, with silver, golden, antique brass, and antique bronze tooth colors available.',
-    overview: 'The No. 5 metal open-end zipper suits center-front openings and other positions that need to separate completely, balancing hardware texture with durability. Weiwei Zipper offers common tooth colors including silver, golden, antique brass, and antique bronze, and can coordinate routine matching around length, tape color, and slider combinations so customers can complete sample confirmation first and then move into bulk purchasing and repeat orders.',
+    overview: 'The metal open-end zipper suits center-front openings and other positions that need to separate completely, balancing hardware texture with durability. Weiwei Zipper offers common tooth colors including silver, golden, antique brass, and antique bronze, and can coordinate routine matching around length, tape color, and slider combinations so customers can complete sample confirmation first and then move into bulk purchasing and repeat orders.',
     features: ['Size 5 suits routine jackets and medium-thickness styles', 'Open-end structure suits center-front plackets and fully separating openings', 'Multiple tooth colors available: silver / golden / antique brass / antique bronze', 'Routine colors, lengths, and slider combinations can be confirmed'],
     applications: ['Jacket plackets', 'Workwear center fronts', 'Bag accessories'],
     specifications: {
@@ -1801,9 +1801,9 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-closed-end-zipper': {
     slug: 'metal-no-5-closed-end-zipper',
     category: 'metalZippers',
-    name: 'Cremallera cerrada metalica No. 5',
+    name: 'Cremallera cerrada metalica',
     description: 'Adecuada para posiciones cerradas en bolsos, calzado y accesorios de ropa de trabajo que exigen mas textura, resistencia al desgaste y combinacion estable.',
-    overview: 'La cremallera cerrada metalica No. 5 es adecuada para estilos que necesitan estructura cerrada junto con una sensacion metalica mas marcada. Weiwei Zipper puede coordinar longitud, color del diente, cinta y combinacion de cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposicion.',
+    overview: 'La cremallera cerrada metalica es adecuada para estilos que necesitan estructura cerrada junto con una sensacion metalica mas marcada. Weiwei Zipper puede coordinar longitud, color del diente, cinta y combinacion de cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposicion.',
     features: ['El tamano 5 se adapta a estilos habituales de grosor medio', 'La estructura cerrada funciona bien en bolsillos y posiciones de accesorios', 'Los dientes metalicos ofrecen mas textura y mejor resistencia al desgaste', 'Pueden confirmarse colores metalicos y cursores habituales'],
     applications: ['Bolsillos de bolsos', 'Accesorios de calzado', 'Accesorios de ropa de trabajo'],
     specifications: {
@@ -1846,9 +1846,9 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-open-end-zipper': {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
-    name: 'Cremallera abierta metalica No. 5',
+    name: 'Cremallera abierta metalica',
     description: 'Adecuada para chaquetas, ropa de trabajo y posiciones de bolsos con estructura abierta, con dientes plateados, dorados, de laton envejecido y de bronce envejecido disponibles.',
-    overview: 'La cremallera abierta metalica No. 5 se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando la textura del herraje con la durabilidad. Weiwei Zipper ofrece colores de diente comunes como plateado, dorado, laton envejecido y bronce envejecido, y puede coordinar longitud, color de cinta y combinacion de cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposicion.',
+    overview: 'La cremallera abierta metalica se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando la textura del herraje con la durabilidad. Weiwei Zipper ofrece colores de diente comunes como plateado, dorado, laton envejecido y bronce envejecido, y puede coordinar longitud, color de cinta y combinacion de cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposicion.',
     features: ['El tamano 5 se adapta a chaquetas habituales y estilos de grosor medio', 'La estructura abierta funciona bien en aperturas centrales delanteras y posiciones de separacion completa', 'Varios colores de diente disponibles: plateado / dorado / laton envejecido / bronce envejecido', 'Pueden confirmarse colores, longitudes y cursores habituales'],
     applications: ['Aperturas de chaquetas', 'Frentes de ropa de trabajo', 'Accesorios de bolsos'],
     specifications: {
@@ -2111,9 +2111,9 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-closed-end-zipper': {
     slug: 'metal-no-5-closed-end-zipper',
     category: 'metalZippers',
-    name: 'سحاب معدني مغلق رقم 5',
+    name: 'سحاب معدني مغلق',
     description: 'مناسب للمواضع المغلقة في الحقائب والأحذية وإكسسوارات ملابس العمل التي تتطلب ملمسا أقوى ومقاومة للاهتراء وتطابقا مستقرا.',
-    overview: 'يعد السحاب المعدني المغلق رقم 5 مناسبا للتصاميم التي تحتاج إلى بنية مغلقة مع إحساس معدني أقوى. ويمكن لـ Weiwei Zipper تنسيق الطول ولون الأسنان والشريط وتركيبة السحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
+    overview: 'يعد السحاب المعدني المغلق مناسبا للتصاميم التي تحتاج إلى بنية مغلقة مع إحساس معدني أقوى. ويمكن لـ Weiwei Zipper تنسيق الطول ولون الأسنان والشريط وتركيبة السحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
     features: ['المقاس 5 مناسب للتصاميم الشائعة متوسطة السماكة', 'البنية المغلقة مناسبة للجيوب ومواضع الإكسسوار', 'الأسنان المعدنية تمنح ملمسا أقوى ومقاومة أفضل للاهتراء', 'يمكن تأكيد الألوان المعدنية والسحابات الشائعة'],
     applications: ['جيوب الحقائب', 'إكسسوارات الأحذية', 'إكسسوارات ملابس العمل'],
     specifications: {
@@ -2156,9 +2156,9 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-open-end-zipper': {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
-    name: 'سحاب معدني مفتوح رقم 5',
+    name: 'سحاب معدني مفتوح',
     description: 'مناسب للسترات وملابس العمل ومواضع الحقائب ذات البنية المفتوحة، مع توفر أسنان فضية وذهبية ونحاس عتيق وبرونز عتيق.',
-    overview: 'يناسب السحاب المعدني المفتوح رقم 5 الفتحات الأمامية الوسطى وغيرها من المواضع التي تحتاج إلى فصل كامل، مع توازن بين الملمس المعدني والمتانة. وتوفر Weiwei Zipper ألوان أسنان شائعة تشمل الفضي والذهبي والنحاس العتيق والبرونز العتيق، ويمكنها تنسيق الطول ولون الشريط وتركيبة السحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
+    overview: 'يناسب السحاب المعدني المفتوح الفتحات الأمامية الوسطى وغيرها من المواضع التي تحتاج إلى فصل كامل، مع توازن بين الملمس المعدني والمتانة. وتوفر Weiwei Zipper ألوان أسنان شائعة تشمل الفضي والذهبي والنحاس العتيق والبرونز العتيق، ويمكنها تنسيق الطول ولون الشريط وتركيبة السحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
     features: ['المقاس 5 مناسب للسترات الشائعة والتصاميم متوسطة السماكة', 'البنية المفتوحة مناسبة للفتحات الأمامية الوسطى ومواضع الفصل الكامل', 'ألوان أسنان متعددة متاحة: فضي / ذهبي / نحاس عتيق / برونز عتيق', 'يمكن تأكيد الألوان والأطوال والسحابات الشائعة'],
     applications: ['فتحات السترات', 'الفتحات الأمامية لملابس العمل', 'إكسسوارات الحقائب'],
     specifications: {
@@ -2421,9 +2421,9 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-closed-end-zipper': {
     slug: 'metal-no-5-closed-end-zipper',
     category: 'metalZippers',
-    name: 'Металлическая неразъемная молния №5',
+    name: 'Металлическая неразъемная молния',
     description: 'Подходит для неразъемных зон в сумках, обуви и аксессуарах рабочей одежды, где особенно важны фактура, износостойкость и стабильное сочетание.',
-    overview: 'Металлическая неразъемная молния №5 подходит для моделей, где нужна закрытая конструкция вместе с более выраженным металлическим ощущением. Weiwei Zipper помогает координировать длину, цвет зуба, тесьму и комбинацию бегунка, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    overview: 'Металлическая неразъемная молния подходит для моделей, где нужна закрытая конструкция вместе с более выраженным металлическим ощущением. Weiwei Zipper помогает координировать длину, цвет зуба, тесьму и комбинацию бегунка, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
     features: ['Размер 5 подходит для типовых моделей средней плотности', 'Неразъемная конструкция удобна для карманов и аксессуарных зон', 'Металлические зубья дают более сильную фактуру и лучшую стойкость к истиранию', 'Можно подтверждать типовые металлические оттенки и бегунки'],
     applications: ['Карманы сумок', 'Обувные аксессуары', 'Аксессуары рабочей одежды'],
     specifications: {
@@ -2466,9 +2466,9 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
   'metal-no-5-open-end-zipper': {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
-    name: 'Металлическая разъемная молния №5',
+    name: 'Металлическая разъемная молния',
     description: 'Подходит для курток, рабочей одежды и сумок с разъемной конструкцией; доступны серебристые, золотистые зубья, а также покрытия под античную латунь и бронзу.',
-    overview: 'Металлическая разъемная молния №5 подходит для центральных застежек и других зон, где нужно полное разделение, сочетая металлическую фактуру с долговечностью. Weiwei Zipper предлагает распространенные цвета зубьев — серебристый, золотистый, античную латунь и античную бронзу — и помогает координировать длину, цвет тесьмы и комбинацию бегунка, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    overview: 'Металлическая разъемная молния подходит для центральных застежек и других зон, где нужно полное разделение, сочетая металлическую фактуру с долговечностью. Weiwei Zipper предлагает распространенные цвета зубьев — серебристый, золотистый, античную латунь и античную бронзу — и помогает координировать длину, цвет тесьмы и комбинацию бегунка, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
     features: ['Размер 5 подходит для типовых курток и моделей средней плотности', 'Разъемная конструкция удобна для центральных застежек и зон полного разделения', 'Несколько цветов зубьев: серебристый / золотистый / античная латунь / античная бронза', 'Можно подтверждать типовые цвета, длины и бегунки'],
     applications: ['Застежки курток', 'Центральные застежки рабочей одежды', 'Фурнитура для сумок'],
     specifications: {
