@@ -182,7 +182,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
 
           {category.featureImage ? (
             <div
-              className={`w-full mx-auto lg:mx-0 lg:mt-6 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
+              className={`w-full mx-auto lg:mx-0 lg:self-end lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
                 productSlugs.length > 0 ? 'max-w-2xl' : 'max-w-md'
               }`}
             >
