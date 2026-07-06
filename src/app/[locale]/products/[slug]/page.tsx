@@ -152,14 +152,14 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
             </section>
 
             {category.featureImage && productSlugs.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+              <div className="grid grid-cols-2 gap-3 mt-8 max-w-xl">
                 {productSlugs.map((productSlug: ProductSlug) => (
                   <Link
                     key={productSlug}
                     href={`/products/${productSlug}` as any}
                     className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
                   >
-                    <div className="h-40 bg-gray-50 overflow-hidden">
+                    <div className="h-28 sm:h-32 bg-gray-50 overflow-hidden">
                       <Image
                         src={PRODUCT_IMAGES[productSlug]}
                         alt={productItems[productSlug].name}
@@ -168,11 +168,11 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="p-4">
-                      <h2 className="text-base font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
+                    <div className="p-3">
+                      <h2 className="text-sm sm:text-base font-semibold text-gray-900 mb-0.5 group-hover:text-blue-800 transition-colors">
                         {productItems[productSlug].name}
                       </h2>
-                      <p className="text-sm text-gray-600 line-clamp-2">{productItems[productSlug].description}</p>
+                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">{productItems[productSlug].description}</p>
                     </div>
                   </Link>
                 ))}
