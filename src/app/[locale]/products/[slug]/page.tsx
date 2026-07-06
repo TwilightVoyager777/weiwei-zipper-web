@@ -125,11 +125,11 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
         <div
           className={
             category.featureImage
-              ? 'grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start mb-12'
+              ? 'grid grid-cols-1 lg:grid-cols-9 gap-8 lg:gap-12 items-start mb-12'
               : undefined
           }
         >
-          <div className={category.featureImage ? 'lg:col-span-3' : undefined}>
+          <div className={category.featureImage ? 'lg:col-span-5' : undefined}>
             <div className="max-w-3xl mb-10">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed">{category.description}</p>
@@ -182,8 +182,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
 
           {category.featureImage ? (
             <div
-              className={`lg:col-span-2 w-full mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
-                productSlugs.length > 0 ? 'max-w-xl' : 'max-w-md'
+              className={`lg:col-span-4 w-full mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
+                productSlugs.length > 0 ? 'max-w-2xl' : 'max-w-md'
               }`}
             >
               <ZoomableImage
