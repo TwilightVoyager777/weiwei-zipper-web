@@ -124,6 +124,7 @@ export type ProductCategoryContent = {
   };
   faq?: { question: string; answer: string }[];
   gallery?: CategoryGallery;
+  featureImage?: string;
 };
 
 export type ProductItemContent = {
@@ -168,6 +169,7 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     key: 'resinZippers',
     slug: 'resin-zippers',
     name: '树脂拉链',
+    featureImage: '/products/resin/resin-feature-poster.webp',
     description: '主推 3 号 / 5 号 / 8 号常用规格，适合服装、童装、鞋帽等轻量项目配套。',
     overview: '树脂拉链是伟伟拉链当前的重要供应品类之一，主要适用于服装及轻量配件场景。常用 3 号、5 号、8 号规格，便于按款式进一步确认颜色、长度与拉头搭配，适合日常开发、批量采购与返单跟进。',
     keyFeatures: ['配色灵活，适合做常规成衣颜色匹配', '3 号 / 5 号 / 8 号常用规格覆盖完整', '闭尾、开尾、双开方式都可配', '适合服装与鞋帽等轻量使用场景'],
@@ -237,6 +239,7 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     key: 'nylonZippers',
     slug: 'nylon-zippers',
     name: '尼龙拉链',
+    featureImage: '/products/nylon/nylon-feature-poster.webp',
     description: '适合服装、箱包与防晒衣项目，常用 3 号 / 5 号 / 8 号规格。',
     overview: '尼龙拉链兼顾顺滑度、柔韧性和广泛适配性，是服装、箱包和防晒衣项目中的高频应用品类。伟伟拉链围绕 3 号、5 号、8 号常用规格建立稳定配套，便于快反开发、批量采购与持续返单。',
     keyFeatures: ['顺滑度稳定，适合高频拉合场景', '柔韧性更好，适合轻薄面料与软包结构', '颜色匹配空间大，适合系列化开发', '可覆盖防晒衣、外套、背包等多场景'],
@@ -306,6 +309,7 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     key: 'metalZippers',
     slug: 'metal-zippers',
     name: '金属拉链',
+    featureImage: '/products/metal/metal-feature-poster.webp',
     description: '适合箱包、靴类、工装及对质感要求更高的款式，常用 3 号 / 5 号 / 8 号规格。',
     overview: '金属拉链更适合强调质感与耐用度的应用场景。伟伟拉链围绕常用 3 号、5 号、8 号规格提供基础配套，适合箱包、工装、靴类及局部装饰类项目的长期使用。',
     keyFeatures: ['外观质感更强，适合有装饰属性的款式', '耐磨耐用，适合箱包和鞋类场景', '可搭配不同拉头样式形成风格差异', '适合中高频返单的固定款式配套'],
@@ -1151,6 +1155,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'resinZippers',
     slug: 'resin-zippers',
     name: 'Resin Zippers',
+    featureImage: '/products/resin/resin-feature-poster.webp',
     description: 'Built around common size 3 / 5 / 8 demand for garments, kidswear, footwear, and other lightweight projects.',
     overview: 'Resin zippers are one of Weiwei Zipper’s core product lines and are widely used in garments and lightweight accessory projects. Common size 3, 5, and 8 options are organized in a way that makes it easier to confirm color, length, and slider matching for development, bulk purchasing, and repeat orders.',
     keyFeatures: ['Flexible color matching for routine garment projects', 'Clear coverage across size 3 / 5 / 8 demand', 'Closed-end, open-end, and two-way options can all be supported', 'Suitable for garments, footwear, and other lighter-use scenarios'],
@@ -1220,6 +1225,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'nylonZippers',
     slug: 'nylon-zippers',
     name: 'Nylon Zippers',
+    featureImage: '/products/nylon/nylon-feature-poster.webp',
     description: 'Suitable for garments, bags, and sun-protective outerwear, with common size 3 / 5 / 8 options.',
     overview: 'Nylon zippers balance smooth operation, flexibility, and broad adaptability, making them a high-frequency choice in garments, bags, and sun-protective outerwear. Weiwei Zipper organizes stable supply mainly around size 3, 5, and 8 demand so customers can move more smoothly through quick-turn development, bulk purchasing, and repeat orders.',
     keyFeatures: ['Stable smoothness for high-frequency opening and closing', 'Better flexibility for light fabrics and softer bag structures', 'Broad color matching range for series development', 'Suitable across sun-protective outerwear, jackets, and backpacks'],
@@ -1289,6 +1295,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'metalZippers',
     slug: 'metal-zippers',
     name: 'Metal Zippers',
+    featureImage: '/products/metal/metal-feature-poster.webp',
     description: 'More suitable for bags, footwear, workwear, and styles that require stronger texture and durability, usually within the size 3 / 5 / 8 range.',
     overview: 'Metal zippers are more suitable for applications that emphasize durability and visual texture. Weiwei Zipper mainly supports common size 3, 5, and 8 options in this category, making them useful for bags, workwear, boots, and projects that need stronger decorative presence and long-term reuse.',
     keyFeatures: ['Stronger decorative appearance and visual texture', 'Better suited to durable-use scenarios', 'Can be matched with different slider styles for stronger style variation', 'Suitable for fixed styles with repeat-order potential'],

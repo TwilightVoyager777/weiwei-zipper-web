@@ -143,6 +143,20 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           </ul>
         </section>
 
+        {category.featureImage ? (
+          <section className="mb-12">
+            <div className="max-w-3xl border border-gray-200 rounded-lg overflow-hidden bg-white">
+              <ZoomableImage
+                src={category.featureImage}
+                alt={category.name}
+                width={1254}
+                height={1254}
+                className="w-full h-auto"
+              />
+            </div>
+          </section>
+        ) : null}
+
         {productSlugs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
             {productSlugs.map((productSlug: ProductSlug) => (
