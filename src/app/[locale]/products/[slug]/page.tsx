@@ -152,14 +152,14 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
             </section>
 
             {category.featureImage && productSlugs.length > 0 ? (
-              <div className="grid grid-cols-2 gap-3 mt-8 max-w-2xl">
+              <div className="grid grid-cols-2 gap-4 mt-8 max-w-3xl">
                 {productSlugs.map((productSlug: ProductSlug) => (
                   <Link
                     key={productSlug}
                     href={`/products/${productSlug}` as any}
                     className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
                   >
-                    <div className="h-36 sm:h-40 bg-gray-50 overflow-hidden">
+                    <div className="h-40 sm:h-48 bg-gray-50 overflow-hidden">
                       <Image
                         src={PRODUCT_IMAGES[productSlug]}
                         alt={productItems[productSlug].name}
