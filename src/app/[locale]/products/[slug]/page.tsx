@@ -129,15 +129,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
               : undefined
           }
         >
-          <div
-            className={
-              category.featureImage
-                ? productSlugs.length > 0
-                  ? 'lg:col-span-2'
-                  : 'lg:col-span-3'
-                : undefined
-            }
-          >
+          <div className={category.featureImage ? 'lg:col-span-3' : undefined}>
             <div className="max-w-3xl mb-10">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed">{category.description}</p>
@@ -160,14 +152,14 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
             </section>
 
             {category.featureImage && productSlugs.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+              <div className="grid grid-cols-2 gap-3 mt-8 max-w-xl">
                 {productSlugs.map((productSlug: ProductSlug) => (
                   <Link
                     key={productSlug}
                     href={`/products/${productSlug}` as any}
                     className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
                   >
-                    <div className="h-32 sm:h-36 bg-gray-50 overflow-hidden">
+                    <div className="h-28 sm:h-32 bg-gray-50 overflow-hidden">
                       <Image
                         src={PRODUCT_IMAGES[productSlug]}
                         alt={productItems[productSlug].name}
@@ -176,8 +168,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="p-3.5">
-                      <h2 className="text-base font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
+                    <div className="p-3">
+                      <h2 className="text-sm sm:text-base font-semibold text-gray-900 mb-0.5 group-hover:text-blue-800 transition-colors">
                         {productItems[productSlug].name}
                       </h2>
                       <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">{productItems[productSlug].description}</p>
@@ -190,8 +182,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
 
           {category.featureImage ? (
             <div
-              className={`w-full mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
-                productSlugs.length > 0 ? 'lg:col-span-3' : 'lg:col-span-2 max-w-md'
+              className={`lg:col-span-2 w-full mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
+                productSlugs.length > 0 ? 'max-w-2xl' : 'max-w-md'
               }`}
             >
               <ZoomableImage
