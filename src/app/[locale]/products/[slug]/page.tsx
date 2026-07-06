@@ -152,7 +152,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
             </section>
 
             {category.featureImage && productSlugs.length > 0 ? (
-              <div className="grid grid-cols-2 gap-3 mt-8 max-w-xl">
+              <div className="grid grid-cols-2 gap-3 mt-8 max-w-2xl">
                 {productSlugs.map((productSlug: ProductSlug) => (
                   <Link
                     key={productSlug}
@@ -183,7 +183,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           {category.featureImage ? (
             <div
               className={`lg:col-span-2 w-full mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
-                productSlugs.length > 0 ? 'max-w-2xl' : 'max-w-md'
+                productSlugs.length > 0 ? 'max-w-xl' : 'max-w-md'
               }`}
             >
               <ZoomableImage
