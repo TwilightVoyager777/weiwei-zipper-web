@@ -127,25 +127,31 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">{category.description}</p>
         </div>
 
-        <section className="max-w-3xl mb-10">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">{category.overview}</p>
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">{productDetailLabels.features}</h3>
-          <ul className="space-y-2">
-            {category.keyFeatures.map((feature: string) => (
-              <li key={feature} className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-gray-700">{feature}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <div
+          className={
+            category.featureImage
+              ? 'grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-12'
+              : 'max-w-3xl mb-10'
+          }
+        >
+          <section>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">{category.overview}</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">{productDetailLabels.features}</h3>
+            <ul className="space-y-2">
+              {category.keyFeatures.map((feature: string) => (
+                <li key={feature} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        {category.featureImage ? (
-          <section className="mb-12">
-            <div className="max-w-3xl border border-gray-200 rounded-lg overflow-hidden bg-white">
+          {category.featureImage ? (
+            <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
               <ZoomableImage
                 src={category.featureImage}
                 alt={category.name}
@@ -154,8 +160,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
                 className="w-full h-auto"
               />
             </div>
-          </section>
-        ) : null}
+          ) : null}
+        </div>
 
         {productSlugs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
