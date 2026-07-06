@@ -42,13 +42,13 @@ export default async function ProductsPage({ params }: Props) {
             href={card.href as any}
             className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all group"
           >
-            <div className="h-44 sm:h-52 bg-gradient-to-br from-blue-50 to-gray-100 flex items-center justify-center overflow-hidden">
+            <div className="h-44 sm:h-52 bg-gray-50 overflow-hidden">
               <Image
                 src={card.image}
                 alt={card.name}
-                width={400}
-                height={300}
-                className="object-contain max-h-[200px] w-auto group-hover:scale-105 transition-transform duration-300"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="p-4 sm:p-5">
@@ -71,13 +71,13 @@ export default async function ProductsPage({ params }: Props) {
                 href={`/products/${slug}` as any}
                 className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-all group"
               >
-                <div className="h-40 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                <div className="h-40 bg-gray-50 overflow-hidden">
                   <Image
                     src={PRODUCT_IMAGES[slug]}
                     alt={productItems[slug].name}
-                    width={300}
-                    height={200}
-                    className="object-contain max-h-[150px] w-auto group-hover:scale-105 transition-transform duration-300"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4 sm:p-5">

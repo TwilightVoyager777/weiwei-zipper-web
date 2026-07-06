@@ -173,13 +173,13 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
                 href={`/products/${productSlug}` as any}
                 className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
               >
-                <div className="h-40 sm:h-48 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                <div className="h-40 sm:h-48 bg-gray-50 overflow-hidden">
                   <Image
                     src={PRODUCT_IMAGES[productSlug]}
                     alt={productItems[productSlug].name}
-                    width={300}
-                    height={200}
-                    className="object-contain max-h-[160px] w-auto group-hover:scale-105 transition-transform duration-300"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4 sm:p-5">
