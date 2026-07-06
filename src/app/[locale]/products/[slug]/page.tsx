@@ -122,36 +122,38 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           </ol>
         </nav>
 
-        <div className="max-w-3xl mb-10">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
-          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">{category.description}</p>
-        </div>
-
         <div
           className={
             category.featureImage
-              ? 'grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center mb-12'
-              : 'max-w-3xl mb-10'
+              ? 'grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start mb-12'
+              : undefined
           }
         >
-          <section className={category.featureImage ? 'lg:col-span-3' : undefined}>
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">{category.overview}</p>
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">{productDetailLabels.features}</h3>
-            <ul className="space-y-2">
-              {category.keyFeatures.map((feature: string) => (
-                <li key={feature} className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+          <div className={category.featureImage ? 'lg:col-span-3' : undefined}>
+            <div className="max-w-3xl mb-10">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category.name}</h1>
+              <p className="text-gray-600 text-base sm:text-lg leading-relaxed">{category.description}</p>
+            </div>
+
+            <section className={category.featureImage ? 'max-w-3xl' : 'max-w-3xl mb-10'}>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
+              <p className="text-gray-700 leading-relaxed mb-6">{category.overview}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{productDetailLabels.features}</h3>
+              <ul className="space-y-2">
+                {category.keyFeatures.map((feature: string) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
 
           {category.featureImage ? (
-            <div className="lg:col-span-2 w-full max-w-md mx-auto border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
+            <div className="lg:col-span-2 w-full max-w-md mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
               <ZoomableImage
                 src={category.featureImage}
                 alt={category.name}
