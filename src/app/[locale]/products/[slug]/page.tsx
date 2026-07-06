@@ -130,11 +130,11 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
         <div
           className={
             category.featureImage
-              ? 'grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-12'
+              ? 'grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center mb-12'
               : 'max-w-3xl mb-10'
           }
         >
-          <section>
+          <section className={category.featureImage ? 'lg:col-span-3' : undefined}>
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.overview}</h2>
             <p className="text-gray-700 leading-relaxed mb-6">{category.overview}</p>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">{productDetailLabels.features}</h3>
@@ -151,7 +151,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           </section>
 
           {category.featureImage ? (
-            <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+            <div className="lg:col-span-2 w-full max-w-md mx-auto border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
               <ZoomableImage
                 src={category.featureImage}
                 alt={category.name}
