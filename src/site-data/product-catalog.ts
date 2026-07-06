@@ -683,6 +683,11 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     },
     gallery: [
       {
+        image: '/products/nylon/beige-continuous-chain.webp',
+        title: '尼龙码装链带（卷装）',
+        description: '米色尼龙卷装链带，按卷供货，不带上下止与插销，可按需求定长裁切、装配拉头后加工。',
+      },
+      {
         image: '/products/nylon/red-long-chain.webp',
         title: '尼龙码装链带特写',
         description: '卷装连续链带，不带上下止与插销，可按需求定长裁切、装配拉头后加工成成品拉链，链带颜色可按色卡定染。',
@@ -879,7 +884,7 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
   'nylon-zipper-3-5-8': '/products/nylon-zipper-main.png?v=20260302b',
   'nylon-no-5-closed-end-zipper': '/products/nylon/black-closed-end.webp',
   'nylon-no-5-open-end-zipper': '/products/nylon/black-open-end.webp',
-  'nylon-zipper-roll-3-5-8': '/products/nylon/red-long-chain.webp',
+  'nylon-zipper-roll-3-5-8': '/products/nylon/beige-continuous-chain.webp',
 };
 
 export const CATEGORY_IMAGES: Record<ProductCategory, string> = {
@@ -888,7 +893,7 @@ export const CATEGORY_IMAGES: Record<ProductCategory, string> = {
   nylonZippers: '/products/nylon/beige-open-end-cover.webp',
   metalRolls: '/products/metal/brass-continuous-chain.webp',
   resinRolls: '/products/resin/dark-continuous-chain.webp',
-  nylonRolls: '/products/nylon/red-long-chain.webp',
+  nylonRolls: '/products/nylon/beige-continuous-chain.webp',
 };
 
 export const productsPagePrimaryCards = [
@@ -1994,6 +1999,11 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     },
     gallery: [
       {
+        image: '/products/nylon/beige-continuous-chain.webp',
+        title: 'Nylon Zipper Chain (Roll)',
+        description: 'Beige nylon coil chain supplied by the roll — no stops or insertion parts, ready for cut-to-length processing and slider fitting.',
+      },
+      {
         image: '/products/nylon/red-long-chain.webp',
         title: 'Nylon Zipper Chain Close-Up',
         description: 'Continuous roll chain without stops or insertion parts — ready for cut-to-length processing and slider fitting, with tape colors dyed to color cards.',
@@ -2445,6 +2455,11 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       notes: 'La cadena por rollo es mas adecuada para proyectos que requieren corte y procesamiento posterior',
     },
     gallery: [
+      {
+        image: '/products/nylon/beige-continuous-chain.webp',
+        title: 'Cadena de nylon por rollo',
+        description: 'Cadena de espiral de nylon beige suministrada por rollo: sin topes ni piezas de insercion, lista para corte a medida y montaje de cursor.',
+      },
       {
         image: '/products/nylon/red-long-chain.webp',
         title: 'Primer plano de cadena de nylon por rollo',
@@ -2898,6 +2913,11 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     },
     gallery: [
       {
+        image: '/products/nylon/beige-continuous-chain.webp',
+        title: 'سلسلة نايلون بالرول',
+        description: 'سلسلة نايلون حلزونية بلون بيج تورد بالرول: من دون نقاط توقف أو أجزاء إدخال، جاهزة للقص حسب الطول وتركيب السحاب.',
+      },
+      {
         image: '/products/nylon/red-long-chain.webp',
         title: 'لقطة مقربة لسلسلة نايلون بالرول',
         description: 'سلسلة متصلة بالرول من دون نقاط توقف أو أجزاء إدخال، جاهزة للقص حسب الطول وتركيب السحاب، مع صباغة الشريط حسب بطاقة الألوان.',
@@ -3349,6 +3369,11 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       notes: 'Рулонный формат лучше подходит для проектов, где требуется последующая нарезка и обработка',
     },
     gallery: [
+      {
+        image: '/products/nylon/beige-continuous-chain.webp',
+        title: 'Нейлоновая рулонная цепочка',
+        description: 'Бежевая нейлоновая спиральная цепочка поставляется в рулоне: без стопоров и вставных элементов, готова к нарезке по длине и установке бегунка.',
+      },
       {
         image: '/products/nylon/red-long-chain.webp',
         title: 'Нейлоновая рулонная цепочка крупным планом',
