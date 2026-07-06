@@ -896,7 +896,7 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
 
 export const CATEGORY_IMAGES: Record<ProductCategory, string> = {
   metalZippers: '/products/metal/black-gold-open-end-cover.webp',
-  resinZippers: '/products/resin/charcoal-open-end.webp',
+  resinZippers: '/products/resin/gray-open-end-cover.webp',
   nylonZippers: '/products/nylon/beige-open-end-cover.webp',
   metalRolls: '/products/metal/brass-continuous-chain.webp',
   resinRolls: '/products/resin/dark-continuous-chain.webp',
