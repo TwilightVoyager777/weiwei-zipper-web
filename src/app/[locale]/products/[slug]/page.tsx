@@ -150,10 +150,42 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
                 ))}
               </ul>
             </section>
+
+            {category.featureImage && productSlugs.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+                {productSlugs.map((productSlug: ProductSlug) => (
+                  <Link
+                    key={productSlug}
+                    href={`/products/${productSlug}` as any}
+                    className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg active:shadow-md transition-all group"
+                  >
+                    <div className="h-40 bg-gray-50 overflow-hidden">
+                      <Image
+                        src={PRODUCT_IMAGES[productSlug]}
+                        alt={productItems[productSlug].name}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h2 className="text-base font-semibold text-gray-900 mb-1 group-hover:text-blue-800 transition-colors">
+                        {productItems[productSlug].name}
+                      </h2>
+                      <p className="text-sm text-gray-600 line-clamp-2">{productItems[productSlug].description}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : null}
           </div>
 
           {category.featureImage ? (
-            <div className="lg:col-span-2 w-full max-w-md mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
+            <div
+              className={`lg:col-span-2 w-full mx-auto lg:mx-0 lg:justify-self-end border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm ${
+                productSlugs.length > 0 ? 'max-w-2xl' : 'max-w-md'
+              }`}
+            >
               <ZoomableImage
                 src={category.featureImage}
                 alt={category.name}
@@ -165,7 +197,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           ) : null}
         </div>
 
-        {productSlugs.length > 0 ? (
+        {!category.featureImage && productSlugs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
             {productSlugs.map((productSlug: ProductSlug) => (
               <Link
