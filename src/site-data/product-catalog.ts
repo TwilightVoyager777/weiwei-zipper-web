@@ -443,6 +443,18 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
       applicationScope: '服装加工 / 鞋帽加工 / 轻量配件',
       notes: '码装主要用于后道加工，不同于成品拉链',
     },
+    gallery: [
+      {
+        image: '/products/resin/dark-continuous-chain.webp',
+        title: '树脂码装链带（卷装）',
+        description: '深色树脂卷装链带，粗齿耐用，不带上下止与插销，可按需求定长裁切、装配拉头后加工。',
+      },
+      {
+        image: '/products/resin/gray-continuous-chain.webp',
+        title: '浅灰树脂码装链带',
+        description: '链带与链齿颜色可按色卡定染，适合服装与鞋帽类加工项目。',
+      },
+    ],
   },
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
@@ -822,6 +834,18 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
       applicationScope: '箱包加工 / 鞋帽加工 / 工装',
       notes: '码装主要用于后道加工，不同于成品拉链',
     },
+    gallery: [
+      {
+        image: '/products/metal/brass-continuous-chain.webp',
+        title: '金属码装链带（卷装）',
+        description: '黑织带配金齿的卷装链带，不带上下止与插销，可按需求定长裁切、装配拉头后加工。',
+      },
+      {
+        image: '/products/metal/army-green-brass-chain.webp',
+        title: '军绿金齿码装链带',
+        description: '织带颜色可按色卡定染，金齿链带适合工装与箱包类项目。',
+      },
+    ],
   },
 };
 
@@ -847,11 +871,11 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
   'metal-zipper-3-5-8': '/products/metal-zipper-main.png?v=20260302b',
   'metal-no-5-closed-end-zipper': '/products/metal/black-silver-closed-end.webp',
   'metal-no-5-open-end-zipper': '/products/metal/black-silver-open-end.webp',
-  'metal-zipper-roll-3-5-8': '/products/metal-zipper-main.png?v=20260302b',
+  'metal-zipper-roll-3-5-8': '/products/metal/brass-continuous-chain.webp',
   'resin-zipper-3-5-8': '/products/resin-zipper-main.png?v=20260302b',
   'resin-no-5-closed-end-zipper': '/products/resin/red-closed-end.webp',
   'resin-no-5-open-end-zipper': '/products/resin/red-open-end.webp',
-  'resin-zipper-roll-3-5-8': '/products/resin-zipper-main.png?v=20260302b',
+  'resin-zipper-roll-3-5-8': '/products/resin/dark-continuous-chain.webp',
   'nylon-zipper-3-5-8': '/products/nylon-zipper-main.png?v=20260302b',
   'nylon-no-5-closed-end-zipper': '/products/nylon/black-closed-end.webp',
   'nylon-no-5-open-end-zipper': '/products/nylon/black-open-end.webp',
@@ -859,11 +883,11 @@ export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
 };
 
 export const CATEGORY_IMAGES: Record<ProductCategory, string> = {
-  metalZippers: '/products/metal/black-golden-open-end.webp',
-  resinZippers: '/products/resin/multicolor-collection.webp',
-  nylonZippers: '/products/nylon/multicolor-collection.webp',
-  metalRolls: '/products/metal-zipper-main.png?v=20260302b',
-  resinRolls: '/products/resin-zipper-main.png?v=20260302b',
+  metalZippers: '/products/metal/black-gold-open-end-cover.webp',
+  resinZippers: '/products/resin/charcoal-open-end.webp',
+  nylonZippers: '/products/nylon/beige-open-end-cover.webp',
+  metalRolls: '/products/metal/brass-continuous-chain.webp',
+  resinRolls: '/products/resin/dark-continuous-chain.webp',
   nylonRolls: '/products/nylon/red-long-chain.webp',
 };
 
@@ -1730,6 +1754,18 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Garment processing / Footwear processing / Lightweight accessories',
       notes: 'Zipper rolls are mainly used for post-processing and differ from finished zippers',
     },
+    gallery: [
+      {
+        image: '/products/resin/dark-continuous-chain.webp',
+        title: 'Resin Zipper Chain (Roll)',
+        description: 'Dark resin roll chain with durable molded teeth — no stops or insertion parts, ready for cut-to-length processing and slider fitting.',
+      },
+      {
+        image: '/products/resin/gray-continuous-chain.webp',
+        title: 'Light Gray Resin Chain',
+        description: 'Tape and teeth colors can be dyed to color cards, suited to garment and footwear processing projects.',
+      },
+    ],
   },
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
@@ -2109,6 +2145,18 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Bag processing / Footwear processing / Workwear',
       notes: 'Zipper rolls are mainly used for post-processing and differ from finished zippers',
     },
+    gallery: [
+      {
+        image: '/products/metal/brass-continuous-chain.webp',
+        title: 'Metal Zipper Chain (Roll)',
+        description: 'Black tape with golden teeth supplied as continuous roll chain — no stops or insertion parts, ready for cut-to-length processing and slider fitting.',
+      },
+      {
+        image: '/products/metal/army-green-brass-chain.webp',
+        title: 'Army Green Metal Chain',
+        description: 'Tape colors can be dyed to color cards; golden-teeth chain suits workwear and bag projects.',
+      },
+    ],
   },
 };
 
@@ -2158,6 +2206,18 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Procesamiento de prendas / calzado / accesorios ligeros',
       notes: 'La cadena por rollo se utiliza principalmente para procesamiento posterior y es distinta de la cremallera terminada',
     },
+    gallery: [
+      {
+        image: '/products/resin/dark-continuous-chain.webp',
+        title: 'Cadena de resina por rollo',
+        description: 'Cadena de resina oscura en rollo con dientes moldeados duraderos: sin topes ni piezas de insercion, lista para corte a medida y montaje de cursor.',
+      },
+      {
+        image: '/products/resin/gray-continuous-chain.webp',
+        title: 'Cadena de resina gris claro',
+        description: 'Los colores de cinta y dientes pueden tenirse segun carta de colores, adecuada para procesamiento de prendas y calzado.',
+      },
+    ],
   },
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
@@ -2537,6 +2597,18 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Procesamiento de bolsos / calzado / ropa de trabajo',
       notes: 'La cadena por rollo se utiliza principalmente para procesamiento posterior y es distinta de la cremallera terminada',
     },
+    gallery: [
+      {
+        image: '/products/metal/brass-continuous-chain.webp',
+        title: 'Cadena metalica por rollo',
+        description: 'Cinta negra con dientes dorados suministrada como cadena continua en rollo: sin topes ni piezas de insercion, lista para corte a medida y montaje de cursor.',
+      },
+      {
+        image: '/products/metal/army-green-brass-chain.webp',
+        title: 'Cadena metalica verde militar',
+        description: 'Los colores de cinta pueden tenirse segun carta de colores; la cadena de dientes dorados se adapta a ropa de trabajo y bolsos.',
+      },
+    ],
   },
 };
 
@@ -2586,6 +2658,18 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'معالجة الملابس / الأحذية / الإكسسوارات الخفيفة',
       notes: 'يستخدم الرول أساسا في المعالجة اللاحقة ويختلف عن السحاب الجاهز',
     },
+    gallery: [
+      {
+        image: '/products/resin/dark-continuous-chain.webp',
+        title: 'سلسلة راتنج بالرول',
+        description: 'سلسلة راتنج داكنة بالرول بأسنان مقولبة متينة: من دون نقاط توقف أو أجزاء إدخال، جاهزة للقص حسب الطول وتركيب السحاب.',
+      },
+      {
+        image: '/products/resin/gray-continuous-chain.webp',
+        title: 'سلسلة راتنج رمادية فاتحة',
+        description: 'يمكن صباغة ألوان الشريط والأسنان حسب بطاقة الألوان، وهي مناسبة لمشاريع معالجة الملابس والأحذية.',
+      },
+    ],
   },
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
@@ -2965,6 +3049,18 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'معالجة الحقائب / الأحذية / ملابس العمل',
       notes: 'يستخدم الرول أساسا في المعالجة اللاحقة ويختلف عن السحاب الجاهز',
     },
+    gallery: [
+      {
+        image: '/products/metal/brass-continuous-chain.webp',
+        title: 'سلسلة معدنية بالرول',
+        description: 'شريط أسود بأسنان ذهبية يورد كسلسلة متصلة بالرول: من دون نقاط توقف أو أجزاء إدخال، جاهزة للقص حسب الطول وتركيب السحاب.',
+      },
+      {
+        image: '/products/metal/army-green-brass-chain.webp',
+        title: 'سلسلة معدنية بلون أخضر عسكري',
+        description: 'يمكن صباغة ألوان الشريط حسب بطاقة الألوان؛ وتناسب السلسلة ذات الأسنان الذهبية ملابس العمل والحقائب.',
+      },
+    ],
   },
 };
 
@@ -3014,6 +3110,18 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Обработка одежды / обуви / легких аксессуаров',
       notes: 'Рулонная цепочка в основном используется для последующей обработки и отличается от готовой молнии',
     },
+    gallery: [
+      {
+        image: '/products/resin/dark-continuous-chain.webp',
+        title: 'Смоляная рулонная цепочка',
+        description: 'Темная смоляная цепочка в рулоне с прочными литыми зубьями: без стопоров и вставных элементов, готова к нарезке по длине и установке бегунка.',
+      },
+      {
+        image: '/products/resin/gray-continuous-chain.webp',
+        title: 'Светло-серая смоляная цепочка',
+        description: 'Цвета тесьмы и зубьев окрашиваются по цветовым картам — для проектов обработки одежды и обуви.',
+      },
+    ],
   },
   'resin-no-5-closed-end-zipper': {
     slug: 'resin-no-5-closed-end-zipper',
@@ -3393,6 +3501,18 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
       applicationScope: 'Обработка сумок / обуви / рабочей одежды',
       notes: 'Рулонная цепочка в основном используется для последующей обработки и отличается от готовой молнии',
     },
+    gallery: [
+      {
+        image: '/products/metal/brass-continuous-chain.webp',
+        title: 'Металлическая рулонная цепочка',
+        description: 'Черная тесьма с золотистыми зубьями поставляется непрерывной рулонной цепочкой: без стопоров и вставных элементов, готова к нарезке по длине и установке бегунка.',
+      },
+      {
+        image: '/products/metal/army-green-brass-chain.webp',
+        title: 'Цепочка цвета хаки с золотистыми зубьями',
+        description: 'Цвета тесьмы окрашиваются по цветовым картам; цепочка с золотистыми зубьями подходит для рабочей одежды и сумок.',
+      },
+    ],
   },
 };
 
