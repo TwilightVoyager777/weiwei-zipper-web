@@ -30,7 +30,7 @@ export const faqPageContent = {
     },
     {
       question: '打样周期一般怎么安排？',
-      answer: '打样周期通常会根据规格复杂度、颜色确认方式、是否需要特殊拉头和当前排样情况综合判断。常规方案通常更快，特殊颜色或特殊结构会相应延长。最稳妥的做法，是在询盘时先把用途、规格、颜色和样品需求说明清楚，再确认具体样品安排。',
+      answer: '常规规格通常 3 天可以完成打样。新色、特殊结构或需要另行配套的项目会更长，确认需求后我们会同步具体安排。',
     },
     {
       question: '起订量是固定的吗？',
@@ -38,7 +38,7 @@ export const faqPageContent = {
     },
     {
       question: '交期一般多久？',
-      answer: '交期会受规格、颜色、数量、是否打样确认以及当前排单情况影响。常用规格通常更容易衔接安排；需要特殊颜色、特殊结构或多款并行时，交期会按实际项目确认。建议在报价阶段就同步说明目标时间节点，便于一起判断更合适的推进节奏。',
+      answer: '确认样品与订单细节后，大货通常 10 天。新色、特殊结构或多款混单可能更长，下单前会先同步具体排期。',
     },
     {
       question: '颜色通常怎么确认？',
@@ -85,7 +85,7 @@ const faqPageContentEn = {
     },
     {
       question: 'How is the sampling cycle usually arranged?',
-      answer: 'Sampling timing depends on the complexity of the specification, the color confirmation method, whether special sliders are needed, and the current sample schedule. Standard solutions are usually faster, while special colors or structures can take longer. The clearest way is to share the use case, size, color, and sample requirements first, then confirm the actual sample timing based on that information.',
+      answer: 'For standard specifications a sample usually takes about 3 days. New colours, special structures, or projects that need separate accessories take longer, and we confirm the actual timing once the requirement is clear.',
     },
     {
       question: 'Is there a fixed MOQ?',
@@ -93,7 +93,7 @@ const faqPageContentEn = {
     },
     {
       question: 'How is lead time usually judged?',
-      answer: 'Lead time is influenced by size, color, quantity, whether sampling is required, and the current production schedule. Standard sizes are usually easier to arrange. Special colors, structures, or multi-style orders may take longer and need to be confirmed against the actual project. It is always better to share your target timing during the quotation stage so the delivery schedule can be assessed together.',
+      answer: 'Once the sample and order details are confirmed, bulk production usually takes about 10 days. New colours, special structures, or multi-style orders can take longer, and we confirm the schedule before the order is placed.',
     },
     {
       question: 'How should color usually be confirmed?',
@@ -140,7 +140,7 @@ const faqPageContentEs = {
     },
     {
       question: '¿Cómo suele organizarse el tiempo de muestreo?',
-      answer: 'El tiempo de muestreo depende de la complejidad de la especificación, del método de confirmación del color, de si se requieren cursores especiales y del calendario actual de muestras. Las soluciones estándar suelen ser más rápidas, mientras que colores o estructuras especiales pueden requerir más tiempo. La forma más clara es compartir primero el uso previsto, el tamaño, el color y los requisitos de muestra, y después confirmar el calendario real con esa base.',
+      answer: 'Para especificaciones estándar la muestra suele tardar unos 3 días. Los colores nuevos, las estructuras especiales o los proyectos que necesitan accesorios aparte llevan más tiempo, y confirmamos el plazo real una vez que el requisito está claro.',
     },
     {
       question: '¿Existe una MOQ fija?',
@@ -148,7 +148,7 @@ const faqPageContentEs = {
     },
     {
       question: '¿Cómo se define normalmente el plazo de entrega?',
-      answer: 'El plazo depende del tamaño, color, cantidad, de si se requieren muestras y del calendario actual de producción. Los tamaños estándar suelen organizarse con más facilidad. Los colores especiales, las estructuras especiales o los pedidos con varios estilos pueden requerir más tiempo y deben confirmarse según el proyecto real. Siempre es mejor compartir el objetivo de tiempo durante la etapa de cotización para poder evaluar juntos el plan de entrega.',
+      answer: 'Una vez confirmados la muestra y los detalles del pedido, la producción en volumen suele tardar unos 10 días. Los colores nuevos, las estructuras especiales o los pedidos con varios modelos pueden llevar más tiempo, y confirmamos el calendario antes de cerrar el pedido.',
     },
     {
       question: '¿Cómo debe confirmarse normalmente el color?',
@@ -195,7 +195,7 @@ const faqPageContentAr = {
     },
     {
       question: 'كيف يتم ترتيب مدة إعداد العينة عادة؟',
-      answer: 'تعتمد مدة إعداد العينة على تعقيد المواصفة وطريقة تأكيد اللون وما إذا كانت هناك حاجة إلى سحابات خاصة وكذلك على جدول العينات الحالي. وعادة تكون الحلول القياسية أسرع، بينما تحتاج الألوان أو البنى الخاصة إلى وقت أطول. وأوضح طريقة هي مشاركة الاستخدام والمقاس واللون ومتطلبات العينة أولا، ثم تأكيد المدة الفعلية بناء على تلك المعلومات.',
+      answer: 'بالنسبة للمواصفات القياسية تستغرق العينة عادة نحو 3 أيام. أما الألوان الجديدة أو الهياكل الخاصة أو المشاريع التي تحتاج مستلزمات منفصلة فتتطلب وقتا أطول، ونؤكد المدة الفعلية بمجرد وضوح المتطلبات.',
     },
     {
       question: 'هل توجد كمية طلب دنيا ثابتة؟',
@@ -203,7 +203,7 @@ const faqPageContentAr = {
     },
     {
       question: 'كيف يتم تحديد موعد التسليم عادة؟',
-      answer: 'يتأثر موعد التسليم بالمقاس واللون والكمية، وما إذا كانت العينات مطلوبة، وكذلك بجدول الإنتاج الحالي. وعادة يكون ترتيب المقاسات القياسية أسهل. أما الألوان الخاصة أو البنى الخاصة أو الطلبات متعددة الموديلات فقد تحتاج إلى وقت أطول ويجب تأكيدها حسب المشروع الفعلي. ومن الأفضل دائما مشاركة الموعد المستهدف أثناء مرحلة التسعير لتقييم خطة التسليم بشكل مشترك.',
+      answer: 'بعد تأكيد العينة وتفاصيل الطلب، يستغرق الإنتاج بالجملة عادة نحو 10 أيام. قد تحتاج الألوان الجديدة أو الهياكل الخاصة أو الطلبات متعددة الموديلات وقتا أطول، ونؤكد الجدول قبل تثبيت الطلب.',
     },
     {
       question: 'كيف يتم تأكيد اللون عادة؟',
@@ -250,7 +250,7 @@ const faqPageContentRu = {
     },
     {
       question: 'Как обычно определяется срок подготовки образца?',
-      answer: 'Срок подготовки образца зависит от сложности спецификации, способа подтверждения цвета, необходимости специальных бегунков и текущего графика образцов. Стандартные решения обычно быстрее, а особые цвета и конструкции требуют больше времени. Самый удобный способ — сначала прислать сферу применения, размер, цвет и требования к образцу, а затем уже подтвердить фактический срок на этой основе.',
+      answer: 'Для стандартных спецификаций образец обычно готов примерно за 3 дня. Новые цвета, особые конструкции или проекты, которым нужна отдельная фурнитура, требуют больше времени — точный срок мы подтверждаем, когда требование становится ясным.',
     },
     {
       question: 'Есть ли фиксированный MOQ?',
@@ -258,7 +258,7 @@ const faqPageContentRu = {
     },
     {
       question: 'Как обычно оценивается срок поставки?',
-      answer: 'Срок поставки зависит от размера, цвета, количества, необходимости образцов и текущей производственной загрузки. Стандартные размеры обычно организуются проще. Особые цвета, конструкции или заказы с несколькими стилями могут потребовать больше времени и должны подтверждаться исходя из реального проекта. Поэтому лучше уже на этапе расчета цены сообщить желаемый срок, чтобы вместе оценить подходящий график поставки.',
+      answer: 'После подтверждения образца и деталей заказа серийное производство обычно занимает около 10 дней. Новые цвета, особые конструкции или заказы с несколькими моделями могут занять больше времени; график мы подтверждаем до размещения заказа.',
     },
     {
       question: 'Как обычно подтверждается цвет?',
