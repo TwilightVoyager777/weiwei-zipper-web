@@ -40,7 +40,7 @@ export default async function ProductsPage({ params }: Props) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
-        {productsPagePrimaryCards.map((card) => (
+        {productsPagePrimaryCards.map((card, cardIndex) => (
           <Link
             key={card.href}
             href={card.href as any}
@@ -52,6 +52,8 @@ export default async function ProductsPage({ params }: Props) {
                 alt={card.name}
                 width={400}
                 height={300}
+                // Likely LCP element; the rest of the grid stays lazy.
+                priority={cardIndex === 0}
                 className="object-contain max-h-[200px] w-auto group-hover:scale-105 transition-transform duration-300"
               />
             </div>

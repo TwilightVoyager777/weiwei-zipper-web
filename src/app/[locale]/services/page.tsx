@@ -32,7 +32,7 @@ export default async function ServicesPage({ params }: Props) {
         <p className="text-gray-600 mb-10 leading-relaxed">{solutionsPageContent.introText}</p>
 
         <div className="space-y-8">
-          {solutionsPageContent.items.map((item) => (
+          {solutionsPageContent.items.map((item, itemIndex) => (
             <div key={item.title} className="bg-white border border-gray-200 rounded-lg p-5 sm:p-6">
               <h2 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">{item.description}</p>
@@ -55,6 +55,7 @@ export default async function ServicesPage({ params }: Props) {
                       src={item.imagePath}
                       alt={item.imageAlt}
                       fill
+                      priority={itemIndex === 0}
                       className="object-cover"
                       sizes="(min-width: 1024px) 896px, 100vw"
                     />

@@ -87,7 +87,7 @@ export default function Header() {
               {CONTACT_EMAIL}
             </a>
             <a href={`tel:${CONTACT_PHONE.replace(/[^\d+]/g, '')}`} className="hover:text-white transition-colors">
-              {CONTACT_PHONE}
+              <span dir="ltr">{CONTACT_PHONE}</span>
             </a>
           </div>
           <div className="flex items-center gap-3">

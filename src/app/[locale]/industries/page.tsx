@@ -33,7 +33,7 @@ export default async function IndustriesPage({ params }: Props) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
-        {useCasesContent.items.map((item) => (
+        {useCasesContent.items.map((item, itemIndex) => (
           <div key={item.slug} className="bg-white border border-gray-200 rounded-lg p-5 sm:p-6 hover:shadow-md transition-shadow">
             <h2 className="text-xl font-bold text-gray-900 mb-3">{item.name}</h2>
             <p className="text-gray-600 leading-relaxed mb-4">{item.description}</p>
@@ -48,6 +48,7 @@ export default async function IndustriesPage({ params }: Props) {
                     src={item.imagePath}
                     alt={item.imageAlt}
                     fill
+                    priority={itemIndex === 0}
                     className="object-cover"
                     style={{ objectPosition: item.imagePosition }}
                     sizes="(min-width: 768px) 50vw, 100vw"

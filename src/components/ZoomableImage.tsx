@@ -9,9 +9,11 @@ type Props = {
   width: number;
   height: number;
   className?: string;
+  /** Set on the above-the-fold instance so it is not lazy-loaded. */
+  priority?: boolean;
 };
 
-export default function ZoomableImage({ src, alt, width, height, className }: Props) {
+export default function ZoomableImage({ src, alt, width, height, className, priority }: Props) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -35,7 +37,7 @@ export default function ZoomableImage({ src, alt, width, height, className }: Pr
         className="block w-full cursor-zoom-in"
         aria-label={alt}
       >
-        <Image src={src} alt={alt} width={width} height={height} className={className} />
+        <Image src={src} alt={alt} width={width} height={height} className={className} priority={priority} />
       </button>
       {open ? (
         <div

@@ -86,7 +86,7 @@ export default async function BlogPage({ params }: Props) {
                     {post.excerpt}
                   </p>
                   <span className="text-blue-800 text-sm font-medium group-hover:underline">
-                    {blogContent.readMoreLabel} →
+                    {blogContent.readMoreLabel} <span className="inline-block rtl:rotate-180">→</span>
                   </span>
                 </Link>
               </article>

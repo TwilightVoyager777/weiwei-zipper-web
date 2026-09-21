@@ -210,6 +210,8 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
                 width={1254}
                 height={1254}
                 className="w-full h-auto"
+                // The category hero, and the likely LCP element on this page.
+                priority
               />
             </div>
           ) : null}
@@ -494,8 +496,8 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
                 <table className="w-full text-sm min-w-[400px]">
                   <thead>
                     <tr className="bg-gray-50">
-                      <th className="text-left px-3 py-3 font-semibold text-gray-900 w-1/3 sm:px-4">{productDetailLabels.property}</th>
-                      <th className="text-left px-3 py-3 font-semibold text-gray-900 sm:px-4">{productDetailLabels.value}</th>
+                      <th className="text-start px-3 py-3 font-semibold text-gray-900 w-1/3 sm:px-4">{productDetailLabels.property}</th>
+                      <th className="text-start px-3 py-3 font-semibold text-gray-900 sm:px-4">{productDetailLabels.value}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -555,7 +557,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
             </div>
 
             <Link href="/products" className="flex items-center gap-2 text-blue-800 font-medium hover:underline text-sm">
-              ← {productDetailLabels.backToProducts}
+              <span className="inline-block rtl:rotate-180">←</span> {productDetailLabels.backToProducts}
             </Link>
           </aside>
         </div>

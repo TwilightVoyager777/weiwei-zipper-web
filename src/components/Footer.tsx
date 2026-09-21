@@ -122,7 +122,7 @@ export default function Footer() {
                   <div className="min-w-0">
                     {/* tel: URIs must not contain spaces; brand.phone is formatted for display. */}
                     <a href={`tel:${brand.phone.replace(/\s+/g, '')}`} className="block min-h-0 break-words hover:text-white transition-colors">
-                      {brand.phone}
+                      <span dir="ltr">{brand.phone}</span>
                     </a>
                   </div>
                 </li>

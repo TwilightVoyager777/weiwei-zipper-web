@@ -28,6 +28,9 @@ type ContactCard = {
   href?: string;
   external?: boolean;
   icon: typeof PhoneIcon;
+  /** Phone numbers and addresses are Latin text; without dir="ltr" the bidi
+   *  algorithm reorders them inside the Arabic layout ("+86 139..." -> "139... 86+"). */
+  ltr?: boolean;
 };
 
 const mapEmbedUrl =
@@ -59,12 +62,14 @@ export default async function ContactPage({ params }: Props) {
       value: CONTACT_PHONE,
       href: `tel:${CONTACT_PHONE.replace(/[^\d+]/g, '')}`,
       icon: PhoneIcon,
+      ltr: true,
     },
     {
       title: t('cards.email'),
       value: CONTACT_EMAIL,
       href: `mailto:${CONTACT_EMAIL}`,
       icon: EmailIcon,
+      ltr: true,
     },
     {
       title: t('cards.whatsapp'),
@@ -72,6 +77,7 @@ export default async function ContactPage({ params }: Props) {
       href: WHATSAPP_URL,
       icon: WhatsAppIcon,
       external: true,
+      ltr: true,
     },
     {
       title: t('cards.businessHours'),
@@ -133,10 +139,10 @@ export default async function ContactPage({ params }: Props) {
                                 rel={item.external ? 'noopener noreferrer' : undefined}
                                 className="text-sm text-gray-600 hover:text-blue-800 break-words transition-colors"
                               >
-                                {item.value}
+                                <span dir={item.ltr ? 'ltr' : undefined}>{item.value}</span>
                               </a>
                             ) : (
-                              <p className="text-sm text-gray-600">{item.value}</p>
+                              <p className="text-sm text-gray-600" dir={item.ltr ? 'ltr' : undefined}>{item.value}</p>
                             )}
                           </div>
                         </div>

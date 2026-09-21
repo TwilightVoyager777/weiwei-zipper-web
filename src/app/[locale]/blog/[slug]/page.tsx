@@ -93,7 +93,7 @@ export default async function BlogArticlePage({ params }: Props) {
             href="/blog"
             className="text-blue-800 text-sm font-medium hover:underline"
           >
-            ← {blogContent.backToBlog}
+            <span className="inline-block rtl:rotate-180">←</span> {blogContent.backToBlog}
           </Link>
         </nav>
 
