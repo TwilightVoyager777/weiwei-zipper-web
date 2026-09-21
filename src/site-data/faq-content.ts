@@ -34,7 +34,7 @@ export const faqPageContent = {
     },
     {
       question: '起订量是固定的吗？',
-      answer: '起订量通常不会简单按单一数字统一判断，而是会结合品类、规格、颜色、是否常规款以及是否需要特殊配件一起确认。常用规格和常规方案沟通会更顺畅；如果是新色、新结构或特殊配套需求，建议先把数量预估同步说明，以便更准确评估安排方式。',
+      answer: '成品拉链通常 1000 条起订。一个订单内可以混色，把配比告诉我们即可确认。染色按颜色安排，因此单一颜色数量低于 2000 条时，该颜色需另付 150 元染色费。码装（卷装）另行报价。',
     },
     {
       question: '交期一般多久？',
@@ -89,7 +89,7 @@ const faqPageContentEn = {
     },
     {
       question: 'Is there a fixed MOQ?',
-      answer: 'MOQ is usually not judged by one single number alone. It often depends on the zipper type, size, color, whether it is a standard item, and whether special accessories are involved. Communication is usually easier for common sizes and standard solutions. If the project requires new colors, special structures, or matching parts, it is better to provide the estimated quantity early so the arrangement can be evaluated more accurately.',
+      answer: 'For finished zippers the minimum order is usually 1,000 pieces. Colours can be mixed within one order; share the split you need and we will confirm it. Dyeing is arranged per colour, so any colour ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that colour. Zipper rolls are quoted separately.',
     },
     {
       question: 'How is lead time usually judged?',
@@ -144,7 +144,7 @@ const faqPageContentEs = {
     },
     {
       question: '¿Existe una MOQ fija?',
-      answer: 'La MOQ normalmente no se define con un solo número. Suele depender del tipo de cremallera, tamaño, color, si es un artículo estándar y si incluye accesorios especiales. La comunicación suele ser más sencilla para tamaños comunes y soluciones estándar. Si el proyecto requiere nuevos colores, estructuras especiales o piezas complementarias, conviene indicar la cantidad estimada desde el principio para poder evaluar mejor la producción.',
+      answer: 'Para cremalleras terminadas el pedido mínimo suele ser de 1000 unidades. Se pueden mezclar colores dentro de un mismo pedido; indíquenos el reparto que necesita y se lo confirmamos. El teñido se organiza por color, por lo que cualquier color con una cantidad inferior a 2000 unidades lleva una tasa de teñido de 150 RMB para ese color. Las cremalleras por rollo se cotizan aparte.',
     },
     {
       question: '¿Cómo se define normalmente el plazo de entrega?',
@@ -199,7 +199,7 @@ const faqPageContentAr = {
     },
     {
       question: 'هل توجد كمية طلب دنيا ثابتة؟',
-      answer: 'غالبا لا يتم تحديد الحد الأدنى للطلب برقم واحد ثابت. بل يعتمد ذلك على نوع السحاب والمقاس واللون وما إذا كان المنتج قياسيا وما إذا كانت هناك ملحقات خاصة. وعادة يكون التنسيق أسهل في المقاسات الشائعة والحلول القياسية. وإذا كان المشروع يتطلب ألوانا جديدة أو هياكل خاصة أو ملحقات إضافية، فمن الأفضل مشاركة الكمية التقديرية مبكرا حتى يمكن تقييم الترتيب بدقة أكبر.',
+      answer: 'بالنسبة للسحابات الجاهزة يكون الحد الأدنى للطلب عادة 1000 قطعة. يمكن مزج الألوان ضمن الطلب الواحد؛ أخبرنا بالتوزيع المطلوب وسنؤكده. تتم الصباغة حسب اللون، لذلك يضاف رسم صباغة قدره 150 يوان صيني لأي لون تقل كميته عن 2000 قطعة. أما السحابات بالرول فتسعّر بشكل منفصل.',
     },
     {
       question: 'كيف يتم تحديد موعد التسليم عادة؟',
@@ -254,7 +254,7 @@ const faqPageContentRu = {
     },
     {
       question: 'Есть ли фиксированный MOQ?',
-      answer: 'MOQ редко определяется одной единственной цифрой. Он обычно зависит от типа молнии, размера, цвета, того, является ли позиция стандартной, и нужны ли специальные аксессуары. Для популярных размеров и типовых решений согласование обычно идет легче. Если проект требует новых цветов, особой конструкции или специальных комплектующих, лучше заранее сообщить ожидаемое количество, чтобы точнее оценить организацию поставки.',
+      answer: 'Для готовых молний минимальный заказ обычно составляет 1000 штук. Цвета можно комбинировать в одном заказе — сообщите нужное распределение, и мы его подтвердим. Окрашивание организуется по цветам, поэтому для любого цвета в количестве менее 2000 штук взимается плата за окрашивание 150 юаней за этот цвет. Молния в рулонах рассчитывается отдельно.',
     },
     {
       question: 'Как обычно оценивается срок поставки?',

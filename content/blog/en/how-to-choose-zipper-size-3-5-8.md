@@ -11,6 +11,14 @@ Choosing the right zipper size is usually the first step in narrowing down a pra
 
 The right answer depends less on theory and more on where the zipper will be used, how often it will be opened and closed, and what kind of finished product it needs to support.
 
+| Size | Closed chain width | Common use |
+| --- | --- | --- |
+| Size 3 | about 3 mm | Light apparel, pockets, children's wear |
+| Size 5 | about 5 mm | Jackets, hoodies, bags — the most common choice |
+| Size 8 | about 8 mm | Luggage, workwear, heavy-duty positions |
+
+The number is the industry's shorthand for the width of the closed chain in millimetres, and it is used the same way across manufacturers. Treat it as an approximation: the exact figure shifts slightly with material and structure, so confirm it against a sample before bulk production.
+
 ## When size 3 is usually the right choice
 
 Size 3 is commonly used for lighter applications, especially where the zipper should feel clean, light, and not too heavy.

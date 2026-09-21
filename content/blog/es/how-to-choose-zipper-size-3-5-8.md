@@ -11,6 +11,14 @@ Elegir el tamaño correcto de la cremallera suele ser el primer paso para defini
 
 La respuesta correcta depende menos de la teoría y más de dónde se va a usar la cremallera, con qué frecuencia se abrirá y cerrará, y qué tipo de producto terminado necesita soportar.
 
+| Tamaño | Ancho de la cadena cerrada | Uso habitual |
+| --- | --- | --- |
+| Tamaño 3 | unos 3 mm | Prendas ligeras, bolsillos, ropa infantil |
+| Tamaño 5 | unos 5 mm | Chaquetas, sudaderas, bolsos: la opción más común |
+| Tamaño 8 | unos 8 mm | Maletas, ropa de trabajo, posiciones de uso intensivo |
+
+El número es la forma habitual del sector de indicar el ancho de la cadena cerrada en milímetros, y se usa igual entre fabricantes. Tómelo como una aproximación: la medida exacta varía un poco según el material y la estructura, así que conviene confirmarla con una muestra antes de la producción en volumen.
+
 ## Cuando el tamaño 3 suele ser la opción adecuada
 
 El tamaño 3 se utiliza normalmente en aplicaciones más ligeras, especialmente cuando la cremallera debe sentirse limpia, ligera y no demasiado pesada.
