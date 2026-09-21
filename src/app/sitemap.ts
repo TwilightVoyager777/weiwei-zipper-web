@@ -19,6 +19,20 @@ function blogPostDate(slug: string, locale: string): Date | undefined {
   return Number.isNaN(parsed.getTime()) ? undefined : parsed;
 }
 
+/**
+ * Newest post date in a locale, used as the blog index's lastmod.
+ *
+ * The index lists the posts, so it genuinely changes when the newest one does —
+ * unlike the other static routes, this is a real date rather than a guess.
+ */
+function blogIndexDate(locale: string): Date | undefined {
+  const dates = BLOG_SLUGS.map((slug) => blogPostDate(slug, locale)).filter(
+    (date): date is Date => date !== undefined,
+  );
+  if (dates.length === 0) return undefined;
+  return new Date(Math.max(...dates.map((date) => date.getTime())));
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
   const routes = ['', '/products', '/about', '/contact', '/quote', '/industries', '/services', '/faq', '/blog', '/yiwu-zipper-supplier', '/privacy-policy', '/terms-of-service'];
@@ -30,10 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Static pages for each locale
   for (const locale of locales) {
+    const blogIndexLastModified = blogIndexDate(locale);
+
     for (const route of routes) {
       entries.push({
         url: localizedUrl(locale, route),
-        lastModified: now,
+        lastModified: route === '/blog' ? blogIndexLastModified : now,
         changeFrequency: route === '' ? 'weekly' : 'monthly',
         priority: route === '' ? 1.0 : route === '/products' ? 0.9 : 0.8,
         alternates: alternatesForPath(locale, route).languages ? { languages: alternatesForPath(locale, route).languages } : undefined,
