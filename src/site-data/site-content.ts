@@ -327,7 +327,7 @@ const siteBrandEn = {
 
 const siteBrandEs = {
   ...siteBrandEn,
-  businessHours: 'Lunes a sabado 08:30-18:00',
+  businessHours: 'Lunes a sábado 08:30-18:00',
   responseTime: 'Respuesta prioritaria en horario laboral',
 } as const;
 
@@ -363,10 +363,10 @@ const navigationContentEs = {
     { href: '/industries' as const, label: 'Aplicaciones' },
     { href: '/services' as const, label: 'Soluciones' },
     { href: '/about' as const, label: 'Nosotros' },
-    { href: '/blog' as const, label: 'Articulos' },
+    { href: '/blog' as const, label: 'Artículos' },
     { href: '/contact' as const, label: 'Contacto' },
   ],
-  primaryCta: 'Solicitar cotizacion',
+  primaryCta: 'Solicitar cotización',
 } as const;
 
 const navigationContentAr = {
@@ -457,19 +457,19 @@ const homeContentEn = {
 
 const homeContentEs = {
   metadata: {
-    title: 'Weiwei Zipper | Fabrica de cremalleras metalicas, de resina y de nylon en tamanos 3 / 5 / 8',
-    description: 'Weiwei Zipper suministra y personaliza cremalleras metalicas, de resina y de nylon en tamanos comunes 3, 5 y 8 para prendas, bolsos, calzado y ropa con proteccion solar.',
+    title: 'Weiwei Zipper | Fábrica de cremalleras metálicas, de resina y de nylon en tamaños 3 / 5 / 8',
+    description: 'Weiwei Zipper suministra y personaliza cremalleras metálicas, de resina y de nylon en tamaños comunes 3, 5 y 8 para prendas, bolsos, calzado y ropa con protección solar.',
   },
   hero: {
-    badges: ['Suministro directo de fabrica', 'Soporte de muestras', 'Desarrollo a medida'],
+    badges: ['Suministro directo de fábrica', 'Soporte de muestras', 'Desarrollo a medida'],
     title: 'Weiwei Zipper',
-    subtitle: 'Weiwei Zipper suministra cremalleras metalicas, de resina y de nylon para proyectos de prendas, bolsos y calzado, con opciones comunes en tamanos 3, 5 y 8 adecuadas para muestreo, compras al por mayor y reposiciones.',
+    subtitle: 'Weiwei Zipper suministra cremalleras metálicas, de resina y de nylon para proyectos de prendas, bolsos y calzado, con opciones comunes en tamaños 3, 5 y 8 adecuadas para muestreo, compras al por mayor y reposiciones.',
     visualPath: '/hero/profile.png',
-    visualAlt: 'Visual principal de una cremallera metalica parcialmente abierta',
+    visualAlt: 'Visual principal de una cremallera metálica parcialmente abierta',
     primaryCta: 'Ver productos',
-    secondaryCta: 'Solicitar cotizacion',
+    secondaryCta: 'Solicitar cotización',
     stats: [
-      { label: 'Tamanos comunes', value: '3 / 5 / 8' },
+      { label: 'Tamaños comunes', value: '3 / 5 / 8' },
       { label: 'Tipos principales', value: 'Metal / Resina / Nylon' },
       { label: 'Aplicaciones', value: 'Prendas / Bolsos / Calzado' },
     ],
@@ -478,39 +478,39 @@ const homeContentEs = {
     title: 'Por que los compradores trabajan con Weiwei Zipper',
     items: [
       {
-        title: 'Suministro estable de tamanos estandar',
-        description: 'Organizamos el suministro alrededor de los tamanos 3, 5 y 8 de uso mas frecuente, lo que facilita el desarrollo, las compras al por mayor y las reposiciones.',
-        points: ['Soporta cremalleras terminadas y cremalleras por rollo', 'Las estructuras cerradas, abiertas y de doble carro pueden coordinarse segun la necesidad', 'Los colores y cursores pueden alinearse con el estilo del producto', 'Ayuda a reducir confirmaciones repetidas durante el proceso'],
+        title: 'Suministro estable de tamaños estándar',
+        description: 'Organizamos el suministro alrededor de los tamaños 3, 5 y 8 de uso más frecuente, lo que facilita el desarrollo, las compras al por mayor y las reposiciones.',
+        points: ['Soporta cremalleras terminadas y cremalleras por rollo', 'Las estructuras cerradas, abiertas y de doble carro pueden coordinarse según la necesidad', 'Los colores y cursores pueden alinearse con el estilo del producto', 'Ayuda a reducir confirmaciones repetidas durante el proceso'],
       },
       {
-        title: 'Confirmacion de muestras mas eficiente',
-        description: 'Las muestras pueden revisarse con cartas de color, tarjetas de referencia, prendas o muestras antiguas para alinear los detalles clave antes de programar la produccion.',
-        points: ['Admite control de color y revision basica de muestras', 'Puede seguir muestras antiguas para estructuras habituales', 'Adecuado para muestreo de pequenos lotes de desarrollo', 'Acorta el proceso desde la seleccion hasta la aprobacion de la muestra'],
+        title: 'Confirmación de muestras más eficiente',
+        description: 'Las muestras pueden revisarse con cartas de color, tarjetas de referencia, prendas o muestras antiguas para alinear los detalles clave antes de programar la producción.',
+        points: ['Admite control de color y revisión básica de muestras', 'Puede seguir muestras antiguas para estructuras habituales', 'Adecuado para muestreo de pequeños lotes de desarrollo', 'Acorta el proceso desde la selección hasta la aprobación de la muestra'],
       },
       {
-        title: 'Entrega mas predecible',
-        description: 'En opciones estandar, los materiales y los espacios de produccion pueden coordinarse antes una vez confirmadas las especificaciones, lo que funciona bien para proyectos rapidos y pedidos recurrentes.',
-        points: ['Los colores y tamanos comunes son mas faciles de organizar con rapidez', 'Los pedidos recurrentes pueden reutilizar registros de confirmacion anteriores', 'Las urgencias pueden coordinarse segun la disponibilidad de produccion', 'Los hitos clave pueden compartirse a tiempo'],
+        title: 'Entrega más predecible',
+        description: 'En opciones estándar, los materiales y los espacios de producción pueden coordinarse antes una vez confirmadas las especificaciones, lo que funciona bien para proyectos rápidos y pedidos recurrentes.',
+        points: ['Los colores y tamaños comunes son más fáciles de organizar con rapidez', 'Los pedidos recurrentes pueden reutilizar registros de confirmación anteriores', 'Las urgencias pueden coordinarse según la disponibilidad de producción', 'Los hitos clave pueden compartirse a tiempo'],
       },
       {
-        title: 'Comunicacion rapida por varios canales',
-        description: 'Telefono, WeChat y WhatsApp pueden usarse en paralelo, lo que facilita confirmar especificaciones, colores, muestras y entrega con mayor rapidez.',
-        points: ['Un canal de contacto consistente ayuda a mantener el historial alineado', 'Respuesta prioritaria en horario laboral', 'Admite imagenes y videos para confirmar detalles', 'Util para proyectos de largo plazo en distintas regiones'],
+        title: 'Comunicación rápida por varios canales',
+        description: 'Teléfono, WeChat y WhatsApp pueden usarse en paralelo, lo que facilita confirmar especificaciones, colores, muestras y entrega con mayor rapidez.',
+        points: ['Un canal de contacto consistente ayuda a mantener el historial alineado', 'Respuesta prioritaria en horario laboral', 'Admite imágenes y videos para confirmar detalles', 'Útil para proyectos de largo plazo en distintas regiones'],
       },
     ],
   },
   featuredProducts: {
-    title: 'Categorias de producto',
-    subtitle: 'Organizamos la oferta en torno a necesidades de compra habituales para cremalleras metalicas, de resina y de nylon, de modo que sea mas facil confirmar primero el material y despues hablar de tamano, estructura, color y entrega.',
+    title: 'Categorías de producto',
+    subtitle: 'Organizamos la oferta en torno a necesidades de compra habituales para cremalleras metálicas, de resina y de nylon, de modo que sea más fácil confirmar primero el material y después hablar de tamaño, estructura, color y entrega.',
   },
   useCasesPreview: {
     title: 'Aplicaciones comunes',
-    subtitle: 'Organizamos soluciones habituales para prendas, bolsos y calzado para que el tipo, tamano y estructura adecuados puedan definirse a partir del uso final.',
+    subtitle: 'Organizamos soluciones habituales para prendas, bolsos y calzado para que el tipo, tamaño y estructura adecuados puedan definirse a partir del uso final.',
   },
   bottomCta: {
-    title: 'Tiene ya muestras o necesidades de compra?',
-    description: 'Puede compartir tamano, longitud, color, cantidad y aplicacion para que podamos confirmar la direccion adecuada y avanzar con la cotizacion con mayor eficiencia.',
-    primaryCta: 'Solicitar cotizacion',
+    title: '¿Tiene ya muestras o necesidades de compra?',
+    description: 'Puede compartir tamaño, longitud, color, cantidad y aplicación para que podamos confirmar la dirección adecuada y avanzar con la cotización con mayor eficiencia.',
+    primaryCta: 'Solicitar cotización',
     secondaryCta: 'Ver productos',
   },
 } as const;
@@ -699,39 +699,39 @@ const useCasesContentEn = {
 const useCasesContentEs = {
   metadata: {
     title: 'Aplicaciones',
-    description: 'Weiwei Zipper apoya proyectos de prendas, bolsos y calzado con opciones mas estables de cremalleras metalicas, de resina y de nylon, junto con orientacion sobre tamanos.',
+    description: 'Weiwei Zipper apoya proyectos de prendas, bolsos y calzado con opciones más estables de cremalleras metálicas, de resina y de nylon, junto con orientación sobre tamaños.',
   },
   title: 'Aplicaciones',
-  subtitle: 'Partir del uso final facilita confirmar el material, el tamano, la estructura y los requisitos de entrega adecuados.',
-  introText: 'Weiwei Zipper se centra actualmente en aplicaciones para prendas, bolsos y calzado. Cada uso final exige niveles distintos de suavidad, durabilidad, consistencia de color, sensacion de uso y estabilidad entre lotes. Por eso solemos recomendar confirmar primero el uso final y despues definir con mas precision la opcion de metal, resina o nylon, junto con tamano, estructura y longitud.',
+  subtitle: 'Partir del uso final facilita confirmar el material, el tamaño, la estructura y los requisitos de entrega adecuados.',
+  introText: 'Weiwei Zipper se centra actualmente en aplicaciones para prendas, bolsos y calzado. Cada uso final exige niveles distintos de suavidad, durabilidad, consistencia de color, sensación de uso y estabilidad entre lotes. Por eso solemos recomendar confirmar primero el uso final y después definir con más precisión la opción de metal, resina o nylon, junto con tamaño, estructura y longitud.',
   keyLabel: 'Punto clave:',
   items: [
     {
       slug: 'apparel',
       name: 'Prendas',
       imagePath: '/products/cloth.png',
-      imageAlt: 'Aplicacion de cremallera en prendas',
+      imageAlt: 'Aplicación de cremallera en prendas',
       imagePosition: 'center 10%',
-      description: 'Adecuadas para chaquetas, sudaderas, pantalones, ropa infantil y prendas con proteccion solar, donde suele prestarse mucha atencion a la suavidad, el peso ligero, la combinacion de color y la estabilidad en el uso repetido.',
-      focus: 'Los tamanos comunes son principalmente 3 y 5. Las opciones de resina y nylon se utilizan con frecuencia y pueden confirmarse segun apertura frontal, bolsillos o si la estructura debe ser cerrada, abierta o de doble carro.',
+      description: 'Adecuadas para chaquetas, sudaderas, pantalones, ropa infantil y prendas con protección solar, donde suele prestarse mucha atención a la suavidad, el peso ligero, la combinación de color y la estabilidad en el uso repetido.',
+      focus: 'Los tamaños comunes son principalmente 3 y 5. Las opciones de resina y nylon se utilizan con frecuencia y pueden confirmarse según apertura frontal, bolsillos o si la estructura debe ser cerrada, abierta o de doble carro.',
     },
     {
       slug: 'bags',
       name: 'Bolsos',
       imagePath: '/products/bag.png',
-      imageAlt: 'Aplicacion de cremallera en bolsos',
+      imageAlt: 'Aplicación de cremallera en bolsos',
       imagePosition: 'center center',
-      description: 'Adecuadas para mochilas escolares, bolsos de viaje, organizadores y bolsos de herramientas, donde la durabilidad, el enganche estable de los dientes y la consistencia entre lotes suelen ser mas importantes.',
-      focus: 'Los tamanos comunes son principalmente 5 y 8. El nylon y el metal suelen ser las opciones preferidas, y la seleccion final depende de si la cremallera se usa en el compartimento principal, bolsillo lateral o bolsillo interior.',
+      description: 'Adecuadas para mochilas escolares, bolsos de viaje, organizadores y bolsos de herramientas, donde la durabilidad, el enganche estable de los dientes y la consistencia entre lotes suelen ser más importantes.',
+      focus: 'Los tamaños comunes son principalmente 5 y 8. El nylon y el metal suelen ser las opciones preferidas, y la selección final depende de si la cremallera se usa en el compartimento principal, bolsillo lateral o bolsillo interior.',
     },
     {
       slug: 'footwear',
       name: 'Calzado y accesorios',
       imagePath: '/products/boost.jpg',
-      imageAlt: 'Aplicacion de cremallera en calzado',
+      imageAlt: 'Aplicación de cremallera en calzado',
       imagePosition: 'center center',
       description: 'Adecuadas para botas, calzado funcional y piezas accesorias donde la resistencia al desgaste, la facilidad de uso y la eficiencia de montaje son factores importantes.',
-      focus: 'Los tamanos comunes son principalmente 3 y 5. Las opciones metalicas y de resina se utilizan con frecuencia en posiciones decorativas, aperturas funcionales y pequenas secciones accesorias.',
+      focus: 'Los tamaños comunes son principalmente 3 y 5. Las opciones metálicas y de resina se utilizan con frecuencia en posiciones decorativas, aperturas funcionales y pequeñas secciones accesorias.',
     },
   ],
   whyChoose: {
@@ -739,21 +739,21 @@ const useCasesContentEs = {
     items: [
       {
         title: 'Experiencia en el sector',
-        description: 'Con 34 anos de experiencia, hemos apoyado de forma continua proyectos de prendas, bolsos y calzado, y conocemos mejor las necesidades reales de material, tamano y estructura detras de cada tipo de producto.',
+        description: 'Con 34 años de experiencia, hemos apoyado de forma continua proyectos de prendas, bolsos y calzado, y conocemos mejor las necesidades reales de material, tamaño y estructura detrás de cada tipo de producto.',
       },
       {
-        title: 'Cotizacion rapida',
-        description: 'Al organizar soluciones comunes alrededor de los tamanos 3, 5 y 8 mas utilizados, normalmente podemos avanzar con mayor rapidez hacia la seleccion, el muestreo y la cotizacion una vez que la solicitud esta clara.',
+        title: 'Cotización rápida',
+        description: 'Al organizar soluciones comunes alrededor de los tamaños 3, 5 y 8 más utilizados, normalmente podemos avanzar con mayor rapidez hacia la selección, el muestreo y la cotización una vez que la solicitud está clara.',
       },
       {
         title: 'Suministro global',
-        description: 'Respaldados por una calidad estable, consistencia tecnica y entrega fiable, seguimos apoyando proyectos orientados a exportacion y programas de suministro a largo plazo.',
+        description: 'Respaldados por una calidad estable, consistencia técnica y entrega fiable, seguimos apoyando proyectos orientados a exportación y programas de suministro a largo plazo.',
       },
     ],
   },
-  ctaTitle: 'Tiene ya muestras o necesidades de compra?',
-  ctaDescription: 'Puede compartir tamano, longitud, color, cantidad y aplicacion para que podamos confirmar la direccion adecuada y avanzar con la cotizacion con mayor eficiencia.',
-  ctaPrimary: 'Solicitar cotizacion',
+  ctaTitle: '¿Tiene ya muestras o necesidades de compra?',
+  ctaDescription: 'Puede compartir tamaño, longitud, color, cantidad y aplicación para que podamos confirmar la dirección adecuada y avanzar con la cotización con mayor eficiencia.',
+  ctaPrimary: 'Solicitar cotización',
   ctaSecondary: 'Ver productos',
 } as const;
 
@@ -928,27 +928,27 @@ const aboutContentEn = {
 const aboutContentEs = {
   metadata: {
     title: 'Nosotros',
-    description: 'Descubra como Weiwei Zipper ha apoyado proyectos de cremalleras metalicas, de resina y de nylon desde 1992 desde el Distrito 3 de Yiwu International Trade City, sirviendo a clientes de prendas, bolsos y calzado.',
+    description: 'Descubra cómo Weiwei Zipper ha apoyado proyectos de cremalleras metálicas, de resina y de nylon desde 1992 desde el Distrito 3 de Yiwu International Trade City, sirviendo a clientes de prendas, bolsos y calzado.',
   },
   title: 'Nosotros',
-  subtitle: 'Fundada en 1992, Weiwei Zipper se ha centrado durante muchos anos en el suministro de cremalleras metalicas, de resina y de nylon desde Yiwu International Trade City para clientes de prendas, bolsos y calzado en desarrollo, muestreo, compras y reposiciones.',
+  subtitle: 'Fundada en 1992, Weiwei Zipper se ha centrado durante muchos años en el suministro de cremalleras metálicas, de resina y de nylon desde Yiwu International Trade City para clientes de prendas, bolsos y calzado en desarrollo, muestreo, compras y reposiciones.',
   story: {
     title: 'Sobre Weiwei Zipper',
     paragraphs: [
-      'Weiwei Zipper fue fundada en 1992 y opera desde el Distrito 3 de Yiwu International Trade City. Como proveedor de cremalleras con base en Yiwu, a lo largo de los anos nos hemos mantenido enfocados en tres lineas principales: cremalleras metalicas, de resina y de nylon. Al trabajar de forma continua con clientes de prendas, bolsos y calzado, hemos acumulado una experiencia practica muy cercana a las necesidades reales de compra, desarrollo y reposicion.',
-      'En la cooperacion diaria prestamos especial atencion a los puntos que normalmente deben confirmarse al principio, como el material, el tamano, la estructura, la longitud, la combinacion de color y la seleccion del cursor. Sobre esas necesidades frecuentes seguimos organizando soluciones mas estables y reutilizables basadas en los tamanos comunes 3, 5 y 8.',
-      'Para muchos compradores que buscan un proveedor de cremalleras o una fuente de compra al por mayor en Yiwu, lo importante no es solo el precio, sino tambien si las especificaciones quedan claras, si las muestras avanzan con fluidez y si el suministro posterior se mantiene estable. Nos hemos mantenido constantes en nuestro enfoque sobre calidad del producto, precision tecnica y entrega fiable. Esa disciplina a largo plazo ha ayudado a Weiwei Zipper a mantener cooperacion continua con clientes que atienden el Sudeste Asiatico, Oriente Medio, Europa y America. Para nosotros, la calidad estable, la comunicacion clara y el suministro fiable importan mas que las operaciones de una sola vez.',
-      'Tanto si el proyecto es una reposicion, un nuevo desarrollo o una conversacion inicial basada en una muestra antigua o una imagen de referencia, nuestro objetivo es ayudar a los clientes a confirmar la direccion, avanzar en las muestras y conectar con las compras de una forma mas fluida y eficiente.',
+      'Weiwei Zipper fue fundada en 1992 y opera desde el Distrito 3 de Yiwu International Trade City. Como proveedor de cremalleras con base en Yiwu, a lo largo de los años nos hemos mantenido enfocados en tres líneas principales: cremalleras metálicas, de resina y de nylon. Al trabajar de forma continua con clientes de prendas, bolsos y calzado, hemos acumulado una experiencia práctica muy cercana a las necesidades reales de compra, desarrollo y reposición.',
+      'En la cooperación diaria prestamos especial atención a los puntos que normalmente deben confirmarse al principio, como el material, el tamaño, la estructura, la longitud, la combinación de color y la selección del cursor. Sobre esas necesidades frecuentes seguimos organizando soluciones más estables y reutilizables basadas en los tamaños comunes 3, 5 y 8.',
+      'Para muchos compradores que buscan un proveedor de cremalleras o una fuente de compra al por mayor en Yiwu, lo importante no es solo el precio, sino también si las especificaciones quedan claras, si las muestras avanzan con fluidez y si el suministro posterior se mantiene estable. Nos hemos mantenido constantes en nuestro enfoque sobre calidad del producto, precisión técnica y entrega fiable. Esa disciplina a largo plazo ha ayudado a Weiwei Zipper a mantener cooperación continua con clientes que atienden el Sudeste Asiático, Oriente Medio, Europa y América. Para nosotros, la calidad estable, la comunicación clara y el suministro fiable importan más que las operaciones de una sola vez.',
+      'Tanto si el proyecto es una reposición, un nuevo desarrollo o una conversación inicial basada en una muestra antigua o una imagen de referencia, nuestro objetivo es ayudar a los clientes a confirmar la dirección, avanzar en las muestras y conectar con las compras de una forma más fluida y eficiente.',
     ],
   },
   capabilities: {
-    title: 'Capacidad de fabrica',
+    title: 'Capacidad de fábrica',
     items: [
       { value: siteBrand.foundedYear, label: 'Fundada en' },
-      { value: '30+ anos', label: 'Experiencia del sector' },
-      { value: 'Metal / Resina / Nylon', label: 'Lineas principales' },
-      { value: '3 / 5 / 8', label: 'Tamanos frecuentes' },
-      { value: '50+ paises y regiones', label: 'Mercados de exportacion' },
+      { value: '30+ años', label: 'Experiencia del sector' },
+      { value: 'Metal / Resina / Nylon', label: 'Líneas principales' },
+      { value: '3 / 5 / 8', label: 'Tamaños frecuentes' },
+      { value: '50+ países y regiones', label: 'Mercados de exportación' },
       { value: 'Entrega fiable', label: 'Capacidad de suministro' },
     ],
   },
@@ -956,16 +956,16 @@ const aboutContentEs = {
     title: 'Como trabajamos',
     items: [
       {
-        title: 'Alineacion de requisitos',
-        description: 'Comenzamos alineando aplicacion, direccion de material, tamano, estructura, longitud, color y detalles del cursor para que el muestreo y la cotizacion avancen con una base clara.',
+        title: 'Alineación de requisitos',
+        description: 'Comenzamos alineando aplicación, dirección de material, tamaño, estructura, longitud, color y detalles del cursor para que el muestreo y la cotización avancen con una base clara.',
       },
       {
-        title: 'Confirmacion de muestras',
-        description: 'Durante el muestreo revisamos detalles estructurales, sensacion de uso y requisitos de color para que el proyecto pueda pasar con mas fluidez a la compra al por mayor.',
+        title: 'Confirmación de muestras',
+        description: 'Durante el muestreo revisamos detalles estructurales, sensación de uso y requisitos de color para que el proyecto pueda pasar con más fluidez a la compra al por mayor.',
       },
       {
         title: 'Entrega en volumen',
-        description: 'Una vez establecidos los tamanos comunes y los registros de confirmacion, las reposiciones, la programacion y la cooperacion a largo plazo pueden avanzar con mayor eficiencia y estabilidad de entrega.',
+        description: 'Una vez establecidos los tamaños comunes y los registros de confirmación, las reposiciones, la programación y la cooperación a largo plazo pueden avanzar con mayor eficiencia y estabilidad de entrega.',
       },
     ],
   },
@@ -1085,17 +1085,17 @@ const contactContentEn = {
 const contactContentEs = {
   metadata: {
     title: 'Contacto',
-    description: 'Contacte con Weiwei Zipper por telefono, WeChat, WhatsApp o correo electronico y consulte la direccion de la empresa y la ubicacion en el mapa.',
+    description: 'Contacte con Weiwei Zipper por teléfono, WeChat, WhatsApp o correo electrónico y consulte la dirección de la empresa y la ubicación en el mapa.',
   },
   title: 'Contacto',
-  subtitle: 'Puede contactarnos por telefono, WeChat, WhatsApp o correo electronico. Si su solicitud ya esta clara, tambien puede ir directamente a la pagina de cotizacion y enviarla alli.',
-  cardTitle: 'Informacion de contacto',
-  responseNote: 'Durante el horario laboral, WeChat, telefono, WhatsApp y correo electronico pueden utilizarse para coordinar visitas, solicitudes de contacto y detalles basicos del proyecto con mayor rapidez.',
-  addressTitle: 'Informacion para visitarnos',
-  addressDescription: 'Si necesita una visita presencial o una referencia de ubicacion, puede utilizar la direccion y la informacion de mapa que aparecen a continuacion.',
-  mapTitle: 'Ubicacion en el mapa',
+  subtitle: 'Puede contactarnos por teléfono, WeChat, WhatsApp o correo electrónico. Si su solicitud ya está clara, también puede ir directamente a la página de cotización y enviarla allí.',
+  cardTitle: 'Información de contacto',
+  responseNote: 'Durante el horario laboral, WeChat, teléfono, WhatsApp y correo electrónico pueden utilizarse para coordinar visitas, solicitudes de contacto y detalles básicos del proyecto con mayor rapidez.',
+  addressTitle: 'Información para visitarnos',
+  addressDescription: 'Si necesita una visita presencial o una referencia de ubicación, puede utilizar la dirección y la información de mapa que aparecen a continuación.',
+  mapTitle: 'Ubicación en el mapa',
   mapOpenLabel: 'Abrir en Maps',
-  quoteButton: 'Ir a cotizacion',
+  quoteButton: 'Ir a cotización',
   whatsappButton: 'Contactar por WhatsApp',
   wechatLabel: 'WeChat',
   wechatScan: 'Escanee para agregar en WeChat',
@@ -1154,13 +1154,13 @@ const quoteContentEn = {
 
 const quoteContentEs = {
   metadata: {
-    title: 'Solicitar cotizacion',
-    description: 'Envie su consulta a Weiwei Zipper por formulario, WeChat, telefono o WhatsApp para recibir recomendaciones y cotizaciones de cremalleras metalicas, de resina y de nylon.',
+    title: 'Solicitar cotización',
+    description: 'Envie su consulta a Weiwei Zipper por formulario, WeChat, teléfono o WhatsApp para recibir recomendaciones y cotizaciones de cremalleras metálicas, de resina y de nylon.',
   },
-  title: 'Solicitar cotizacion',
-  subtitle: 'Para avanzar con la cotizacion de forma mas eficiente, incluya siempre que sea posible la aplicacion, el tamano, la longitud, el color y la cantidad requerida.',
-  cardTitle: 'Informacion de contacto',
-  responseNote: 'WeChat, telefono y WhatsApp pueden utilizarse para confirmar colores, especificaciones, muestras y plazos con mayor eficiencia.',
+  title: 'Solicitar cotización',
+  subtitle: 'Para avanzar con la cotización de forma más eficiente, incluya siempre que sea posible la aplicación, el tamaño, la longitud, el color y la cantidad requerida.',
+  cardTitle: 'Información de contacto',
+  responseNote: 'WeChat, teléfono y WhatsApp pueden utilizarse para confirmar colores, especificaciones, muestras y plazos con mayor eficiencia.',
   wechatLabel: 'WeChat',
   wechatScan: 'Escanee para agregar en WeChat',
 } as const;
@@ -1200,10 +1200,10 @@ const footerContentEn = {
 } as const;
 
 const footerContentEs = {
-  description: 'Weiwei Zipper se centra en el suministro y la personalizacion de cremalleras metalicas, de resina y de nylon, con opciones comunes en tamanos 3, 5 y 8 para apoyar con mayor eficiencia el muestreo, la cotizacion y la compra al por mayor.',
-  quickLinksTitle: 'Enlaces rapidos',
-  contactInfoTitle: 'Informacion de contacto',
-  privacy: 'Politica de privacidad',
+  description: 'Weiwei Zipper se centra en el suministro y la personalización de cremalleras metálicas, de resina y de nylon, con opciones comunes en tamaños 3, 5 y 8 para apoyar con mayor eficiencia el muestreo, la cotización y la compra al por mayor.',
+  quickLinksTitle: 'Enlaces rápidos',
+  contactInfoTitle: 'Información de contacto',
+  privacy: 'Política de privacidad',
   terms: 'Terminos del servicio',
 } as const;
 
@@ -1230,7 +1230,7 @@ const faqSectionIntroEn = {
 
 const faqSectionIntroEs = {
   title: 'Preguntas frecuentes',
-  subtitle: 'Aclarar las preguntas comunes desde el principio ayuda a reducir confirmaciones repetidas y mantiene la comunicacion y la cotizacion en mejor ritmo.',
+  subtitle: 'Aclarar las preguntas comunes desde el principio ayuda a reducir confirmaciones repetidas y mantiene la comunicación y la cotización en mejor ritmo.',
 } as const;
 
 const faqSectionIntroAr = {
@@ -1275,30 +1275,30 @@ const blogContentEn = {
 
 const blogContentEs = {
   metadata: {
-    title: 'Articulos',
-    description: 'Articulos practicos de Weiwei Zipper sobre la seleccion de tamanos 3 / 5 / 8, estructuras abiertas y cerradas, preparacion de consultas y mejora de la comunicacion de compra.',
+    title: 'Artículos',
+    description: 'Artículos prácticos de Weiwei Zipper sobre la selección de tamaños 3 / 5 / 8, estructuras abiertas y cerradas, preparación de consultas y mejora de la comunicación de compra.',
   },
-  title: 'Articulos',
-  subtitle: 'Contenido practico centrado en seleccion de tamanos, decisiones de estructura, preparacion de consultas y comunicacion de compra para proyectos de cremalleras.',
-  allArticles: 'Todos los articulos',
+  title: 'Artículos',
+  subtitle: 'Contenido práctico centrado en selección de tamaños, decisiones de estructura, preparación de consultas y comunicación de compra para proyectos de cremalleras.',
+  allArticles: 'Todos los artículos',
   readTimeLabel: 'min de lectura',
-  readMoreLabel: 'Leer mas',
-  backToBlog: 'Volver a articulos',
+  readMoreLabel: 'Leer más',
+  backToBlog: 'Volver a artículos',
   authorLabel: 'Autor',
   categories: {
-    guide: 'Guia de seleccion',
+    guide: 'Guía de selección',
     sourcing: 'Consejos de compra',
-    general: 'Informacion del sector',
+    general: 'Información del sector',
   },
   faq: {
     title: 'FAQ',
-    description: 'Si aun esta confirmando tamano, estructura, cremalleras por rollo, cronograma de muestras o requisitos de cotizacion, la FAQ es un buen lugar para revisar primero los puntos mas comunes.',
+    description: 'Si aún está confirmando tamaño, estructura, cremalleras por rollo, cronograma de muestras o requisitos de cotización, la FAQ es un buen lugar para revisar primero los puntos más comunes.',
     button: 'Ver FAQ',
   },
   cta: {
-    title: 'Tiene ya un proyecto especifico?',
-    description: 'Puede compartir sus requisitos de producto. Con base en especificaciones comunes y experiencia de suministro, podemos ayudarle a avanzar mas rapidamente hacia la cotizacion y el muestreo.',
-    button: 'Solicitar cotizacion',
+    title: '¿Tiene ya un proyecto específico?',
+    description: 'Puede compartir sus requisitos de producto. Con base en especificaciones comunes y experiencia de suministro, podemos ayudarle a avanzar más rápidamente hacia la cotización y el muestreo.',
+    button: 'Solicitar cotización',
     secondary: 'Ver productos',
   },
 } as const;
@@ -1403,37 +1403,37 @@ const inquiryFormContentEn = {
 const inquiryFormContentEs = {
   title: 'Enviar consulta',
   success: 'Su consulta se ha enviado correctamente. Nos pondremos en contacto con usted lo antes posible en horario laboral.',
-  error: 'El envio ha fallado. Intente de nuevo mas tarde o contactenos directamente por telefono o WhatsApp.',
-  sectionContact: 'Informacion de contacto',
+  error: 'El envío ha fallado. Intente de nuevo más tarde o contactenos directamente por teléfono o WhatsApp.',
+  sectionContact: 'Información de contacto',
   sectionProduct: 'Requisitos del producto',
   fields: {
     name: 'Nombre de contacto',
-    email: 'Correo electronico',
+    email: 'Correo electrónico',
     company: 'Empresa',
-    country: 'Pais / Region',
-    phone: 'Telefono',
-    productInterest: 'Interes de producto',
+    country: 'País / Región',
+    phone: 'Teléfono',
+    productInterest: 'Interés de producto',
     productModel: 'Notas de estilo / modelo',
-    productSize: 'Tamano / longitud',
-    application: 'Aplicacion',
+    productSize: 'Tamaño / longitud',
+    application: 'Aplicación',
     quantity: 'Cantidad',
     message: 'Notas adicionales',
   },
   placeholders: {
-    productModel: 'Por ejemplo: resina cerrada, nylon de doble apertura, cremallera metalica decorativa',
-    productSize: 'Por ejemplo: tamano 5, 60 cm, abierta',
+    productModel: 'Por ejemplo: resina cerrada, nylon de doble apertura, cremallera metálica decorativa',
+    productSize: 'Por ejemplo: tamaño 5, 60 cm, abierta',
     quantity: 'Por ejemplo: 3.000 piezas, o 3 estilos para muestreo primero',
-    message: 'Puede agregar aqui color, longitud, estilo de cursor, embalaje, plazo objetivo y cualquier otro detalle.',
+    message: 'Puede agregar aquí color, longitud, estilo de cursor, embalaje, plazo objetivo y cualquier otro detalle.',
   },
-  selectProduct: 'Seleccione una categoria',
+  selectProduct: 'Seleccione una categoría',
   productOptions: [
     { value: 'resin-zipper', label: 'Cremallera de resina' },
     { value: 'nylon-zipper', label: 'Cremallera de nylon' },
-    { value: 'metal-zipper', label: 'Cremallera metalica' },
+    { value: 'metal-zipper', label: 'Cremallera metálica' },
     { value: 'custom-zipper', label: 'Desarrollo a medida' },
   ],
-  privacyNote: 'Despues del envio, la informacion solo se utilizara para cotizacion, comunicacion de muestras y seguimiento del proyecto, y no se utilizara para fines no relacionados.',
-  submit: 'Solicitar cotizacion',
+  privacyNote: 'Después del envío, la información solo se utilizará para cotización, comunicación de muestras y seguimiento del proyecto, y no se utilizará para fines no relacionados.',
+  submit: 'Solicitar cotización',
   submitting: 'Enviando...',
 } as const;
 

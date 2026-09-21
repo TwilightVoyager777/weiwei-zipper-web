@@ -113,54 +113,54 @@ const faqPageContentEn = {
 const faqPageContentEs = {
   metadata: {
     title: 'Preguntas frecuentes',
-    description: 'Revise las preguntas comunes sobre la seleccion de tamanos 3 / 5 / 8, estructuras cerradas y abiertas, cremalleras por rollo, muestreo, plazos, confirmacion de color y preparacion de cotizaciones.',
+    description: 'Revise las preguntas comunes sobre la selección de tamaños 3 / 5 / 8, estructuras cerradas y abiertas, cremalleras por rollo, muestreo, plazos, confirmación de color y preparación de cotizaciones.',
   },
   title: 'Preguntas frecuentes',
-  subtitle: 'Esta pagina resume las preguntas que los clientes hacen con mas frecuencia sobre seleccion de cremalleras, muestreo, cotizaciones, cremalleras por rollo, plazos y confirmacion de color.',
+  subtitle: 'Esta página resume las preguntas que los clientes hacen con más frecuencia sobre selección de cremalleras, muestreo, cotizaciones, cremalleras por rollo, plazos y confirmación de color.',
   items: [
     {
-      question: 'Como debo elegir entre los tamanos 3, 5 y 8?',
-      answer: 'El primer paso suele ser evaluar el producto final y la posicion donde se utilizara la cremallera. El tamano 3 es mas comun en prendas ligeras, bolsillos y ropa infantil. El tamano 5 cubre la gama mas amplia, como chaquetas, sudaderas, pantalones y bolsos de uso diario. El tamano 8 es mas adecuado para maletas, bolsos de mayor resistencia, ropa de trabajo y posiciones que requieren mayor durabilidad. Si aun no esta seguro, una muestra antigua, una foto del producto o el uso previsto suelen ser suficientes para orientar la seleccion.',
+      question: '¿Cómo debo elegir entre los tamaños 3, 5 y 8?',
+      answer: 'El primer paso suele ser evaluar el producto final y la posición donde se utilizará la cremallera. El tamaño 3 es más común en prendas ligeras, bolsillos y ropa infantil. El tamaño 5 cubre la gama más amplia, como chaquetas, sudaderas, pantalones y bolsos de uso diario. El tamaño 8 es más adecuado para maletas, bolsos de mayor resistencia, ropa de trabajo y posiciones que requieren mayor durabilidad. Si aún no está seguro, una muestra antigua, una foto del producto o el uso previsto suelen ser suficientes para orientar la selección.',
     },
     {
-      question: 'Cual es la diferencia entre una cremallera cerrada y una abierta?',
+      question: '¿Cuál es la diferencia entre una cremallera cerrada y una abierta?',
       answer: 'La cremallera cerrada tiene la parte inferior fija y suele utilizarse en bolsillos, pantalones, bolsos interiores y otras posiciones que no necesitan separarse por completo. La cremallera abierta puede separarse totalmente por la parte inferior y se usa con mayor frecuencia en chaquetas, sudaderas, chalecos y prendas con apertura frontal. Si el proyecto incluye doble apertura o cursores especiales, es mejor indicarlo al mismo tiempo.',
     },
     {
-      question: 'Cual es la diferencia entre cremalleras por rollo y cremalleras terminadas?',
-      answer: 'Las cremalleras terminadas ya se procesan con una longitud y estructura fijas, por lo que son adecuadas para instalarse directamente en prendas o productos terminados. Las cremalleras por rollo se suministran por rollo y son mas adecuadas cuando el cliente cortara longitudes, montara cursores o realizara un procesamiento posterior. La opcion correcta depende de si la cremallera se instalara directamente o si se procesara mas adelante en la siguiente fase de produccion.',
+      question: '¿Cuál es la diferencia entre cremalleras por rollo y cremalleras terminadas?',
+      answer: 'Las cremalleras terminadas ya se procesan con una longitud y estructura fijas, por lo que son adecuadas para instalarse directamente en prendas o productos terminados. Las cremalleras por rollo se suministran por rollo y son más adecuadas cuando el cliente cortará longitudes, montará cursores o realizará un procesamiento posterior. La opción correcta depende de si la cremallera se instalará directamente o si se procesará más adelante en la siguiente fase de producción.',
     },
     {
-      question: 'Que informacion debe confirmarse antes de pedir cremalleras por rollo?',
-      answer: 'Para las cremalleras por rollo, normalmente conviene confirmar el material, el tamano del diente, el color de la cinta, la longitud del rollo, si tambien se necesitan cursores y como se utilizaran despues. Si tiene rollos antiguos, muestras o historiales de compra anteriores, compartirlos ayuda mucho a confirmar soluciones habituales y detalles de cotizacion.',
+      question: '¿Qué información debe confirmarse antes de pedir cremalleras por rollo?',
+      answer: 'Para las cremalleras por rollo, normalmente conviene confirmar el material, el tamaño del diente, el color de la cinta, la longitud del rollo, si también se necesitan cursores y cómo se utilizarán después. Si tiene rollos antiguos, muestras o historiales de compra anteriores, compartirlos ayuda mucho a confirmar soluciones habituales y detalles de cotización.',
     },
     {
-      question: 'Puedo confirmar muestras antes de hacer un pedido al por mayor?',
-      answer: 'Si. Para desarrollos nuevos, proyectos con muchos colores o estructuras mas detalladas, suele ser mas seguro confirmar primero las muestras y luego pasar a la produccion en volumen. Eso facilita alinear tamano, longitud, color, tipo de cursor y detalles estructurales antes de organizar cantidades mayores.',
+      question: '¿Puedo confirmar muestras antes de hacer un pedido al por mayor?',
+      answer: 'Si. Para desarrollos nuevos, proyectos con muchos colores o estructuras más detalladas, suele ser más seguro confirmar primero las muestras y luego pasar a la producción en volumen. Eso facilita alinear tamaño, longitud, color, tipo de cursor y detalles estructurales antes de organizar cantidades mayores.',
     },
     {
-      question: 'Como suele organizarse el tiempo de muestreo?',
-      answer: 'El tiempo de muestreo depende de la complejidad de la especificacion, del metodo de confirmacion del color, de si se requieren cursores especiales y del calendario actual de muestras. Las soluciones estandar suelen ser mas rapidas, mientras que colores o estructuras especiales pueden requerir mas tiempo. La forma mas clara es compartir primero el uso previsto, el tamano, el color y los requisitos de muestra, y despues confirmar el calendario real con esa base.',
+      question: '¿Cómo suele organizarse el tiempo de muestreo?',
+      answer: 'El tiempo de muestreo depende de la complejidad de la especificación, del método de confirmación del color, de si se requieren cursores especiales y del calendario actual de muestras. Las soluciones estándar suelen ser más rápidas, mientras que colores o estructuras especiales pueden requerir más tiempo. La forma más clara es compartir primero el uso previsto, el tamaño, el color y los requisitos de muestra, y después confirmar el calendario real con esa base.',
     },
     {
-      question: 'Existe una MOQ fija?',
-      answer: 'La MOQ normalmente no se define con un solo numero. Suele depender del tipo de cremallera, tamano, color, si es un articulo estandar y si incluye accesorios especiales. La comunicacion suele ser mas sencilla para tamanos comunes y soluciones estandar. Si el proyecto requiere nuevos colores, estructuras especiales o piezas complementarias, conviene indicar la cantidad estimada desde el principio para poder evaluar mejor la produccion.',
+      question: '¿Existe una MOQ fija?',
+      answer: 'La MOQ normalmente no se define con un solo número. Suele depender del tipo de cremallera, tamaño, color, si es un artículo estándar y si incluye accesorios especiales. La comunicación suele ser más sencilla para tamaños comunes y soluciones estándar. Si el proyecto requiere nuevos colores, estructuras especiales o piezas complementarias, conviene indicar la cantidad estimada desde el principio para poder evaluar mejor la producción.',
     },
     {
-      question: 'Como se define normalmente el plazo de entrega?',
-      answer: 'El plazo depende del tamano, color, cantidad, de si se requieren muestras y del calendario actual de produccion. Los tamanos estandar suelen organizarse con mas facilidad. Los colores especiales, las estructuras especiales o los pedidos con varios estilos pueden requerir mas tiempo y deben confirmarse segun el proyecto real. Siempre es mejor compartir el objetivo de tiempo durante la etapa de cotizacion para poder evaluar juntos el plan de entrega.',
+      question: '¿Cómo se define normalmente el plazo de entrega?',
+      answer: 'El plazo depende del tamaño, color, cantidad, de si se requieren muestras y del calendario actual de producción. Los tamaños estándar suelen organizarse con más facilidad. Los colores especiales, las estructuras especiales o los pedidos con varios estilos pueden requerir más tiempo y deben confirmarse según el proyecto real. Siempre es mejor compartir el objetivo de tiempo durante la etapa de cotización para poder evaluar juntos el plan de entrega.',
     },
     {
-      question: 'Como debe confirmarse normalmente el color?',
-      answer: 'Si el proyecto exige mayor consistencia de color, lo ideal es proporcionar un numero de carta de color, una muestra de tejido, una muestra antigua o cualquier referencia fisica posible. El color es dificil de confirmar de forma fiable solo con una descripcion verbal, especialmente en prendas y ropa con proteccion solar. Cuanto mas completa sea la referencia de color, mas fluido suele ser el proceso de muestra y produccion.',
+      question: '¿Cómo debe confirmarse normalmente el color?',
+      answer: 'Si el proyecto exige mayor consistencia de color, lo ideal es proporcionar un número de carta de color, una muestra de tejido, una muestra antigua o cualquier referencia física posible. El color es difícil de confirmar de forma fiable solo con una descripción verbal, especialmente en prendas y ropa con protección solar. Cuanto más completa sea la referencia de color, más fluido suele ser el proceso de muestra y producción.',
     },
     {
-      question: 'Podemos hablar del proyecto si la especificacion aun no esta totalmente clara?',
-      answer: 'Si. Muchos proyectos no empiezan con una lista completa de tamanos y estructuras. Puede comenzar con una foto de muestra, una muestra antigua, el tipo de producto, la posicion de uso o una cantidad estimada, y nosotros podemos ayudarle a reducir la seleccion entre opciones metalicas, de resina y de nylon dentro de los tamanos comunes 3, 5 y 8.',
+      question: '¿Podemos hablar del proyecto si la especificación aún no está totalmente clara?',
+      answer: 'Si. Muchos proyectos no empiezan con una lista completa de tamaños y estructuras. Puede comenzar con una foto de muestra, una muestra antigua, el tipo de producto, la posición de uso o una cantidad estimada, y nosotros podemos ayudarle a reducir la selección entre opciones metálicas, de resina y de nylon dentro de los tamaños comunes 3, 5 y 8.',
     },
     {
-      question: 'Que informacion ayuda a acelerar la cotizacion?',
-      answer: 'Como minimo, es util preparar el tipo de cremallera, el tamano, la longitud, la estructura abierta o cerrada, la informacion de color, la cantidad requerida y el uso previsto. Si tambien conoce el tipo de cursor, el embalaje, el calendario de muestras o la fecha objetivo de entrega, compartirlo al mismo tiempo suele hacer mucho mas eficiente la confirmacion de solucion y la cotizacion.',
+      question: '¿Qué información ayuda a acelerar la cotización?',
+      answer: 'Como mínimo, es útil preparar el tipo de cremallera, el tamaño, la longitud, la estructura abierta o cerrada, la información de color, la cantidad requerida y el uso previsto. Si también conoce el tipo de cursor, el embalaje, el calendario de muestras o la fecha objetivo de entrega, compartirlo al mismo tiempo suele hacer mucho más eficiente la confirmación de solución y la cotización.',
     },
   ],
 } as const;

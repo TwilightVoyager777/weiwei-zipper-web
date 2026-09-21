@@ -120,57 +120,57 @@ const yiwuZipperLandingEs = {
   metadata: {
     title: 'Proveedor de cremalleras en Yiwu | Compra mayorista en Yiwu',
     description:
-      'Weiwei Zipper apoya la compra mayorista de cremalleras en Yiwu desde el Distrito 3 de Yiwu International Trade City, con cremalleras metalicas, de resina, de nylon y por rollo para prendas, bolsos y calzado.',
+      'Weiwei Zipper apoya la compra mayorista de cremalleras en Yiwu desde el Distrito 3 de Yiwu International Trade City, con cremalleras metálicas, de resina, de nylon y por rollo para prendas, bolsos y calzado.',
   },
   title: 'Proveedor de cremalleras y fuente mayorista en Yiwu',
   subtitle:
-    'Weiwei Zipper apoya a compradores que llegan a Yiwu en busca de un proveedor de cremalleras, compra al por mayor y coordinacion estable para cremalleras metalicas, de resina, de nylon y por rollo.',
+    'Weiwei Zipper apoya a compradores que llegan a Yiwu en busca de un proveedor de cremalleras, compra al por mayor y coordinación estable para cremalleras metálicas, de resina, de nylon y por rollo.',
   intro:
-    'Si esta buscando cremalleras en Yiwu, normalmente el punto clave no es solo el precio. Tambien importa si las especificaciones estan claras, si el muestreo puede avanzar con fluidez, si el suministro en volumen es estable y si las reposiciones pueden coordinarse sin demasiadas confirmaciones repetidas. Desde el Distrito 3 de Yiwu International Trade City, Weiwei Zipper se centra en soluciones practicas para prendas, bolsos, calzado y proyectos relacionados, conectando de forma mas eficiente muestreo, cotizacion y compra al por mayor.',
+    'Si está buscando cremalleras en Yiwu, normalmente el punto clave no es solo el precio. También importa si las especificaciones están claras, si el muestreo puede avanzar con fluidez, si el suministro en volumen es estable y si las reposiciones pueden coordinarse sin demasiadas confirmaciones repetidas. Desde el Distrito 3 de Yiwu International Trade City, Weiwei Zipper se centra en soluciones prácticas para prendas, bolsos, calzado y proyectos relacionados, conectando de forma más eficiente muestreo, cotización y compra al por mayor.',
   highlightsTitle: 'Por que muchos compradores en Yiwu trabajan con Weiwei Zipper',
   highlights: [
     {
-      title: 'Coordinacion directa en International Trade City',
-      description: 'Para compradores que visitan Yiwu International Trade City, confirmar tamano, color, estructura y detalles de muestras de forma directa ayuda a ahorrar tiempo.',
+      title: 'Coordinación directa en International Trade City',
+      description: 'Para compradores que visitan Yiwu International Trade City, confirmar tamaño, color, estructura y detalles de muestras de forma directa ayuda a ahorrar tiempo.',
     },
     {
-      title: 'Categorias frecuentes ya organizadas',
-      description: 'Las opciones de metal, resina, nylon y rollo ya estan organizadas alrededor de necesidades habituales, lo que facilita entrar rapidamente en medidas 3, 5 y 8.',
+      title: 'Categorías frecuentes ya organizadas',
+      description: 'Las opciones de metal, resina, nylon y rollo ya están organizadas alrededor de necesidades habituales, lo que facilita entrar rápidamente en medidas 3, 5 y 8.',
     },
     {
-      title: 'Mejor preparacion para reposiciones',
-      description: 'Cuando se confirman tamanos, colores y cursores, los mismos registros ayudan a reposiciones y suministro continuo con mayor eficiencia.',
+      title: 'Mejor preparación para reposiciones',
+      description: 'Cuando se confirman tamaños, colores y cursores, los mismos registros ayudan a reposiciones y suministro continuo con mayor eficiencia.',
     },
   ],
-  categoriesTitle: 'Direcciones de compra mas comunes',
+  categoriesTitle: 'Direcciones de compra más comunes',
   categories: [
     {
-      title: 'Cremalleras metalicas',
+      title: 'Cremalleras metálicas',
       description: 'Adecuadas para bolsos, ropa de trabajo, botas y estilos que requieren mayor textura y durabilidad.',
       href: '/products/metal-zippers',
     },
     {
       title: 'Cremalleras de resina',
-      description: 'Una opcion practica para prendas, ropa infantil, calzado y proyectos ligeros con mayor necesidad de coordinacion de color.',
+      description: 'Una opción práctica para prendas, ropa infantil, calzado y proyectos ligeros con mayor necesidad de coordinación de color.',
       href: '/products/resin-zippers',
     },
     {
       title: 'Cremalleras de nylon',
-      description: 'Muy utilizadas en prendas, bolsos y ropa con proteccion solar donde importan la suavidad y la flexibilidad.',
+      description: 'Muy utilizadas en prendas, bolsos y ropa con protección solar donde importan la suavidad y la flexibilidad.',
       href: '/products/nylon-zippers',
     },
   ],
-  checklistTitle: 'Que conviene confirmar antes de pedir cotizacion en Yiwu',
+  checklistTitle: 'Que conviene confirmar antes de pedir cotización en Yiwu',
   checklist: [
     'Tipo de material: metal, resina, nylon o rollo.',
-    'Tamano: si las medidas comunes 3, 5 u 8 son adecuadas.',
+    'Tamaño: si las medidas comunes 3, 5 u 8 son adecuadas.',
     'Estructura: cerrada, abierta, doble carro o para corte posterior.',
     'Longitud, color, cursor y cantidad estimada.',
-    'Si primero se necesita muestra, revision de color o referencia previa.',
+    'Si primero se necesita muestra, revisión de color o referencia previa.',
   ],
-  ctaTitle: 'Tiene ya muestras, imagenes de referencia o una necesidad de compra clara?',
-  ctaDescription: 'Puede compartir tamano, longitud, color, cantidad y aplicacion para que podamos confirmar la direccion adecuada y avanzar con la cotizacion.',
-  primaryCta: 'Solicitar cotizacion',
+  ctaTitle: '¿Tiene ya muestras, imágenes de referencia o una necesidad de compra clara?',
+  ctaDescription: 'Puede compartir tamaño, longitud, color, cantidad y aplicación para que podamos confirmar la dirección adecuada y avanzar con la cotización.',
+  primaryCta: 'Solicitar cotización',
   secondaryCta: 'Ver productos',
 } as const;
 
