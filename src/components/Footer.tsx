@@ -113,8 +113,7 @@ export default function Footer() {
                 <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
                   <EmailIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <div className="min-w-0">
-                    <span className="break-all sm:hidden">{brand.email}</span>
-                    <a href={`mailto:${brand.email}`} className="hidden min-h-0 break-all hover:text-white transition-colors sm:inline">
+                    <a href={`mailto:${brand.email}`} className="block min-h-0 break-all hover:text-white transition-colors">
                       {brand.email}
                     </a>
                   </div>
@@ -122,8 +121,7 @@ export default function Footer() {
                 <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
                   <PhoneIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <div className="min-w-0">
-                    <span className="break-words sm:hidden">{brand.phone}</span>
-                    <a href={`tel:${brand.phone}`} className="hidden min-h-0 break-words hover:text-white transition-colors sm:inline">
+                    <a href={`tel:${brand.phone}`} className="block min-h-0 break-words hover:text-white transition-colors">
                       {brand.phone}
                     </a>
                   </div>
@@ -131,12 +129,11 @@ export default function Footer() {
                 <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
                   <WhatsAppIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <div className="min-w-0">
-                    <span className="break-words sm:hidden">WhatsApp: {brand.whatsapp}</span>
                     <a
                       href={WHATSAPP_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hidden min-h-0 break-words hover:text-white transition-colors sm:inline"
+                      className="block min-h-0 break-words hover:text-white transition-colors"
                     >
                       WhatsApp: {brand.whatsapp}
                     </a>

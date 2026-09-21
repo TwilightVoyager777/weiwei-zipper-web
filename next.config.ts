@@ -19,16 +19,28 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   async redirects() {
-    const removedSlugs = [
-      'resin-zipper',
-      'nylon-zipper',
-      'metal-zipper',
-      'zipper-accessories',
-    ];
-    return removedSlugs.flatMap((slug) => [
-      { source: `/products/${slug}`, destination: '/', permanent: true },
-      { source: `/en/products/${slug}`, destination: '/en', permanent: true },
-      { source: `/zh/products/${slug}`, destination: '/zh', permanent: true },
+    // Retired singular category slugs, mapped to their closest live page rather
+    // than to the home page, so the landing page still answers the original
+    // intent. Keep in sync with routing.locales in src/localization/routing.ts.
+    const removedSlugs: Record<string, string> = {
+      'resin-zipper': '/products/resin-zippers',
+      'nylon-zipper': '/products/nylon-zippers',
+      'metal-zipper': '/products/metal-zippers',
+      // No direct successor; the products hub is the closest match.
+      'zipper-accessories': '/products',
+    };
+    // 'en' is the default locale and is served unprefixed, so /en/* normalises
+    // straight to the unprefixed destination instead of chaining through /en.
+    const prefixedLocales = ['zh', 'ru', 'es', 'ar'];
+
+    return Object.entries(removedSlugs).flatMap(([slug, destination]) => [
+      { source: `/products/${slug}`, destination, permanent: true },
+      { source: `/en/products/${slug}`, destination, permanent: true },
+      ...prefixedLocales.map((locale) => ({
+        source: `/${locale}/products/${slug}`,
+        destination: `/${locale}${destination}`,
+        permanent: true,
+      })),
     ]);
   },
   async headers() {

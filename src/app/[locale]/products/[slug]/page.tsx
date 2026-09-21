@@ -5,7 +5,7 @@ import ProductGallery from '@/components/ProductGallery';
 import ZoomableImage from '@/components/ZoomableImage';
 import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
 import { SITE_URL } from '@/config/site-constants';
-import { permanentRedirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import {
   ALL_PRODUCT_PAGE_SLUGS,
@@ -44,6 +44,13 @@ export function generateStaticParams() {
   return ALL_PRODUCT_PAGE_SLUGS.map((slug) => ({ slug }));
 }
 
+// Without this, an unknown slug still renders the tree: the 200 response has
+// already started streaming by the time the component calls permanentRedirect,
+// so the status code can no longer change and the URL becomes a soft 404.
+// Restricting the segment to the generated slugs makes Next.js return a real
+// 404 at the routing layer instead.
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   setRequestLocale(locale);
@@ -69,7 +76,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  return {};
+  // Unreachable while dynamicParams is false, but an empty object would make
+  // metadata fall through to the parent layout and inherit the home page's
+  // canonical, so be explicit rather than silently indexable.
+  return { robots: { index: false, follow: false } };
 }
 
 async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySlug }) {
@@ -368,19 +378,8 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
     },
     category: 'Zippers',
     url: localizedUrl(locale, `/products/${slug}`),
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'CNY',
-      price: '0',
-      priceValidUntil: '2027-12-31',
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'Yiwu Weiwei Zipper Co., Ltd.',
-      },
-      url: localizedUrl(locale, '/quote'),
-      description: ui.quoteDescription,
-    },
+    // No `offers`: this is a quote-only catalogue with no published prices.
+    // A placeholder price of 0 would misrepresent the products as free.
   };
 
   const breadcrumbSchema = {
@@ -570,5 +569,8 @@ export default async function ProductSlugPage({ params }: Props) {
     return <ProductDetailPage locale={locale} slug={slug} />;
   }
 
-  permanentRedirect(`/${locale}`);
+  // dynamicParams = false means an unknown slug never reaches this point; keep
+  // notFound() as the fallback so the response is a 404 rather than a 200 that
+  // redirects, which is what permanentRedirect produced once streaming began.
+  notFound();
 }

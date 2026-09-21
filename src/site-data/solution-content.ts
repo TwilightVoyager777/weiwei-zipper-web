@@ -2,7 +2,7 @@ import { getLocalizedContent, type AppLocale } from '@/localization/content';
 
 export const solutionsPageContent = {
   metadata: {
-    title: '解决方案 | 伟伟拉链',
+    title: '解决方案',
     description: '查看伟伟拉链围绕打样开发、批量采购与返单供货建立的拉链配套解决方案，帮助项目更顺畅进入确认、报价与交付流程。',
   },
   title: '解决方案',
@@ -50,7 +50,7 @@ export const solutionsPageContent = {
 
 const solutionsPageContentEn = {
   metadata: {
-    title: 'Solutions | Weiwei Zipper',
+    title: 'Solutions',
     description: 'Explore how Weiwei Zipper supports sampling, bulk purchasing, and repeat-order supply so projects can move more smoothly through confirmation, quotation, and delivery.',
   },
   title: 'Solutions',
@@ -98,7 +98,7 @@ const solutionsPageContentEn = {
 
 const solutionsPageContentEs = {
   metadata: {
-    title: 'Soluciones | Weiwei Zipper',
+    title: 'Soluciones',
     description: 'Descubra como Weiwei Zipper apoya el muestreo, la compra al por mayor y el suministro para reposiciones para que los proyectos avancen con mas fluidez en confirmacion, cotizacion y entrega.',
   },
   title: 'Soluciones',
@@ -146,7 +146,7 @@ const solutionsPageContentEs = {
 
 const solutionsPageContentAr = {
   metadata: {
-    title: 'الحلول | Weiwei Zipper',
+    title: 'الحلول',
     description: 'اكتشف كيف تدعم Weiwei Zipper مراحل العينات والشراء بالجملة والتوريد لإعادة الطلب بحيث تتحرك المشاريع بسلاسة أكبر في التأكيد والتسعير والتسليم.',
   },
   title: 'الحلول',
@@ -194,7 +194,7 @@ const solutionsPageContentAr = {
 
 const solutionsPageContentRu = {
   metadata: {
-    title: 'Решения | Weiwei Zipper',
+    title: 'Решения',
     description: 'Посмотрите, как Weiwei Zipper поддерживает этапы образцов, оптовых закупок и повторных поставок, чтобы проекты двигались более плавно через подтверждение, расчет цены и поставку.',
   },
   title: 'Решения',

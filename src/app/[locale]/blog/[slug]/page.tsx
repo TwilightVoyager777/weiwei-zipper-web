@@ -13,11 +13,18 @@ export function generateStaticParams() {
   return getBlogSlugs().map((slug) => ({ slug }));
 }
 
+// See the note in products/[slug]/page.tsx: without this an unknown slug is a
+// soft 404 (HTTP 200) because notFound() throws after streaming has begun.
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const post = getBlogPost(slug, locale);
-  if (!post) return {};
+  // Unreachable while dynamicParams is false; an empty object would inherit the
+  // parent layout's canonical (the locale home page) instead of staying out of
+  // the index.
+  if (!post) return { robots: { index: false, follow: false } };
 
   return {
     title: post.title,

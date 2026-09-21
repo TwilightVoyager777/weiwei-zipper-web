@@ -141,7 +141,7 @@ export type ProductItemContent = {
 
 export const productsPageContent = {
   metadata: {
-    title: '产品中心 | 伟伟拉链',
+    title: '产品中心',
     description: '查看伟伟拉链作为义乌拉链厂家提供的金属拉链、树脂拉链、尼龙拉链，以及金属码装、树脂码装、尼龙码装六大产品分类信息。',
   },
   title: '产品中心',
@@ -1115,7 +1115,7 @@ const productSpecLabelsRu: Record<ProductSpecKey, string> = {
 
 const productsPageContentEn = {
   metadata: {
-    title: 'Products | Weiwei Zipper',
+    title: 'Products',
     description: 'Explore six core product directions from Weiwei Zipper: metal zippers, resin zippers, nylon zippers, and the corresponding metal, resin, and nylon zipper rolls.',
   },
   title: 'Products',
@@ -1125,7 +1125,7 @@ const productsPageContentEn = {
 
 const productsPageContentEs = {
   metadata: {
-    title: 'Productos | Weiwei Zipper',
+    title: 'Productos',
     description: 'Explore seis direcciones principales de producto de Weiwei Zipper: cremalleras metalicas, de resina y de nylon, junto con las correspondientes cremalleras por rollo de metal, resina y nylon.',
   },
   title: 'Productos',
@@ -1135,7 +1135,7 @@ const productsPageContentEs = {
 
 const productsPageContentAr = {
   metadata: {
-    title: 'المنتجات | Weiwei Zipper',
+    title: 'المنتجات',
     description: 'استكشف ستة اتجاهات رئيسية لدى Weiwei Zipper: السحابات المعدنية والراتنجية والنايلون، إضافة إلى سحابات الرول المعدنية والراتنجية والنايلون المقابلة لها.',
   },
   title: 'المنتجات',
@@ -1145,7 +1145,7 @@ const productsPageContentAr = {
 
 const productsPageContentRu = {
   metadata: {
-    title: 'Продукция | Weiwei Zipper',
+    title: 'Продукция',
     description: 'Изучите шесть основных направлений Weiwei Zipper: металлические, смоляные и нейлоновые молнии, а также соответствующие рулонные цепочки из металла, смолы и нейлона.',
   },
   title: 'Продукция',

@@ -2,7 +2,7 @@ import { getLocalizedContent, type AppLocale } from '@/localization/content';
 
 export const faqPageContent = {
   metadata: {
-    title: '常见问题 | 伟伟拉链',
+    title: '常见问题',
     description: '查看伟伟拉链关于 3 号 / 5 号 / 8 号规格、闭口与开口、码装、打样、交期、颜色确认及报价准备的常见问题。',
   },
   title: '常见问题',
@@ -57,7 +57,7 @@ export const faqPageContent = {
 
 const faqPageContentEn = {
   metadata: {
-    title: 'FAQ | Weiwei Zipper',
+    title: 'FAQ',
     description: 'Read common questions about choosing size 3 / 5 / 8 zippers, understanding closed-end and open-end structures, ordering zipper rolls, sampling, lead time, color approval, and quotation preparation.',
   },
   title: 'FAQ',
@@ -112,7 +112,7 @@ const faqPageContentEn = {
 
 const faqPageContentEs = {
   metadata: {
-    title: 'Preguntas frecuentes | Weiwei Zipper',
+    title: 'Preguntas frecuentes',
     description: 'Revise las preguntas comunes sobre la seleccion de tamanos 3 / 5 / 8, estructuras cerradas y abiertas, cremalleras por rollo, muestreo, plazos, confirmacion de color y preparacion de cotizaciones.',
   },
   title: 'Preguntas frecuentes',
@@ -167,7 +167,7 @@ const faqPageContentEs = {
 
 const faqPageContentAr = {
   metadata: {
-    title: 'الأسئلة الشائعة | Weiwei Zipper',
+    title: 'الأسئلة الشائعة',
     description: 'اطلع على الأسئلة الشائعة حول اختيار المقاسات 3 / 5 / 8، والبنية المغلقة والمفتوحة، وسحابات الرول، والعينات، ومواعيد التسليم، وتأكيد اللون، وتحضير عروض الأسعار.',
   },
   title: 'الأسئلة الشائعة',
@@ -222,7 +222,7 @@ const faqPageContentAr = {
 
 const faqPageContentRu = {
   metadata: {
-    title: 'Частые вопросы | Weiwei Zipper',
+    title: 'Частые вопросы',
     description: 'Посмотрите частые вопросы о выборе размеров 3 / 5 / 8, разнице между разъемной и неразъемной конструкцией, рулонных молниях, образцах, сроках, подтверждении цвета и подготовке к расчету цены.',
   },
   title: 'Частые вопросы',

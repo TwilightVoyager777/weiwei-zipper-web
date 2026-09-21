@@ -2,7 +2,7 @@ import { getLocalizedContent } from '@/localization/content';
 
 const yiwuZipperLandingZh = {
   metadata: {
-    title: '义乌拉链厂家 | 义乌国际商贸城三区拉链批发 | 伟伟拉链',
+    title: '义乌拉链厂家 | 义乌国际商贸城三区拉链批发',
     description:
       '伟伟拉链长期服务义乌拉链批发与出口配套需求，位于义乌国际商贸城三区，主营金属拉链、树脂拉链、尼龙拉链及码装产品，适合服装、箱包、鞋帽项目。',
   },
@@ -60,7 +60,7 @@ const yiwuZipperLandingZh = {
 
 const yiwuZipperLandingEn = {
   metadata: {
-    title: 'Yiwu Zipper Supplier | Wholesale Zipper Source in Yiwu | Weiwei Zipper',
+    title: 'Yiwu Zipper Supplier | Wholesale Zipper Source in Yiwu',
     description:
       'Weiwei Zipper supports wholesale zipper sourcing in Yiwu from District 3 of Yiwu International Trade City, supplying metal, resin, nylon, and zipper roll products for garment, bag, and footwear projects.',
   },
@@ -118,7 +118,7 @@ const yiwuZipperLandingEn = {
 
 const yiwuZipperLandingEs = {
   metadata: {
-    title: 'Proveedor de cremalleras en Yiwu | Compra mayorista en Yiwu | Weiwei Zipper',
+    title: 'Proveedor de cremalleras en Yiwu | Compra mayorista en Yiwu',
     description:
       'Weiwei Zipper apoya la compra mayorista de cremalleras en Yiwu desde el Distrito 3 de Yiwu International Trade City, con cremalleras metalicas, de resina, de nylon y por rollo para prendas, bolsos y calzado.',
   },
@@ -176,7 +176,7 @@ const yiwuZipperLandingEs = {
 
 const yiwuZipperLandingAr = {
   metadata: {
-    title: 'مورد سحابات في ييوو | مصدر جملة للسحابات في ييوو | Weiwei Zipper',
+    title: 'مورد سحابات في ييوو | مصدر جملة للسحابات في ييوو',
     description:
       'تدعم Weiwei Zipper شراء السحابات بالجملة في ييوو من المنطقة الثالثة في مدينة ييوو التجارية الدولية، مع سحابات معدنية وراتنجية ونايلون وسحابات رول لمشاريع الملابس والحقائب والأحذية.',
   },
@@ -234,7 +234,7 @@ const yiwuZipperLandingAr = {
 
 const yiwuZipperLandingRu = {
   metadata: {
-    title: 'Поставщик молний в Иу | Оптовый источник молний в Иу | Weiwei Zipper',
+    title: 'Поставщик молний в Иу | Оптовый источник молний в Иу',
     description:
       'Weiwei Zipper поддерживает оптовые закупки молний в Иу из района 3 Yiwu International Trade City, поставляя металлические, смоляные, нейлоновые и рулонные молнии для одежды, сумок и обуви.',
   },

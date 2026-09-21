@@ -98,7 +98,7 @@ export const homeContent = {
 
 export const useCasesContent = {
   metadata: {
-    title: '应用场景 | 伟伟拉链',
+    title: '应用场景',
     description: '伟伟拉链围绕服装、箱包、鞋帽等常见成品场景，提供更稳定的金属、树脂、尼龙拉链配套方案与规格建议。',
   },
   title: '应用场景',
@@ -159,7 +159,7 @@ export const useCasesContent = {
 
 export const aboutContent = {
   metadata: {
-    title: '关于我们 | 伟伟拉链',
+    title: '关于我们',
     description: '了解伟伟拉链作为义乌拉链厂家，自 1992 年以来围绕金属、树脂、尼龙拉链建立的配套经验，以及服务服装、箱包、鞋帽客户的合作方式。',
   },
   title: '关于我们',
@@ -205,7 +205,7 @@ export const aboutContent = {
 
 export const contactContent = {
   metadata: {
-    title: '联系我们 | 伟伟拉链',
+    title: '联系我们',
     description: '通过电话、微信、WhatsApp 或邮箱联系伟伟拉链，并查看公司地址与地图定位信息。',
   },
   title: '联系我们',
@@ -224,7 +224,7 @@ export const contactContent = {
 
 export const quoteContent = {
   metadata: {
-    title: '获取报价 | 伟伟拉链',
+    title: '获取报价',
     description: '通过表单、微信、电话或 WhatsApp 向伟伟拉链提交需求，获取金属、树脂、尼龙拉链的配套建议与报价。',
   },
   title: '获取报价',
@@ -250,7 +250,7 @@ export const faqSectionIntro = {
 
 export const blogContent = {
   metadata: {
-    title: '资讯 | 伟伟拉链',
+    title: '资讯',
     description: '伟伟拉链围绕 3 号 / 5 号 / 8 号规格选择、闭口与开口结构、询盘准备及采购沟通整理的实用文章。',
   },
   title: '资讯',
@@ -637,7 +637,7 @@ const homeContentRu = {
 
 const useCasesContentEn = {
   metadata: {
-    title: 'Applications | Weiwei Zipper',
+    title: 'Applications',
     description: 'Weiwei Zipper supports garments, bags, and footwear projects with more stable metal, resin, and nylon zipper options and sizing guidance.',
   },
   title: 'Applications',
@@ -698,7 +698,7 @@ const useCasesContentEn = {
 
 const useCasesContentEs = {
   metadata: {
-    title: 'Aplicaciones | Weiwei Zipper',
+    title: 'Aplicaciones',
     description: 'Weiwei Zipper apoya proyectos de prendas, bolsos y calzado con opciones mas estables de cremalleras metalicas, de resina y de nylon, junto con orientacion sobre tamanos.',
   },
   title: 'Aplicaciones',
@@ -759,7 +759,7 @@ const useCasesContentEs = {
 
 const useCasesContentAr = {
   metadata: {
-    title: 'الاستخدامات | Weiwei Zipper',
+    title: 'الاستخدامات',
     description: 'تدعم Weiwei Zipper مشاريع الملابس والحقائب والأحذية بخيارات أكثر استقرارا من السحابات المعدنية والراتنجية والنايلون مع إرشاد أوضح لاختيار المقاسات.',
   },
   title: 'الاستخدامات',
@@ -820,7 +820,7 @@ const useCasesContentAr = {
 
 const useCasesContentRu = {
   metadata: {
-    title: 'Применение | Weiwei Zipper',
+    title: 'Применение',
     description: 'Weiwei Zipper поддерживает проекты в одежде, сумках и обуви, предлагая более стабильные металлические, смоляные и нейлоновые молнии и понятные рекомендации по размерам.',
   },
   title: 'Применение',
@@ -881,7 +881,7 @@ const useCasesContentRu = {
 
 const aboutContentEn = {
   metadata: {
-    title: 'About Us | Weiwei Zipper',
+    title: 'About Us',
     description: 'Learn how Weiwei Zipper has supported metal, resin, and nylon zipper projects since 1992 from Yiwu International Trade City, serving garment, bag, and footwear customers.',
   },
   title: 'About Us',
@@ -927,7 +927,7 @@ const aboutContentEn = {
 
 const aboutContentEs = {
   metadata: {
-    title: 'Nosotros | Weiwei Zipper',
+    title: 'Nosotros',
     description: 'Descubra como Weiwei Zipper ha apoyado proyectos de cremalleras metalicas, de resina y de nylon desde 1992 desde el Distrito 3 de Yiwu International Trade City, sirviendo a clientes de prendas, bolsos y calzado.',
   },
   title: 'Nosotros',
@@ -973,7 +973,7 @@ const aboutContentEs = {
 
 const aboutContentAr = {
   metadata: {
-    title: 'من نحن | Weiwei Zipper',
+    title: 'من نحن',
     description: 'تعرف على كيفية دعم Weiwei Zipper لمشاريع السحابات المعدنية والراتنجية والنايلون منذ عام 1992 من المنطقة الثالثة في مدينة ييوو التجارية الدولية، مع خدمة عملاء الملابس والحقائب والأحذية.',
   },
   title: 'من نحن',
@@ -1019,7 +1019,7 @@ const aboutContentAr = {
 
 const aboutContentRu = {
   metadata: {
-    title: 'О нас | Weiwei Zipper',
+    title: 'О нас',
     description: 'Узнайте, как Weiwei Zipper с 1992 года поддерживает проекты по металлическим, смоляным и нейлоновым молниям из района 3 Yiwu International Trade City для клиентов в одежде, сумках и обуви.',
   },
   title: 'О нас',
@@ -1065,7 +1065,7 @@ const aboutContentRu = {
 
 const contactContentEn = {
   metadata: {
-    title: 'Contact Us | Weiwei Zipper',
+    title: 'Contact Us',
     description: 'Contact Weiwei Zipper by phone, WeChat, WhatsApp, or email, and view the company address and map location.',
   },
   title: 'Contact Us',
@@ -1084,7 +1084,7 @@ const contactContentEn = {
 
 const contactContentEs = {
   metadata: {
-    title: 'Contacto | Weiwei Zipper',
+    title: 'Contacto',
     description: 'Contacte con Weiwei Zipper por telefono, WeChat, WhatsApp o correo electronico y consulte la direccion de la empresa y la ubicacion en el mapa.',
   },
   title: 'Contacto',
@@ -1103,7 +1103,7 @@ const contactContentEs = {
 
 const contactContentAr = {
   metadata: {
-    title: 'اتصل بنا | Weiwei Zipper',
+    title: 'اتصل بنا',
     description: 'تواصل مع Weiwei Zipper عبر الهاتف أو WeChat أو WhatsApp أو البريد الإلكتروني، واطلع على عنوان الشركة وموقعها على الخريطة.',
   },
   title: 'اتصل بنا',
@@ -1122,7 +1122,7 @@ const contactContentAr = {
 
 const contactContentRu = {
   metadata: {
-    title: 'Контакты | Weiwei Zipper',
+    title: 'Контакты',
     description: 'Свяжитесь с Weiwei Zipper по телефону, WeChat, WhatsApp или электронной почте, а также ознакомьтесь с адресом компании и расположением на карте.',
   },
   title: 'Контакты',
@@ -1141,7 +1141,7 @@ const contactContentRu = {
 
 const quoteContentEn = {
   metadata: {
-    title: 'Get Quote | Weiwei Zipper',
+    title: 'Get Quote',
   description: 'Submit your inquiry to Weiwei Zipper by form, WeChat, phone, or WhatsApp to receive suggestions and quotations for metal, resin, and nylon zippers.',
   },
   title: 'Get Quote',
@@ -1154,7 +1154,7 @@ const quoteContentEn = {
 
 const quoteContentEs = {
   metadata: {
-    title: 'Solicitar cotizacion | Weiwei Zipper',
+    title: 'Solicitar cotizacion',
     description: 'Envie su consulta a Weiwei Zipper por formulario, WeChat, telefono o WhatsApp para recibir recomendaciones y cotizaciones de cremalleras metalicas, de resina y de nylon.',
   },
   title: 'Solicitar cotizacion',
@@ -1167,7 +1167,7 @@ const quoteContentEs = {
 
 const quoteContentAr = {
   metadata: {
-    title: 'طلب عرض سعر | Weiwei Zipper',
+    title: 'طلب عرض سعر',
     description: 'أرسل استفسارك إلى Weiwei Zipper عبر النموذج أو WeChat أو الهاتف أو WhatsApp للحصول على اقتراحات وتسعير للسحابات المعدنية والراتنجية والنايلون.',
   },
   title: 'طلب عرض سعر',
@@ -1180,7 +1180,7 @@ const quoteContentAr = {
 
 const quoteContentRu = {
   metadata: {
-    title: 'Запросить цену | Weiwei Zipper',
+    title: 'Запросить цену',
     description: 'Отправьте запрос в Weiwei Zipper через форму, WeChat, телефон или WhatsApp, чтобы получить рекомендации и расчет цены по металлическим, смоляным и нейлоновым молниям.',
   },
   title: 'Запросить цену',
@@ -1245,7 +1245,7 @@ const faqSectionIntroRu = {
 
 const blogContentEn = {
   metadata: {
-    title: 'Insights | Weiwei Zipper',
+    title: 'Insights',
     description: 'Practical articles from Weiwei Zipper on choosing size 3 / 5 / 8 zippers, understanding closed-end and open-end structures, preparing inquiries, and improving purchasing communication.',
   },
   title: 'Insights',
@@ -1275,7 +1275,7 @@ const blogContentEn = {
 
 const blogContentEs = {
   metadata: {
-    title: 'Articulos | Weiwei Zipper',
+    title: 'Articulos',
     description: 'Articulos practicos de Weiwei Zipper sobre la seleccion de tamanos 3 / 5 / 8, estructuras abiertas y cerradas, preparacion de consultas y mejora de la comunicacion de compra.',
   },
   title: 'Articulos',
@@ -1305,7 +1305,7 @@ const blogContentEs = {
 
 const blogContentAr = {
   metadata: {
-    title: 'المقالات | Weiwei Zipper',
+    title: 'المقالات',
     description: 'محتوى عملي من Weiwei Zipper حول اختيار مقاسات 3 / 5 / 8، وفهم البنية المفتوحة والمغلقة، وتحضير الاستفسارات وتحسين تواصل الشراء.',
   },
   title: 'المقالات',
@@ -1335,7 +1335,7 @@ const blogContentAr = {
 
 const blogContentRu = {
   metadata: {
-    title: 'Статьи | Weiwei Zipper',
+    title: 'Статьи',
     description: 'Практические статьи от Weiwei Zipper о выборе размеров 3 / 5 / 8, различии между разъемными и неразъемными молниями, подготовке запросов и улучшении закупочной коммуникации.',
   },
   title: 'Статьи',
