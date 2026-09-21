@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { alternatesForPath } from '@/seo/localized-urls';
 import { getFaqPageContent } from '@/site-data/faq-content';
 import type { Metadata } from 'next';
@@ -6,6 +7,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const faqPageContent = getFaqPageContent(locale);
   return {
     title: faqPageContent.metadata.title,
@@ -16,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function FAQPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const faqPageContent = getFaqPageContent(locale);
   const faqSchema = {
     '@context': 'https://schema.org',

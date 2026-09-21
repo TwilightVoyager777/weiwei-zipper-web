@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import { getAllBlogPosts } from '@/site-data/blog-posts';
@@ -8,6 +9,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const blogContent = getBlogContent(locale);
   return {
     title: blogContent.metadata.title,
@@ -18,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const blogContent = getBlogContent(locale);
   const posts = getAllBlogPosts(locale);
   const yiwuLanding = locale === 'zh'

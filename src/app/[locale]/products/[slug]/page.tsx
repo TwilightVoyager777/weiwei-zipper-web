@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import ProductGallery from '@/components/ProductGallery';
 import ZoomableImage from '@/components/ZoomableImage';
@@ -46,6 +46,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const categoryContent = getCategoryContent(locale);
   const productItems = getProductItems(locale);
 
@@ -559,6 +560,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
 
 export default async function ProductSlugPage({ params }: Props) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
 
   if (isCategorySlug(slug)) {
     return <CategoryPage locale={locale} slug={slug} />;

@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import { getBlogPost, getBlogSlugs } from '@/site-data/blog-posts';
@@ -14,6 +15,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const post = getBlogPost(slug, locale);
   if (!post) return {};
 
@@ -26,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogArticlePage({ params }: Props) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const blogContent = getBlogContent(locale);
   const post = getBlogPost(slug, locale);
   if (!post) notFound();

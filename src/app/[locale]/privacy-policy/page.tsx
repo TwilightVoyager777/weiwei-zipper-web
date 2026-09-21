@@ -1,5 +1,5 @@
 import { COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/config/site-constants';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { getSiteBrand } from '@/site-data/site-content';
 import { alternatesForPath } from '@/seo/localized-urls';
 import type { Metadata } from 'next';
@@ -24,6 +24,7 @@ type PrivacyPolicyMessages = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'PrivacyPolicy.meta' });
   return {
     title: t('title'),
@@ -34,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PrivacyPolicyPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = await getMessages({ locale });
   const content = messages.PrivacyPolicy as PrivacyPolicyMessages;
   const companyName = locale === 'zh' ? COMPANY_NAME_ZH : COMPANY_NAME_EN;

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import {
@@ -37,6 +37,7 @@ const mapOpenUrl =
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const contactContent = getContactContent(locale);
   return {
     title: contactContent.metadata.title,
@@ -47,6 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations('ContactPage');
   const contactContent = getContactContent(locale);
   const siteBrand = getSiteBrand(locale);

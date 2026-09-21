@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
@@ -8,6 +9,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const aboutContent = getAboutContent(locale);
   return {
     title: aboutContent.metadata.title,
@@ -18,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const aboutContent = getAboutContent(locale);
   const socialContent = locale === 'zh'
     ? {

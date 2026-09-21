@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import { alternatesForPath } from '@/seo/localized-urls';
 import { getUseCasesContent } from '@/site-data/site-content';
@@ -8,6 +9,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const useCasesContent = getUseCasesContent(locale);
   return {
     title: useCasesContent.metadata.title,
@@ -18,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function IndustriesPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const useCasesContent = getUseCasesContent(locale);
 
   return (

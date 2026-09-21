@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/localization/routing';
 import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/config/site-constants';
 import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
@@ -46,6 +46,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
+  setRequestLocale(locale);
   const homeContent = getHomeContent(locale);
   const siteBrand = getSiteBrand(locale);
   const defaultTitle = homeContent.metadata.title;
@@ -199,6 +200,7 @@ function StructuredData({ locale }: { locale: string }) {
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
 
   // Validate locale
   if (!routing.locales.includes(locale as Locale)) {
