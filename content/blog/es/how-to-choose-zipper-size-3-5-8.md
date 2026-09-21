@@ -1,5 +1,5 @@
 ---
-title: "Como elegir cremalleras tamaño 3, 5 u 8"
+title: "Cómo elegir cremalleras tamaño 3, 5 u 8"
 excerpt: "Los tamaños 3, 5 y 8 se adaptan a distintos proyectos de prendas, bolsos y accesorios. La elección correcta depende de la posición de uso, el material y el nivel de resistencia requerido."
 date: "2026-03-06"
 author: "Weiwei Zipper"
@@ -9,7 +9,7 @@ readTime: 6
 
 Elegir el tamaño correcto de la cremallera suele ser el primer paso para definir una dirección de compra más práctica. En la mayoría de los proyectos habituales, la conversación comienza con el tamaño 3, el tamaño 5 o el tamaño 8.
 
-La respuesta correcta depende menos de la teoría y más de donde se va a usar la cremallera, con que frecuencia se abrira y cerrara, y que tipo de producto terminado necesita soportar.
+La respuesta correcta depende menos de la teoría y más de dónde se va a usar la cremallera, con qué frecuencia se abrirá y cerrará, y qué tipo de producto terminado necesita soportar.
 
 ## Cuando el tamaño 3 suele ser la opción adecuada
 
@@ -59,7 +59,7 @@ En este tipo de proyectos normalmente se pone más énfasis en la durabilidad, l
 
 Incluso después de elegir de forma aproximada el tamaño, todavía hay varios detalles que afectan la recomendación final:
 
-* dirección de cremallera metálica, de resina o de nylon
+* dirección de [cremallera metálica](/products/metal-zipper-3-5-8), [de resina](/products/resin-zipper-3-5-8) o [de nylon](/products/nylon-zipper-3-5-8)
 * estructura abierta o cerrada
 * longitud requerida
 * estilo del cursor

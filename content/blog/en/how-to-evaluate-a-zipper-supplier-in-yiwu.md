@@ -13,7 +13,7 @@ Those points matter, but if your goal is to find a supplier for long-term garmen
 
 ## 1. Check what the supplier handles consistently
 
-A supplier that works with metal, resin, and nylon zippers on a long-term basis is very different from a trader who only assembles temporary stock.
+A supplier that works with [metal, resin, and nylon zippers](/products) on a long-term basis is very different from a trader who only assembles temporary stock.
 
 Long-term specialization usually means:
 
@@ -28,7 +28,7 @@ If most of your projects use size 3, 5, or 8, then you should confirm:
 
 * whether these sizes are handled regularly
 * whether closed-end, open-end, and two-way structures are all familiar
-* whether both finished zippers and zipper rolls can be supported
+* whether both finished zippers and [zipper rolls](/products/nylon-zipper-rolls) can be supported
 
 This affects how smoothly later sampling and replenishment can move.
 
@@ -58,6 +58,6 @@ then their recommendations are more likely to fit real projects.
 
 ## Conclusion
 
-When evaluating a zipper supplier in District 3 of Yiwu International Trade City, price should not be the only filter.
+When evaluating a [zipper supplier in District 3 of Yiwu International Trade City](/yiwu-zipper-supplier), price should not be the only filter.
 
 It is usually more valuable to check whether the supplier works with zippers consistently, understands common specifications, supports efficient sample confirmation, and can keep later repeat orders moving with stability.

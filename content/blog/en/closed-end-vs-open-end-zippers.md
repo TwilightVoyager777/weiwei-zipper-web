@@ -13,7 +13,7 @@ This is a practical decision. It affects how the finished product opens, how the
 
 ## What a closed-end zipper is
 
-A closed-end zipper has a fixed bottom. The two sides remain connected even when the zipper is fully opened.
+A [closed-end zipper](/products/metal-no-5-closed-end-zipper) has a fixed bottom. The two sides remain connected even when the zipper is fully opened.
 
 Closed-end zippers are commonly used for:
 
@@ -27,7 +27,7 @@ If the product does not need to separate completely, a closed-end zipper is ofte
 
 ## What an open-end zipper is
 
-An open-end zipper can separate fully at the bottom. This structure is commonly used when the finished product needs to open completely.
+An [open-end zipper](/products/metal-no-5-open-end-zipper) can separate fully at the bottom. This structure is commonly used when the finished product needs to open completely.
 
 Open-end zippers are often used for:
 
@@ -60,7 +60,7 @@ If the answer is no, closed-end is often more suitable.
 
 If the answer is yes, open-end is usually required.
 
-From there, length, size, slider style, and material direction can be confirmed more accurately.
+From there, length, size, slider style, and [material direction](/products) can be confirmed more accurately.
 
 ## Garments and bags often differ here
 

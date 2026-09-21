@@ -59,7 +59,7 @@ Projects in this range usually place more emphasis on durability, strength, and 
 
 Even after the size is roughly selected, there are still several details that affect the final recommendation:
 
-* metal, resin, or nylon zipper direction
+* [metal](/products/metal-zipper-3-5-8), [resin](/products/resin-zipper-3-5-8), or [nylon](/products/nylon-zipper-3-5-8) zipper direction
 * open-end or closed-end structure
 * required length
 * slider style

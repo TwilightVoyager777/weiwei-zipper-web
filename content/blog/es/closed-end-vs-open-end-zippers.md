@@ -13,7 +13,7 @@ Es una decisión práctica. Afecta la forma en que se abre el producto terminado
 
 ## Que es una cremallera cerrada
 
-Una cremallera cerrada tiene una base fija. Los dos lados permanecen unidos incluso cuando la cremallera esta completamente abierta.
+Una [cremallera cerrada](/products/metal-no-5-closed-end-zipper) tiene una base fija. Los dos lados permanecen unidos incluso cuando la cremallera esta completamente abierta.
 
 Las cremalleras cerradas se usan con frecuencia en:
 
@@ -27,7 +27,7 @@ Si el producto no necesita separarse por completo, la cremallera cerrada suele s
 
 ## Que es una cremallera abierta
 
-Una cremallera abierta puede separarse totalmente en la parte inferior. Esta estructura se utiliza con frecuencia cuando el producto terminado necesita abrirse por completo.
+Una [cremallera abierta](/products/metal-no-5-open-end-zipper) puede separarse totalmente en la parte inferior. Esta estructura se utiliza con frecuencia cuando el producto terminado necesita abrirse por completo.
 
 Las cremalleras abiertas suelen utilizarse en:
 
@@ -60,7 +60,7 @@ Si la respuesta es no, la opción cerrada suele ser la más adecuada.
 
 Si la respuesta es si, normalmente se requiere una cremallera abierta.
 
-A partir de ahí, la longitud, el tamaño, el estilo del cursor y la dirección del material pueden confirmarse con mayor precisión.
+A partir de ahí, la longitud, el tamaño, el estilo del cursor y la [dirección del material](/products) pueden confirmarse con mayor precisión.
 
 ## Prendas y bolsos suelen diferir en este punto
 
@@ -72,7 +72,7 @@ Por eso el mismo proyecto puede utilizar más de una estructura de cremallera en
 
 ## Si no está seguro, envie una referencia
 
-Muchos clientes no empiezan con los terminos técnicos. Eso es completamente normal.
+Muchos clientes no empiezan con los términos técnicos. Eso es completamente normal.
 
 Una muestra anterior, una foto de la prenda, una imagen del producto o incluso una referencia marcada suele ser suficiente para identificar si la estructura cerrada o abierta es más adecuada.
 

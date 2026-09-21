@@ -15,9 +15,9 @@ readTime: 6
 
 伟伟拉链当前主推三类：
 
-* 金属拉链
-* 树脂拉链
-* 尼龙拉链
+* [金属拉链](/products/metal-zippers)
+* [树脂拉链](/products/resin-zippers)
+* [尼龙拉链](/products/nylon-zippers)
 
 如果你暂时还没确定到底更适合哪一类，也可以先告诉我们它是用于服装、箱包还是鞋帽，以及具体用在什么位置。仅凭这一点，通常就能先缩小方向。
 

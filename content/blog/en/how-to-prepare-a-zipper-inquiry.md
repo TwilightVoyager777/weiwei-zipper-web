@@ -15,9 +15,9 @@ If the basic details are clear early, sampling, quotation, and bulk discussion a
 
 Weiwei Zipper currently focuses on:
 
-* Metal zippers
-* Resin zippers
-* Nylon zippers
+* [Metal zippers](/products/metal-zippers)
+* [Resin zippers](/products/resin-zippers)
+* [Nylon zippers](/products/nylon-zippers)
 
 If you are not sure which one fits your project yet, start with the end use. Tell us whether the product is for garments, bags, or footwear accessories, and where the zipper will be used.
 

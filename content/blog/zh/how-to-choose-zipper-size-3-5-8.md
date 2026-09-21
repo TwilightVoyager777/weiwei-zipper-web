@@ -59,7 +59,7 @@ readTime: 6
 
 即使初步确定了 3 号、5 号或 8 号，后面通常还要一起看下面这些因素：
 
-* 金属、树脂还是尼龙
+* [金属](/products/metal-zipper-3-5-8)、[树脂](/products/resin-zipper-3-5-8)还是[尼龙](/products/nylon-zipper-3-5-8)
 * 开口还是闭口
 * 长度要求
 * 拉头方式
