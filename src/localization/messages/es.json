@@ -2,7 +2,7 @@
   "Header": {
     "tagline": "Cremalleras metálicas, de resina y de nylon en tamaños 3 / 5 / 8",
     "viewAllProducts": "Ver todos los productos →",
-    "menuAria": "Abrir o cerrar menu",
+    "menuAria": "Abrir o cerrar menú",
     "productsAria": "Abrir o cerrar categorías de producto",
     "mainNavigation": "Navegación principal",
     "mobileNavigation": "Navegación móvil",
@@ -135,26 +135,26 @@
     },
     "changes": {
       "title": "Cambios en esta política",
-      "paragraph": "Podemos actualizar esta política para reflejar cambios del negocio o requisitos legales. Las actualizaciones se publicaran aquí con una nueva fecha. Recomendamos revisarla periódicamente."
+      "paragraph": "Podemos actualizar esta política para reflejar cambios del negocio o requisitos legales. Las actualizaciones se publicarán aquí con una nueva fecha. Recomendamos revisarla periódicamente."
     },
     "contact": {
-      "title": "Contactenos",
-      "intro": "Para consultas relacionadas con privacidad, respondemos dentro de dos días habiles.",
+      "title": "Contáctenos",
+      "intro": "Para consultas relacionadas con privacidad, respondemos dentro de dos días hábiles.",
       "emailLabel": "Correo electrónico: ",
       "addressLabel": "Dirección: "
     }
   },
   "TermsOfService": {
     "meta": {
-      "title": "Terminos del servicio",
-      "description": "Terminos del servicio de Weiwei Zipper. Conozca las condiciones de uso del sitio, la información de producto, la propiedad intelectual y las condiciones de transacción."
+      "title": "Términos del servicio",
+      "description": "Términos del servicio de Weiwei Zipper. Conozca las condiciones de uso del sitio, la información de producto, la propiedad intelectual y las condiciones de transacción."
     },
-    "title": "Terminos del servicio",
+    "title": "Términos del servicio",
     "lastUpdated": "Última actualización: enero de 2026",
     "acceptance": {
-      "title": "Aceptación de los terminos",
+      "title": "Aceptación de los términos",
       "paragraph1": "Bienvenido al sitio web de {companyName}.",
-      "paragraph2": "Al utilizar este sitio, usted acepta estos terminos. Si no esta de acuerdo, deje de utilizar el sitio. Podemos actualizar estos terminos en cualquier momento y entraran en vigor desde su publicación."
+      "paragraph2": "Al utilizar este sitio, usted acepta estos términos. Si no está de acuerdo, deje de utilizar el sitio. Podemos actualizar estos términos en cualquier momento y entrarán en vigor desde su publicación."
     },
     "termsOfUse": {
       "title": "Condiciones de uso",
@@ -173,7 +173,7 @@
       "items": [
         "Las imágenes de producto son solo de referencia; las páginas actuales se centran en la comunicación de categoría y tamaño",
         "Todas las cotizaciones son preliminares; el precio final se rige por el contrato firmado o la factura proforma",
-        "Las cotizaciones suelen ser validas durante 30 días salvo indicación escrita en contrario"
+        "Las cotizaciones suelen ser válidas durante 30 días salvo indicación escrita en contrario"
       ]
     },
     "orders": {
@@ -235,7 +235,7 @@
     },
     "governingLaw": {
       "title": "Ley aplicable y disputas",
-      "paragraph": "Estos terminos se rigen por las leyes de la República Popular China.",
+      "paragraph": "Estos términos se rigen por las leyes de la República Popular China.",
       "stepsTitle": "Pasos para la resolución de disputas",
       "steps": [
         "Negociación amistosa entre las partes",
@@ -244,8 +244,8 @@
       ]
     },
     "contact": {
-      "title": "Contactenos",
-      "intro": "Para preguntas sobre estos terminos, respondemos dentro de dos días habiles.",
+      "title": "Contáctenos",
+      "intro": "Para preguntas sobre estos términos, respondemos dentro de dos días hábiles.",
       "emailLabel": "Correo electrónico: ",
       "addressLabel": "Dirección: "
     }

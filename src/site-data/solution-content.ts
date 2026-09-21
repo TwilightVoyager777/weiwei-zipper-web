@@ -111,7 +111,7 @@ const solutionsPageContentEs = {
       imagePath: '/products/fsf.png',
       imageAlt: 'Visual de detalle de producto de cremallera',
       description: 'Ayudamos a los clientes a confirmar más rápidamente la dirección adecuada de material, tamaño y estructura durante el desarrollo de nuevos proyectos y la preparación de muestras.',
-      detail: 'En la fase de desarrollo, la clave no suele ser solo si la cremallera puede fabricarse, sino si los parametros básicos pueden definirse a tiempo: material, tamaño, estructura, longitud y color. En torno a las aplicaciones comunes de prendas, bolsos y calzado, y especialmente alrededor de la demanda en tamaños 3, 5 y 8, Weiwei Zipper ayuda a reducir más rápidamente la dirección práctica para que el proyecto avance con mayor fluidez hacia el muestreo y la cotización.',
+      detail: 'En la fase de desarrollo, la clave no suele ser solo si la cremallera puede fabricarse, sino si los parámetros básicos pueden definirse a tiempo: material, tamaño, estructura, longitud y color. En torno a las aplicaciones comunes de prendas, bolsos y calzado, y especialmente alrededor de la demanda en tamaños 3, 5 y 8, Weiwei Zipper ayuda a reducir más rápidamente la dirección práctica para que el proyecto avance con mayor fluidez hacia el muestreo y la cotización.',
       points: ['La dirección puede evaluarse a partir de fotos de muestra, referencias antiguas o notas básicas de especificación', 'Las sugerencias pueden reducirse alrededor de soluciones comunes de metal, resina y nylon', 'La estructura puede discutirse según apertura frontal, bolsillo, compartimento principal o posición accesoria', 'Ayuda a acortar el camino entre el primer contacto y la confirmación de la muestra'],
     },
     {

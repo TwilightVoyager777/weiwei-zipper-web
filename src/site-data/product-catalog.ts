@@ -996,7 +996,7 @@ const productDetailLabelsEn = {
 
 const productDetailLabelsEs = {
   overview: 'Resumen del producto',
-  features: 'Caracteristicas clave',
+  features: 'Características clave',
   specifications: 'Especificaciones',
   property: 'Elemento',
   value: 'Detalles',
@@ -1405,9 +1405,48 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
 
 const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
   metalZippers: {
-    ...categoryContentEn.metalZippers,
+    key: 'metalZippers',
+    slug: 'metal-zippers',
+    featureImage: '/products/metal/metal-feature-poster.webp',
     name: 'Cremalleras metálicas',
     description: 'Más adecuadas para bolsos, calzado, ropa de trabajo y estilos que requieren mayor textura y durabilidad, normalmente dentro de los tamaños 3 / 5 / 8.',
+    overview: 'Las cremalleras metálicas resultan más adecuadas para aplicaciones que dan importancia a la durabilidad y a la textura visual. Weiwei Zipper trabaja principalmente los tamaños comunes 3, 5 y 8 en esta categoría, lo que las hace útiles para bolsos, ropa de trabajo, botas y proyectos que necesitan una presencia decorativa más marcada y una reutilización prolongada.',
+    keyFeatures: ['Apariencia decorativa y textura visual más marcadas', 'Más adecuadas para escenarios de uso duradero', 'Se pueden combinar con distintos estilos de cursor para obtener más variación de estilo', 'Adecuadas para estilos fijos con potencial de pedidos recurrentes'],
+    applications: {
+      title: 'Soluciones típicas',
+      items: [
+        {
+          title: 'Cremalleras para bolsillos de bolsos',
+          description: 'Adecuadas para proyectos de bolsos que requieren mayor resistencia a la abrasión y una sensación de herraje más marcada, con el tamaño y la estructura confirmados según se trate de bolsillos, compartimento principal o posiciones decorativas.',
+        },
+        {
+          title: 'Cremalleras para chaquetas de ropa de trabajo',
+          description: 'Más adecuadas para estilos de ropa de trabajo que dan importancia a la apariencia y a la resistencia, habitualmente con configuraciones de tamaño 5 / 8 para aperturas frontales o bolsillos.',
+        },
+        {
+          title: 'Cremalleras para accesorios de calzado',
+          description: 'Adecuadas para botas y posiciones de accesorio en calzado que necesitan una apertura y cierre estables con una apariencia metálica clara, lo que facilita coordinar el color del diente y el estilo del cursor.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Guía de selección',
+      description: 'Las cremalleras metálicas se eligen normalmente observando primero la textura del producto, la intensidad de uso y la posición de instalación, y confirmando después el color del diente, la estructura y el estilo del cursor.',
+      factors: [
+        {
+          title: 'Empiece por el uso y los requisitos de resistencia',
+          description: 'Los proyectos de bolsos, calzado y ropa de trabajo suelen prestar más atención a la resistencia a la abrasión y a la apariencia del herraje, por lo que la elección de tamaño tiende a situarse en rangos medios o mayores.',
+        },
+        {
+          title: 'Después confirme el tamaño y el color del herraje',
+          description: 'Una vez clara la posición de uso, el proyecto puede acotar el tamaño 3, 5 u 8 junto con la dirección de color de herraje más adecuada.',
+        },
+        {
+          title: 'Por último confirme el cursor y la longitud',
+          description: 'Tras confirmar el tamaño y el color del diente, el estilo de cursor, la longitud y la estructura se pueden alinear de forma más eficiente para el muestreo y la reutilización posterior.',
+        },
+      ],
+    },
     gallery: {
       title: 'Colores de dientes y acabados',
       description: 'La mayor parte de la variación de estilo en las cremalleras metálicas proviene del color de los dientes. A continuación se muestran fotos de los cuatro acabados más comunes, que pueden combinarse con colores de cinta y estilos de cursor.',
@@ -1436,9 +1475,48 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   resinZippers: {
-    ...categoryContentEn.resinZippers,
+    key: 'resinZippers',
+    slug: 'resin-zippers',
+    featureImage: '/products/resin/resin-feature-poster.webp',
     name: 'Cremalleras de resina',
     description: 'Organizadas alrededor de la demanda común de tamaños 3 / 5 / 8 para prendas, ropa infantil, calzado y otros proyectos ligeros.',
+    overview: 'Las cremalleras de resina son una de las líneas de producto principales de Weiwei Zipper y se utilizan ampliamente en prendas y proyectos de accesorios ligeros. Los tamaños comunes 3, 5 y 8 están organizados de forma que resulte más sencillo confirmar el color, la longitud y la combinación de cursor para el desarrollo, las compras por volumen y los pedidos recurrentes.',
+    keyFeatures: ['Combinación de color flexible para proyectos habituales de prenda', 'Cobertura clara de la demanda de tamaños 3 / 5 / 8', 'Se pueden atender opciones cerradas, abiertas y de doble apertura', 'Adecuadas para prendas, calzado y otros escenarios de uso más ligero'],
+    applications: {
+      title: 'Soluciones típicas',
+      items: [
+        {
+          title: 'Cremalleras para abrigos de ropa infantil',
+          description: 'Normalmente se centran en la sensación ligera, la consistencia de color y una apertura y cierre estables en el uso habitual, con soluciones de resina en tamaño 3 / 5 utilizadas a menudo para colores coordinados de serie.',
+        },
+        {
+          title: 'Cremalleras para ropa casual',
+          description: 'Adecuadas para estilos que necesitan una combinación de color equilibrada y una sensación de manejo cotidiana, definiendo después la estructura según la apertura frontal, el bolsillo o las secciones localizadas.',
+        },
+        {
+          title: 'Cremalleras para accesorios de calzado y gorras',
+          description: 'Adecuadas para proyectos que necesitan piezas de apoyo más ligeras y colores unificados, lo que facilita coordinar la longitud, la cinta y las opciones de cursor para el desarrollo y los pedidos recurrentes.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Guía de selección',
+      description: 'Las cremalleras de resina se eligen normalmente observando primero el peso del producto terminado, los requisitos de color y la posición de apertura, y confirmando después la estructura, la longitud y la combinación de cursor.',
+      factors: [
+        {
+          title: 'Empiece por el estilo y el color del producto',
+          description: 'Si el proyecto da más importancia al color unificado y a una sensación de mano más ligera, las cremalleras de resina suelen ser más fáciles de utilizar en el desarrollo repetido de series.',
+        },
+        {
+          title: 'Después decida el tamaño y la estructura',
+          description: 'A partir de las aperturas frontales, los bolsillos o las posiciones decorativas, el proyecto puede acotar el tamaño 3, 5 u 8 junto con estructuras cerradas, abiertas o de doble apertura.',
+        },
+        {
+          title: 'Confirme la longitud y el cursor al final',
+          description: 'Una vez clara la dirección de color y tamaño, la longitud, el estilo de cursor y la organización de muestras se pueden alinear de forma más eficiente.',
+        },
+      ],
+    },
     gallery: {
       title: 'Colores y estructuras',
       description: 'La flexibilidad de color es la principal fortaleza de las cremalleras de resina. A continuación, fotos de colores y estructuras comunes; la cinta y los dientes pueden teñirse según carta de colores.',
@@ -1467,9 +1545,48 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   nylonZippers: {
-    ...categoryContentEn.nylonZippers,
+    key: 'nylonZippers',
+    slug: 'nylon-zippers',
+    featureImage: '/products/nylon/nylon-feature-poster.webp',
     name: 'Cremalleras de nylon',
     description: 'Adecuadas para prendas, bolsos y ropa con protección solar, con opciones comunes en tamaños 3 / 5 / 8.',
+    overview: 'Las cremalleras de nylon equilibran la suavidad de funcionamiento, la flexibilidad y una amplia adaptabilidad, lo que las convierte en una opción de alta frecuencia en prendas, bolsos y ropa con protección solar. Weiwei Zipper organiza un suministro estable principalmente en torno a la demanda de tamaños 3, 5 y 8, de modo que los clientes puedan avanzar con más fluidez en el desarrollo rápido, las compras por volumen y los pedidos recurrentes.',
+    keyFeatures: ['Suavidad estable para aperturas y cierres frecuentes', 'Mayor flexibilidad para tejidos ligeros y estructuras de bolso más blandas', 'Amplia gama de combinación de color para el desarrollo de series', 'Adecuadas para ropa con protección solar, chaquetas y mochilas'],
+    applications: {
+      title: 'Soluciones típicas',
+      items: [
+        {
+          title: 'Cremalleras para ropa con protección solar',
+          description: 'Normalmente se centran en la sensación ligera, la suavidad de funcionamiento y la consistencia de color, con soluciones de nylon en tamaño 3 / 5 utilizadas a menudo para aperturas frontales y posiciones de bolsillo.',
+        },
+        {
+          title: 'Cremalleras para chaquetas ligeras',
+          description: 'Adecuadas para proyectos que necesitan un manejo más sencillo y un uso repetido estable, valorando estructuras abiertas o de doble apertura según el estilo de la prenda.',
+        },
+        {
+          title: 'Cremalleras para mochilas de uso diario',
+          description: 'Útiles para proyectos habituales de bolso que necesitan un equilibrio entre flexibilidad y durabilidad, lo que facilita gestionar el desarrollo coordinado y los pedidos recurrentes.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Guía de selección',
+      description: 'Las cremalleras de nylon se eligen normalmente valorando primero el grosor del tejido, la frecuencia de uso y la posición de apertura, y confirmando después el tamaño, la longitud, la estructura y la combinación de cursor.',
+      factors: [
+        {
+          title: 'Empiece por la posición de uso',
+          description: 'Las aperturas frontales, los bolsillos, las aperturas laterales y las posiciones de accesorio suelen llevar a tamaños preferidos distintos.',
+        },
+        {
+          title: 'Después valore el tejido y el peso',
+          description: 'Los tejidos más ligeros suelen adaptarse a tamaños más ligeros, mientras que los abrigos y bolsos habituales pueden partir a menudo del tamaño 5.',
+        },
+        {
+          title: 'Termine con el color y el cursor',
+          description: 'Una vez claras la consistencia de color y la sensación del cursor, el muestreo y la planificación del volumen resultan más fáciles de coordinar.',
+        },
+      ],
+    },
     gallery: {
       title: 'Colores y acabados',
       description: 'Las cremalleras de nylon son suaves, ligeras y ofrecen una amplia gama de colores. A continuación, fotos de colores y acabados comunes.',
@@ -1498,27 +1615,78 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   metalRolls: {
-    ...categoryContentEn.metalRolls,
+    key: 'metalRolls',
+    slug: 'metal-zipper-rolls',
+    featureImage: '/products/metal/brass-continuous-chain.webp',
     name: 'Cremalleras metálicas por rollo',
     description: 'Adecuadas para bolsos, calzado, ropa de trabajo y otros proyectos que utilizan cadena por rollo y la cortan según necesidad, principalmente en los tamaños 3 / 5 / 8.',
+    overview: 'Las cremalleras metálicas por rollo se utilizan principalmente para el corte posterior, el montaje del cursor y el ensamblaje del producto, por lo que resultan adecuadas para proyectos que necesitan textura metálica junto con un control de longitud más flexible. Weiwei Zipper organiza aquí los tamaños comunes 3, 5 y 8 para que el cliente pueda confirmar el color del diente, la cinta y la dirección del cursor antes de pasar al procesamiento posterior.',
+    keyFeatures: ['Suministro por rollo para facilitar el corte por lotes', 'Mantiene la textura metálica y la durabilidad', 'Adecuadas para el montaje posterior del cursor y el procesamiento del producto', 'Útiles para proyectos de bolsos, calzado y ropa de trabajo'],
   },
   resinRolls: {
-    ...categoryContentEn.resinRolls,
+    key: 'resinRolls',
+    slug: 'resin-zipper-rolls',
+    featureImage: '/products/resin/dark-continuous-chain.webp',
     name: 'Cremalleras de resina por rollo',
     description: 'Adecuadas para prendas, ropa infantil, calzado y proyectos similares que usan cadena por rollo y luego la cortan a medida, principalmente en los tamaños 3 / 5 / 8.',
+    overview: 'Las cremalleras de resina por rollo se utilizan principalmente para el corte posterior, el montaje del cursor y el procesamiento del producto, más que como cremalleras terminadas de longitud fija. Weiwei Zipper organiza aquí los tamaños comunes 3, 5 y 8 para que el cliente pueda confirmar el tipo de diente, el color y la dirección de la cinta antes de organizar el procesamiento final.',
+    keyFeatures: ['Suministro por rollo para facilitar el corte por lotes', 'Adecuadas para el montaje posterior del cursor y el procesamiento a longitud fija', 'Combinación de color flexible para el desarrollo repetido de series', 'Adecuadas para prendas, calzado y otros escenarios de uso más ligero'],
   },
   nylonRolls: {
-    ...categoryContentEn.nylonRolls,
+    key: 'nylonRolls',
+    slug: 'nylon-zipper-rolls',
+    featureImage: '/products/nylon/beige-continuous-chain.webp',
     name: 'Cremalleras de nylon por rollo',
     description: 'Adecuadas para prendas, bolsos y ropa con protección solar que usan cadena por rollo y la cortan según necesidad, equilibrando suavidad y flexibilidad de proceso.',
+    overview: 'Las cremalleras de nylon por rollo se utilizan principalmente para el corte posterior, el montaje del cursor y el procesamiento del producto, sobre todo cuando la suavidad de funcionamiento y un manejo flexible de la longitud son ambos importantes. Weiwei Zipper organiza en esta categoría los tamaños comunes 3, 5 y 8 para que el cliente pueda confirmar primero la dirección de tamaño y pasar después al muestreo o a la cotización en torno a la longitud, los cursores y los requisitos de procesamiento posterior.',
+    keyFeatures: ['Suministro por rollo para facilitar el corte a medida', 'Suavidad estable para aperturas y cierres frecuentes', 'Adecuadas para el montaje posterior del cursor y el procesamiento del producto terminado', 'Útiles para proyectos de prendas, bolsos y ropa con protección solar'],
   },
 };
 
 const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
   metalZippers: {
-    ...categoryContentEn.metalZippers,
+    key: 'metalZippers',
+    slug: 'metal-zippers',
+    featureImage: '/products/metal/metal-feature-poster.webp',
     name: 'سحابات معدنية',
     description: 'أنسب للحقائب والأحذية وملابس العمل والتصاميم التي تحتاج إلى ملمس أقوى ومتانة أعلى، وغالبا ضمن المقاسات 3 / 5 / 8.',
+    overview: 'السحابات المعدنية أنسب للاستخدامات التي تركز على المتانة والملمس البصري. وتوفر Weiwei Zipper في هذه الفئة المقاسات الشائعة 3 و5 و8 بشكل أساسي، وهو ما يجعلها مفيدة للحقائب وملابس العمل والأحذية الطويلة والمشاريع التي تحتاج إلى حضور زخرفي أقوى وإعادة استخدام على المدى الطويل.',
+    keyFeatures: ['مظهر زخرفي وملمس بصري أقوى', 'أنسب لحالات الاستخدام التي تتطلب متانة أعلى', 'يمكن تنسيقها مع أنماط سحابات مختلفة للحصول على تنوع أكبر في الأسلوب', 'مناسبة للتصاميم الثابتة التي يحتمل تكرار طلبها'],
+    applications: {
+      title: 'الحلول النموذجية',
+      items: [
+        {
+          title: 'سحابات جيوب الحقائب',
+          description: 'مناسبة لمشاريع الحقائب التي تتطلب مقاومة أعلى للاحتكاك وإحساسا أقوى بالمعدن، مع تأكيد المقاس والبنية وفق موضع الجيب أو الحيز الرئيسي أو المواضع الزخرفية.',
+        },
+        {
+          title: 'سحابات جاكيتات ملابس العمل',
+          description: 'أنسب لتصاميم ملابس العمل التي تركز على المظهر والمتانة، وغالبا ما تبنى حول المقاسات 5 / 8 للفتحات الأمامية أو الجيوب.',
+        },
+        {
+          title: 'سحابات إكسسوارات الأحذية',
+          description: 'مناسبة للأحذية الطويلة ومواضع إكسسوارات الأحذية التي تحتاج إلى فتح وإغلاق ثابت مع مظهر معدني واضح، وهو ما يسهل تنسيق لون الأسنان ونمط السحاب.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'دليل الاختيار',
+      description: 'تختار السحابات المعدنية عادة بالنظر أولا إلى ملمس المنتج وشدة الاستخدام وموضع التركيب، ثم تأكيد لون الأسنان والبنية ونمط السحاب.',
+      factors: [
+        {
+          title: 'ابدأ من حالة الاستخدام ومتطلبات المتانة',
+          description: 'تهتم مشاريع الحقائب والأحذية وملابس العمل غالبا بمقاومة الاحتكاك ومظهر المعدن، لذلك يميل اختيار المقاس عادة إلى النطاقات المتوسطة أو الأكبر.',
+        },
+        {
+          title: 'ثم أكد المقاس ولون المعدن',
+          description: 'بعد وضوح موضع الاستخدام، يمكن تضييق الاختيار بين المقاس 3 أو 5 أو 8 إلى جانب اتجاه لون المعدن الأنسب.',
+        },
+        {
+          title: 'وأخيرا أكد السحاب والطول',
+          description: 'بعد تأكيد المقاس ولون الأسنان، يمكن مواءمة نمط السحاب والطول والبنية بكفاءة أكبر من أجل العينات وإعادة الاستخدام لاحقا.',
+        },
+      ],
+    },
     gallery: {
       title: 'ألوان الأسنان واللمسات النهائية',
       description: 'يأتي معظم التنوع في أسلوب السحابات المعدنية من لون الأسنان. فيما يلي صور لأكثر أربع لمسات نهائية شيوعا، ويمكن تنسيقها جميعا مع ألوان الأشرطة وأنماط السحابات.',
@@ -1547,9 +1715,48 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   resinZippers: {
-    ...categoryContentEn.resinZippers,
+    key: 'resinZippers',
+    slug: 'resin-zippers',
+    featureImage: '/products/resin/resin-feature-poster.webp',
     name: 'سحابات راتنج',
     description: 'منظمة حول الطلب الشائع على المقاسات 3 / 5 / 8 للملابس وملابس الأطفال والأحذية والمشاريع الخفيفة الأخرى.',
+    overview: 'سحابات الراتنج من خطوط المنتجات الأساسية لدى Weiwei Zipper، وتستخدم على نطاق واسع في الملابس ومشاريع الإكسسوارات الخفيفة. وقد نظمت المقاسات الشائعة 3 و5 و8 بطريقة تسهل تأكيد اللون والطول ومطابقة السحاب في مراحل التطوير والشراء بالجملة وإعادة الطلب.',
+    keyFeatures: ['تنسيق ألوان مرن لمشاريع الملابس الاعتيادية', 'تغطية واضحة للطلب على المقاسات 3 / 5 / 8', 'يمكن دعم الخيارات المغلقة والمفتوحة والمزدوجة الفتح', 'مناسبة للملابس والأحذية وغيرها من الاستخدامات الأخف'],
+    applications: {
+      title: 'الحلول النموذجية',
+      items: [
+        {
+          title: 'سحابات ملابس الأطفال الخارجية',
+          description: 'تركز عادة على خفة الإحساس وتناسق اللون وثبات الفتح والإغلاق في الاستخدام اليومي، وتستخدم حلول الراتنج بالمقاسين 3 / 5 كثيرا في تنسيق ألوان السلاسل.',
+        },
+        {
+          title: 'سحابات الملابس الكاجوال',
+          description: 'مناسبة للتصاميم التي تحتاج إلى تنسيق لون متوازن وإحساس عملي في الاستخدام اليومي، على أن تحدد البنية لاحقا حسب الفتحة الأمامية أو الجيب أو المواضع الجزئية.',
+        },
+        {
+          title: 'سحابات إكسسوارات الأحذية والقبعات',
+          description: 'مناسبة للمشاريع التي تحتاج إلى أجزاء مساندة أخف وألوان موحدة، وهو ما يسهل تنسيق الطول والشريط وخيارات السحاب في مراحل التطوير وإعادة الطلب.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'دليل الاختيار',
+      description: 'تختار سحابات الراتنج عادة بالنظر أولا إلى وزن المنتج النهائي ومتطلبات اللون وموضع الفتح، ثم تأكيد البنية والطول ومطابقة السحاب.',
+      factors: [
+        {
+          title: 'ابدأ من أسلوب المنتج ولونه',
+          description: 'إذا كان المشروع يركز أكثر على توحيد اللون وخفة الملمس، فغالبا ما يكون استخدام سحابات الراتنج أسهل في تطوير السلاسل المتكررة.',
+        },
+        {
+          title: 'ثم حدد المقاس والبنية',
+          description: 'انطلاقا من الفتحات الأمامية أو الجيوب أو المواضع الزخرفية، يمكن للمشروع تضييق الاختيار بين المقاس 3 أو 5 أو 8 إلى جانب البنية المغلقة أو المفتوحة أو المزدوجة الفتح.',
+        },
+        {
+          title: 'أكد الطول والسحاب في النهاية',
+          description: 'بعد وضوح اتجاه اللون والمقاس، يمكن مواءمة الطول ونمط السحاب وترتيبات العينات بكفاءة أكبر.',
+        },
+      ],
+    },
     gallery: {
       title: 'الألوان والبنى',
       description: 'مرونة الألوان هي أبرز مزايا سحابات الراتنج. فيما يلي صور للألوان والبنى الشائعة، ويمكن صباغة الشريط والأسنان حسب بطاقة الألوان.',
@@ -1578,9 +1785,48 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   nylonZippers: {
-    ...categoryContentEn.nylonZippers,
+    key: 'nylonZippers',
+    slug: 'nylon-zippers',
+    featureImage: '/products/nylon/nylon-feature-poster.webp',
     name: 'سحابات نايلون',
     description: 'مناسبة للملابس والحقائب والملابس الواقية من الشمس، مع خيارات شائعة بالمقاسات 3 / 5 / 8.',
+    overview: 'توازن سحابات النايلون بين سلاسة الحركة والمرونة واتساع نطاق الاستخدام، وهو ما يجعلها خيارا متكررا في الملابس والحقائب والملابس الواقية من الشمس. وتنظم Weiwei Zipper توريدا مستقرا يدور أساسا حول الطلب على المقاسات 3 و5 و8، حتى يتمكن العملاء من التقدم بسلاسة أكبر في التطوير السريع والشراء بالجملة وإعادة الطلب.',
+    keyFeatures: ['سلاسة ثابتة في الفتح والإغلاق المتكرر', 'مرونة أفضل مع الأقمشة الخفيفة وبنى الحقائب الأكثر ليونة', 'نطاق واسع لتنسيق الألوان في تطوير السلاسل', 'مناسبة للملابس الواقية من الشمس والجاكيتات وحقائب الظهر'],
+    applications: {
+      title: 'الحلول النموذجية',
+      items: [
+        {
+          title: 'سحابات الملابس الواقية من الشمس',
+          description: 'تركز عادة على خفة الإحساس وسلاسة الحركة وتناسق اللون، وتستخدم حلول النايلون بالمقاسين 3 / 5 كثيرا في الفتحات الأمامية ومواضع الجيوب.',
+        },
+        {
+          title: 'سحابات الجاكيتات الخفيفة',
+          description: 'مناسبة للمشاريع التي تحتاج إلى تشغيل أسهل واستخدام متكرر ثابت، مع تقييم البنية المفتوحة أو المزدوجة الفتح وفق أسلوب الملبس.',
+        },
+        {
+          title: 'سحابات حقائب الظهر اليومية',
+          description: 'مفيدة لمشاريع الحقائب الاعتيادية التي تحتاج إلى توازن بين المرونة والمتانة، وهو ما يسهل إدارة التطوير المنسق وإعادة الطلب.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'دليل الاختيار',
+      description: 'تختار سحابات النايلون عادة بتقدير سماكة القماش وتكرار الاستخدام وموضع الفتح أولا، ثم تأكيد المقاس والطول والبنية ومطابقة السحاب.',
+      factors: [
+        {
+          title: 'ابدأ من موضع الاستخدام',
+          description: 'غالبا ما تؤدي الفتحات الأمامية والجيوب والفتحات الجانبية ومواضع الإكسسوارات إلى تفضيل مقاسات مختلفة.',
+        },
+        {
+          title: 'ثم قدر القماش والوزن',
+          description: 'تناسب الأقمشة الأخف عادة المقاسات الأخف، بينما يمكن للملابس الخارجية والحقائب الاعتيادية أن تبدأ غالبا من المقاس 5.',
+        },
+        {
+          title: 'اختم باللون والسحاب',
+          description: 'بعد وضوح تناسق اللون وإحساس السحاب، يصبح تنسيق العينات وجدولة الكميات أسهل.',
+        },
+      ],
+    },
     gallery: {
       title: 'الألوان واللمسات النهائية',
       description: 'سحابات النايلون سلسة وخفيفة وتوفر نطاقا واسعا من الألوان. فيما يلي صور للألوان واللمسات الشائعة.',
@@ -1609,27 +1855,78 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   metalRolls: {
-    ...categoryContentEn.metalRolls,
+    key: 'metalRolls',
+    slug: 'metal-zipper-rolls',
+    featureImage: '/products/metal/brass-continuous-chain.webp',
     name: 'سحابات معدنية بالرول',
     description: 'مناسبة للحقائب والأحذية وملابس العمل وغيرها من المشاريع التي تستخدم السلسلة بالرول ثم تقصها حسب الحاجة، وخاصة بالمقاسات 3 / 5 / 8.',
+    overview: 'تستخدم السحابات المعدنية بالرول أساسا في القص اللاحق وتركيب السحاب وتجميع المنتج، وهو ما يجعلها مناسبة للمشاريع التي تحتاج إلى ملمس معدني مع تحكم أكثر مرونة في الطول. وتنظم Weiwei Zipper هنا المقاسات الشائعة 3 و5 و8 حتى يتمكن العملاء من تأكيد لون الأسنان والشريط واتجاه السحاب قبل الانتقال إلى المعالجة اللاحقة.',
+    keyFeatures: ['توريد بالرول لتسهيل القص على دفعات', 'تحافظ على الملمس المعدني والمتانة', 'مناسبة لتركيب السحاب لاحقا ومعالجة المنتج', 'مفيدة لمشاريع الحقائب والأحذية وملابس العمل'],
   },
   resinRolls: {
-    ...categoryContentEn.resinRolls,
+    key: 'resinRolls',
+    slug: 'resin-zipper-rolls',
+    featureImage: '/products/resin/dark-continuous-chain.webp',
     name: 'سحابات راتنج بالرول',
     description: 'مناسبة للملابس وملابس الأطفال والأحذية والمشاريع المشابهة التي تستخدم السلسلة بالرول ثم تقصها حسب الحاجة، خاصة بالمقاسات 3 / 5 / 8.',
+    overview: 'تستخدم سحابات الراتنج بالرول أساسا في القص اللاحق وتركيب السحاب ومعالجة المنتج، وليس كسحابات جاهزة بطول ثابت. وتنظم Weiwei Zipper هنا المقاسات الشائعة 3 و5 و8 حتى يتمكن العملاء من تأكيد نوع الأسنان واللون واتجاه الشريط قبل ترتيب المعالجة النهائية.',
+    keyFeatures: ['توريد بالرول لتسهيل القص على دفعات', 'مناسبة لتركيب السحاب لاحقا والمعالجة بالقص حسب الطول', 'تنسيق ألوان مرن لتطوير السلاسل المتكررة', 'مناسبة للملابس والأحذية وغيرها من الاستخدامات الأخف'],
   },
   nylonRolls: {
-    ...categoryContentEn.nylonRolls,
+    key: 'nylonRolls',
+    slug: 'nylon-zipper-rolls',
+    featureImage: '/products/nylon/beige-continuous-chain.webp',
     name: 'سحابات نايلون بالرول',
     description: 'مناسبة للملابس والحقائب والملابس الواقية من الشمس التي تستخدم السلسلة بالرول وتقضيها حسب الحاجة مع توازن بين السلاسة ومرونة المعالجة.',
+    overview: 'تستخدم سحابات النايلون بالرول أساسا في القص اللاحق وتركيب السحاب ومعالجة المنتج، خاصة عندما تكون سلاسة الحركة والمرونة في التعامل مع الطول مهمتين معا. وتنظم Weiwei Zipper في هذه الفئة المقاسات الشائعة 3 و5 و8 حتى يتمكن العملاء من تأكيد اتجاه المقاس أولا، ثم الانتقال إلى العينات أو التسعير حول الطول والسحابات ومتطلبات المعالجة اللاحقة.',
+    keyFeatures: ['توريد بالرول لتسهيل القص حسب الطلب', 'سلاسة ثابتة في الفتح والإغلاق المتكرر', 'مناسبة لتركيب السحاب لاحقا ومعالجة المنتج النهائي', 'مفيدة لمشاريع الملابس والحقائب والملابس الواقية من الشمس'],
   },
 };
 
 const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
   metalZippers: {
-    ...categoryContentEn.metalZippers,
+    key: 'metalZippers',
+    slug: 'metal-zippers',
+    featureImage: '/products/metal/metal-feature-poster.webp',
     name: 'Металлические молнии',
     description: 'Лучше подходят для сумок, обуви, рабочей одежды и моделей, где важны фактура и высокая износостойкость, обычно в размерах 3 / 5 / 8.',
+    overview: 'Металлические молнии лучше подходят для применений, где важны износостойкость и фактура. В этой категории Weiwei Zipper работает главным образом с популярными размерами 3, 5 и 8, что делает их удобными для сумок, рабочей одежды, ботинок и проектов, где нужны более выраженная декоративная роль и длительное повторное использование.',
+    keyFeatures: ['Более выраженный декоративный вид и фактура', 'Лучше подходят для сценариев с высокой нагрузкой на износ', 'Можно сочетать с разными стилями бегунков для большего разнообразия стиля', 'Подходят для постоянных моделей с потенциалом повторных заказов'],
+    applications: {
+      title: 'Типовые решения',
+      items: [
+        {
+          title: 'Молнии для карманов сумок',
+          description: 'Подходят для проектов в сумках, где нужны более высокая износостойкость и выраженное ощущение фурнитуры; размер и конструкция подтверждаются по карману, основному отделению или декоративной зоне.',
+        },
+        {
+          title: 'Молнии для рабочих курток',
+          description: 'Больше подходят для моделей рабочей одежды, где важны внешний вид и прочность; обычно строятся вокруг размеров 5 / 8 для передней застежки или карманов.',
+        },
+        {
+          title: 'Молнии для обувных аксессуаров',
+          description: 'Подходят для ботинок и аксессуарных зон обуви, где нужны стабильное открывание и закрывание и четкий металлический вид, что упрощает согласование цвета зубьев и стиля бегунка.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Руководство по выбору',
+      description: 'Металлические молнии обычно подбирают, сначала оценивая фактуру изделия, интенсивность использования и место установки, а затем подтверждая цвет зубьев, конструкцию и стиль бегунка.',
+      factors: [
+        {
+          title: 'Начните со сценария использования и требований к прочности',
+          description: 'В проектах сумок, обуви и рабочей одежды чаще важнее износостойкость и вид фурнитуры, поэтому выбор размера обычно смещается в средний или больший диапазон.',
+        },
+        {
+          title: 'Затем подтвердите размер и цвет фурнитуры',
+          description: 'После того как место использования понятно, можно сузить выбор до размера 3, 5 или 8 вместе с более подходящим направлением по цвету фурнитуры.',
+        },
+        {
+          title: 'В конце подтвердите бегунок и длину',
+          description: 'После подтверждения размера и цвета зубьев стиль бегунка, длину и конструкцию проще согласовать для образцов и дальнейшего повторного использования.',
+        },
+      ],
+    },
     gallery: {
       title: 'Цвета зубьев и покрытия',
       description: 'Основное стилевое разнообразие металлических молний определяется цветом зубьев. Ниже показаны четыре самых распространенных покрытия; каждое можно дополнительно сочетать с цветом тесьмы и стилем бегунка.',
@@ -1658,9 +1955,48 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   resinZippers: {
-    ...categoryContentEn.resinZippers,
+    key: 'resinZippers',
+    slug: 'resin-zippers',
+    featureImage: '/products/resin/resin-feature-poster.webp',
     name: 'Смоляные молнии',
     description: 'Организованы вокруг распространенного спроса на размеры 3 / 5 / 8 для одежды, детских изделий, обуви и других легких проектов.',
+    overview: 'Смоляные молнии — одна из основных продуктовых линеек Weiwei Zipper, они широко используются в одежде и проектах легких аксессуаров. Популярные размеры 3, 5 и 8 организованы так, чтобы было проще подтверждать цвет, длину и подбор бегунка для разработки, оптовой закупки и повторных заказов.',
+    keyFeatures: ['Гибкий подбор цвета для типовых проектов одежды', 'Понятное покрытие спроса на размеры 3 / 5 / 8', 'Можно обеспечить неразъемные, разъемные и двухзамковые варианты', 'Подходят для одежды, обуви и других более легких сценариев использования'],
+    applications: {
+      title: 'Типовые решения',
+      items: [
+        {
+          title: 'Молнии для детской верхней одежды',
+          description: 'Обычно в фокусе легкое ощущение, единообразие цвета и стабильное открывание и закрывание в повседневном использовании; смоляные решения размеров 3 / 5 часто применяются для согласованных цветов серии.',
+        },
+        {
+          title: 'Молнии для повседневной одежды',
+          description: 'Подходят для моделей, где нужны сбалансированный подбор цвета и привычное ощущение при использовании, а конструкция уточняется по передней застежке, карману или отдельным участкам.',
+        },
+        {
+          title: 'Молнии для аксессуаров обуви и головных уборов',
+          description: 'Подходят для проектов, где нужны более легкие вспомогательные детали и единые цвета, что упрощает согласование длины, тесьмы и вариантов бегунка для разработки и повторных заказов.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Руководство по выбору',
+      description: 'Смоляные молнии обычно подбирают, сначала оценивая вес готового изделия, требования к цвету и место открывания, а затем подтверждая конструкцию, длину и подбор бегунка.',
+      factors: [
+        {
+          title: 'Начните со стиля и цвета изделия',
+          description: 'Если в проекте больше внимания уделяется единству цвета и более легкому ощущению, смоляные молнии обычно проще использовать в повторяющейся разработке серий.',
+        },
+        {
+          title: 'Затем определите размер и конструкцию',
+          description: 'Исходя из передних застежек, карманов или декоративных зон проект может сузить выбор до размера 3, 5 или 8 вместе с неразъемной, разъемной или двухзамковой конструкцией.',
+        },
+        {
+          title: 'Длину и бегунок подтвердите в последнюю очередь',
+          description: 'Когда направление по цвету и размеру понятно, длину, стиль бегунка и организацию образцов проще согласовать.',
+        },
+      ],
+    },
     gallery: {
       title: 'Цвета и конструкции',
       description: 'Гибкость по цвету — главное преимущество смоляных молний. Ниже фотографии распространенных цветов и конструкций; тесьма и зубья окрашиваются по цветовым картам.',
@@ -1689,9 +2025,48 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   nylonZippers: {
-    ...categoryContentEn.nylonZippers,
+    key: 'nylonZippers',
+    slug: 'nylon-zippers',
+    featureImage: '/products/nylon/nylon-feature-poster.webp',
     name: 'Нейлоновые молнии',
     description: 'Подходят для одежды, сумок и солнцезащитной верхней одежды, с распространенными вариантами размеров 3 / 5 / 8.',
+    overview: 'Нейлоновые молнии сочетают плавность хода, гибкость и широкую применимость, поэтому они часто выбираются для одежды, сумок и солнцезащитной верхней одежды. Weiwei Zipper организует стабильные поставки главным образом вокруг спроса на размеры 3, 5 и 8, чтобы клиентам было проще проходить быструю разработку, оптовую закупку и повторные заказы.',
+    keyFeatures: ['Стабильная плавность при частом открывании и закрывании', 'Лучшая гибкость для легких тканей и более мягких конструкций сумок', 'Широкий диапазон подбора цвета для разработки серий', 'Подходят для солнцезащитной верхней одежды, курток и рюкзаков'],
+    applications: {
+      title: 'Типовые решения',
+      items: [
+        {
+          title: 'Молнии для солнцезащитной верхней одежды',
+          description: 'Обычно в фокусе легкое ощущение, плавность хода и единообразие цвета; нейлоновые решения размеров 3 / 5 часто применяются для передних застежек и карманов.',
+        },
+        {
+          title: 'Молнии для легких курток',
+          description: 'Подходят для проектов, где нужны более простое обращение и стабильное повторное использование, а разъемные или двухзамковые конструкции оцениваются по стилю изделия.',
+        },
+        {
+          title: 'Молнии для повседневных рюкзаков',
+          description: 'Полезны для типовых проектов в сумках, где нужен баланс гибкости и износостойкости, что упрощает согласованную разработку и повторные заказы.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Руководство по выбору',
+      description: 'Нейлоновые молнии обычно подбирают, сначала оценивая толщину ткани, частоту использования и место открывания, а затем подтверждая размер, длину, конструкцию и подбор бегунка.',
+      factors: [
+        {
+          title: 'Начните с места использования',
+          description: 'Передние застежки, карманы, боковые открывания и аксессуарные зоны часто ведут к разным предпочтительным размерам.',
+        },
+        {
+          title: 'Затем оцените ткань и вес',
+          description: 'Более легким тканям часто подходят более легкие размеры, а для типовой верхней одежды и сумок нередко можно начинать с размера 5.',
+        },
+        {
+          title: 'Завершите цветом и бегунком',
+          description: 'Когда единообразие цвета и ощущение бегунка понятны, проще согласовать образцы и планирование партии.',
+        },
+      ],
+    },
     gallery: {
       title: 'Цвета и исполнения',
       description: 'Нейлоновые молнии плавные, легкие и предлагают широкую цветовую гамму. Ниже фотографии распространенных цветов и исполнений.',
@@ -1720,19 +2095,31 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     },
   },
   metalRolls: {
-    ...categoryContentEn.metalRolls,
+    key: 'metalRolls',
+    slug: 'metal-zipper-rolls',
+    featureImage: '/products/metal/brass-continuous-chain.webp',
     name: 'Металлические рулонные молнии',
     description: 'Подходят для сумок, обуви, рабочей одежды и других проектов, где цепочка используется в рулоне и режется по необходимости, главным образом в размерах 3 / 5 / 8.',
+    overview: 'Металлические рулонные молнии используются в основном для последующей нарезки, установки бегунка и сборки изделия, поэтому подходят для проектов, где нужна металлическая фактура вместе с более гибким управлением длиной. Weiwei Zipper организует здесь популярные размеры 3, 5 и 8, чтобы клиент мог подтвердить цвет зубьев, тесьму и направление по бегункам до перехода к последующей обработке.',
+    keyFeatures: ['Поставка в рулоне для удобной нарезки партиями', 'Сохраняют металлическую фактуру и износостойкость', 'Подходят для последующей установки бегунка и обработки изделия', 'Удобны для проектов в сумках, обуви и рабочей одежде'],
   },
   resinRolls: {
-    ...categoryContentEn.resinRolls,
+    key: 'resinRolls',
+    slug: 'resin-zipper-rolls',
+    featureImage: '/products/resin/dark-continuous-chain.webp',
     name: 'Смоляные рулонные молнии',
     description: 'Подходят для одежды, детских изделий, обуви и схожих проектов, где цепочка используется в рулоне и затем нарезается по длине, главным образом в размерах 3 / 5 / 8.',
+    overview: 'Смоляные рулонные молнии используются в основном для последующей нарезки, установки бегунка и обработки изделия, а не как готовые молнии фиксированной длины. Weiwei Zipper организует здесь популярные размеры 3, 5 и 8, чтобы клиент мог подтвердить тип зуба, цвет и направление тесьмы до организации итоговой обработки.',
+    keyFeatures: ['Поставка в рулоне для удобной нарезки партиями', 'Подходят для последующей установки бегунка и нарезки по длине', 'Гибкий подбор цвета для повторяющейся разработки серий', 'Подходят для одежды, обуви и других более легких сценариев использования'],
   },
   nylonRolls: {
-    ...categoryContentEn.nylonRolls,
+    key: 'nylonRolls',
+    slug: 'nylon-zipper-rolls',
+    featureImage: '/products/nylon/beige-continuous-chain.webp',
     name: 'Нейлоновые рулонные молнии',
     description: 'Подходят для одежды, сумок и солнцезащитной верхней одежды, где цепочка используется в рулоне и режется по необходимости, сочетая плавность хода и гибкость обработки.',
+    overview: 'Нейлоновые рулонные молнии используются в основном для последующей нарезки, установки бегунка и обработки изделия, особенно когда одновременно важны плавность хода и гибкая работа с длиной. В этой категории Weiwei Zipper организует популярные размеры 3, 5 и 8, чтобы клиент мог сначала подтвердить направление по размеру, а затем перейти к образцам или расчету цены с учетом длины, бегунков и требований к последующей обработке.',
+    keyFeatures: ['Поставка в рулоне для удобной нарезки под заказ', 'Стабильная плавность при частом открывании и закрывании', 'Подходят для последующей установки бегунка и обработки готового изделия', 'Удобны для проектов в одежде, сумках и солнцезащитной верхней одежде'],
   },
 };
 
@@ -2405,8 +2792,8 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     category: 'nylonZippers',
     name: 'Cremallera abierta de nylon',
     description: 'Adecuada para chaquetas, ropa con protección solar y ropa deportiva con estructura abierta: suave, ligera y con opciones de cinta reflectante y colores variados.',
-    overview: 'La cremallera abierta de nylon se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando suavidad y ligereza. Weiwei Zipper ofrece colores habituales, degradados arcoiris y cinta reflectante, y puede coordinar longitud, color y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposición.',
-    features: ['Suave y ligera para aperturas centrales de uso frecuente', 'La estructura abierta se adapta a aperturas de separación completa', 'Colores habituales / degradado arcoiris / cinta reflectante disponibles', 'Pueden confirmarse colores, longitudes y cursores habituales'],
+    overview: 'La cremallera abierta de nylon se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando suavidad y ligereza. Weiwei Zipper ofrece colores habituales, degradados arcoíris y cinta reflectante, y puede coordinar longitud, color y cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposición.',
+    features: ['Suave y ligera para aperturas centrales de uso frecuente', 'La estructura abierta se adapta a aperturas de separación completa', 'Colores habituales / degradado arcoíris / cinta reflectante disponibles', 'Pueden confirmarse colores, longitudes y cursores habituales'],
     applications: ['Aperturas de chaquetas', 'Frentes de ropa con protección solar', 'Ropa deportiva'],
     specifications: {
       type: 'Cremallera abierta de nylon',
@@ -2420,7 +2807,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       productionLeadTime: 'La programación en volumen comienza después de confirmar la muestra',
       orderType: 'Adecuada para desarrollo, volumen habitual y reposición',
       applicationScope: 'Chaquetas / ropa con protección solar / ropa deportiva',
-      notes: 'Procesos especiales como cinta reflectante o degradado arcoiris pueden confirmarse a partir de muestras',
+      notes: 'Procesos especiales como cinta reflectante o degradado arcoíris pueden confirmarse a partir de muestras',
     },
     gallery: [
       {
@@ -2445,8 +2832,8 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       },
       {
         image: '/products/nylon/rainbow-open-end.webp',
-        title: 'Cremallera abierta de nylon arcoiris',
-        description: 'Cinta con degradado arcoiris que funciona como detalle de diseño en ropa infantil y estilos de tendencia.',
+        title: 'Cremallera abierta de nylon arcoíris',
+        description: 'Cinta con degradado arcoíris que funciona como detalle de diseño en ropa infantil y estilos de tendencia.',
       },
       {
         image: '/products/nylon/sky-blue-reflective-open-end.webp',
@@ -2604,7 +2991,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
       {
         image: '/products/metal/off-white-golden-open-end.webp',
         title: 'Cinta crudo con dientes dorados, abierta',
-        description: 'Cinta clara con dientes dorados, adecuada para gabardinas claras, plumiferos y otros estilos donde importa el detalle.',
+        description: 'Cinta clara con dientes dorados, adecuada para gabardinas claras, plumíferos y otros estilos donde importa el detalle.',
       },
       {
         image: '/products/metal/navy-antique-bronze-open-end.webp',

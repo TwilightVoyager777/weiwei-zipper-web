@@ -1204,7 +1204,7 @@ const footerContentEs = {
   quickLinksTitle: 'Enlaces rápidos',
   contactInfoTitle: 'Información de contacto',
   privacy: 'Política de privacidad',
-  terms: 'Terminos del servicio',
+  terms: 'Términos del servicio',
 } as const;
 
 const footerContentAr = {
@@ -1403,7 +1403,7 @@ const inquiryFormContentEn = {
 const inquiryFormContentEs = {
   title: 'Enviar consulta',
   success: 'Su consulta se ha enviado correctamente. Nos pondremos en contacto con usted lo antes posible en horario laboral.',
-  error: 'El envío ha fallado. Intente de nuevo más tarde o contactenos directamente por teléfono o WhatsApp.',
+  error: 'El envío ha fallado. Intente de nuevo más tarde o contáctenos directamente por teléfono o WhatsApp.',
   sectionContact: 'Información de contacto',
   sectionProduct: 'Requisitos del producto',
   fields: {

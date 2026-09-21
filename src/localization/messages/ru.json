@@ -88,54 +88,54 @@
       ]
     },
     "cookies": {
-      "title": "Cookies and Tracking",
-      "paragraph1": "We use cookies to improve your browsing experience. Cookies are small text files stored in your browser.",
+      "title": "Файлы cookie и отслеживание",
+      "paragraph1": "Мы используем файлы cookie, чтобы улучшить работу с сайтом. Файлы cookie — это небольшие текстовые файлы, которые хранятся в вашем браузере.",
       "items": {
-        "essential": "Essential cookies — ensure basic site functions (e.g., language selection)",
-        "analytics": "Analytics cookies — help us understand visitor behavior and improve experience"
+        "essential": "Необходимые файлы cookie — обеспечивают базовые функции сайта (например, выбор языка)",
+        "analytics": "Аналитические файлы cookie — помогают нам понимать поведение посетителей и улучшать работу сайта"
       },
-      "paragraph2": "You can manage cookies in your browser settings, but disabling them may affect some features."
+      "paragraph2": "Вы можете управлять файлами cookie в настройках браузера, но их отключение может повлиять на работу некоторых функций."
     },
     "dataProtection": {
-      "title": "Data Protection",
-      "intro": "We protect your data through:",
+      "title": "Защита данных",
+      "intro": "Мы защищаем ваши данные следующими способами:",
       "items": [
-        "SSL/TLS encryption for data transmission",
-        "Restricted employee access to personal data",
-        "Regular review and update of security practices"
+        "Шифрование SSL/TLS при передаче данных",
+        "Ограниченный доступ сотрудников к персональным данным",
+        "Регулярный пересмотр и обновление практик безопасности"
       ],
-      "outro": "We never sell your data. We only share it with third parties when necessary (e.g., logistics partners for shipping), and require them to follow equivalent protection standards."
+      "outro": "Мы никогда не продаем ваши данные. Мы передаем их третьим лицам только при необходимости (например, логистическим партнерам для отгрузки) и требуем от них соблюдения эквивалентных стандартов защиты."
     },
     "dataRetention": {
-      "title": "Data Retention",
+      "title": "Сроки хранения данных",
       "items": [
-        "Inquiry and business records are kept for three years",
-        "Order records are retained per tax and commercial regulations"
+        "Записи по запросам и коммерческому взаимодействию хранятся три года",
+        "Записи по заказам хранятся в соответствии с налоговыми и коммерческими требованиями"
       ],
-      "outro": "You may request deletion at any time. We will process your request promptly, except where retention is required by law."
+      "outro": "Вы можете в любой момент запросить удаление данных. Мы обработаем ваш запрос оперативно, кроме случаев, когда хранение требуется по закону."
     },
     "internationalTransfers": {
-      "title": "International Data Transfers",
-      "paragraph": "As a global exporter, your data may be transferred between China and other countries. We ensure proper safeguards during all transfers. By submitting inquiries, you consent to such transfers."
+      "title": "Международная передача данных",
+      "paragraph": "Поскольку мы работаем как экспортер на международном рынке, ваши данные могут передаваться между Китаем и другими странами. Мы обеспечиваем надлежащие меры защиты при всех передачах. Отправляя запрос, вы соглашаетесь на такую передачу."
     },
     "thirdPartyLinks": {
-      "title": "Third-Party Links",
-      "paragraph": "Our site may link to platforms like WhatsApp and WeChat. These have their own privacy policies, and we are not responsible for them. Review their policies before sharing personal data."
+      "title": "Ссылки на сторонние ресурсы",
+      "paragraph": "На нашем сайте могут быть ссылки на такие платформы, как WhatsApp и WeChat. У них есть собственные политики конфиденциальности, и мы не несем за них ответственности. Ознакомьтесь с их политиками, прежде чем передавать персональные данные."
     },
     "yourRights": {
-      "title": "Your Rights",
-      "intro": "Under applicable laws, you have the right to:",
+      "title": "Ваши права",
+      "intro": "В соответствии с применимым законодательством вы имеете право:",
       "items": [
-        "Access personal data we hold about you",
-        "Correct inaccurate or incomplete data",
-        "Request deletion of your data",
-        "Object to or restrict our data processing",
-        "Data portability"
+        "Получать доступ к персональным данным, которые мы о вас храним",
+        "Исправлять неточные или неполные данные",
+        "Запрашивать удаление ваших данных",
+        "Возражать против обработки данных или ограничивать ее",
+        "На переносимость данных"
       ]
     },
     "changes": {
-      "title": "Changes to This Policy",
-      "paragraph": "We may update this policy to reflect business changes or legal requirements. Updates will be posted here with a new date. We encourage periodic review."
+      "title": "Изменения в настоящей политике",
+      "paragraph": "Мы можем обновлять эту политику, отражая изменения в работе компании или требования законодательства. Обновления будут публиковаться здесь с новой датой. Рекомендуем периодически просматривать ее."
     },
     "contact": {
       "title": "Связаться с нами",
