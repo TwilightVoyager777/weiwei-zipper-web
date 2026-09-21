@@ -145,7 +145,7 @@ const yiwuZipperLandingEs = {
     'Weiwei Zipper apoya a compradores que llegan a Yiwu en busca de un proveedor de cremalleras, compra al por mayor y coordinación estable para cremalleras metálicas, de resina, de nylon y por rollo.',
   intro:
     'Si está buscando cremalleras en Yiwu, normalmente el punto clave no es solo el precio. También importa si las especificaciones están claras, si el muestreo puede avanzar con fluidez, si el suministro en volumen es estable y si las reposiciones pueden coordinarse sin demasiadas confirmaciones repetidas. Desde el Distrito 3 de Yiwu International Trade City, Weiwei Zipper se centra en soluciones prácticas para prendas, bolsos, calzado y proyectos relacionados, conectando de forma más eficiente muestreo, cotización y compra al por mayor.',
-  highlightsTitle: 'Por que muchos compradores en Yiwu trabajan con Weiwei Zipper',
+  highlightsTitle: 'Por qué muchos compradores en Yiwu trabajan con Weiwei Zipper',
   highlights: [
     {
       title: 'Coordinación directa en International Trade City',

@@ -61,18 +61,18 @@ export const homeContent = {
     items: [
       {
         title: '常用规格稳定供应',
-        description: '围绕 3 号、5 号、8 号高频规格建立标准化配套方案，便于客户在开发、批量采购与后续补单中保持供应连续性。',
-        points: ['常规码装与成品拉链均可配套', '闭尾、开尾、双开结构可按需确认', '颜色与拉头可结合款式统一匹配', '减少重复沟通带来的确认成本'],
+        description: '围绕 3 号、5 号、8 号高频规格建立标准化配套方案，便于客户在开发、批量采购与后续补单中保持供应连续性。3 号 / 5 号 / 8 号分别对应闭合状态下链牙宽度约 3 / 5 / 8 毫米。',
+        points: ['常规码装与成品拉链均可配套', '闭尾、开尾、双开结构可按需确认', '颜色与拉头可结合款式统一匹配', '成品拉链通常 1000 条起订，一个订单内可以混色'],
       },
       {
         title: '打样确认流程高效',
         description: '可结合色卡、样卡、样衣或旧样进行样品确认，先完成关键细节验证，再进入批量排产流程。',
-        points: ['支持寄样核色与基础测试确认', '支持来样复刻常用结构', '可配合开发季小批量打样', '缩短从选型到出样的沟通路径'],
+        points: ['支持寄样核色与基础测试确认', '支持来样复刻常用结构', '可配合开发季小批量打样', '常规规格打样通常 3 天，新色或特殊结构会更长'],
       },
       {
         title: '交付节奏可控',
         description: '常规款可优先协调备料与排单，规格确认后可更快进入生产节奏，适合快反项目与持续返单需求。',
-        points: ['常规颜色与规格更便于快速安排', '返单项目可复用既有确认记录', '急单可根据排产情况优先协调', '关键节点可同步反馈进度'],
+        points: ['常规颜色与规格更便于快速安排', '返单项目可复用既有确认记录', '急单可根据排产情况优先协调', '确认样品与订单细节后，大货通常 10 天'],
       },
       {
         title: '多渠道业务响应',
@@ -230,6 +230,17 @@ export const quoteContent = {
   },
   title: '获取报价',
   subtitle: '如需更快进入有效报价流程，请尽量一并提供用途、规格、长度、颜色和需求数量。',
+  // 走到报价页的买家已经决定要问了，卡住他的是不知道自己的量够不够。
+  // 这几条原先只存在于 /faq 的手风琴里，报价页一个数字都没有。
+  terms: {
+    title: '下单条件',
+    items: [
+      '成品拉链通常 1000 条起订。一个订单内可以混色，把配比告诉我们即可确认。',
+      '染色按颜色安排：单一颜色数量低于 2000 条时，该颜色需另付 150 元染色费。',
+      '常规规格打样通常 3 天；确认样品与订单细节后，大货通常 10 天。码装（卷装）另行报价。',
+    ],
+    faqLink: '查看完整的起订量、打样与交期说明',
+  },
   cardTitle: '联系信息',
   responseNote: '支持微信、电话、WhatsApp 同步沟通，便于快速确认颜色、规格、样品安排与交期信息。',
   wechatLabel: '微信沟通',
@@ -421,18 +432,18 @@ const homeContentEn = {
     items: [
       {
         title: 'Reliable Supply of Standard Sizes',
-        description: 'We organize supply around the most commonly used size 3, 5, and 8 range, making development, bulk purchasing, and repeat orders easier to coordinate.',
-        points: ['Supports both finished zippers and zipper rolls', 'Closed-end, open-end, and two-way structures can be matched as needed', 'Colors and sliders can be aligned with the style direction', 'Helps reduce repeated back-and-forth during confirmation'],
+        description: 'We organize supply around the most commonly used size 3, 5, and 8 range, making development, bulk purchasing, and repeat orders easier to coordinate. Sizes 3, 5, and 8 correspond to a closed chain width of about 3, 5, and 8 mm.',
+        points: ['Supports both finished zippers and zipper rolls', 'Closed-end, open-end, and two-way structures can be matched as needed', 'Colors and sliders can be aligned with the style direction', 'Finished zippers start at 1,000 pieces, with colours mixable within one order'],
       },
       {
         title: 'Efficient Sample Confirmation',
         description: 'Samples can be reviewed against color cards, reference cards, garments, or old samples so key details are aligned before bulk scheduling.',
-        points: ['Supports color checking and basic sample review', 'Can follow old samples for common structures', 'Suitable for small-batch development sampling', 'Shortens the path from selection to sample approval'],
+        points: ['Supports color checking and basic sample review', 'Can follow old samples for common structures', 'Suitable for small-batch development sampling', 'Standard specifications sample in about 3 days; new colours or special structures take longer'],
       },
       {
         title: 'More Predictable Delivery',
         description: 'For standard options, materials and production slots can be coordinated earlier once specifications are confirmed, which works well for quick-turn projects and repeat orders.',
-        points: ['Common colors and sizes are easier to arrange quickly', 'Repeat orders can reuse prior confirmation records', 'Urgent requests can be coordinated around production availability', 'Key milestones can be shared in a timely way'],
+        points: ['Common colors and sizes are easier to arrange quickly', 'Repeat orders can reuse prior confirmation records', 'Urgent requests can be coordinated around production availability', 'Bulk production usually takes about 10 days once the sample and order details are confirmed'],
       },
       {
         title: 'Responsive Communication Across Channels',
@@ -478,22 +489,22 @@ const homeContentEs = {
     ],
   },
   trust: {
-    title: 'Por que los compradores trabajan con Weiwei Zipper',
+    title: 'Por qué los compradores trabajan con Weiwei Zipper',
     items: [
       {
         title: 'Suministro estable de tamaños estándar',
-        description: 'Organizamos el suministro alrededor de los tamaños 3, 5 y 8 de uso más frecuente, lo que facilita el desarrollo, las compras al por mayor y las reposiciones.',
-        points: ['Soporta cremalleras terminadas y cremalleras por rollo', 'Las estructuras cerradas, abiertas y de doble carro pueden coordinarse según la necesidad', 'Los colores y cursores pueden alinearse con el estilo del producto', 'Ayuda a reducir confirmaciones repetidas durante el proceso'],
+        description: 'Organizamos el suministro alrededor de los tamaños 3, 5 y 8 de uso más frecuente, lo que facilita el desarrollo, las compras al por mayor y las reposiciones. Los tamaños 3, 5 y 8 corresponden a un ancho de cadena cerrada de unos 3, 5 y 8 mm.',
+        points: ['Soporta cremalleras terminadas y cremalleras por rollo', 'Las estructuras cerradas, abiertas y de doble carro pueden coordinarse según la necesidad', 'Los colores y cursores pueden alinearse con el estilo del producto', 'Las cremalleras terminadas parten de 1000 unidades y se pueden mezclar colores en un mismo pedido'],
       },
       {
         title: 'Confirmación de muestras más eficiente',
         description: 'Las muestras pueden revisarse con cartas de color, tarjetas de referencia, prendas o muestras antiguas para alinear los detalles clave antes de programar la producción.',
-        points: ['Admite control de color y revisión básica de muestras', 'Puede seguir muestras antiguas para estructuras habituales', 'Adecuado para muestreo de pequeños lotes de desarrollo', 'Acorta el proceso desde la selección hasta la aprobación de la muestra'],
+        points: ['Admite control de color y revisión básica de muestras', 'Puede seguir muestras antiguas para estructuras habituales', 'Adecuado para muestreo de pequeños lotes de desarrollo', 'Las especificaciones estándar se muestrean en unos 3 días; los colores nuevos o las estructuras especiales tardan más'],
       },
       {
         title: 'Entrega más predecible',
         description: 'En opciones estándar, los materiales y los espacios de producción pueden coordinarse antes una vez confirmadas las especificaciones, lo que funciona bien para proyectos rápidos y pedidos recurrentes.',
-        points: ['Los colores y tamaños comunes son más fáciles de organizar con rapidez', 'Los pedidos recurrentes pueden reutilizar registros de confirmación anteriores', 'Las urgencias pueden coordinarse según la disponibilidad de producción', 'Los hitos clave pueden compartirse a tiempo'],
+        points: ['Los colores y tamaños comunes son más fáciles de organizar con rapidez', 'Los pedidos recurrentes pueden reutilizar registros de confirmación anteriores', 'Las urgencias pueden coordinarse según la disponibilidad de producción', 'La producción en volumen suele tardar unos 10 días una vez confirmados la muestra y los detalles del pedido'],
       },
       {
         title: 'Comunicación rápida por varios canales',
@@ -543,18 +554,18 @@ const homeContentAr = {
     items: [
       {
         title: 'توريد مستقر للمقاسات القياسية',
-        description: 'ننظم التوريد حول المقاسات الأكثر استخداما 3 و5 و8، مما يجعل التطوير والشراء بالجملة وإعادة الطلب أكثر سهولة في التنسيق.',
-        points: ['يدعم السحابات الجاهزة وسحابات الرول', 'يمكن تنسيق الهياكل المغلقة والمفتوحة والمزدوجة حسب الحاجة', 'يمكن مواءمة الألوان والسحابات مع اتجاه التصميم', 'يساعد على تقليل التكرار في مراحل التأكيد'],
+        description: 'ننظم التوريد حول المقاسات الأكثر استخداما 3 و5 و8، مما يجعل التطوير والشراء بالجملة وإعادة الطلب أكثر سهولة في التنسيق. وتقابل المقاسات 3 و5 و8 عرض سلسلة مغلقة نحو 3 و5 و8 مم.',
+        points: ['يدعم السحابات الجاهزة وسحابات الرول', 'يمكن تنسيق الهياكل المغلقة والمفتوحة والمزدوجة حسب الحاجة', 'يمكن مواءمة الألوان والسحابات مع اتجاه التصميم', 'تبدأ السحابات الجاهزة من 1000 قطعة، ويمكن مزج الألوان ضمن الطلب الواحد'],
       },
       {
         title: 'تأكيد عينات أكثر كفاءة',
         description: 'يمكن مراجعة العينات بالاعتماد على بطاقات الألوان أو العينات المرجعية أو عينات قديمة لتأكيد التفاصيل الرئيسية قبل جدولة الإنتاج.',
-        points: ['يدعم فحص الألوان ومراجعة العينات الأساسية', 'يمكن الرجوع إلى عينات سابقة للهياكل الشائعة', 'مناسب لعينات التطوير بكميات صغيرة', 'يقصر الطريق من الاختيار الأولي إلى اعتماد العينة'],
+        points: ['يدعم فحص الألوان ومراجعة العينات الأساسية', 'يمكن الرجوع إلى عينات سابقة للهياكل الشائعة', 'مناسب لعينات التطوير بكميات صغيرة', 'تستغرق العينة نحو 3 أيام للمواصفات القياسية؛ وتتطلب الألوان الجديدة أو الهياكل الخاصة وقتا أطول'],
       },
       {
         title: 'تسليم أكثر قابلية للتوقع',
         description: 'بالنسبة للخيارات القياسية، يمكن تنسيق الخامات وجدولة الإنتاج بشكل أبكر بعد تأكيد المواصفات، وهو ما يناسب المشاريع السريعة وإعادة الطلب.',
-        points: ['يسهل ترتيب الألوان والمقاسات الشائعة بسرعة', 'يمكن إعادة استخدام سجلات التأكيد السابقة في إعادة الطلب', 'يمكن تنسيق الطلبات العاجلة حسب طاقة الإنتاج', 'يمكن مشاركة المراحل الرئيسية في الوقت المناسب'],
+        points: ['يسهل ترتيب الألوان والمقاسات الشائعة بسرعة', 'يمكن إعادة استخدام سجلات التأكيد السابقة في إعادة الطلب', 'يمكن تنسيق الطلبات العاجلة حسب طاقة الإنتاج', 'يستغرق الإنتاج بالجملة نحو 10 أيام بعد تأكيد العينة وتفاصيل الطلب'],
       },
       {
         title: 'استجابة سريعة عبر قنوات متعددة',
@@ -604,18 +615,18 @@ const homeContentRu = {
     items: [
       {
         title: 'Стабильные поставки стандартных размеров',
-        description: 'Мы выстраиваем поставки вокруг самых востребованных размеров 3, 5 и 8, чтобы упрощать разработку, оптовые закупки и повторные заказы.',
-        points: ['Поддерживаем как готовые молнии, так и рулонные цепочки', 'Можно согласовать закрытую, разъемную и двухзамковую конструкцию', 'Цвета и бегунки подбираются под стиль изделия', 'Это снижает количество повторных согласований'],
+        description: 'Мы выстраиваем поставки вокруг самых востребованных размеров 3, 5 и 8, чтобы упрощать разработку, оптовые закупки и повторные заказы. Размеры 3, 5 и 8 соответствуют ширине сомкнутой цепочки около 3, 5 и 8 мм.',
+        points: ['Поддерживаем как готовые молнии, так и рулонные цепочки', 'Можно согласовать закрытую, разъемную и двухзамковую конструкцию', 'Цвета и бегунки подбираются под стиль изделия', 'Готовые молнии — от 1000 штук, цвета можно комбинировать в одном заказе'],
       },
       {
         title: 'Более эффективное подтверждение образцов',
         description: 'Образцы можно сверять по цветовым картам, эталонам, готовым изделиям или старым образцам, чтобы ключевые детали были согласованы до запуска заказа.',
-        points: ['Поддерживается базовая проверка цвета и образца', 'Можно ориентироваться на старые образцы для типовых конструкций', 'Подходит для мелкосерийной разработки', 'Сокращает путь от выбора до утверждения образца'],
+        points: ['Поддерживается базовая проверка цвета и образца', 'Можно ориентироваться на старые образцы для типовых конструкций', 'Подходит для мелкосерийной разработки', 'Образец по стандартным спецификациям обычно готов примерно за 3 дня; новые цвета и особые конструкции требуют больше времени'],
       },
       {
         title: 'Более предсказуемые сроки поставки',
         description: 'Для стандартных позиций материалы и производственные окна можно согласовать заранее после подтверждения спецификации, что удобно для быстрых проектов и повторных заказов.',
-        points: ['Популярные цвета и размеры проще организовать быстрее', 'Повторные заказы могут использовать прежние записи подтверждения', 'Срочные запросы координируются по доступности производства', 'Ключевые этапы можно сообщать своевременно'],
+        points: ['Популярные цвета и размеры проще организовать быстрее', 'Повторные заказы могут использовать прежние записи подтверждения', 'Срочные запросы координируются по доступности производства', 'Серийное производство занимает около 10 дней после подтверждения образца и деталей заказа'],
       },
       {
         title: 'Оперативная связь по нескольким каналам',
@@ -740,7 +751,7 @@ const useCasesContentEs = {
     },
   ],
   whyChoose: {
-    title: 'Por que elegir Weiwei Zipper',
+    title: 'Por qué elegir Weiwei Zipper',
     items: [
       {
         title: 'Experiencia en el sector',
@@ -1151,6 +1162,15 @@ const quoteContentEn = {
   },
   title: 'Get Quote',
   subtitle: 'To move into quotation more efficiently, please include the application, size, length, color, and required quantity whenever possible.',
+  terms: {
+    title: 'Order conditions',
+    items: [
+      'For finished zippers the minimum order is usually 1,000 pieces. Colours can be mixed within one order — share the split you need and we will confirm it.',
+      'Dyeing is arranged per colour, so any colour ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that colour.',
+      'Standard specifications sample in about 3 days; bulk production usually takes about 10 days once the sample and order details are confirmed. Zipper rolls are quoted separately.',
+    ],
+    faqLink: 'Read the full notes on minimum order, sampling, and lead time',
+  },
   cardTitle: 'Contact Information',
   responseNote: 'WeChat, phone, and WhatsApp can all be used to confirm colors, specifications, sample arrangements, and lead time more efficiently.',
   wechatLabel: 'WeChat',
@@ -1160,10 +1180,19 @@ const quoteContentEn = {
 const quoteContentEs = {
   metadata: {
     title: 'Solicitar cotización',
-    description: 'Envie su consulta a Weiwei Zipper por formulario, WeChat, teléfono o WhatsApp para recibir recomendaciones y cotizaciones de cremalleras metálicas, de resina y de nylon.',
+    description: 'Envíe su consulta a Weiwei Zipper por formulario, WeChat, teléfono o WhatsApp para recibir recomendaciones y cotizaciones de cremalleras metálicas, de resina y de nylon.',
   },
   title: 'Solicitar cotización',
   subtitle: 'Para avanzar con la cotización de forma más eficiente, incluya siempre que sea posible la aplicación, el tamaño, la longitud, el color y la cantidad requerida.',
+  terms: {
+    title: 'Condiciones del pedido',
+    items: [
+      'Para cremalleras terminadas el pedido mínimo suele ser de 1000 unidades. Se pueden mezclar colores dentro de un mismo pedido: indíquenos el reparto que necesita y se lo confirmamos.',
+      'El teñido se organiza por color, por lo que cualquier color con una cantidad inferior a 2000 unidades lleva una tasa de teñido de 150 RMB para ese color.',
+      'Las especificaciones estándar se muestrean en unos 3 días; la producción en volumen suele tardar unos 10 días una vez confirmados la muestra y los detalles del pedido. Las cremalleras por rollo se cotizan aparte.',
+    ],
+    faqLink: 'Consulte las notas completas sobre pedido mínimo, muestras y plazos',
+  },
   cardTitle: 'Información de contacto',
   responseNote: 'WeChat, teléfono y WhatsApp pueden utilizarse para confirmar colores, especificaciones, muestras y plazos con mayor eficiencia.',
   wechatLabel: 'WeChat',
@@ -1177,6 +1206,15 @@ const quoteContentAr = {
   },
   title: 'طلب عرض سعر',
   subtitle: 'للدخول في مرحلة التسعير بشكل أكثر كفاءة، يرجى تضمين الاستخدام والمقاس والطول واللون والكمية المطلوبة قدر الإمكان.',
+  terms: {
+    title: 'شروط الطلب',
+    items: [
+      'بالنسبة للسحابات الجاهزة يكون الحد الأدنى للطلب عادة 1000 قطعة. ويمكن مزج الألوان ضمن الطلب الواحد — أخبرنا بالتوزيع المطلوب وسنؤكده.',
+      'تتم الصباغة حسب اللون، لذلك يضاف رسم صباغة قدره 150 يوان صيني لأي لون تقل كميته عن 2000 قطعة.',
+      'تستغرق العينة عادة نحو 3 أيام للمواصفات القياسية؛ ويستغرق الإنتاج بالجملة نحو 10 أيام بعد تأكيد العينة وتفاصيل الطلب. أما السحابات بالرول فتسعّر بشكل منفصل.',
+    ],
+    faqLink: 'اقرأ التفاصيل الكاملة عن الحد الأدنى للطلب والعينات ومواعيد التسليم',
+  },
   cardTitle: 'معلومات التواصل',
   responseNote: 'يمكن استخدام WeChat والهاتف وWhatsApp لتأكيد الألوان والمواصفات والعينات ومواعيد التسليم بكفاءة أكبر.',
   wechatLabel: 'WeChat',
@@ -1190,6 +1228,15 @@ const quoteContentRu = {
   },
   title: 'Запросить цену',
   subtitle: 'Чтобы быстрее перейти к расчету цены, по возможности укажите сферу применения, размер, длину, цвет и требуемое количество.',
+  terms: {
+    title: 'Условия заказа',
+    items: [
+      'Для готовых молний минимальный заказ обычно составляет 1000 штук. Цвета можно комбинировать в одном заказе — сообщите нужное распределение, и мы его подтвердим.',
+      'Окрашивание организуется по цветам, поэтому для любого цвета в количестве менее 2000 штук взимается плата за окрашивание 150 юаней за этот цвет.',
+      'Образец по стандартным спецификациям обычно готов примерно за 3 дня; серийное производство занимает около 10 дней после подтверждения образца и деталей заказа. Молния в рулонах рассчитывается отдельно.',
+    ],
+    faqLink: 'Полные условия по минимальному заказу, образцам и срокам',
+  },
   cardTitle: 'Контактная информация',
   responseNote: 'WeChat, телефон и WhatsApp можно использовать для более оперативного согласования цветов, спецификаций, образцов и сроков поставки.',
   wechatLabel: 'WeChat',

@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/localization/navigation';
 import { WHATSAPP_URL } from '@/config/site-constants';
 import { getSiteBrand } from '@/site-data/site-content';
 
@@ -31,6 +32,17 @@ type InquiryPageContent = {
   responseNote: string;
   wechatLabel: string;
   wechatScan: string;
+  /**
+   * Commercial conditions, shown directly above the form.
+   *
+   * Optional because this layout is shared with `/contact`, which is a "how to
+   * reach us" page rather than an ordering one.
+   */
+  terms?: {
+    title: string;
+    items: readonly string[];
+    faqLink: string;
+  };
 };
 
 export default function InquiryPageLayout({ content }: { content: InquiryPageContent }) {
@@ -114,6 +126,31 @@ export default function InquiryPageLayout({ content }: { content: InquiryPageCon
           </div>
 
           <div className="order-1 lg:order-2 lg:col-span-2">
+            {/* A buyer who reached this page has already decided to ask; what
+                stops them is not knowing whether their quantity qualifies.
+                These figures lived only inside the /faq accordion, and this
+                page carried no number at all. */}
+            {content.terms ? (
+              <div className="mb-6 bg-amber-50 border border-amber-200 rounded-lg p-4 sm:p-5">
+                <h2 className="text-sm font-bold text-amber-900 mb-3">{content.terms.title}</h2>
+                <ul className="space-y-2">
+                  {content.terms.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-amber-900/90 leading-relaxed">
+                      <span aria-hidden="true" className="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                {/* Also the first in-body link to /faq from this page: the
+                    facts were reachable only through the footer. */}
+                <Link
+                  href="/faq"
+                  className="inline-block mt-3 text-sm font-medium text-amber-900 underline underline-offset-2 hover:text-amber-700"
+                >
+                  {content.terms.faqLink}
+                </Link>
+              </div>
+            ) : null}
             <ContactForm />
           </div>
         </div>

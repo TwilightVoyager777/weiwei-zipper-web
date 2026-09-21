@@ -70,7 +70,7 @@ En bolsos, muchos compartimentos y bolsillos interiores usan estructuras cerrada
 
 Por eso el mismo proyecto puede utilizar más de una estructura de cremallera en posiciones diferentes.
 
-## Si no está seguro, envie una referencia
+## Si no está seguro, envíe una referencia
 
 Muchos clientes no empiezan con los términos técnicos. Eso es completamente normal.
 
