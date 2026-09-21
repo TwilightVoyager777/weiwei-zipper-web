@@ -59,7 +59,9 @@ function TableOfContents({
           </span>
         </div>
 
-        <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">{title}</h4>
+        {/* h2, not h4: as an h4 next to the article's h2 headings this skipped a
+            level in the document outline on all 25 article pages. */}
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">{title}</h2>
         <ul className="space-y-0.5 text-sm border-l border-gray-200">
           {items.map((item) => (
             <li key={item.id}>

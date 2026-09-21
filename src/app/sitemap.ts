@@ -2,12 +2,29 @@ import { MetadataRoute } from 'next';
 import { routing } from '@/localization/routing';
 import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
 import { PRODUCT_SLUGS, CATEGORY_SLUGS } from '@/site-data/product-catalog';
-import { BLOG_SLUGS } from '@/site-data/blog-posts';
+import { BLOG_SLUGS, getBlogPostMeta } from '@/site-data/blog-posts';
+
+/**
+ * Real publication date for a post, or undefined when the frontmatter has none.
+ *
+ * Every URL used to carry the build timestamp as its lastModified, which made
+ * the whole sitemap claim that all 175 pages changed on every deploy. Google
+ * ignores a lastmod it cannot trust, so an absent date is worth more than a
+ * wrong one — hence undefined rather than a fallback to `now`.
+ */
+function blogPostDate(slug: string, locale: string): Date | undefined {
+  const raw = getBlogPostMeta(slug, locale).date;
+  if (!raw) return undefined;
+  const parsed = new Date(raw);
+  return Number.isNaN(parsed.getTime()) ? undefined : parsed;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
   const routes = ['', '/products', '/about', '/contact', '/quote', '/industries', '/services', '/faq', '/blog', '/yiwu-zipper-supplier', '/privacy-policy', '/terms-of-service'];
-  const now = new Date();
+  // Static and product pages have no per-page date source in the content model,
+  // so they are published without a lastmod rather than with a fabricated one.
+  const now = undefined;
 
   const entries: MetadataRoute.Sitemap = [];
 
@@ -38,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const slug of BLOG_SLUGS) {
       entries.push({
         url: localizedUrl(locale, `/blog/${slug}`),
-        lastModified: now,
+        lastModified: blogPostDate(slug, locale),
         changeFrequency: 'monthly',
         priority: 0.7,
         alternates: alternatesForPath(locale, `/blog/${slug}`).languages ? { languages: alternatesForPath(locale, `/blog/${slug}`).languages } : undefined,

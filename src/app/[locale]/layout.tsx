@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/localization/routing';
 import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/config/site-constants';
 import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
+import { DEFAULT_OG_IMAGE } from '@/seo/page-metadata';
 import { getHomeContent, getSiteBrand } from '@/site-data/site-content';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -28,7 +29,7 @@ const LOCALE_KEYWORDS = {
   zh: ['伟伟拉链', '义乌拉链厂', '义乌拉链厂家', '义乌拉链批发', '义乌拉链供应商', '义乌拉链定制', '义乌国际商贸城', '义乌国际商贸城拉链', '国际商贸城三区', '国际商贸城三区拉链', '拉链厂', '拉链供应商', '拉链定制', '码装拉链', '闭口拉链', '开口拉链', '双开拉链', '树脂拉链', '尼龙拉链', '金属拉链', '3号拉链', '5号拉链', '8号拉链', '服装拉链', '箱包拉链', '防晒衣拉链'],
   en: ['Weiwei Zipper', 'Yiwu zipper manufacturer', 'Yiwu zipper factory', 'Yiwu zipper supplier', 'Yiwu zipper wholesale', 'custom zipper supplier', 'custom zipper factory', 'Yiwu International Trade City zipper', 'District 3 International Trade City zipper', 'metal zipper', 'resin zipper', 'nylon zipper', 'zipper rolls', 'closed end zipper', 'open end zipper', 'two way zipper', 'size 3 zipper', 'size 5 zipper', 'size 8 zipper', 'garment zipper', 'bag zipper', 'sun protective jacket zipper'],
   ru: ['Weiwei Zipper', 'производитель молний в Иу', 'фабрика молний в Иу', 'поставщик молний в Иу', 'оптовые молнии Иу', 'молнии на заказ', 'рулонные молнии', 'молнии Иу Международный торговый город', 'молнии район 3 Международного торгового города', 'металлическая молния', 'смоляная молния', 'нейлоновая молния', 'неразъемная молния', 'разъемная молния', 'двухзамковая молния', 'молния размер 3', 'молния размер 5', 'молния размер 8', 'молния для одежды', 'молния для сумок', 'молния для солнцезащитной куртки'],
-  es: ['Weiwei Zipper', 'fabricante de cremalleras en Yiwu', 'fabrica de cremalleras en Yiwu', 'proveedor de cremalleras en Yiwu', 'cremalleras al por mayor en Yiwu', 'cremalleras personalizadas', 'cremalleras por rollo', 'cremalleras en Yiwu International Trade City', 'cremalleras en el Distrito 3 del International Trade City', 'cremallera metalica', 'cremallera de resina', 'cremallera de nylon', 'cremallera cerrada', 'cremallera abierta', 'cremallera de doble cursor', 'cremallera tamano 3', 'cremallera tamano 5', 'cremallera tamano 8', 'cremallera para prendas', 'cremallera para bolsos', 'cremallera para ropa con proteccion solar'],
+  es: ['Weiwei Zipper', 'fabricante de cremalleras en Yiwu', 'fábrica de cremalleras en Yiwu', 'proveedor de cremalleras en Yiwu', 'cremalleras al por mayor en Yiwu', 'cremalleras personalizadas', 'cremalleras por rollo', 'cremalleras en Yiwu International Trade City', 'cremalleras en el Distrito 3 del International Trade City', 'cremallera metálica', 'cremallera de resina', 'cremallera de nylon', 'cremallera cerrada', 'cremallera abierta', 'cremallera de doble cursor', 'cremallera tamaño 3', 'cremallera tamaño 5', 'cremallera tamaño 8', 'cremallera para prendas', 'cremallera para bolsos', 'cremallera para ropa con protección solar'],
   ar: ['Weiwei Zipper', 'مصنع سحابات في ييوو', 'شركة سحابات في ييوو', 'مورد سحابات في ييوو', 'سحابات جملة في ييوو', 'سحابات مخصصة', 'سحابات رول', 'سحابات مدينة ييوو للتجارة الدولية', 'سحابات المنطقة الثالثة في مدينة التجارة الدولية', 'سحاب معدني', 'سحاب راتنج', 'سحاب نايلون', 'سحاب مغلق', 'سحاب مفتوح', 'سحاب مزدوج', 'سحاب مقاس 3', 'سحاب مقاس 5', 'سحاب مقاس 8', 'سحاب للملابس', 'سحاب للحقائب', 'سحاب للملابس الواقية من الشمس'],
 } as const;
 
@@ -86,7 +87,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: localizedUrl(locale),
       images: [
         {
-          url: `${SITE_URL}${siteBrand.logoPath}`,
+          // Purpose-built 1200x630 card. The logo used to stand in here, but it
+          // is 3:2 and was being declared as 1200x630 regardless.
+          url: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
           width: 1200,
           height: 630,
           alt: siteBrand.logoAlt,
@@ -97,7 +100,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: defaultTitle,
       description,
-      images: [`${SITE_URL}${siteBrand.logoPath}`],
+      images: [`${SITE_URL}${DEFAULT_OG_IMAGE}`],
     },
     robots: {
       index: true,
@@ -133,11 +136,13 @@ function StructuredData({ locale }: { locale: string }) {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: companyName,
-    alternateName: [
+    // Deduplicated: in most locales these three fields hold the same string,
+    // which produced alternateName: ["Weiwei Zipper","Weiwei Zipper","Weiwei Zipper"].
+    alternateName: [...new Set<string>([
       siteBrand.siteName,
       siteBrand.siteNameEn,
       siteBrand.shortBrand,
-    ],
+    ])].filter((value) => value && value !== (companyName as string)),
     url: SITE_URL,
     logo: `${SITE_URL}${siteBrand.logoPath}`,
     image: `${SITE_URL}${siteBrand.logoPath}`,

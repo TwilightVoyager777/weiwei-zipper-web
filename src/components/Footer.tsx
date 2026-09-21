@@ -39,7 +39,6 @@ export default function Footer() {
                 src={footerLogoPath}
                 alt={brand.logoAlt}
                 fill
-                unoptimized
                 sizes="96px"
                 className="object-contain object-left"
               />
@@ -121,7 +120,8 @@ export default function Footer() {
                 <li className="grid grid-cols-[16px_minmax(0,1fr)] items-start gap-2.5 leading-5">
                   <PhoneIcon className="mt-0.5 h-4 w-4 flex-shrink-0" />
                   <div className="min-w-0">
-                    <a href={`tel:${brand.phone}`} className="block min-h-0 break-words hover:text-white transition-colors">
+                    {/* tel: URIs must not contain spaces; brand.phone is formatted for display. */}
+                    <a href={`tel:${brand.phone.replace(/\s+/g, '')}`} className="block min-h-0 break-words hover:text-white transition-colors">
                       {brand.phone}
                     </a>
                   </div>

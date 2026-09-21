@@ -1,6 +1,6 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import { getUseCasesContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -11,11 +11,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const useCasesContent = getUseCasesContent(locale);
-  return {
+  return pageMetadata({
+    locale,
+    path: '/industries',
     title: useCasesContent.metadata.title,
     description: useCasesContent.metadata.description,
-    alternates: alternatesForPath(locale, '/industries'),
-  };
+  });
 }
 
 export default async function IndustriesPage({ params }: Props) {

@@ -1,6 +1,6 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import { getAllBlogPosts } from '@/site-data/blog-posts';
 import { getBlogContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
@@ -11,11 +11,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const blogContent = getBlogContent(locale);
-  return {
+  return pageMetadata({
+    locale,
+    path: '/blog',
     title: blogContent.metadata.title,
     description: blogContent.metadata.description,
-    alternates: alternatesForPath(locale, '/blog'),
-  };
+  });
 }
 
 export default async function BlogPage({ params }: Props) {

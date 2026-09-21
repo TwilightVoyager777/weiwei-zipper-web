@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/localization/navigation';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/site-constants';
 import { MenuIcon } from '@/components/Icons';
-import { localeDisplayNames, localeSwitcherOrder, type Locale } from '@/localization/routing';
+import { localeDisplayNames, localeSwitcherOrder, routing, type Locale } from '@/localization/routing';
 import { getNavigationContent, getSiteBrand } from '@/site-data/site-content';
 import { categoryOrder, getCategoryContent } from '@/site-data/product-catalog';
 
@@ -41,6 +41,20 @@ export default function Header() {
   const switchLocale = useCallback((newLocale: Locale) => {
     router.replace(pathname, { locale: newLocale });
   }, [router, pathname]);
+
+  // Real href for each locale, so the switcher is a crawlable link rather than
+  // a script-only control: without it nothing on the site linked from one
+  // language tree to another, and the other four locales were reachable only
+  // through hreflang and the sitemap.
+  // Built by hand rather than with next-intl's <Link locale>, which emits the
+  // /en prefix for the default locale and lands on a 307.
+  const localeHref = useCallback(
+    (target: Locale) => {
+      const path = pathname === '/' ? '' : pathname;
+      return target === routing.defaultLocale ? path || '/' : `/${target}${path}`;
+    },
+    [pathname],
+  );
 
   const closeMenu = useCallback(() => setIsMenuOpen(false), []);
 
@@ -81,13 +95,18 @@ export default function Header() {
             <span className="text-gray-400">|</span>
             <div className="flex items-center gap-1">
               {localeSwitcherOrder.map((localeOption) => (
-                <button
+                <a
                   key={localeOption}
-                  onClick={() => switchLocale(localeOption)}
+                  href={localeHref(localeOption)}
+                  hrefLang={localeOption}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    switchLocale(localeOption);
+                  }}
                   className={`text-xs px-2 py-1 min-h-[32px] min-w-[32px] flex items-center justify-center rounded ${locale === localeOption ? 'text-white font-semibold bg-white/10' : 'text-gray-400 hover:text-white'}`}
                 >
                   {localeDisplayNames[localeOption]}
-                </button>
+                </a>
               ))}
             </div>
           </div>
@@ -103,7 +122,6 @@ export default function Header() {
                 alt={brand.logoAlt}
                 fill
                 priority
-                unoptimized
                 sizes="64px"
                 className="object-contain object-left"
               />

@@ -1,9 +1,11 @@
+import { pageMetadata, DEFAULT_OG_IMAGE } from '@/seo/page-metadata';
+import { localizedUrl } from '@/seo/localized-urls';
+import { SITE_URL } from '@/config/site-constants';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import { getBlogPost, getBlogSlugs } from '@/site-data/blog-posts';
 import { notFound } from 'next/navigation';
-import { getBlogContent } from '@/site-data/site-content';
+import { getBlogContent, getSiteBrand } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 import BlogArticleContent from './BlogArticleContent';
 
@@ -26,11 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // the index.
   if (!post) return { robots: { index: false, follow: false } };
 
-  return {
+  return pageMetadata({
+    locale,
+    path: `/blog/${slug}`,
     title: post.title,
     description: post.excerpt,
-    alternates: alternatesForPath(locale, `/blog/${slug}`),
-  };
+    type: 'article',
+    publishedTime: post.date || undefined,
+  });
 }
 
 export default async function BlogArticlePage({ params }: Props) {
@@ -41,9 +46,47 @@ export default async function BlogArticlePage({ params }: Props) {
   if (!post) notFound();
 
   const categoryLabel = blogContent.categories[post.category as keyof typeof blogContent.categories] || blogContent.categories.general;
+  const brand = getSiteBrand(locale);
+
+  // The 25 article pages previously carried no content schema at all — only the
+  // site-wide Organization and WebSite nodes from the layout.
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    inLanguage: locale,
+    articleSection: categoryLabel,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': localizedUrl(locale, `/blog/${slug}`) },
+    url: localizedUrl(locale, `/blog/${slug}`),
+    image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+    // The frontmatter credits the company rather than a named person, so the
+    // author is the organisation. A named author would be a stronger E-E-A-T
+    // signal, but inventing one is not an option.
+    author: { '@type': 'Organization', name: post.author || brand.siteNameEn, url: SITE_URL },
+    publisher: {
+      '@type': 'Organization',
+      name: brand.siteNameEn,
+      url: SITE_URL,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}${brand.logoPath}` },
+    },
+    ...(post.date ? { datePublished: post.date, dateModified: post.date } : {}),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: brand.siteName, item: localizedUrl(locale) },
+      { '@type': 'ListItem', position: 2, name: blogContent.metadata.title, item: localizedUrl(locale, '/blog') },
+      { '@type': 'ListItem', position: 3, name: post.title },
+    ],
+  };
 
   return (
     <div className="container mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="max-w-5xl mx-auto">
         <nav className="mb-8">
           <Link
@@ -59,7 +102,7 @@ export default async function BlogArticlePage({ params }: Props) {
             <span className="bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full text-xs font-medium">
               {categoryLabel}
             </span>
-            <span>{post.date}</span>
+            <time dateTime={post.date}>{post.date}</time>
             <span>·</span>
             <span>{post.readTime} {blogContent.readTimeLabel}</span>
           </div>

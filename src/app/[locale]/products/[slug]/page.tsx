@@ -1,9 +1,10 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
 import ProductGallery from '@/components/ProductGallery';
 import ZoomableImage from '@/components/ZoomableImage';
-import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
+import { localizedUrl } from '@/seo/localized-urls';
 import { SITE_URL } from '@/config/site-constants';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -60,20 +61,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (isCategorySlug(slug)) {
     const catKey = CATEGORY_SLUG_TO_KEY[slug];
     const category = categoryContent[catKey];
-    return {
+    return pageMetadata({
+      locale,
+      path: `/products/${slug}`,
       title: category.name,
       description: category.description,
-      alternates: alternatesForPath(locale, `/products/${slug}`),
-    };
+      image: category.featureImage,
+      imageAlt: category.name,
+    });
   }
 
   if (isProductSlug(slug)) {
     const product = productItems[slug];
-    return {
+    return pageMetadata({
+      locale,
+      path: `/products/${slug}`,
       title: product.name,
       description: product.description,
-      alternates: alternatesForPath(locale, `/products/${slug}`),
-    };
+      image: PRODUCT_IMAGES[slug],
+      imageAlt: product.name,
+    });
   }
 
   // Unreachable while dynamicParams is false, but an empty object would make

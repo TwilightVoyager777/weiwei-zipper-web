@@ -1,5 +1,5 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
-import { alternatesForPath } from '@/seo/localized-urls';
 import { getQuoteContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 import InquiryPageLayout from '@/components/InquiryPageLayout';
@@ -10,11 +10,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const quoteContent = getQuoteContent(locale);
-  return {
+  return pageMetadata({
+    locale,
+    path: '/quote',
     title: quoteContent.metadata.title,
     description: quoteContent.metadata.description,
-    alternates: alternatesForPath(locale, '/quote'),
-  };
+  });
 }
 
 export default async function QuotePage({ params }: Props) {

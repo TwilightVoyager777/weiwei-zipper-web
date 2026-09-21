@@ -870,14 +870,24 @@ export const CATEGORY_SLUG_TO_KEY: Record<CategorySlug, ProductCategory> = {
   'nylon-zipper-rolls': 'nylonRolls',
 };
 
-export const CATEGORY_PRODUCTS: Record<CategorySlug, ProductSlug[]> = {
-  'metal-zippers': ['metal-no-5-closed-end-zipper', 'metal-no-5-open-end-zipper'],
-  'resin-zippers': ['resin-no-5-closed-end-zipper', 'resin-no-5-open-end-zipper'],
-  'nylon-zippers': ['nylon-no-5-closed-end-zipper', 'nylon-no-5-open-end-zipper'],
-  'metal-zipper-rolls': [],
-  'resin-zipper-rolls': [],
-  'nylon-zipper-rolls': [],
-};
+/**
+ * Products listed on each category page.
+ *
+ * Derived from each product's own `category` rather than maintained by hand,
+ * because the hand-written version had drifted: the three roll categories
+ * listed nothing at all, and the `*-zipper-3-5-8` pages were missing from their
+ * categories. Six product pages were therefore in the sitemap with no inbound
+ * link anywhere on the site, and the roll category pages emitted no ItemList
+ * structured data.
+ */
+export const CATEGORY_PRODUCTS: Record<CategorySlug, ProductSlug[]> = Object.fromEntries(
+  CATEGORY_SLUGS.map((categorySlug) => [
+    categorySlug,
+    PRODUCT_SLUGS.filter(
+      (productSlug) => productItems[productSlug].category === CATEGORY_SLUG_TO_KEY[categorySlug],
+    ),
+  ]),
+) as Record<CategorySlug, ProductSlug[]>;
 
 export const PRODUCT_IMAGES: Record<ProductSlug, string> = {
   'metal-zipper-3-5-8': '/products/metal-zipper-main.png?v=20260302b',

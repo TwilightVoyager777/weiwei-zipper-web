@@ -1,8 +1,8 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import { getYiwuZipperLandingContent } from '@/site-data/market-landing-content';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -12,11 +12,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   setRequestLocale(locale);
   const content = getYiwuZipperLandingContent(locale);
 
-  return {
+  return pageMetadata({
+    locale,
+    path: '/yiwu-zipper-supplier',
     title: content.metadata.title,
     description: content.metadata.description,
-    alternates: alternatesForPath(locale, '/yiwu-zipper-supplier'),
-  };
+  });
 }
 
 export default async function YiwuZipperSupplierPage({ params }: Props) {

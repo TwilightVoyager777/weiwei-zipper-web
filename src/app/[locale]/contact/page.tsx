@@ -1,7 +1,7 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import {
   COMPANY_ADDRESS_EN,
   COMPANY_ADDRESS_ZH,
@@ -39,11 +39,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const contactContent = getContactContent(locale);
-  return {
+  return pageMetadata({
+    locale,
+    path: '/contact',
     title: contactContent.metadata.title,
     description: contactContent.metadata.description,
-    alternates: alternatesForPath(locale, '/contact'),
-  };
+  });
 }
 
 export default async function ContactPage({ params }: Props) {

@@ -1,6 +1,6 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import { getSolutionsPageContent } from '@/site-data/solution-content';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -11,11 +11,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const solutionsPageContent = getSolutionsPageContent(locale);
-  return {
+  return pageMetadata({
+    locale,
+    path: '/services',
     title: solutionsPageContent.metadata.title,
     description: solutionsPageContent.metadata.description,
-    alternates: alternatesForPath(locale, '/services'),
-  };
+  });
 }
 
 export default async function ServicesPage({ params }: Props) {

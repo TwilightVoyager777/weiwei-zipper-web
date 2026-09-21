@@ -1,7 +1,7 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL } from '@/config/site-constants';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { getSiteBrand } from '@/site-data/site-content';
-import { alternatesForPath } from '@/seo/localized-urls';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -25,11 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'TermsOfService.meta' });
-  return {
+  return pageMetadata({
+    locale,
+    path: '/terms-of-service',
     title: t('title'),
     description: t('description'),
-    alternates: alternatesForPath(locale, '/terms-of-service'),
-  };
+  });
 }
 
 export default async function TermsOfServicePage({ params }: Props) {

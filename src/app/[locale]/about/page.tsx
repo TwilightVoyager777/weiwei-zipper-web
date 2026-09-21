@@ -1,7 +1,7 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import { getAboutContent } from '@/site-data/site-content';
 import type { Metadata } from 'next';
 
@@ -11,11 +11,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const aboutContent = getAboutContent(locale);
-  return {
+  return pageMetadata({
+    locale,
+    path: '/about',
     title: aboutContent.metadata.title,
     description: aboutContent.metadata.description,
-    alternates: alternatesForPath(locale, '/about'),
-  };
+  });
 }
 
 export default async function AboutPage({ params }: Props) {

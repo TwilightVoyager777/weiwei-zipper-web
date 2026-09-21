@@ -1,7 +1,7 @@
+import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/localization/navigation';
-import { alternatesForPath } from '@/seo/localized-urls';
 import {
   getProductItems,
   PRODUCT_IMAGES,
@@ -17,11 +17,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const productsPageContent = getProductsPageContent(locale);
-  return {
+  return pageMetadata({
+    locale,
+    path: '/products',
     title: productsPageContent.metadata.title,
     description: productsPageContent.metadata.description,
-    alternates: alternatesForPath(locale, '/products'),
-  };
+  });
 }
 
 export default async function ProductsPage({ params }: Props) {
