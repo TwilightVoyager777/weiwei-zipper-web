@@ -7,6 +7,7 @@ import { routing, type Locale } from '@/localization/routing';
 import { SITE_URL, COMPANY_NAME_EN, COMPANY_NAME_ZH, CONTACT_EMAIL, CONTACT_PHONE, COMPANY_ADDRESS_EN } from '@/config/site-constants';
 import { alternatesForPath, localizedUrl } from '@/seo/localized-urls';
 import { DEFAULT_OG_IMAGE } from '@/seo/page-metadata';
+import { SCHEMA_ID, htmlLangFor, schemaRef } from '@/seo/schema';
 import { getHomeContent, getSiteBrand } from '@/site-data/site-content';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -18,11 +19,14 @@ const ICON_CACHE_BUST = '20260302a';
 const BAIDU_SITE_VERIFICATION = process.env.BAIDU_SITE_VERIFICATION || 'codeva-K6Q4UfkUrb';
 const QIHOO_SITE_VERIFICATION = process.env.QIHOO_SITE_VERIFICATION || 'c4dd98193d4a3e7c38e2dbbde8166f81';
 const LOCALE_METADATA = {
-  en: { htmlLang: 'en', dir: 'ltr', ogLocale: 'en_US', companyName: COMPANY_NAME_EN },
-  zh: { htmlLang: 'zh-CN', dir: 'ltr', ogLocale: 'zh_CN', companyName: COMPANY_NAME_ZH },
-  ru: { htmlLang: 'ru', dir: 'ltr', ogLocale: 'ru_RU', companyName: COMPANY_NAME_EN },
-  es: { htmlLang: 'es', dir: 'ltr', ogLocale: 'es_ES', companyName: COMPANY_NAME_EN },
-  ar: { htmlLang: 'ar', dir: 'rtl', ogLocale: 'ar_AR', companyName: COMPANY_NAME_EN },
+  // The BCP-47 tag lives in `@/seo/schema` so that `<html lang>` and every
+  // schema `inLanguage` cannot drift apart — they did: this file emitted
+  // `zh-CN` while the blog schema emitted a bare `zh` on the same page.
+  en: { dir: 'ltr', ogLocale: 'en_US', companyName: COMPANY_NAME_EN },
+  zh: { dir: 'ltr', ogLocale: 'zh_CN', companyName: COMPANY_NAME_ZH },
+  ru: { dir: 'ltr', ogLocale: 'ru_RU', companyName: COMPANY_NAME_EN },
+  es: { dir: 'ltr', ogLocale: 'es_ES', companyName: COMPANY_NAME_EN },
+  ar: { dir: 'rtl', ogLocale: 'ar_AR', companyName: COMPANY_NAME_EN },
 } as const;
 
 const LOCALE_KEYWORDS = {
@@ -32,6 +36,21 @@ const LOCALE_KEYWORDS = {
   es: ['Weiwei Zipper', 'fabricante de cremalleras en Yiwu', 'fábrica de cremalleras en Yiwu', 'proveedor de cremalleras en Yiwu', 'cremalleras al por mayor en Yiwu', 'cremalleras personalizadas', 'cremalleras por rollo', 'cremalleras en Yiwu International Trade City', 'cremalleras en el Distrito 3 del International Trade City', 'cremallera metálica', 'cremallera de resina', 'cremallera de nylon', 'cremallera cerrada', 'cremallera abierta', 'cremallera de doble cursor', 'cremallera tamaño 3', 'cremallera tamaño 5', 'cremallera tamaño 8', 'cremallera para prendas', 'cremallera para bolsos', 'cremallera para ropa con protección solar'],
   ar: ['Weiwei Zipper', 'مصنع سحابات في ييوو', 'شركة سحابات في ييوو', 'مورد سحابات في ييوو', 'سحابات جملة في ييوو', 'سحابات مخصصة', 'سحابات رول', 'سحابات مدينة ييوو للتجارة الدولية', 'سحابات المنطقة الثالثة في مدينة التجارة الدولية', 'سحاب معدني', 'سحاب راتنج', 'سحاب نايلون', 'سحاب مغلق', 'سحاب مفتوح', 'سحاب مزدوج', 'سحاب مقاس 3', 'سحاب مقاس 5', 'سحاب مقاس 8', 'سحاب للملابس', 'سحاب للحقائب', 'سحاب للملابس الواقية من الشمس'],
 } as const;
+
+/**
+ * Distinct alternate names for a schema node, minus whatever that node already
+ * uses as its `name`.
+ *
+ * In most locales siteName, siteNameEn and shortBrand hold the same string, so
+ * spelling the array out by hand produced ["Weiwei Zipper","Weiwei Zipper"].
+ *
+ * Returns undefined rather than [] when nothing is left, so `JSON.stringify`
+ * drops the property instead of emitting an empty list.
+ */
+function alternateNames(primary: string, ...candidates: string[]) {
+  const names = [...new Set(candidates)].filter((value) => value && value !== primary);
+  return names.length > 0 ? names : undefined;
+}
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -135,23 +154,23 @@ function StructuredData({ locale }: { locale: string }) {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': SCHEMA_ID.organization,
     name: companyName,
-    // Deduplicated: in most locales these three fields hold the same string,
-    // which produced alternateName: ["Weiwei Zipper","Weiwei Zipper","Weiwei Zipper"].
-    alternateName: [...new Set<string>([
-      siteBrand.siteName,
-      siteBrand.siteNameEn,
-      siteBrand.shortBrand,
-    ])].filter((value) => value && value !== (companyName as string)),
+    legalName: COMPANY_NAME_EN,
+    alternateName: alternateNames(companyName, siteBrand.siteName, siteBrand.siteNameEn, siteBrand.shortBrand),
     url: SITE_URL,
-    logo: `${SITE_URL}${siteBrand.logoPath}`,
+    // ImageObject rather than a bare URL: article pages point their
+    // `publisher` at this node by `@id`, and Google's Article documentation
+    // asks for the publisher logo in that form.
+    logo: { '@type': 'ImageObject', '@id': `${SITE_URL}/#logo`, url: `${SITE_URL}${siteBrand.logoPath}` },
     image: `${SITE_URL}${siteBrand.logoPath}`,
     description: homeContent.metadata.description,
     foundingDate: siteBrand.foundedYear,
     brand: {
       '@type': 'Brand',
+      '@id': SCHEMA_ID.brand,
       name: siteBrand.siteNameEn,
-      alternateName: [siteBrand.siteName, siteBrand.shortBrand],
+      alternateName: alternateNames(siteBrand.siteNameEn, siteBrand.siteName, siteBrand.shortBrand),
       url: SITE_URL,
     },
     address: {
@@ -179,14 +198,14 @@ function StructuredData({ locale }: { locale: string }) {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': SCHEMA_ID.website,
     name: siteName,
-    alternateName: [siteBrand.siteName, siteBrand.siteNameEn],
+    alternateName: alternateNames(siteName, siteBrand.siteName, siteBrand.siteNameEn),
     url: SITE_URL,
-    inLanguage: localeMeta.htmlLang,
-    publisher: {
-      '@type': 'Organization',
-      name: companyName,
-    },
+    inLanguage: htmlLangFor(locale),
+    // Reference rather than repeat: the full Organization node is emitted just
+    // above, on this same page.
+    publisher: schemaRef(SCHEMA_ID.organization),
   };
 
   return (
@@ -216,7 +235,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const localeMeta = LOCALE_METADATA[(locale as Locale) ?? 'en'] ?? LOCALE_METADATA.en;
 
   return (
-    <html lang={localeMeta.htmlLang} dir={localeMeta.dir} suppressHydrationWarning>
+    <html lang={htmlLangFor(locale)} dir={localeMeta.dir} suppressHydrationWarning>
       <head>
         <link rel="icon" href={`/favicon-tab.ico?v=${ICON_CACHE_BUST}`} sizes="any" />
         <link rel="icon" href={`/favicon-tab.png?v=${ICON_CACHE_BUST}`} type="image/png" sizes="512x512" />

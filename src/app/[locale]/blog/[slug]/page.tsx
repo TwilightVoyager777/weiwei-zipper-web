@@ -1,5 +1,6 @@
 import { pageMetadata, DEFAULT_OG_IMAGE } from '@/seo/page-metadata';
 import { localizedUrl } from '@/seo/localized-urls';
+import { SCHEMA_ID, htmlLangFor, schemaRef } from '@/seo/schema';
 import { SITE_URL } from '@/config/site-constants';
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/localization/navigation';
@@ -53,9 +54,11 @@ export default async function BlogArticlePage({ params }: Props) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${localizedUrl(locale, `/blog/${slug}`)}#article`,
+    isPartOf: schemaRef(SCHEMA_ID.website),
     headline: post.title,
     description: post.excerpt,
-    inLanguage: locale,
+    inLanguage: htmlLangFor(locale),
     articleSection: categoryLabel,
     mainEntityOfPage: { '@type': 'WebPage', '@id': localizedUrl(locale, `/blog/${slug}`) },
     url: localizedUrl(locale, `/blog/${slug}`),
@@ -63,19 +66,22 @@ export default async function BlogArticlePage({ params }: Props) {
     // The frontmatter credits the company rather than a named person, so the
     // author is the organisation. A named author would be a stronger E-E-A-T
     // signal, but inventing one is not an option.
-    author: { '@type': 'Organization', name: post.author || brand.siteNameEn, url: SITE_URL },
-    publisher: {
-      '@type': 'Organization',
-      name: brand.siteNameEn,
-      url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}${brand.logoPath}` },
-    },
+    //
+    // When the byline is the company itself, point at the Organization node the
+    // layout already emits instead of declaring a second, unlinked one. A
+    // frontmatter byline that names someone else stays inline.
+    author:
+      !post.author || post.author === brand.siteNameEn || post.author === brand.siteName
+        ? schemaRef(SCHEMA_ID.organization)
+        : { '@type': 'Organization', name: post.author, url: SITE_URL },
+    publisher: schemaRef(SCHEMA_ID.organization),
     ...(post.date ? { datePublished: post.date, dateModified: post.date } : {}),
   };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${localizedUrl(locale, `/blog/${slug}`)}#breadcrumb`,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: brand.siteName, item: localizedUrl(locale) },
       { '@type': 'ListItem', position: 2, name: blogContent.metadata.title, item: localizedUrl(locale, '/blog') },

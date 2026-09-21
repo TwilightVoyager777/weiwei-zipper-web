@@ -6,11 +6,11 @@ import { Link } from '@/localization/navigation';
 import { getYiwuZipperLandingContent } from '@/site-data/market-landing-content';
 import { getSiteBrand } from '@/site-data/site-content';
 import { localizedUrl } from '@/seo/localized-urls';
+import { SCHEMA_ID, schemaRef } from '@/seo/schema';
 import {
   BOOTH_LATITUDE,
   BOOTH_LONGITUDE,
   COMPANY_ADDRESS_EN,
-  COMPANY_NAME_EN,
   CONTACT_EMAIL,
   CONTACT_PHONE,
   FOUNDED_YEAR,
@@ -58,8 +58,13 @@ export default async function YiwuZipperSupplierPage({ params }: Props) {
   const storeSchema = {
     '@context': 'https://schema.org',
     '@type': 'WholesaleStore',
+    '@id': SCHEMA_ID.yiwuStore,
     name: brand.siteNameEn,
-    legalName: COMPANY_NAME_EN,
+    // No `legalName` here. This node is the booth in the trade city, a location
+    // of the company — giving it the company's legal name *and* naming the same
+    // company as its parent made the two entities indistinguishable. The legal
+    // name now lives only on the Organization node, which the layout emits on
+    // this page and which `parentOrganization` points at.
     url: localizedUrl(locale, '/yiwu-zipper-supplier'),
     image: `${SITE_URL}/hero/tanwei.png`,
     telephone: CONTACT_PHONE,
@@ -80,13 +85,14 @@ export default async function YiwuZipperSupplierPage({ params }: Props) {
       latitude: BOOTH_LATITUDE,
       longitude: BOOTH_LONGITUDE,
     },
-    parentOrganization: { '@type': 'Organization', name: COMPANY_NAME_EN, url: SITE_URL },
+    parentOrganization: schemaRef(SCHEMA_ID.organization),
     // No priceRange: this is a quote-only supplier with no published prices.
   };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${localizedUrl(locale, '/yiwu-zipper-supplier')}#breadcrumb`,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: brand.siteName, item: localizedUrl(locale) },
       { '@type': 'ListItem', position: 2, name: content.title },

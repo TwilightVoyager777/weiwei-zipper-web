@@ -1,5 +1,7 @@
 import { pageMetadata } from '@/seo/page-metadata';
 import { setRequestLocale } from 'next-intl/server';
+import { localizedUrl } from '@/seo/localized-urls';
+import { SCHEMA_ID, schemaRef } from '@/seo/schema';
 import { getFaqPageContent } from '@/site-data/faq-content';
 import type { Metadata } from 'next';
 
@@ -24,6 +26,8 @@ export default async function FAQPage({ params }: Props) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    '@id': `${localizedUrl(locale, '/faq')}#faq`,
+    isPartOf: schemaRef(SCHEMA_ID.website),
     mainEntity: faqPageContent.items.map(({ question, answer }) => ({
       '@type': 'Question',
       name: question,

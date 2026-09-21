@@ -5,6 +5,7 @@ import { Link } from '@/localization/navigation';
 import ProductGallery from '@/components/ProductGallery';
 import ZoomableImage from '@/components/ZoomableImage';
 import { localizedUrl } from '@/seo/localized-urls';
+import { SCHEMA_ID, schemaRef } from '@/seo/schema';
 import { SITE_URL } from '@/config/site-constants';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -101,6 +102,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${localizedUrl(locale, `/products/${slug}`)}#breadcrumb`,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: ui.home, item: localizedUrl(locale) },
       { '@type': 'ListItem', position: 2, name: ui.products, item: localizedUrl(locale, '/products') },
@@ -111,6 +113,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
   const itemListSchema = productSlugs.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
+    '@id': `${localizedUrl(locale, `/products/${slug}`)}#itemlist`,
     name: category.name,
     description: category.description,
     numberOfItems: productSlugs.length,
@@ -119,6 +122,9 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
       position: index + 1,
       name: productItems[productSlug].name,
       url: localizedUrl(locale, `/products/${productSlug}`),
+      // The detail page emits the full Product node under this id, so a
+      // consumer that crawls both pages resolves them to one entity.
+      item: schemaRef(`${localizedUrl(locale, `/products/${productSlug}`)}#product`),
     })),
   } : null;
 
@@ -377,14 +383,16 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': `${localizedUrl(locale, `/products/${slug}`)}#product`,
+    isPartOf: schemaRef(SCHEMA_ID.website),
     name: product.name,
     description: product.overview,
     image: `${SITE_URL}${PRODUCT_IMAGES[slug]}`,
-    brand: { '@type': 'Brand', name: 'Weiwei Zipper' },
-    manufacturer: {
-      '@type': 'Organization',
-      name: 'Yiwu Weiwei Zipper Co., Ltd.',
-    },
+    // The Brand and Organization nodes are emitted once by the locale layout,
+    // which wraps this page; referencing them by `@id` keeps every product tied
+    // to the same two entities instead of declaring a fresh pair per page.
+    brand: schemaRef(SCHEMA_ID.brand),
+    manufacturer: schemaRef(SCHEMA_ID.organization),
     category: 'Zippers',
     url: localizedUrl(locale, `/products/${slug}`),
     // No `offers`: this is a quote-only catalogue with no published prices.
@@ -394,6 +402,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${localizedUrl(locale, `/products/${slug}`)}#breadcrumb`,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: ui.home, item: localizedUrl(locale) },
       { '@type': 'ListItem', position: 2, name: ui.products, item: localizedUrl(locale, '/products') },
