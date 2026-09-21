@@ -12,6 +12,7 @@ import type { Metadata } from 'next';
 import {
   ALL_PRODUCT_PAGE_SLUGS,
   CATEGORY_PRODUCTS,
+  PRODUCT_SPEC_KEYS,
   CATEGORY_SLUGS,
   CATEGORY_SLUG_TO_KEY,
   PRODUCT_IMAGES,
@@ -94,6 +95,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
   const categoryContent = getCategoryContent(locale);
   const productItems = getProductItems(locale);
   const productDetailLabels = getProductDetailLabels(locale);
+  const productSpecLabels = getProductSpecLabels(locale);
   const ui = await getProductPageUi(locale);
   const catKey = CATEGORY_SLUG_TO_KEY[slug];
   const category = categoryContent[catKey];
@@ -174,6 +176,33 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
                 ))}
               </ul>
             </section>
+
+            {/* Category-level specifications. These pages take the head terms
+                and used to carry no specification at all, so a buyer landing
+                here had to open a product page to learn anything concrete. */}
+            {category.specifications ? (
+              <section className="max-w-3xl mt-10">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{productDetailLabels.specifications}</h2>
+                <div className="overflow-x-auto -mx-4 sm:mx-0 border border-gray-200 rounded-lg">
+                  <table className="w-full text-sm min-w-[400px]">
+                    <thead>
+                      <tr className="bg-gray-50">
+                        <th className="text-start px-3 py-3 font-semibold text-gray-900 w-1/3 sm:px-4">{productDetailLabels.property}</th>
+                        <th className="text-start px-3 py-3 font-semibold text-gray-900 sm:px-4">{productDetailLabels.value}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(Object.entries(category.specifications) as [ProductSpecKey, string][]).map(([key, value], index: number) => (
+                        <tr key={key} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                          <td className="px-3 py-3 font-medium text-gray-700 sm:px-4">{productSpecLabels[key]}</td>
+                          <td className="px-3 py-3 text-gray-600 sm:px-4">{value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            ) : null}
 
             {category.featureImage && productSlugs.length > 0 ? (
               <div className="grid grid-cols-2 gap-4 mt-8 max-w-3xl">
@@ -394,6 +423,17 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
     brand: schemaRef(SCHEMA_ID.brand),
     manufacturer: schemaRef(SCHEMA_ID.organization),
     category: 'Zippers',
+    material: product.specifications.material,
+    size: product.specifications.size,
+    // The spec table existed only as HTML, so a consumer of the structured
+    // data could not see the minimum order, the sampling cycle or the lead
+    // time — the three things a buyer screens on. Same values, same labels,
+    // just also expressed where machines read.
+    additionalProperty: PRODUCT_SPEC_KEYS.map((key: ProductSpecKey) => ({
+      '@type': 'PropertyValue',
+      name: productSpecLabels[key],
+      value: product.specifications[key],
+    })),
     url: localizedUrl(locale, `/products/${slug}`),
     // No `offers`: this is a quote-only catalogue with no published prices.
     // A placeholder price of 0 would misrepresent the products as free.

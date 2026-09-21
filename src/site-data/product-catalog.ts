@@ -115,6 +115,24 @@ export type ProductCategoryContent = {
   description: string;
   overview: string;
   keyFeatures: string[];
+  /**
+   * Category-level spec table.
+   *
+   * These 30 pages are the ones that take head terms like "metal zipper
+   * supplier", and until now they were the weakest pages on the site: no
+   * specification of any kind, because this type had no slot for one while
+   * `ProductItemContent` did.
+   *
+   * The values are the ones already published on the category's generic
+   * product page, which is written at exactly this level of generality — no
+   * new information, just carried to where buyers land first.
+   *
+   * Optional, and deliberately unset for the three roll categories: each has
+   * a single member product whose specs are identical, so a table here would
+   * make those two pages near-copies of each other rather than fixing
+   * anything. They are differentiated with their own sections instead.
+   */
+  specifications?: Record<ProductSpecKey, string>;
   applications?: {
     title: string;
     items: { title: string; description: string }[];
@@ -175,6 +193,21 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     description: '主推 3 号 / 5 号 / 8 号常用规格，适合服装、童装、鞋帽等轻量项目配套。',
     overview: '树脂拉链是伟伟拉链当前的重要供应品类之一，主要适用于服装及轻量配件场景。常用 3 号、5 号、8 号规格，便于按款式进一步确认颜色、长度与拉头搭配，适合日常开发、批量采购与返单跟进。',
     keyFeatures: ['配色灵活，适合做常规成衣颜色匹配', '3 号 / 5 号 / 8 号常用规格覆盖完整', '闭尾、开尾、双开方式都可配', '适合服装与鞋帽等轻量使用场景'],
+    specifications: {
+      type: '树脂拉链',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
+      length: '可按需求长度配套',
+      structure: '闭尾 / 开尾 / 双开',
+      material: '树脂牙链配套常规织带',
+      sliderStyle: '可按款式搭配不同拉头',
+      colorOption: '支持按色卡沟通',
+      moq: '1000 条起，可混色',
+      samplingCycle: '通常 3 天',
+      productionLeadTime: '确认后通常 10 天',
+      orderType: '适合开发单、常规批量与返单',
+      applicationScope: '服装 / 鞋帽 / 轻量配件',
+      notes: '本表为该品类的通用参数；具体款式的差异见下方各产品页。',
+    },
     applications: {
       title: '典型方案',
       items: [
@@ -245,6 +278,21 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     description: '适合服装、箱包与防晒衣项目，常用 3 号 / 5 号 / 8 号规格。',
     overview: '尼龙拉链兼顾顺滑度、柔韧性和广泛适配性，是服装、箱包和防晒衣项目中的高频应用品类。伟伟拉链围绕 3 号、5 号、8 号常用规格建立稳定配套，便于快反开发、批量采购与持续返单。',
     keyFeatures: ['顺滑度稳定，适合高频拉合场景', '柔韧性更好，适合轻薄面料与软包结构', '颜色匹配空间大，适合系列化开发', '可覆盖防晒衣、外套、背包等多场景'],
+    specifications: {
+      type: '尼龙拉链',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
+      length: '可按需求长度配套',
+      structure: '闭尾 / 开尾 / 双开',
+      material: '尼龙牙链配套常规织带',
+      sliderStyle: '可按使用手感选拉头',
+      colorOption: '支持色卡与样衣确认',
+      moq: '1000 条起，可混色',
+      samplingCycle: '通常 3 天',
+      productionLeadTime: '确认后通常 10 天',
+      orderType: '适合开发单、常规批量与返单',
+      applicationScope: '服装 / 箱包 / 防晒衣',
+      notes: '本表为该品类的通用参数；具体款式的差异见下方各产品页。',
+    },
     applications: {
       title: '典型方案',
       items: [
@@ -315,6 +363,21 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     description: '适合箱包、靴类、工装及对质感要求更高的款式，常用 3 号 / 5 号 / 8 号规格。',
     overview: '金属拉链更适合强调质感与耐用度的应用场景。伟伟拉链围绕常用 3 号、5 号、8 号规格提供基础配套，适合箱包、工装、靴类及局部装饰类项目的长期使用。',
     keyFeatures: ['外观质感更强，适合有装饰属性的款式', '耐磨耐用，适合箱包和鞋类场景', '可搭配不同拉头样式形成风格差异', '适合中高频返单的固定款式配套'],
+    specifications: {
+      type: '金属拉链',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
+      length: '可按需求长度配套',
+      structure: '闭尾 / 开尾 / 双开',
+      material: '金属牙链配套常规织带',
+      sliderStyle: '可选常规与装饰型拉头',
+      colorOption: '支持颜色与五金风格沟通',
+      moq: '1000 条起，可混色',
+      samplingCycle: '通常 3 天',
+      productionLeadTime: '确认后通常 10 天',
+      orderType: '适合开发单、常规批量与返单',
+      applicationScope: '箱包 / 鞋帽 / 工装',
+      notes: '本表为该品类的通用参数；具体款式的差异见下方各产品页。',
+    },
     applications: {
       title: '典型方案',
       items: [
@@ -417,7 +480,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['服装', '鞋帽', '轻量配件'],
     specifications: {
       type: '树脂拉链',
-      size: '3 号 / 5 号 / 8 号',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
       length: '可按需求长度配套',
       structure: '闭尾 / 开尾 / 双开',
       material: '树脂牙链配套常规织带',
@@ -441,7 +504,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['服装加工', '鞋帽加工', '轻量配件'],
     specifications: {
       type: '树脂码装',
-      size: '3 号 / 5 号 / 8 号',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
       length: '按卷供货，可按需求裁切',
       structure: '卷装链带，不带上下止 / 插销，适合后续装头与定长加工',
       material: '树脂牙链配套常规织带',
@@ -477,7 +540,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['服装口袋', '童装配件', '鞋帽配件'],
     specifications: {
       type: '树脂闭口拉链',
-      size: '5 号',
+      size: '5 号（闭合链牙宽度约 5 毫米）',
       length: '可按需求长度定制',
       structure: '闭口',
       material: '树脂牙链配套常规织带',
@@ -518,7 +581,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['外套门襟', '童装开口位', '防晒衣前中开合'],
     specifications: {
       type: '树脂开口拉链',
-      size: '5 号',
+      size: '5 号（闭合链牙宽度约 5 毫米）',
       length: '可按需求长度定制',
       structure: '开口',
       material: '树脂牙链配套常规织带',
@@ -564,7 +627,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['服装', '箱包', '防晒衣拉链'],
     specifications: {
       type: '尼龙拉链',
-      size: '3 号 / 5 号 / 8 号',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
       length: '可按需求长度配套',
       structure: '闭尾 / 开尾 / 双开',
       material: '尼龙牙链配套常规织带',
@@ -588,7 +651,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['服装口袋', '箱包内袋', '轻工配件'],
     specifications: {
       type: '尼龙闭口拉链',
-      size: '5 号',
+      size: '5 号（闭合链牙宽度约 5 毫米）',
       length: '可按需求长度定制',
       structure: '闭口',
       material: '尼龙牙链配套常规织带',
@@ -629,7 +692,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['外套门襟', '防晒衣前中', '运动服饰'],
     specifications: {
       type: '尼龙开口拉链',
-      size: '5 号等常用规格',
+      size: '5 号等常用规格（5 号闭合链牙宽度约 5 毫米）',
       length: '可按需求长度定制',
       structure: '开口',
       material: '尼龙牙链配套常规织带',
@@ -685,7 +748,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['服装加工', '箱包加工', '防晒衣加工'],
     specifications: {
       type: '尼龙码装',
-      size: '3 号 / 5 号 / 8 号',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
       length: '按卷供货，可按需求裁切',
       structure: '卷装链带，不带上下止 / 插销，适合后续装头与定长加工',
       material: '尼龙牙链配套常规织带',
@@ -721,7 +784,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['箱包', '鞋帽', '工装配件'],
     specifications: {
       type: '金属拉链',
-      size: '3 号 / 5 号 / 8 号',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
       length: '可按需求长度配套',
       structure: '闭尾 / 开尾 / 双开',
       material: '金属牙链配套常规织带',
@@ -745,7 +808,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['箱包口袋', '鞋履配件', '工装配件'],
     specifications: {
       type: '金属闭口拉链',
-      size: '5 号',
+      size: '5 号（闭合链牙宽度约 5 毫米）',
       length: '可按需求长度定制',
       structure: '闭口',
       material: '金属牙链配套常规织带',
@@ -791,7 +854,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['外套门襟', '工装前中', '箱包配件'],
     specifications: {
       type: '金属开口拉链',
-      size: '5 号',
+      size: '5 号（闭合链牙宽度约 5 毫米）',
       length: '可按需求长度定制',
       structure: '开口',
       material: '金属牙链配套常规织带',
@@ -847,7 +910,7 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     applications: ['箱包加工', '鞋帽加工', '工装配件'],
     specifications: {
       type: '金属码装',
-      size: '3 号 / 5 号 / 8 号',
+      size: '3 号 / 5 号 / 8 号（闭合链牙宽度约 3 / 5 / 8 毫米）',
       length: '按卷供货，可按需求裁切',
       structure: '卷装链带，不带上下止 / 插销，适合后续装头与定长加工',
       material: '金属牙链配套常规织带',
@@ -1190,6 +1253,21 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Built around common size 3 / 5 / 8 demand for garments, kidswear, footwear, and other lightweight projects.',
     overview: 'Resin zippers are one of Weiwei Zipper’s core product lines and are widely used in garments and lightweight accessory projects. Common size 3, 5, and 8 options are organized in a way that makes it easier to confirm color, length, and slider matching for development, bulk purchasing, and repeat orders.',
     keyFeatures: ['Flexible color matching for routine garment projects', 'Clear coverage across size 3 / 5 / 8 demand', 'Closed-end, open-end, and two-way options can all be supported', 'Suitable for garments, footwear, and other lighter-use scenarios'],
+    specifications: {
+      type: 'Resin Zipper',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
+      length: 'Can be matched to required lengths',
+      structure: 'Closed-end / Open-end / Two-way',
+      material: 'Resin teeth with routine zipper tape',
+      sliderStyle: 'Different slider styles can be matched by design',
+      colorOption: 'Supports communication by color card',
+      moq: 'From 1,000 pieces, colours mixable',
+      samplingCycle: 'Usually 3 days',
+      productionLeadTime: 'Usually 10 days after confirmation',
+      orderType: 'Suitable for development orders, routine bulk, and repeat orders',
+      applicationScope: 'Garments / Footwear / Lightweight accessories',
+      notes: 'These are the category-level parameters; the product pages below show what changes by style.',
+    },
     applications: {
       title: 'Typical Solutions',
       items: [
@@ -1260,6 +1338,21 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Suitable for garments, bags, and sun-protective outerwear, with common size 3 / 5 / 8 options.',
     overview: 'Nylon zippers balance smooth operation, flexibility, and broad adaptability, making them a high-frequency choice in garments, bags, and sun-protective outerwear. Weiwei Zipper organizes stable supply mainly around size 3, 5, and 8 demand so customers can move more smoothly through quick-turn development, bulk purchasing, and repeat orders.',
     keyFeatures: ['Stable smoothness for high-frequency opening and closing', 'Better flexibility for light fabrics and softer bag structures', 'Broad color matching range for series development', 'Suitable across sun-protective outerwear, jackets, and backpacks'],
+    specifications: {
+      type: 'Nylon Zipper',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
+      length: 'Can be matched to required lengths',
+      structure: 'Closed-end / Open-end / Two-way',
+      material: 'Nylon teeth with routine zipper tape',
+      sliderStyle: 'Slider style can be chosen based on handling preference',
+      colorOption: 'Supports color card and sample garment confirmation',
+      moq: 'From 1,000 pieces, colours mixable',
+      samplingCycle: 'Usually 3 days',
+      productionLeadTime: 'Usually 10 days after confirmation',
+      orderType: 'Suitable for development orders, routine bulk, and repeat orders',
+      applicationScope: 'Garments / Bags / Sun-protective outerwear',
+      notes: 'These are the category-level parameters; the product pages below show what changes by style.',
+    },
     applications: {
       title: 'Typical Solutions',
       items: [
@@ -1330,6 +1423,21 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     description: 'More suitable for bags, footwear, workwear, and styles that require stronger texture and durability, usually within the size 3 / 5 / 8 range.',
     overview: 'Metal zippers are more suitable for applications that emphasize durability and visual texture. Weiwei Zipper mainly supports common size 3, 5, and 8 options in this category, making them useful for bags, workwear, boots, and projects that need stronger decorative presence and long-term reuse.',
     keyFeatures: ['Stronger decorative appearance and visual texture', 'Better suited to durable-use scenarios', 'Can be matched with different slider styles for stronger style variation', 'Suitable for fixed styles with repeat-order potential'],
+    specifications: {
+      type: 'Metal Zipper',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
+      length: 'Can be matched to required lengths',
+      structure: 'Closed-end / Open-end / Two-way',
+      material: 'Metal teeth with routine zipper tape',
+      sliderStyle: 'Routine and decorative slider options available',
+      colorOption: 'Supports coordination around tape color and hardware style',
+      moq: 'From 1,000 pieces, colours mixable',
+      samplingCycle: 'Usually 3 days',
+      productionLeadTime: 'Usually 10 days after confirmation',
+      orderType: 'Suitable for development orders, routine bulk, and repeat orders',
+      applicationScope: 'Bags / Footwear / Workwear',
+      notes: 'These are the category-level parameters; the product pages below show what changes by style.',
+    },
     applications: {
       title: 'Typical Solutions',
       items: [
@@ -1430,6 +1538,21 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Más adecuadas para bolsos, calzado, ropa de trabajo y estilos que requieren mayor textura y durabilidad, normalmente dentro de los tamaños 3 / 5 / 8.',
     overview: 'Las cremalleras metálicas resultan más adecuadas para aplicaciones que dan importancia a la durabilidad y a la textura visual. Weiwei Zipper trabaja principalmente los tamaños comunes 3, 5 y 8 en esta categoría, lo que las hace útiles para bolsos, ropa de trabajo, botas y proyectos que necesitan una presencia decorativa más marcada y una reutilización prolongada.',
     keyFeatures: ['Apariencia decorativa y textura visual más marcadas', 'Más adecuadas para escenarios de uso duradero', 'Se pueden combinar con distintos estilos de cursor para obtener más variación de estilo', 'Adecuadas para estilos fijos con potencial de pedidos recurrentes'],
+    specifications: {
+      type: 'Cremallera metálica',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
+      length: 'Puede ajustarse a la longitud requerida',
+      structure: 'Cerrada / abierta / doble cursor',
+      material: 'Dientes metálicos con cinta textil convencional',
+      sliderStyle: 'Opciones de cursores habituales y decorativos',
+      colorOption: 'Compatible con coordinación entre color de cinta y acabado metálico',
+      moq: 'Desde 1000 unidades, colores mezclables',
+      samplingCycle: 'Normalmente 3 días',
+      productionLeadTime: 'Normalmente 10 días tras la confirmación',
+      orderType: 'Adecuada para desarrollo, volumen habitual y reposición',
+      applicationScope: 'Bolsos / calzado / ropa de trabajo',
+      notes: 'Estos son los parámetros generales de la categoría; las páginas de producto indican qué cambia según el modelo.',
+    },
     applications: {
       title: 'Soluciones típicas',
       items: [
@@ -1500,6 +1623,21 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Organizadas alrededor de la demanda común de tamaños 3 / 5 / 8 para prendas, ropa infantil, calzado y otros proyectos ligeros.',
     overview: 'Las cremalleras de resina son una de las líneas de producto principales de Weiwei Zipper y se utilizan ampliamente en prendas y proyectos de accesorios ligeros. Los tamaños comunes 3, 5 y 8 están organizados de forma que resulte más sencillo confirmar el color, la longitud y la combinación de cursor para el desarrollo, las compras por volumen y los pedidos recurrentes.',
     keyFeatures: ['Combinación de color flexible para proyectos habituales de prenda', 'Cobertura clara de la demanda de tamaños 3 / 5 / 8', 'Se pueden atender opciones cerradas, abiertas y de doble apertura', 'Adecuadas para prendas, calzado y otros escenarios de uso más ligero'],
+    specifications: {
+      type: 'Cremallera de resina',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
+      length: 'Puede ajustarse a la longitud requerida',
+      structure: 'Cerrada / abierta / doble cursor',
+      material: 'Dientes de resina con cinta textil convencional',
+      sliderStyle: 'Se pueden combinar distintos cursores según el diseño',
+      colorOption: 'Compatible con comunicación por carta de colores',
+      moq: 'Desde 1000 unidades, colores mezclables',
+      samplingCycle: 'Normalmente 3 días',
+      productionLeadTime: 'Normalmente 10 días tras la confirmación',
+      orderType: 'Adecuada para desarrollo, volumen habitual y reposición',
+      applicationScope: 'Prendas / calzado / accesorios ligeros',
+      notes: 'Estos son los parámetros generales de la categoría; las páginas de producto indican qué cambia según el modelo.',
+    },
     applications: {
       title: 'Soluciones típicas',
       items: [
@@ -1570,6 +1708,21 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Adecuadas para prendas, bolsos y ropa con protección solar, con opciones comunes en tamaños 3 / 5 / 8.',
     overview: 'Las cremalleras de nylon equilibran la suavidad de funcionamiento, la flexibilidad y una amplia adaptabilidad, lo que las convierte en una opción de alta frecuencia en prendas, bolsos y ropa con protección solar. Weiwei Zipper organiza un suministro estable principalmente en torno a la demanda de tamaños 3, 5 y 8, de modo que los clientes puedan avanzar con más fluidez en el desarrollo rápido, las compras por volumen y los pedidos recurrentes.',
     keyFeatures: ['Suavidad estable para aperturas y cierres frecuentes', 'Mayor flexibilidad para tejidos ligeros y estructuras de bolso más blandas', 'Amplia gama de combinación de color para el desarrollo de series', 'Adecuadas para ropa con protección solar, chaquetas y mochilas'],
+    specifications: {
+      type: 'Cremallera de nylon',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
+      length: 'Puede ajustarse a la longitud requerida',
+      structure: 'Cerrada / abierta / doble cursor',
+      material: 'Dientes de nylon con cinta textil convencional',
+      sliderStyle: 'El cursor puede elegirse según la sensación de uso',
+      colorOption: 'Compatible con carta de colores y confirmación con muestra de prenda',
+      moq: 'Desde 1000 unidades, colores mezclables',
+      samplingCycle: 'Normalmente 3 días',
+      productionLeadTime: 'Normalmente 10 días tras la confirmación',
+      orderType: 'Adecuada para desarrollo, volumen habitual y reposición',
+      applicationScope: 'Prendas / bolsos / ropa con protección solar',
+      notes: 'Estos son los parámetros generales de la categoría; las páginas de producto indican qué cambia según el modelo.',
+    },
     applications: {
       title: 'Soluciones típicas',
       items: [
@@ -1670,6 +1823,21 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     description: 'أنسب للحقائب والأحذية وملابس العمل والتصاميم التي تحتاج إلى ملمس أقوى ومتانة أعلى، وغالبا ضمن المقاسات 3 / 5 / 8.',
     overview: 'السحابات المعدنية أنسب للاستخدامات التي تركز على المتانة والملمس البصري. وتوفر Weiwei Zipper في هذه الفئة المقاسات الشائعة 3 و5 و8 بشكل أساسي، وهو ما يجعلها مفيدة للحقائب وملابس العمل والأحذية الطويلة والمشاريع التي تحتاج إلى حضور زخرفي أقوى وإعادة استخدام على المدى الطويل.',
     keyFeatures: ['مظهر زخرفي وملمس بصري أقوى', 'أنسب لحالات الاستخدام التي تتطلب متانة أعلى', 'يمكن تنسيقها مع أنماط سحابات مختلفة للحصول على تنوع أكبر في الأسلوب', 'مناسبة للتصاميم الثابتة التي يحتمل تكرار طلبها'],
+    specifications: {
+      type: 'سحاب معدني',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
+      length: 'يمكن تنسيقه حسب الطول المطلوب',
+      structure: 'مغلق / مفتوح / مزدوج',
+      material: 'أسنان معدنية مع شريط سحاب قياسي',
+      sliderStyle: 'تتوفر سحابات قياسية وزخرفية',
+      colorOption: 'يدعم التنسيق بين لون الشريط واللون المعدني',
+      moq: 'من 1000 قطعة، يمكن مزج الألوان',
+      samplingCycle: 'عادة 3 أيام',
+      productionLeadTime: 'عادة 10 أيام بعد التأكيد',
+      orderType: 'مناسب للتطوير والطلبات القياسية وإعادة الطلب',
+      applicationScope: 'الحقائب / الأحذية / ملابس العمل',
+      notes: 'هذه هي المعايير العامة لهذه الفئة؛ وصفحات المنتجات أدناه توضّح ما يختلف حسب الطراز.',
+    },
     applications: {
       title: 'الحلول النموذجية',
       items: [
@@ -1740,6 +1908,21 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     description: 'منظمة حول الطلب الشائع على المقاسات 3 / 5 / 8 للملابس وملابس الأطفال والأحذية والمشاريع الخفيفة الأخرى.',
     overview: 'سحابات الراتنج من خطوط المنتجات الأساسية لدى Weiwei Zipper، وتستخدم على نطاق واسع في الملابس ومشاريع الإكسسوارات الخفيفة. وقد نظمت المقاسات الشائعة 3 و5 و8 بطريقة تسهل تأكيد اللون والطول ومطابقة السحاب في مراحل التطوير والشراء بالجملة وإعادة الطلب.',
     keyFeatures: ['تنسيق ألوان مرن لمشاريع الملابس الاعتيادية', 'تغطية واضحة للطلب على المقاسات 3 / 5 / 8', 'يمكن دعم الخيارات المغلقة والمفتوحة والمزدوجة الفتح', 'مناسبة للملابس والأحذية وغيرها من الاستخدامات الأخف'],
+    specifications: {
+      type: 'سحاب راتنج',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
+      length: 'يمكن تنسيقه حسب الطول المطلوب',
+      structure: 'مغلق / مفتوح / مزدوج',
+      material: 'أسنان راتنج مع شريط سحاب قياسي',
+      sliderStyle: 'يمكن تنسيق أشكال مختلفة من السحابات حسب التصميم',
+      colorOption: 'يدعم التواصل عبر بطاقات الألوان',
+      moq: 'من 1000 قطعة، يمكن مزج الألوان',
+      samplingCycle: 'عادة 3 أيام',
+      productionLeadTime: 'عادة 10 أيام بعد التأكيد',
+      orderType: 'مناسب للتطوير والطلبات القياسية وإعادة الطلب',
+      applicationScope: 'الملابس / الأحذية / الإكسسوارات الخفيفة',
+      notes: 'هذه هي المعايير العامة لهذه الفئة؛ وصفحات المنتجات أدناه توضّح ما يختلف حسب الطراز.',
+    },
     applications: {
       title: 'الحلول النموذجية',
       items: [
@@ -1810,6 +1993,21 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     description: 'مناسبة للملابس والحقائب والملابس الواقية من الشمس، مع خيارات شائعة بالمقاسات 3 / 5 / 8.',
     overview: 'توازن سحابات النايلون بين سلاسة الحركة والمرونة واتساع نطاق الاستخدام، وهو ما يجعلها خيارا متكررا في الملابس والحقائب والملابس الواقية من الشمس. وتنظم Weiwei Zipper توريدا مستقرا يدور أساسا حول الطلب على المقاسات 3 و5 و8، حتى يتمكن العملاء من التقدم بسلاسة أكبر في التطوير السريع والشراء بالجملة وإعادة الطلب.',
     keyFeatures: ['سلاسة ثابتة في الفتح والإغلاق المتكرر', 'مرونة أفضل مع الأقمشة الخفيفة وبنى الحقائب الأكثر ليونة', 'نطاق واسع لتنسيق الألوان في تطوير السلاسل', 'مناسبة للملابس الواقية من الشمس والجاكيتات وحقائب الظهر'],
+    specifications: {
+      type: 'سحاب نايلون',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
+      length: 'يمكن تنسيقه حسب الطول المطلوب',
+      structure: 'مغلق / مفتوح / مزدوج',
+      material: 'أسنان نايلون مع شريط سحاب قياسي',
+      sliderStyle: 'يمكن اختيار السحاب بحسب الإحساس المطلوب في الاستخدام',
+      colorOption: 'يدعم بطاقات الألوان وتأكيده عبر عينة الملابس',
+      moq: 'من 1000 قطعة، يمكن مزج الألوان',
+      samplingCycle: 'عادة 3 أيام',
+      productionLeadTime: 'عادة 10 أيام بعد التأكيد',
+      orderType: 'مناسب للتطوير والطلبات القياسية وإعادة الطلب',
+      applicationScope: 'الملابس / الحقائب / الملابس الواقية من الشمس',
+      notes: 'هذه هي المعايير العامة لهذه الفئة؛ وصفحات المنتجات أدناه توضّح ما يختلف حسب الطراز.',
+    },
     applications: {
       title: 'الحلول النموذجية',
       items: [
@@ -1910,6 +2108,21 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Лучше подходят для сумок, обуви, рабочей одежды и моделей, где важны фактура и высокая износостойкость, обычно в размерах 3 / 5 / 8.',
     overview: 'Металлические молнии лучше подходят для применений, где важны износостойкость и фактура. В этой категории Weiwei Zipper работает главным образом с популярными размерами 3, 5 и 8, что делает их удобными для сумок, рабочей одежды, ботинок и проектов, где нужны более выраженная декоративная роль и длительное повторное использование.',
     keyFeatures: ['Более выраженный декоративный вид и фактура', 'Лучше подходят для сценариев с высокой нагрузкой на износ', 'Можно сочетать с разными стилями бегунков для большего разнообразия стиля', 'Подходят для постоянных моделей с потенциалом повторных заказов'],
+    specifications: {
+      type: 'Металлическая молния',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
+      length: 'Может подбираться под нужную длину',
+      structure: 'Неразъемная / разъемная / двухзамковая',
+      material: 'Металлические зубья с типовой тесьмой',
+      sliderStyle: 'Доступны стандартные и декоративные варианты бегунков',
+      colorOption: 'Поддерживается согласование цвета тесьмы и металлического оттенка',
+      moq: 'От 1000 штук, цвета можно смешивать',
+      samplingCycle: 'Обычно 3 дня',
+      productionLeadTime: 'Обычно 10 дней после подтверждения',
+      orderType: 'Подходит для разработки, типовых партий и повторных заказов',
+      applicationScope: 'Сумки / обувь / рабочая одежда',
+      notes: 'Это общие параметры категории; на страницах товаров ниже указано, что меняется в зависимости от модели.',
+    },
     applications: {
       title: 'Типовые решения',
       items: [
@@ -1980,6 +2193,21 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Организованы вокруг распространенного спроса на размеры 3 / 5 / 8 для одежды, детских изделий, обуви и других легких проектов.',
     overview: 'Смоляные молнии — одна из основных продуктовых линеек Weiwei Zipper, они широко используются в одежде и проектах легких аксессуаров. Популярные размеры 3, 5 и 8 организованы так, чтобы было проще подтверждать цвет, длину и подбор бегунка для разработки, оптовой закупки и повторных заказов.',
     keyFeatures: ['Гибкий подбор цвета для типовых проектов одежды', 'Понятное покрытие спроса на размеры 3 / 5 / 8', 'Можно обеспечить неразъемные, разъемные и двухзамковые варианты', 'Подходят для одежды, обуви и других более легких сценариев использования'],
+    specifications: {
+      type: 'Смоляная молния',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
+      length: 'Может подбираться под нужную длину',
+      structure: 'Неразъемная / разъемная / двухзамковая',
+      material: 'Смоляные зубья с типовой тесьмой',
+      sliderStyle: 'Можно подобрать разные бегунки в зависимости от дизайна',
+      colorOption: 'Поддерживается согласование по карте цветов',
+      moq: 'От 1000 штук, цвета можно смешивать',
+      samplingCycle: 'Обычно 3 дня',
+      productionLeadTime: 'Обычно 10 дней после подтверждения',
+      orderType: 'Подходит для разработки, типовых партий и повторных заказов',
+      applicationScope: 'Одежда / обувь / легкие аксессуары',
+      notes: 'Это общие параметры категории; на страницах товаров ниже указано, что меняется в зависимости от модели.',
+    },
     applications: {
       title: 'Типовые решения',
       items: [
@@ -2050,6 +2278,21 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     description: 'Подходят для одежды, сумок и солнцезащитной верхней одежды, с распространенными вариантами размеров 3 / 5 / 8.',
     overview: 'Нейлоновые молнии сочетают плавность хода, гибкость и широкую применимость, поэтому они часто выбираются для одежды, сумок и солнцезащитной верхней одежды. Weiwei Zipper организует стабильные поставки главным образом вокруг спроса на размеры 3, 5 и 8, чтобы клиентам было проще проходить быструю разработку, оптовую закупку и повторные заказы.',
     keyFeatures: ['Стабильная плавность при частом открывании и закрывании', 'Лучшая гибкость для легких тканей и более мягких конструкций сумок', 'Широкий диапазон подбора цвета для разработки серий', 'Подходят для солнцезащитной верхней одежды, курток и рюкзаков'],
+    specifications: {
+      type: 'Нейлоновая молния',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
+      length: 'Может подбираться под нужную длину',
+      structure: 'Неразъемная / разъемная / двухзамковая',
+      material: 'Нейлоновые зубья с типовой тесьмой',
+      sliderStyle: 'Тип бегунка можно выбирать по ощущениям от использования',
+      colorOption: 'Поддерживается согласование по карте цветов и образцу изделия',
+      moq: 'От 1000 штук, цвета можно смешивать',
+      samplingCycle: 'Обычно 3 дня',
+      productionLeadTime: 'Обычно 10 дней после подтверждения',
+      orderType: 'Подходит для разработки, типовых партий и повторных заказов',
+      applicationScope: 'Одежда / сумки / солнцезащитная одежда',
+      notes: 'Это общие параметры категории; на страницах товаров ниже указано, что меняется в зависимости от модели.',
+    },
     applications: {
       title: 'Типовые решения',
       items: [
@@ -2152,7 +2395,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Garments', 'Footwear', 'Lightweight accessories'],
     specifications: {
       type: 'Resin Zipper',
-      size: 'Sizes 3 / 5 / 8',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
       length: 'Can be matched to required lengths',
       structure: 'Closed-end / Open-end / Two-way',
       material: 'Resin teeth with routine zipper tape',
@@ -2176,7 +2419,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Garment processing', 'Footwear processing', 'Lightweight accessory processing'],
     specifications: {
       type: 'Resin Zipper Roll',
-      size: 'Sizes 3 / 5 / 8',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
       length: 'Supplied by the roll and can be cut as needed',
       structure: 'Roll chain without top or bottom stops / insertion parts, suitable for later slider fitting and fixed-length processing',
       material: 'Resin teeth with routine zipper tape',
@@ -2212,7 +2455,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Garment pockets', 'Kidswear accessories', 'Footwear accessories'],
     specifications: {
       type: 'Resin Closed-End Zipper',
-      size: 'No. 5',
+      size: 'No. 5 (closed chain width about 5 mm)',
       length: 'Can be customized to required lengths',
       structure: 'Closed-end',
       material: 'Resin teeth with routine zipper tape',
@@ -2253,7 +2496,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Jacket front openings', 'Kidswear opening positions', 'Sun-protective outerwear front plackets'],
     specifications: {
       type: 'Resin Open-End Zipper',
-      size: 'No. 5',
+      size: 'No. 5 (closed chain width about 5 mm)',
       length: 'Can be customized to required lengths',
       structure: 'Open-end',
       material: 'Resin teeth with routine zipper tape',
@@ -2299,7 +2542,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Garments', 'Bags', 'Sun-protective outerwear'],
     specifications: {
       type: 'Nylon Zipper',
-      size: 'Sizes 3 / 5 / 8',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
       length: 'Can be matched to required lengths',
       structure: 'Closed-end / Open-end / Two-way',
       material: 'Nylon teeth with routine zipper tape',
@@ -2323,7 +2566,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Garment pockets', 'Inner bag sections', 'Light accessories'],
     specifications: {
       type: 'Nylon Closed-End Zipper',
-      size: 'No. 5',
+      size: 'No. 5 (closed chain width about 5 mm)',
       length: 'Can be customized to required lengths',
       structure: 'Closed-end',
       material: 'Nylon teeth with routine zipper tape',
@@ -2364,7 +2607,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Jacket plackets', 'Sun-protective outerwear fronts', 'Sportswear'],
     specifications: {
       type: 'Nylon Open-End Zipper',
-      size: 'Common sizes such as No. 5',
+      size: 'Common sizes such as No. 5 (closed chain width about 5 mm)',
       length: 'Can be customized to required lengths',
       structure: 'Open-end',
       material: 'Nylon teeth with routine zipper tape',
@@ -2420,7 +2663,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Garment processing', 'Bag processing', 'Sun-protective outerwear processing'],
     specifications: {
       type: 'Nylon Zipper Roll',
-      size: 'Sizes 3 / 5 / 8',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
       length: 'Supplied by the roll and can be cut as needed',
       structure: 'Roll chain without top or bottom stops / insertion parts, suitable for later slider fitting and fixed-length processing',
       material: 'Nylon teeth with routine zipper tape',
@@ -2456,7 +2699,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Bags', 'Footwear', 'Workwear accessories'],
     specifications: {
       type: 'Metal Zipper',
-      size: 'Sizes 3 / 5 / 8',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
       length: 'Can be matched to required lengths',
       structure: 'Closed-end / Open-end / Two-way',
       material: 'Metal teeth with routine zipper tape',
@@ -2480,7 +2723,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Bag pockets', 'Footwear accessories', 'Workwear accessories'],
     specifications: {
       type: 'Metal Closed-End Zipper',
-      size: 'No. 5',
+      size: 'No. 5 (closed chain width about 5 mm)',
       length: 'Can be customized to required lengths',
       structure: 'Closed-end',
       material: 'Metal teeth with routine zipper tape',
@@ -2526,7 +2769,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Jacket plackets', 'Workwear center fronts', 'Bag accessories'],
     specifications: {
       type: 'Metal Open-End Zipper',
-      size: 'No. 5',
+      size: 'No. 5 (closed chain width about 5 mm)',
       length: 'Can be customized to required lengths',
       structure: 'Open-end',
       material: 'Metal teeth with routine zipper tape',
@@ -2582,7 +2825,7 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     applications: ['Bag processing', 'Footwear processing', 'Workwear accessories'],
     specifications: {
       type: 'Metal Zipper Roll',
-      size: 'Sizes 3 / 5 / 8',
+      size: 'Sizes 3 / 5 / 8 (closed chain width about 3 / 5 / 8 mm)',
       length: 'Supplied by the roll and can be cut as needed',
       structure: 'Roll chain without top or bottom stops / insertion parts, suitable for later slider fitting and fixed-length processing',
       material: 'Metal teeth with routine zipper tape',
@@ -2621,7 +2864,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Prendas', 'Calzado', 'Accesorios ligeros'],
     specifications: {
       type: 'Cremallera de resina',
-      size: 'Tamaño 3 / 5 / 8',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
       length: 'Puede ajustarse a la longitud requerida',
       structure: 'Cerrada / abierta / doble cursor',
       material: 'Dientes de resina con cinta textil convencional',
@@ -2645,7 +2888,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Procesamiento de prendas', 'Procesamiento de calzado', 'Procesamiento de accesorios ligeros'],
     specifications: {
       type: 'Cremallera de resina por rollo',
-      size: 'Tamaño 3 / 5 / 8',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
       length: 'Se suministra por rollo y puede cortarse según necesidad',
       structure: 'Cadena en rollo sin topes superiores o inferiores ni piezas de inserción, adecuada para montaje posterior de cursor y procesamiento a longitud fija',
       material: 'Dientes de resina con cinta textil convencional',
@@ -2681,7 +2924,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Bolsillos de prendas', 'Accesorios de ropa infantil', 'Accesorios de calzado'],
     specifications: {
       type: 'Cremallera cerrada de resina',
-      size: 'No. 5',
+      size: 'No. 5 (ancho de cadena cerrada de unos 5 mm)',
       length: 'Puede personalizarse a la longitud requerida',
       structure: 'Cerrada',
       material: 'Dientes de resina con cinta textil convencional',
@@ -2722,7 +2965,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Aperturas frontales de chaquetas', 'Posiciones abiertas en ropa infantil', 'Tapetas frontales en ropa con protección solar'],
     specifications: {
       type: 'Cremallera abierta de resina',
-      size: 'No. 5',
+      size: 'No. 5 (ancho de cadena cerrada de unos 5 mm)',
       length: 'Puede personalizarse a la longitud requerida',
       structure: 'Abierta',
       material: 'Dientes de resina con cinta textil convencional',
@@ -2768,7 +3011,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Prendas', 'Bolsos', 'Ropa con protección solar'],
     specifications: {
       type: 'Cremallera de nylon',
-      size: 'Tamaño 3 / 5 / 8',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
       length: 'Puede ajustarse a la longitud requerida',
       structure: 'Cerrada / abierta / doble cursor',
       material: 'Dientes de nylon con cinta textil convencional',
@@ -2792,7 +3035,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Bolsillos de prendas', 'Compartimentos internos de bolsos', 'Accesorios ligeros'],
     specifications: {
       type: 'Cremallera cerrada de nylon',
-      size: 'No. 5',
+      size: 'No. 5 (ancho de cadena cerrada de unos 5 mm)',
       length: 'Puede personalizarse a la longitud requerida',
       structure: 'Cerrada',
       material: 'Dientes de nylon con cinta textil convencional',
@@ -2833,7 +3076,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Aperturas de chaquetas', 'Frentes de ropa con protección solar', 'Ropa deportiva'],
     specifications: {
       type: 'Cremallera abierta de nylon',
-      size: 'Tamaños comunes como No. 5',
+      size: 'Tamaños comunes como No. 5 (ancho de cadena cerrada de unos 5 mm)',
       length: 'Puede personalizarse a la longitud requerida',
       structure: 'Abierta',
       material: 'Dientes de nylon con cinta textil convencional',
@@ -2889,7 +3132,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Procesamiento de prendas', 'Procesamiento de bolsos', 'Procesamiento de ropa con protección solar'],
     specifications: {
       type: 'Cremallera de nylon por rollo',
-      size: 'Tamaño 3 / 5 / 8',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
       length: 'Se suministra por rollo y puede cortarse según necesidad',
       structure: 'Cadena en rollo sin topes superiores o inferiores ni piezas de inserción, adecuada para montaje posterior de cursor y procesamiento a longitud fija',
       material: 'Dientes de nylon con cinta textil convencional',
@@ -2925,7 +3168,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Bolsos', 'Calzado', 'Accesorios de ropa de trabajo'],
     specifications: {
       type: 'Cremallera metálica',
-      size: 'Tamaño 3 / 5 / 8',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
       length: 'Puede ajustarse a la longitud requerida',
       structure: 'Cerrada / abierta / doble cursor',
       material: 'Dientes metálicos con cinta textil convencional',
@@ -2949,7 +3192,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Bolsillos de bolsos', 'Accesorios de calzado', 'Accesorios de ropa de trabajo'],
     specifications: {
       type: 'Cremallera cerrada metálica',
-      size: 'No. 5',
+      size: 'No. 5 (ancho de cadena cerrada de unos 5 mm)',
       length: 'Puede personalizarse a la longitud requerida',
       structure: 'Cerrada',
       material: 'Dientes metálicos con cinta textil convencional',
@@ -2995,7 +3238,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Aperturas de chaquetas', 'Frentes de ropa de trabajo', 'Accesorios de bolsos'],
     specifications: {
       type: 'Cremallera abierta metálica',
-      size: 'No. 5',
+      size: 'No. 5 (ancho de cadena cerrada de unos 5 mm)',
       length: 'Puede personalizarse a la longitud requerida',
       structure: 'Abierta',
       material: 'Dientes metálicos con cinta textil convencional',
@@ -3051,7 +3294,7 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     applications: ['Procesamiento de bolsos', 'Procesamiento de calzado', 'Accesorios de ropa de trabajo'],
     specifications: {
       type: 'Cremallera metálica por rollo',
-      size: 'Tamaño 3 / 5 / 8',
+      size: 'Tamaño 3 / 5 / 8 (ancho de cadena cerrada de unos 3 / 5 / 8 mm)',
       length: 'Se suministra por rollo y puede cortarse según necesidad',
       structure: 'Cadena en rollo sin topes superiores o inferiores ni piezas de inserción, adecuada para montaje posterior de cursor y procesamiento a longitud fija',
       material: 'Dientes metálicos con cinta textil convencional',
@@ -3090,7 +3333,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['الملابس', 'الأحذية', 'الإكسسوارات الخفيفة'],
     specifications: {
       type: 'سحاب راتنج',
-      size: 'مقاس 3 / 5 / 8',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
       length: 'يمكن تنسيقه حسب الطول المطلوب',
       structure: 'مغلق / مفتوح / مزدوج',
       material: 'أسنان راتنج مع شريط سحاب قياسي',
@@ -3114,7 +3357,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['معالجة الملابس', 'معالجة الأحذية', 'معالجة الإكسسوارات الخفيفة'],
     specifications: {
       type: 'سحاب راتنج بالرول',
-      size: 'مقاس 3 / 5 / 8',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
       length: 'يورد بالرول ويمكن قصه حسب الحاجة',
       structure: 'سلسلة رول من دون نقاط توقف علوية أو سفلية أو أجزاء إدخال، مناسبة لتركيب السحاب لاحقا والمعالجة بطول ثابت',
       material: 'أسنان راتنج مع شريط سحاب قياسي',
@@ -3150,7 +3393,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['جيوب الملابس', 'إكسسوارات ملابس الأطفال', 'إكسسوارات الأحذية'],
     specifications: {
       type: 'سحاب راتنج مغلق',
-      size: 'رقم 5',
+      size: 'رقم 5 (عرض السلسلة المغلقة نحو 5 مم)',
       length: 'يمكن تخصيصه حسب الطول المطلوب',
       structure: 'مغلق',
       material: 'أسنان راتنج مع شريط سحاب قياسي',
@@ -3191,7 +3434,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['الفتحات الأمامية للجاكيتات', 'مواضع الفتح في ملابس الأطفال', 'الفتحات الأمامية في الملابس الواقية من الشمس'],
     specifications: {
       type: 'سحاب راتنج مفتوح',
-      size: 'رقم 5',
+      size: 'رقم 5 (عرض السلسلة المغلقة نحو 5 مم)',
       length: 'يمكن تخصيصه حسب الطول المطلوب',
       structure: 'مفتوح',
       material: 'أسنان راتنج مع شريط سحاب قياسي',
@@ -3237,7 +3480,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['الملابس', 'الحقائب', 'الملابس الواقية من الشمس'],
     specifications: {
       type: 'سحاب نايلون',
-      size: 'مقاس 3 / 5 / 8',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
       length: 'يمكن تنسيقه حسب الطول المطلوب',
       structure: 'مغلق / مفتوح / مزدوج',
       material: 'أسنان نايلون مع شريط سحاب قياسي',
@@ -3261,7 +3504,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['جيوب الملابس', 'الأقسام الداخلية للحقائب', 'الإكسسوارات الخفيفة'],
     specifications: {
       type: 'سحاب نايلون مغلق',
-      size: 'رقم 5',
+      size: 'رقم 5 (عرض السلسلة المغلقة نحو 5 مم)',
       length: 'يمكن تخصيصه حسب الطول المطلوب',
       structure: 'مغلق',
       material: 'أسنان نايلون مع شريط سحاب قياسي',
@@ -3302,7 +3545,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['فتحات الجاكيتات', 'واجهات الملابس الواقية من الشمس', 'الملابس الرياضية'],
     specifications: {
       type: 'سحاب نايلون مفتوح',
-      size: 'مقاسات شائعة مثل رقم 5',
+      size: 'مقاسات شائعة مثل رقم 5 (عرض السلسلة المغلقة نحو 5 مم)',
       length: 'يمكن تخصيصه حسب الطول المطلوب',
       structure: 'مفتوح',
       material: 'أسنان نايلون مع شريط سحاب قياسي',
@@ -3358,7 +3601,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['معالجة الملابس', 'معالجة الحقائب', 'معالجة الملابس الواقية من الشمس'],
     specifications: {
       type: 'سحاب نايلون بالرول',
-      size: 'مقاس 3 / 5 / 8',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
       length: 'يورد بالرول ويمكن قصه حسب الحاجة',
       structure: 'سلسلة رول من دون نقاط توقف علوية أو سفلية أو أجزاء إدخال، مناسبة لتركيب السحاب لاحقا والمعالجة بطول ثابت',
       material: 'أسنان نايلون مع شريط سحاب قياسي',
@@ -3394,7 +3637,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['الحقائب', 'الأحذية', 'إكسسوارات ملابس العمل'],
     specifications: {
       type: 'سحاب معدني',
-      size: 'مقاس 3 / 5 / 8',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
       length: 'يمكن تنسيقه حسب الطول المطلوب',
       structure: 'مغلق / مفتوح / مزدوج',
       material: 'أسنان معدنية مع شريط سحاب قياسي',
@@ -3418,7 +3661,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['جيوب الحقائب', 'إكسسوارات الأحذية', 'إكسسوارات ملابس العمل'],
     specifications: {
       type: 'سحاب معدني مغلق',
-      size: 'رقم 5',
+      size: 'رقم 5 (عرض السلسلة المغلقة نحو 5 مم)',
       length: 'يمكن تخصيصه حسب الطول المطلوب',
       structure: 'مغلق',
       material: 'أسنان معدنية مع شريط سحاب قياسي',
@@ -3464,7 +3707,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['فتحات السترات', 'الفتحات الأمامية لملابس العمل', 'إكسسوارات الحقائب'],
     specifications: {
       type: 'سحاب معدني مفتوح',
-      size: 'رقم 5',
+      size: 'رقم 5 (عرض السلسلة المغلقة نحو 5 مم)',
       length: 'يمكن تخصيصه حسب الطول المطلوب',
       structure: 'مفتوح',
       material: 'أسنان معدنية مع شريط سحاب قياسي',
@@ -3520,7 +3763,7 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     applications: ['معالجة الحقائب', 'معالجة الأحذية', 'إكسسوارات ملابس العمل'],
     specifications: {
       type: 'سحاب معدني بالرول',
-      size: 'مقاس 3 / 5 / 8',
+      size: 'مقاس 3 / 5 / 8 (عرض السلسلة المغلقة نحو 3 / 5 / 8 مم)',
       length: 'يورد بالرول ويمكن قصه حسب الحاجة',
       structure: 'سلسلة رول من دون نقاط توقف علوية أو سفلية أو أجزاء إدخال، مناسبة لتركيب السحاب لاحقا والمعالجة بطول ثابت',
       material: 'أسنان معدنية مع شريط سحاب قياسي',
@@ -3559,7 +3802,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Одежда', 'Обувь', 'Легкие аксессуары'],
     specifications: {
       type: 'Смоляная молния',
-      size: 'Размер 3 / 5 / 8',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
       length: 'Может подбираться под нужную длину',
       structure: 'Неразъемная / разъемная / двухзамковая',
       material: 'Смоляные зубья с типовой тесьмой',
@@ -3583,7 +3826,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Обработка одежды', 'Обработка обуви', 'Обработка легких аксессуаров'],
     specifications: {
       type: 'Смоляная рулонная молния',
-      size: 'Размер 3 / 5 / 8',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
       length: 'Поставляется в рулоне и режется по необходимости',
       structure: 'Рулонная цепочка без верхних и нижних стопоров и вставных элементов, подходит для последующей установки бегунка и обработки фиксированной длины',
       material: 'Смоляные зубья с типовой тесьмой',
@@ -3619,7 +3862,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Карманы одежды', 'Аксессуары детской одежды', 'Обувные аксессуары'],
     specifications: {
       type: 'Смоляная неразъемная молния',
-      size: '№5',
+      size: '№5 (ширина сомкнутой цепочки около 5 мм)',
       length: 'Может изготавливаться под требуемую длину',
       structure: 'Неразъемная',
       material: 'Смоляные зубья с типовой тесьмой',
@@ -3660,7 +3903,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Передние планки курток', 'Разъемные элементы детской одежды', 'Передние застежки солнцезащитной верхней одежды'],
     specifications: {
       type: 'Смоляная разъемная молния',
-      size: '№5',
+      size: '№5 (ширина сомкнутой цепочки около 5 мм)',
       length: 'Может изготавливаться под требуемую длину',
       structure: 'Разъемная',
       material: 'Смоляные зубья с типовой тесьмой',
@@ -3706,7 +3949,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Одежда', 'Сумки', 'Солнцезащитная одежда'],
     specifications: {
       type: 'Нейлоновая молния',
-      size: 'Размер 3 / 5 / 8',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
       length: 'Может подбираться под нужную длину',
       structure: 'Неразъемная / разъемная / двухзамковая',
       material: 'Нейлоновые зубья с типовой тесьмой',
@@ -3730,7 +3973,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Карманы одежды', 'Внутренние отделения сумок', 'Легкие аксессуары'],
     specifications: {
       type: 'Нейлоновая неразъемная молния',
-      size: '№5',
+      size: '№5 (ширина сомкнутой цепочки около 5 мм)',
       length: 'Может изготавливаться под требуемую длину',
       structure: 'Неразъемная',
       material: 'Нейлоновые зубья с типовой тесьмой',
@@ -3771,7 +4014,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Застежки курток', 'Передние планки солнцезащитной одежды', 'Спортивная одежда'],
     specifications: {
       type: 'Нейлоновая разъемная молния',
-      size: 'Распространенные размеры, например №5',
+      size: 'Распространенные размеры, например №5 (ширина сомкнутой цепочки около 5 мм)',
       length: 'Может изготавливаться под требуемую длину',
       structure: 'Разъемная',
       material: 'Нейлоновые зубья с типовой тесьмой',
@@ -3827,7 +4070,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Обработка одежды', 'Обработка сумок', 'Обработка солнцезащитной одежды'],
     specifications: {
       type: 'Нейлоновая рулонная молния',
-      size: 'Размер 3 / 5 / 8',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
       length: 'Поставляется в рулоне и режется по необходимости',
       structure: 'Рулонная цепочка без верхних и нижних стопоров и вставных элементов, подходит для последующей установки бегунка и обработки фиксированной длины',
       material: 'Нейлоновые зубья с типовой тесьмой',
@@ -3863,7 +4106,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Сумки', 'Обувь', 'Аксессуары рабочей одежды'],
     specifications: {
       type: 'Металлическая молния',
-      size: 'Размер 3 / 5 / 8',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
       length: 'Может подбираться под нужную длину',
       structure: 'Неразъемная / разъемная / двухзамковая',
       material: 'Металлические зубья с типовой тесьмой',
@@ -3887,7 +4130,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Карманы сумок', 'Обувные аксессуары', 'Аксессуары рабочей одежды'],
     specifications: {
       type: 'Металлическая неразъемная молния',
-      size: '№5',
+      size: '№5 (ширина сомкнутой цепочки около 5 мм)',
       length: 'Может изготавливаться под требуемую длину',
       structure: 'Неразъемная',
       material: 'Металлические зубья с типовой тесьмой',
@@ -3933,7 +4176,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Застежки курток', 'Центральные застежки рабочей одежды', 'Фурнитура для сумок'],
     specifications: {
       type: 'Металлическая разъемная молния',
-      size: '№5',
+      size: '№5 (ширина сомкнутой цепочки около 5 мм)',
       length: 'Может изготавливаться под требуемую длину',
       structure: 'Разъемная',
       material: 'Металлические зубья с типовой тесьмой',
@@ -3989,7 +4232,7 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     applications: ['Обработка сумок', 'Обработка обуви', 'Аксессуары рабочей одежды'],
     specifications: {
       type: 'Металлическая рулонная молния',
-      size: 'Размер 3 / 5 / 8',
+      size: 'Размер 3 / 5 / 8 (ширина сомкнутой цепочки около 3 / 5 / 8 мм)',
       length: 'Поставляется в рулоне и режется по необходимости',
       structure: 'Рулонная цепочка без верхних и нижних стопоров и вставных элементов, подходит для последующей установки бегунка и обработки фиксированной длины',
       material: 'Металлические зубья с типовой тесьмой',
