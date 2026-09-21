@@ -136,7 +136,7 @@ const faqPageContentEs = {
     },
     {
       question: '¿Puedo confirmar muestras antes de hacer un pedido al por mayor?',
-      answer: 'Si. Para desarrollos nuevos, proyectos con muchos colores o estructuras más detalladas, suele ser más seguro confirmar primero las muestras y luego pasar a la producción en volumen. Eso facilita alinear tamaño, longitud, color, tipo de cursor y detalles estructurales antes de organizar cantidades mayores.',
+      answer: 'Sí. Para desarrollos nuevos, proyectos con muchos colores o estructuras más detalladas, suele ser más seguro confirmar primero las muestras y luego pasar a la producción en volumen. Eso facilita alinear tamaño, longitud, color, tipo de cursor y detalles estructurales antes de organizar cantidades mayores.',
     },
     {
       question: '¿Cómo suele organizarse el tiempo de muestreo?',
@@ -156,7 +156,7 @@ const faqPageContentEs = {
     },
     {
       question: '¿Podemos hablar del proyecto si la especificación aún no está totalmente clara?',
-      answer: 'Si. Muchos proyectos no empiezan con una lista completa de tamaños y estructuras. Puede comenzar con una foto de muestra, una muestra antigua, el tipo de producto, la posición de uso o una cantidad estimada, y nosotros podemos ayudarle a reducir la selección entre opciones metálicas, de resina y de nylon dentro de los tamaños comunes 3, 5 y 8.',
+      answer: 'Sí. Muchos proyectos no empiezan con una lista completa de tamaños y estructuras. Puede comenzar con una foto de muestra, una muestra antigua, el tipo de producto, la posición de uso o una cantidad estimada, y nosotros podemos ayudarle a reducir la selección entre opciones metálicas, de resina y de nylon dentro de los tamaños comunes 3, 5 y 8.',
     },
     {
       question: '¿Qué información ayuda a acelerar la cotización?',
