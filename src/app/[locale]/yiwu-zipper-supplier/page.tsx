@@ -4,6 +4,22 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { Link } from '@/localization/navigation';
 import { getYiwuZipperLandingContent } from '@/site-data/market-landing-content';
+import { getSiteBrand } from '@/site-data/site-content';
+import { localizedUrl } from '@/seo/localized-urls';
+import {
+  BOOTH_LATITUDE,
+  BOOTH_LONGITUDE,
+  COMPANY_ADDRESS_EN,
+  COMPANY_NAME_EN,
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  FOUNDED_YEAR,
+  MAP_EMBED_URL,
+  MAP_OPEN_URL,
+  OPENING_HOURS_SCHEMA,
+  SITE_URL,
+  WHATSAPP_URL,
+} from '@/config/site-constants';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,6 +40,7 @@ export default async function YiwuZipperSupplierPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const content = getYiwuZipperLandingContent(locale);
+  const brand = getSiteBrand(locale);
   const boothAlt =
     locale === 'zh'
       ? '伟伟拉链义乌国际商贸城摊位实拍'
@@ -35,8 +52,51 @@ export default async function YiwuZipperSupplierPage({ params }: Props) {
             ? 'Стенд Weiwei Zipper в Yiwu International Trade City'
             : 'Weiwei Zipper booth at Yiwu International Trade City';
 
+  // The page targets "Yiwu zipper supplier"; the competing listings that rank
+  // for it are physical stalls described with their exact address. WholesaleStore
+  // rather than Store because nothing here is sold at retail.
+  const storeSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WholesaleStore',
+    name: brand.siteNameEn,
+    legalName: COMPANY_NAME_EN,
+    url: localizedUrl(locale, '/yiwu-zipper-supplier'),
+    image: `${SITE_URL}/hero/tanwei.png`,
+    telephone: CONTACT_PHONE,
+    email: CONTACT_EMAIL,
+    foundingDate: FOUNDED_YEAR,
+    openingHours: OPENING_HOURS_SCHEMA,
+    hasMap: MAP_OPEN_URL,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: COMPANY_ADDRESS_EN,
+      addressLocality: 'Yiwu',
+      addressRegion: 'Zhejiang',
+      postalCode: '322000',
+      addressCountry: 'CN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: BOOTH_LATITUDE,
+      longitude: BOOTH_LONGITUDE,
+    },
+    parentOrganization: { '@type': 'Organization', name: COMPANY_NAME_EN, url: SITE_URL },
+    // No priceRange: this is a quote-only supplier with no published prices.
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: brand.siteName, item: localizedUrl(locale) },
+      { '@type': 'ListItem', position: 2, name: content.title },
+    ],
+  };
+
   return (
     <div className="container mx-auto px-4 py-10 sm:py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(storeSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="mx-auto max-w-5xl">
         <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
@@ -108,6 +168,62 @@ export default async function YiwuZipperSupplierPage({ params }: Props) {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* The booth address, hours and history lived only in the footer and on
+            /contact. Competing stalls rank on exactly this, so the page that
+            targets "Yiwu zipper supplier" should carry it too. */}
+        <section className="mt-12 sm:mt-14">
+          <h2 className="text-2xl font-bold text-gray-900">{content.visit.title}</h2>
+          <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">{content.visit.note}</p>
+          <div className="mt-6 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <dl className="space-y-5 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-500">{content.visit.addressLabel}</dt>
+                <dd className="mt-1.5 text-sm leading-6 text-gray-900">{brand.currentAddress}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-500">{content.visit.hoursLabel}</dt>
+                <dd className="mt-1.5 text-sm leading-6 text-gray-900">{brand.businessHours}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-500">{content.visit.sinceLabel}</dt>
+                <dd className="mt-1.5 text-sm leading-6 text-gray-900">{FOUNDED_YEAR}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-500">{content.visit.contactLabel}</dt>
+                <dd className="mt-1.5 space-y-1 text-sm leading-6">
+                  <a href={`tel:${CONTACT_PHONE.replace(/[^\d+]/g, '')}`} className="block text-blue-800 hover:underline">
+                    <span dir="ltr">{CONTACT_PHONE}</span>
+                  </a>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="block text-blue-800 hover:underline">
+                    <span dir="ltr">WhatsApp {brand.whatsapp}</span>
+                  </a>
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="block break-all text-blue-800 hover:underline">
+                    <span dir="ltr">{CONTACT_EMAIL}</span>
+                  </a>
+                </dd>
+              </div>
+              <a
+                href={MAP_OPEN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-sm font-semibold text-blue-800 hover:underline"
+              >
+                {content.visit.mapLinkLabel}
+              </a>
+            </dl>
+            <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+              <iframe
+                src={MAP_EMBED_URL}
+                title={content.visit.title}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+                className="h-[320px] w-full border-0 sm:h-full sm:min-h-[360px]"
+              />
+            </div>
+          </div>
         </section>
 
         <section className="mt-12 rounded-2xl bg-blue-900 px-6 py-8 text-white sm:mt-14 sm:px-8">

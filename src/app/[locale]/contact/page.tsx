@@ -7,6 +7,8 @@ import {
   COMPANY_ADDRESS_ZH,
   CONTACT_EMAIL,
   CONTACT_PHONE,
+  MAP_EMBED_URL,
+  MAP_OPEN_URL,
   WHATSAPP_URL,
 } from '@/config/site-constants';
 import {
@@ -33,10 +35,6 @@ type ContactCard = {
   ltr?: boolean;
 };
 
-const mapEmbedUrl =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6956.023038953432!2d120.09984076023103!3d29.340658169538386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3449545eea2e5195%3A0x9fc5bbd29684b931!2z5Lit5Zu95LmJ5LmM5Zu96ZmF5ZWG6LS45Z-O5LiJ5Yy6!5e0!3m2!1szh-CN!2sus!4v1772861265332!5m2!1szh-CN!2sus';
-const mapOpenUrl =
-  'https://www.google.com/maps/place/%E4%B8%AD%E5%9B%BD%E4%B9%89%E4%B9%8C%E5%9B%BD%E9%99%85%E5%95%86%E8%B4%B8%E5%9F%8E%E4%B8%89%E5%8C%BA';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -197,7 +195,7 @@ export default async function ContactPage({ params }: Props) {
             </div>
 
             <a
-              href={mapOpenUrl}
+              href={MAP_OPEN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center rounded-lg bg-blue-800 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-900 transition-colors"
@@ -214,7 +212,7 @@ export default async function ContactPage({ params }: Props) {
             <div className="overflow-hidden rounded-xl border border-gray-200">
               <iframe
                 title={contactContent.mapTitle}
-                src={mapEmbedUrl}
+                src={MAP_EMBED_URL}
                 width="100%"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
