@@ -47,10 +47,11 @@ const yiwuZipperLandingZh = {
   checklistTitle: '在义乌询价前建议先确认的内容',
   checklist: [
     '拉链材质方向：金属、树脂、尼龙还是码装。',
-    '规格大小：常用 3 号、5 号、8 号是否符合项目需求。',
+    '规格大小：常用 3 号、5 号、8 号是否符合项目需求，闭合链牙宽度约 3 / 5 / 8 毫米。',
     '结构方式：闭尾、开尾、双开或后续裁切加工。',
-    '长度、颜色、拉头搭配和大致需求数量。',
+    '长度、颜色、拉头搭配和大致需求数量：成品拉链通常 1000 条起订，一个订单内可以混色。',
     '是否需要先打样、核色或参考旧样推进。',
+    '时间安排：常规规格打样通常 3 天，确认样品与订单细节后大货通常 10 天。',
   ],
   visit: {
     title: '在义乌国际商贸城找到我们',
@@ -114,10 +115,11 @@ const yiwuZipperLandingEn = {
   checklistTitle: 'What to confirm before requesting a quote in Yiwu',
   checklist: [
     'Material direction: metal, resin, nylon, or zipper rolls.',
-    'Size range: whether common sizes 3, 5, or 8 are suitable.',
+    'Size range: whether common sizes 3, 5, or 8 are suitable — their closed chain width is about 3, 5, and 8 mm.',
     'Structure: closed-end, open-end, two-way, or later cutting and assembly.',
-    'Length, color, slider style, and estimated order quantity.',
+    'Length, color, slider style, and estimated order quantity — finished zippers start at 1,000 pieces, with colours mixable within one order.',
     'Whether sampling, color matching, or reference samples are needed first.',
+    'Timing: standard specifications sample in about 3 days, and bulk production usually takes about 10 days once the sample and order details are confirmed.',
   ],
   visit: {
     title: 'Find us at Yiwu International Trade City',
@@ -181,10 +183,11 @@ const yiwuZipperLandingEs = {
   checklistTitle: 'Que conviene confirmar antes de pedir cotización en Yiwu',
   checklist: [
     'Tipo de material: metal, resina, nylon o rollo.',
-    'Tamaño: si las medidas comunes 3, 5 u 8 son adecuadas.',
+    'Tamaño: si las medidas comunes 3, 5 u 8 son adecuadas; su ancho de cadena cerrada es de unos 3, 5 y 8 mm.',
     'Estructura: cerrada, abierta, doble carro o para corte posterior.',
-    'Longitud, color, cursor y cantidad estimada.',
+    'Longitud, color, cursor y cantidad estimada: las cremalleras terminadas parten de 1000 unidades y se pueden mezclar colores en un mismo pedido.',
     'Si primero se necesita muestra, revisión de color o referencia previa.',
+    'Plazos: las especificaciones estándar se muestrean en unos 3 días y la producción en volumen suele tardar unos 10 días una vez confirmados la muestra y los detalles del pedido.',
   ],
   visit: {
     title: 'Encuéntrenos en Yiwu International Trade City',
@@ -248,10 +251,11 @@ const yiwuZipperLandingAr = {
   checklistTitle: 'ما الذي يفضل تأكيده قبل طلب السعر في ييوو',
   checklist: [
     'اتجاه الخامة: معدني أو راتنج أو نايلون أو رول.',
-    'المقاس: هل تناسب المقاسات الشائعة 3 أو 5 أو 8 المشروع.',
+    'المقاس: هل تناسب المقاسات الشائعة 3 أو 5 أو 8 المشروع، وعرض السلسلة المغلقة لها نحو 3 و5 و8 مم.',
     'البنية: مغلق أو مفتوح أو مزدوج أو مخصص للقص والتركيب لاحقا.',
-    'الطول واللون ونوع السحاب والكمية التقديرية.',
+    'الطول واللون ونوع السحاب والكمية التقديرية: تبدأ السحابات الجاهزة من 1000 قطعة، ويمكن مزج الألوان ضمن الطلب الواحد.',
     'هل يلزم أولا عمل عينة أو مراجعة لون أو الاعتماد على نموذج مرجعي.',
+    'التوقيت: تستغرق العينة نحو 3 أيام للمواصفات القياسية، ويستغرق الإنتاج بالجملة نحو 10 أيام بعد تأكيد العينة وتفاصيل الطلب.',
   ],
   visit: {
     title: 'تجدنا في مدينة ييوو للتجارة الدولية',
@@ -315,10 +319,11 @@ const yiwuZipperLandingRu = {
   checklistTitle: 'Что лучше подтвердить до запроса цены в Иу',
   checklist: [
     'Материал: металл, смола, нейлон или рулонная цепочка.',
-    'Размер: подходят ли распространенные размеры 3, 5 или 8.',
+    'Размер: подходят ли распространенные размеры 3, 5 или 8 — ширина их сомкнутой цепочки около 3, 5 и 8 мм.',
     'Конструкция: закрытая, разъемная, двухзамковая или под дальнейшую резку и сборку.',
-    'Длина, цвет, тип бегунка и примерный объем заказа.',
+    'Длина, цвет, тип бегунка и примерный объем заказа: готовые молнии — от 1000 штук, цвета можно комбинировать в одном заказе.',
     'Нужны ли сначала образцы, проверка цвета или старый референс.',
+    'Сроки: образец по стандартным спецификациям обычно готов примерно за 3 дня, а серийное производство занимает около 10 дней после подтверждения образца и деталей заказа.',
   ],
   visit: {
     title: 'Найдите нас в Yiwu International Trade City',
