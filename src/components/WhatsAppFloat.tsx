@@ -1,10 +1,28 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { usePathname } from '@/localization/navigation';
 import { WHATSAPP_URL } from '@/config/site-constants';
 
 export default function WhatsAppFloat() {
   const t = useTranslations('WhatsAppFloat');
+  const pathname = usePathname();
+  const [href, setHref] = useState(WHATSAPP_URL);
+
+  // On a product or category page, open the chat with a link to that page.
+  // Otherwise the seller receives "Hi" with no idea which of the eighteen
+  // product pages the buyer was reading. The page URL rather than its name
+  // keeps this free of the product catalogue, which would otherwise be pulled
+  // into every page's client bundle for one string.
+  useEffect(() => {
+    if (!/^\/products\/[^/?#]+$/.test(pathname)) {
+      setHref(WHATSAPP_URL);
+      return;
+    }
+    const message = t('productMessage', { url: window.location.href });
+    setHref(`${WHATSAPP_URL}?text=${encodeURIComponent(message)}`);
+  }, [pathname, t]);
 
   const handleClick = () => {
     if (typeof window !== 'undefined' && (window as any).dataLayer) {
@@ -17,7 +35,7 @@ export default function WhatsAppFloat() {
 
   return (
     <a
-      href={WHATSAPP_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}

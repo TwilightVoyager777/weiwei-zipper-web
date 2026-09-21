@@ -27,7 +27,8 @@
     "viewAll": "View all →"
   },
   "WhatsAppFloat": {
-    "ariaLabel": "Contact Weiwei Zipper via WhatsApp"
+    "ariaLabel": "Contact Weiwei Zipper via WhatsApp",
+    "productMessage": "Hello, I'd like to ask about this product: {url}"
   },
   "NotFound": {
     "message": "Page not found. Redirecting to the homepage..."

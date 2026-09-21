@@ -327,7 +327,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
               <h2 className="text-lg font-bold text-gray-900 mb-1">{productDetailLabels.inquiryCta}</h2>
               <p className="text-sm text-gray-600">{productDetailLabels.inquiryCtaDescription}</p>
             </div>
-            <Link href="/quote" className="w-full md:w-auto bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
+            <Link href={`/quote?product=${slug}` as any} className="w-full md:w-auto bg-blue-900 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition-colors text-center whitespace-nowrap">
               {productDetailLabels.inquiryButton}
             </Link>
           </div>
@@ -354,7 +354,7 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
           <h2 className="text-xl sm:text-2xl font-bold mb-3">{productDetailLabels.ctaTitle}</h2>
           <p className="text-blue-100 mb-6 max-w-lg mx-auto text-sm sm:text-base">{productDetailLabels.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/quote" className="w-full sm:w-auto bg-white text-blue-900 px-6 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors">
+            <Link href={`/quote?product=${slug}` as any} className="w-full sm:w-auto bg-white text-blue-900 px-6 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors">
               {productDetailLabels.requestQuote}
             </Link>
             <Link href="/products" className="w-full sm:w-auto border border-white/30 px-6 py-2.5 rounded font-medium text-sm hover:bg-white/10 transition-colors">
@@ -534,7 +534,7 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
               <h3 className="text-lg font-bold mb-2">{productDetailLabels.ctaTitle}</h3>
               <p className="text-blue-100 text-sm mb-4">{productDetailLabels.ctaDescription}</p>
               <Link
-                href="/quote"
+                href={`/quote?product=${slug}` as any}
                 className="block w-full text-center bg-white text-blue-900 px-4 py-2.5 rounded font-semibold hover:bg-blue-50 transition-colors mb-3"
               >
                 {productDetailLabels.requestQuote}

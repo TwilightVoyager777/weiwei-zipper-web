@@ -27,7 +27,8 @@
     "viewAll": "Ver todo →"
   },
   "WhatsAppFloat": {
-    "ariaLabel": "Contactar con Weiwei Zipper por WhatsApp"
+    "ariaLabel": "Contactar con Weiwei Zipper por WhatsApp",
+    "productMessage": "Hola, quisiera consultar sobre este producto: {url}"
   },
   "NotFound": {
     "message": "Página no encontrada. Redirigiendo al inicio..."

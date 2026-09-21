@@ -27,7 +27,8 @@
     "viewAll": "查看全部 →"
   },
   "WhatsAppFloat": {
-    "ariaLabel": "通过 WhatsApp 联系伟伟拉链"
+    "ariaLabel": "通过 WhatsApp 联系伟伟拉链",
+    "productMessage": "你好，我想咨询这款产品：{url}"
   },
   "NotFound": {
     "message": "页面不存在，正在返回首页..."

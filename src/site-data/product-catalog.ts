@@ -4178,3 +4178,4 @@ export function getProductItems(locale: string) {
 export function getProductsPagePrimaryCards(locale: string) {
   return getLocalizedContent(productsPagePrimaryCardsByLocale, locale);
 }
+

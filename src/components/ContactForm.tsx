@@ -5,6 +5,26 @@ import { useLocale } from 'next-intl';
 import { CheckCircleIcon } from '@/components/Icons';
 import { getInquiryFormContent } from '@/site-data/site-content';
 
+/**
+ * Map a product-page slug onto the material the inquiry form's dropdown offers.
+ * Derived from the slug rather than looked up in the catalogue on purpose:
+ * importing the catalogue here pulled 44 kB of product data into this page's
+ * client bundle for the sake of one prefilled field.
+ */
+function materialFromSlug(slug: string): string {
+  if (slug.includes('metal')) return 'metal-zipper';
+  if (slug.includes('resin')) return 'resin-zipper';
+  if (slug.includes('nylon')) return 'nylon-zipper';
+  return '';
+}
+
+/** "…-no-5-…" is one size; the "-3-5-8" pages cover all three. */
+function sizeFromSlug(slug: string): string {
+  const single = slug.match(/-no-(\d+)-/);
+  if (single) return single[1];
+  return slug.includes('3-5-8') ? '3 / 5 / 8' : '';
+}
+
 export default function ContactForm() {
   const locale = useLocale();
   const inquiryFormContent = getInquiryFormContent(locale);
@@ -45,6 +65,19 @@ export default function ContactForm() {
         referrer: document.referrer || '',
         landingPage: window.location.pathname,
       });
+
+      // Product pages link here as /quote?product=<slug>, so the buyer does not
+      // have to restate what they were just looking at. Anything that is not a
+      // recognisable material leaves the fields untouched.
+      const productSlug = (params.get('product') || '').slice(0, 64);
+      const material = materialFromSlug(productSlug);
+      if (material) {
+        setFormData((prev) => ({
+          ...prev,
+          productInterest: prev.productInterest || material,
+          productSize: prev.productSize || sizeFromSlug(productSlug),
+        }));
+      }
     } catch {
       // Ignore client-only tracking failures.
     }
