@@ -447,7 +447,42 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     featureImage: '/products/metal/brass-continuous-chain.webp',
     description: '适合箱包、鞋类、工装等项目按卷使用或按需裁切加工，常用规格集中在 3 号 / 5 号 / 8 号。',
     overview: '金属码装主要用于后续裁切、装头与成品加工，适合需要保留金属质感并灵活控制长度的项目。伟伟拉链围绕 3 号、5 号、8 号常用规格提供金属码装基础配套，便于客户先确认牙色、织带与拉头方向，再按实际款式安排后道加工。',
-    keyFeatures: ['按卷供货，便于批量裁切', '保留金属质感与耐用度', '适合后续装头与成品加工', '适合箱包、鞋帽与工装类项目'],
+    keyFeatures: ['不带上下止与插管，需自行裁切、装头后才是成品', '起订量与价格按卷另行报价，不适用成品拉链 1000 条起订的口径', '长度由裁切决定，不受成品固定长度限制', '保留金属牙链的外观质感，适合箱包、鞋帽与工装类后道加工'],
+    applications: {
+      title: '典型用法',
+      items: [
+        {
+          title: '定长裁切加工',
+          description: '按款式所需长度成批裁切，再统一安排装头，适合同一款式覆盖多个长度规格的项目。',
+        },
+        {
+          title: '装头与五金配套',
+          description: '拉头、上下止与插管分开确认，便于按款式风格调整五金方向而不更换链带。',
+        },
+        {
+          title: '系列开发备料',
+          description: '同一批链带可覆盖一个系列里的多个长度，便于开发阶段先备料、后定款。',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: '选型建议',
+      description: '码装不是长度已经固定的成品拉链，所以选型的第一步不是规格，而是确认自己有没有后道加工能力。',
+      factors: [
+        {
+          title: '先确认后道能力',
+          description: '码装需要裁切、装头等后道工序。如果没有这类设备或外协渠道，直接选成品拉链会更省事。',
+        },
+        {
+          title: '再按材质定方向',
+          description: '金属码装保留五金质感与耐用度，更适合箱包、鞋履与工装；轻薄服装项目通常更适合树脂或尼龙码装。',
+        },
+        {
+          title: '最后确认规格与卷长',
+          description: '常用规格是 3 号 / 5 号 / 8 号，闭合链牙宽度约 3 / 5 / 8 毫米。每卷长度请在询价时一并确认，我们会结合项目用量安排。',
+        },
+      ],
+    },
   },
   resinRolls: {
     key: 'resinRolls',
@@ -456,7 +491,42 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     featureImage: '/products/resin/dark-continuous-chain.webp',
     description: '适合服装、童装、鞋帽等项目按卷使用或按需裁切加工，常用规格集中在 3 号 / 5 号 / 8 号。',
     overview: '树脂码装主要用于后续裁切、装头与成品加工，不是长度已经固定的成品拉链。伟伟拉链围绕 3 号、5 号、8 号常用规格提供树脂码装基础配套，便于客户先确认牙型、颜色与织带方向，再按实际长度安排后道加工。',
-    keyFeatures: ['按卷供货，便于批量裁切', '适合后续装头与定长加工', '配色灵活，便于系列化开发', '适合服装与鞋帽等轻量场景'],
+    keyFeatures: ['不带上下止与插管，需自行裁切、装头后才是成品', '起订量与价格按卷另行报价，不适用成品拉链 1000 条起订的口径', '长度由裁切决定，不受成品固定长度限制', '配色灵活、重量较轻，适合服装、童装与鞋帽等轻量项目的系列化开发'],
+    applications: {
+      title: '典型用法',
+      items: [
+        {
+          title: '定长裁切加工',
+          description: '按款式所需长度成批裁切后统一装头，适合服装与童装里同款多尺码的项目。',
+        },
+        {
+          title: '装头与配件配套',
+          description: '拉头与上下止分开确认，便于同一批链带搭配不同拉头风格。',
+        },
+        {
+          title: '系列开发备料',
+          description: '树脂牙链配色范围较宽，便于开发阶段先按色系备料，再按款式确定长度。',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: '选型建议',
+      description: '码装不是长度已经固定的成品拉链，所以选型的第一步不是规格，而是确认自己有没有后道加工能力。',
+      factors: [
+        {
+          title: '先确认后道能力',
+          description: '码装需要裁切、装头等后道工序。如果没有这类设备或外协渠道，直接选成品拉链会更省事。',
+        },
+        {
+          title: '再按材质定方向',
+          description: '树脂码装重量较轻、配色灵活，更适合服装、童装与轻量配件；需要金属外观或更高受力时通常选金属码装。',
+        },
+        {
+          title: '最后确认规格与卷长',
+          description: '常用规格是 3 号 / 5 号 / 8 号，闭合链牙宽度约 3 / 5 / 8 毫米。每卷长度请在询价时一并确认，我们会结合项目用量安排。',
+        },
+      ],
+    },
   },
   nylonRolls: {
     key: 'nylonRolls',
@@ -465,7 +535,42 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     featureImage: '/products/nylon/beige-continuous-chain.webp',
     description: '适用于服装、箱包和防晒衣项目按卷使用或按需裁切加工，兼顾顺滑度与配套灵活性。',
     overview: '尼龙码装主要用于后续裁切、装头与成品加工，适合需要兼顾顺滑度和长度灵活性的常见项目。伟伟拉链围绕 3 号、5 号、8 号常用规格提供尼龙码装基础配套，便于客户先确认规格方向，再结合长度、拉头与后道加工方式推进打样或报价。',
-    keyFeatures: ['按卷供货，便于定长裁切', '顺滑度稳定，适合高频开合项目', '适合后续装头与成品加工', '适合服装、箱包与防晒衣项目'],
+    keyFeatures: ['不带上下止与插管，需自行裁切、装头后才是成品', '起订量与价格按卷另行报价，不适用成品拉链 1000 条起订的口径', '长度由裁切决定，不受成品固定长度限制', '顺滑度稳定、柔韧性较好，适合服装、箱包与防晒衣等高频开合项目的后道加工'],
+    applications: {
+      title: '典型用法',
+      items: [
+        {
+          title: '定长裁切加工',
+          description: '按款式所需长度成批裁切后统一装头，适合防晒衣与箱包内袋这类长度跨度较大的项目。',
+        },
+        {
+          title: '装头与配件配套',
+          description: '拉头可按使用手感单独确认，便于同一批链带适配不同开合频率的位置。',
+        },
+        {
+          title: '系列开发备料',
+          description: '同一批链带可覆盖服装与箱包多个位置的长度需求，便于集中备料。',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: '选型建议',
+      description: '码装不是长度已经固定的成品拉链，所以选型的第一步不是规格，而是确认自己有没有后道加工能力。',
+      factors: [
+        {
+          title: '先确认后道能力',
+          description: '码装需要裁切、装头等后道工序。如果没有这类设备或外协渠道，直接选成品拉链会更省事。',
+        },
+        {
+          title: '再按材质定方向',
+          description: '尼龙码装顺滑度稳定、柔韧性较好，更适合服装、箱包与防晒衣；偏重外观质感的款式通常选金属码装。',
+        },
+        {
+          title: '最后确认规格与卷长',
+          description: '常用规格是 3 号 / 5 号 / 8 号，闭合链牙宽度约 3 / 5 / 8 毫米。每卷长度请在询价时一并确认，我们会结合项目用量安排。',
+        },
+      ],
+    },
   },
 };
 
@@ -1507,7 +1612,42 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     featureImage: '/products/metal/brass-continuous-chain.webp',
     description: 'Suitable for bags, footwear, workwear, and other projects that use zipper chain by the roll and cut it as needed, mainly within the size 3 / 5 / 8 range.',
     overview: 'Metal zipper rolls are mainly used for later cutting, slider fitting, and product assembly, making them suitable for projects that need metal texture together with more flexible length control. Weiwei Zipper organizes common size 3, 5, and 8 options here so customers can confirm tooth color, tape, and slider direction before moving into post-processing.',
-    keyFeatures: ['Supplied by the roll for easier batch cutting', 'Keeps metal texture and durability', 'Suitable for later slider fitting and product processing', 'Useful for bags, footwear, and workwear projects'],
+    keyFeatures: ['Supplied without top and bottom stops or insertion parts, so it becomes a finished zipper only after cutting and slider fitting', 'Quoted by the roll, separately from the 1,000-piece minimum that applies to finished zippers', 'Length is decided by how you cut it, not by a fixed finished length', 'Keeps the look and durability of metal teeth, which suits downstream work on bags, footwear and workwear'],
+    applications: {
+      title: 'Typical Uses',
+      items: [
+        {
+          title: 'Cut-to-length processing',
+          description: 'Cut in batches to the lengths a style needs, then fit sliders in one pass — useful when one style spans several lengths.',
+        },
+        {
+          title: 'Slider and hardware matching',
+          description: 'Sliders, stops and insertion parts are confirmed separately, so the hardware direction can follow the style without changing the chain.',
+        },
+        {
+          title: 'Stocking for a series',
+          description: 'One batch of chain covers several lengths across a series, so material can be secured before the styles are final.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Selection Guide',
+      description: 'Roll chain is not a finished zipper of fixed length, so the first question is not the size — it is whether you have the downstream processing to finish it.',
+      factors: [
+        {
+          title: 'Start with your processing capability',
+          description: 'Roll chain needs cutting and slider fitting. Without that equipment or a subcontractor for it, a finished zipper is the simpler choice.',
+        },
+        {
+          title: 'Then pick the material',
+          description: 'Metal roll keeps the hardware look and the durability, which suits bags, footwear and workwear; lightweight apparel is usually better served by resin or nylon roll.',
+        },
+        {
+          title: 'Last, confirm size and roll length',
+          description: 'Common sizes are 3, 5 and 8, at a closed chain width of about 3, 5 and 8 mm. Please confirm the length per roll with your enquiry so we can arrange it around your volume.',
+        },
+      ],
+    },
   },
   resinRolls: {
     key: 'resinRolls',
@@ -1516,7 +1656,42 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     featureImage: '/products/resin/dark-continuous-chain.webp',
     description: 'Suitable for garments, kidswear, footwear, and similar projects that use zipper chain by the roll and cut to length later, mainly within the size 3 / 5 / 8 range.',
     overview: 'Resin zipper rolls are used mainly for later cutting, slider fitting, and product processing rather than as fixed-length finished zippers. Weiwei Zipper organizes common size 3, 5, and 8 options here so customers can confirm tooth type, color, and tape direction before final processing arrangements.',
-    keyFeatures: ['Supplied by the roll for easier batch cutting', 'Suitable for later slider fitting and cut-to-length processing', 'Flexible color matching for repeated series development', 'Suitable for garments, footwear, and other lighter-use scenarios'],
+    keyFeatures: ['Supplied without top and bottom stops or insertion parts, so it becomes a finished zipper only after cutting and slider fitting', 'Quoted by the roll, separately from the 1,000-piece minimum that applies to finished zippers', 'Length is decided by how you cut it, not by a fixed finished length', 'Light in weight with a wide colour range, which suits series development for apparel, children\'s wear and light accessories'],
+    applications: {
+      title: 'Typical Uses',
+      items: [
+        {
+          title: 'Cut-to-length processing',
+          description: 'Cut in batches to the lengths a style needs, then fit sliders in one pass — useful for apparel and children\'s wear where one style runs across several sizes.',
+        },
+        {
+          title: 'Slider and hardware matching',
+          description: 'Sliders and stops are confirmed separately, so one batch of chain can carry different slider styles.',
+        },
+        {
+          title: 'Stocking for a series',
+          description: 'Resin teeth cover a wide colour range, so material can be secured by colour family during development and cut to length once the styles are set.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Selection Guide',
+      description: 'Roll chain is not a finished zipper of fixed length, so the first question is not the size — it is whether you have the downstream processing to finish it.',
+      factors: [
+        {
+          title: 'Start with your processing capability',
+          description: 'Roll chain needs cutting and slider fitting. Without that equipment or a subcontractor for it, a finished zipper is the simpler choice.',
+        },
+        {
+          title: 'Then pick the material',
+          description: 'Resin roll is lighter and more flexible on colour, which suits apparel, children\'s wear and light accessories; choose metal roll when the style needs a hardware look or has to take more load.',
+        },
+        {
+          title: 'Last, confirm size and roll length',
+          description: 'Common sizes are 3, 5 and 8, at a closed chain width of about 3, 5 and 8 mm. Please confirm the length per roll with your enquiry so we can arrange it around your volume.',
+        },
+      ],
+    },
   },
   nylonRolls: {
     key: 'nylonRolls',
@@ -1525,7 +1700,42 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     featureImage: '/products/nylon/beige-continuous-chain.webp',
     description: 'Suitable for garments, bags, and sun-protective outerwear projects that use zipper chain by the roll and cut it as needed, balancing smooth operation and flexibility.',
     overview: 'Nylon zipper rolls are mainly used for later cutting, slider fitting, and product processing, especially where smooth operation and flexible length handling are both important. Weiwei Zipper organizes common size 3, 5, and 8 options in this category so customers can confirm size direction first, then proceed into sampling or quotation around length, sliders, and post-processing requirements.',
-    keyFeatures: ['Supplied by the roll for easier custom cutting', 'Stable smoothness for high-frequency opening and closing', 'Suitable for later slider fitting and finished product processing', 'Useful for garments, bags, and sun-protective outerwear projects'],
+    keyFeatures: ['Supplied without top and bottom stops or insertion parts, so it becomes a finished zipper only after cutting and slider fitting', 'Quoted by the roll, separately from the 1,000-piece minimum that applies to finished zippers', 'Length is decided by how you cut it, not by a fixed finished length', 'Runs smoothly and stays flexible, which suits downstream work on apparel, bags and sun-protective outerwear that open and close often'],
+    applications: {
+      title: 'Typical Uses',
+      items: [
+        {
+          title: 'Cut-to-length processing',
+          description: 'Cut in batches to the lengths a style needs, then fit sliders in one pass — useful for sun-protective outerwear and bag linings, where lengths vary widely.',
+        },
+        {
+          title: 'Slider and hardware matching',
+          description: 'Sliders can be confirmed on their own by feel, so one batch of chain can serve positions that are opened at very different rates.',
+        },
+        {
+          title: 'Stocking for a series',
+          description: 'One batch of chain covers the lengths needed across apparel and bag positions, which makes it easier to stock in one go.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Selection Guide',
+      description: 'Roll chain is not a finished zipper of fixed length, so the first question is not the size — it is whether you have the downstream processing to finish it.',
+      factors: [
+        {
+          title: 'Start with your processing capability',
+          description: 'Roll chain needs cutting and slider fitting. Without that equipment or a subcontractor for it, a finished zipper is the simpler choice.',
+        },
+        {
+          title: 'Then pick the material',
+          description: 'Nylon roll runs smoothly and stays flexible, which suits apparel, bags and sun-protective outerwear; choose metal roll when the style is about the hardware look.',
+        },
+        {
+          title: 'Last, confirm size and roll length',
+          description: 'Common sizes are 3, 5 and 8, at a closed chain width of about 3, 5 and 8 mm. Please confirm the length per roll with your enquiry so we can arrange it around your volume.',
+        },
+      ],
+    },
   },
 };
 
@@ -1792,7 +2002,42 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     name: 'Cremalleras metálicas por rollo',
     description: 'Adecuadas para bolsos, calzado, ropa de trabajo y otros proyectos que utilizan cadena por rollo y la cortan según necesidad, principalmente en los tamaños 3 / 5 / 8.',
     overview: 'Las cremalleras metálicas por rollo se utilizan principalmente para el corte posterior, el montaje del cursor y el ensamblaje del producto, por lo que resultan adecuadas para proyectos que necesitan textura metálica junto con un control de longitud más flexible. Weiwei Zipper organiza aquí los tamaños comunes 3, 5 y 8 para que el cliente pueda confirmar el color del diente, la cinta y la dirección del cursor antes de pasar al procesamiento posterior.',
-    keyFeatures: ['Suministro por rollo para facilitar el corte por lotes', 'Mantiene la textura metálica y la durabilidad', 'Adecuadas para el montaje posterior del cursor y el procesamiento del producto', 'Útiles para proyectos de bolsos, calzado y ropa de trabajo'],
+    keyFeatures: ['La cadena por rollo se suministra sin topes superiores o inferiores ni piezas de inserción: solo se convierte en cremallera terminada tras el corte y el montaje del cursor', 'El pedido mínimo y el precio se cotizan aparte, por rollo: el mínimo de 1000 unidades solo se aplica a las cremalleras terminadas', 'La longitud se decide en el corte y no queda limitada por la longitud fija de un producto terminado', 'Mantiene el aspecto y la durabilidad de los dientes metálicos, útil para el procesamiento posterior de bolsos, calzado y ropa de trabajo'],
+    applications: {
+      title: 'Usos habituales',
+      items: [
+        {
+          title: 'Corte a medida',
+          description: 'Se corta por lotes a las longitudes que pide cada estilo y después se montan todos los cursores en una sola pasada, lo que resulta práctico cuando un mismo estilo abarca varias longitudes.',
+        },
+        {
+          title: 'Montaje del cursor y combinación de herrajes',
+          description: 'Los cursores, los topes y las piezas de inserción se confirman por separado, de modo que la dirección del herraje puede seguir el estilo sin cambiar la cadena.',
+        },
+        {
+          title: 'Aprovisionamiento para una serie',
+          description: 'Un mismo lote de cadena cubre varias longitudes dentro de una serie, de modo que el material se puede asegurar antes de cerrar los estilos.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Guía de selección',
+      description: 'La cadena por rollo no es una cremallera terminada de longitud fija, por lo que la primera pregunta no es el tamaño, sino si dispone del procesamiento posterior necesario para terminarla.',
+      factors: [
+        {
+          title: 'Empiece por su capacidad de procesamiento',
+          description: 'La cadena por rollo exige corte, montaje de cursor y otros procesos posteriores. Si no dispone de esos equipos ni de un taller externo que los haga, elegir directamente la cremallera terminada le resultará más sencillo.',
+        },
+        {
+          title: 'Después elija el material',
+          description: 'La cadena metálica por rollo mantiene la textura del herraje y la durabilidad, y encaja mejor con bolsos, calzado y ropa de trabajo; para prendas ligeras suele ser más adecuada la cadena de resina o de nylon por rollo.',
+        },
+        {
+          title: 'Por último confirme el tamaño y la longitud del rollo',
+          description: 'Los tamaños habituales son 3, 5 y 8, con un ancho de cadena cerrada de unos 3 / 5 / 8 mm. Confirme la longitud del rollo junto con su consulta y la organizaremos en función del volumen del proyecto.',
+        },
+      ],
+    },
   },
   resinRolls: {
     key: 'resinRolls',
@@ -1801,7 +2046,42 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     name: 'Cremalleras de resina por rollo',
     description: 'Adecuadas para prendas, ropa infantil, calzado y proyectos similares que usan cadena por rollo y luego la cortan a medida, principalmente en los tamaños 3 / 5 / 8.',
     overview: 'Las cremalleras de resina por rollo se utilizan principalmente para el corte posterior, el montaje del cursor y el procesamiento del producto, más que como cremalleras terminadas de longitud fija. Weiwei Zipper organiza aquí los tamaños comunes 3, 5 y 8 para que el cliente pueda confirmar el tipo de diente, el color y la dirección de la cinta antes de organizar el procesamiento final.',
-    keyFeatures: ['Suministro por rollo para facilitar el corte por lotes', 'Adecuadas para el montaje posterior del cursor y el procesamiento a longitud fija', 'Combinación de color flexible para el desarrollo repetido de series', 'Adecuadas para prendas, calzado y otros escenarios de uso más ligero'],
+    keyFeatures: ['La cadena por rollo se suministra sin topes superiores o inferiores ni piezas de inserción: solo se convierte en cremallera terminada tras el corte y el montaje del cursor', 'El pedido mínimo y el precio se cotizan aparte, por rollo: el mínimo de 1000 unidades solo se aplica a las cremalleras terminadas', 'La longitud se decide en el corte y no queda limitada por la longitud fija de un producto terminado', 'Peso más ligero y combinación de color flexible, útil para el desarrollo en serie de prendas, ropa infantil y accesorios ligeros'],
+    applications: {
+      title: 'Usos habituales',
+      items: [
+        {
+          title: 'Corte a medida',
+          description: 'Se corta por lotes a las longitudes que pide cada estilo y después se montan todos los cursores en una sola pasada, lo que resulta práctico en prendas y ropa infantil, donde un mismo estilo abarca varias tallas.',
+        },
+        {
+          title: 'Montaje del cursor y combinación de accesorios',
+          description: 'Los cursores y los topes se confirman por separado, así que un mismo lote de cadena puede llevar distintos estilos de cursor.',
+        },
+        {
+          title: 'Aprovisionamiento para una serie',
+          description: 'Los dientes de resina cubren una gama de color amplia, de modo que durante el desarrollo el material se puede asegurar por familias de color y cortar a la longitud definitiva cuando los estilos están cerrados.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Guía de selección',
+      description: 'La cadena por rollo no es una cremallera terminada de longitud fija, por lo que la primera pregunta no es el tamaño, sino si dispone del procesamiento posterior necesario para terminarla.',
+      factors: [
+        {
+          title: 'Empiece por su capacidad de procesamiento',
+          description: 'La cadena por rollo exige corte, montaje de cursor y otros procesos posteriores. Si no dispone de esos equipos ni de un taller externo que los haga, elegir directamente la cremallera terminada le resultará más sencillo.',
+        },
+        {
+          title: 'Después elija el material',
+          description: 'La cadena de resina por rollo es más ligera y más flexible en color, y encaja mejor con prendas, ropa infantil y accesorios ligeros; cuando el estilo necesita apariencia de herraje o tiene que soportar más esfuerzo, la opción habitual es la cadena metálica por rollo.',
+        },
+        {
+          title: 'Por último confirme el tamaño y la longitud del rollo',
+          description: 'Los tamaños habituales son 3, 5 y 8, con un ancho de cadena cerrada de unos 3 / 5 / 8 mm. Confirme la longitud del rollo junto con su consulta y la organizaremos en función del volumen del proyecto.',
+        },
+      ],
+    },
   },
   nylonRolls: {
     key: 'nylonRolls',
@@ -1810,7 +2090,42 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     name: 'Cremalleras de nylon por rollo',
     description: 'Adecuadas para prendas, bolsos y ropa con protección solar que usan cadena por rollo y la cortan según necesidad, equilibrando suavidad y flexibilidad de proceso.',
     overview: 'Las cremalleras de nylon por rollo se utilizan principalmente para el corte posterior, el montaje del cursor y el procesamiento del producto, sobre todo cuando la suavidad de funcionamiento y un manejo flexible de la longitud son ambos importantes. Weiwei Zipper organiza en esta categoría los tamaños comunes 3, 5 y 8 para que el cliente pueda confirmar primero la dirección de tamaño y pasar después al muestreo o a la cotización en torno a la longitud, los cursores y los requisitos de procesamiento posterior.',
-    keyFeatures: ['Suministro por rollo para facilitar el corte a medida', 'Suavidad estable para aperturas y cierres frecuentes', 'Adecuadas para el montaje posterior del cursor y el procesamiento del producto terminado', 'Útiles para proyectos de prendas, bolsos y ropa con protección solar'],
+    keyFeatures: ['La cadena por rollo se suministra sin topes superiores o inferiores ni piezas de inserción: solo se convierte en cremallera terminada tras el corte y el montaje del cursor', 'El pedido mínimo y el precio se cotizan aparte, por rollo: el mínimo de 1000 unidades solo se aplica a las cremalleras terminadas', 'La longitud se decide en el corte y no queda limitada por la longitud fija de un producto terminado', 'Suavidad estable y buena flexibilidad, útil para el procesamiento posterior de prendas, bolsos y ropa con protección solar que se abren y cierran a menudo'],
+    applications: {
+      title: 'Usos habituales',
+      items: [
+        {
+          title: 'Corte a medida',
+          description: 'Se corta por lotes a las longitudes que pide cada estilo y después se montan todos los cursores en una sola pasada, lo que resulta práctico en ropa con protección solar y bolsillos interiores de bolsos, donde las longitudes varían mucho.',
+        },
+        {
+          title: 'Montaje del cursor y combinación de accesorios',
+          description: 'El cursor se puede confirmar por separado según la sensación de uso, así que un mismo lote de cadena sirve para posiciones que se abren con frecuencias muy distintas.',
+        },
+        {
+          title: 'Aprovisionamiento para una serie',
+          description: 'Un mismo lote de cadena cubre las longitudes que piden varias posiciones de prendas y bolsos, lo que permite concentrar el aprovisionamiento en una sola compra.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Guía de selección',
+      description: 'La cadena por rollo no es una cremallera terminada de longitud fija, por lo que la primera pregunta no es el tamaño, sino si dispone del procesamiento posterior necesario para terminarla.',
+      factors: [
+        {
+          title: 'Empiece por su capacidad de procesamiento',
+          description: 'La cadena por rollo exige corte, montaje de cursor y otros procesos posteriores. Si no dispone de esos equipos ni de un taller externo que los haga, elegir directamente la cremallera terminada le resultará más sencillo.',
+        },
+        {
+          title: 'Después elija el material',
+          description: 'La cadena de nylon por rollo ofrece una suavidad estable y buena flexibilidad, y encaja mejor con prendas, bolsos y ropa con protección solar; cuando el estilo se apoya sobre todo en la textura visual, la opción habitual es la cadena metálica por rollo.',
+        },
+        {
+          title: 'Por último confirme el tamaño y la longitud del rollo',
+          description: 'Los tamaños habituales son 3, 5 y 8, con un ancho de cadena cerrada de unos 3 / 5 / 8 mm. Confirme la longitud del rollo junto con su consulta y la organizaremos en función del volumen del proyecto.',
+        },
+      ],
+    },
   },
 };
 
@@ -2077,7 +2392,42 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     name: 'سحابات معدنية بالرول',
     description: 'مناسبة للحقائب والأحذية وملابس العمل وغيرها من المشاريع التي تستخدم السلسلة بالرول ثم تقصها حسب الحاجة، وخاصة بالمقاسات 3 / 5 / 8.',
     overview: 'تستخدم السحابات المعدنية بالرول أساسا في القص اللاحق وتركيب السحاب وتجميع المنتج، وهو ما يجعلها مناسبة للمشاريع التي تحتاج إلى ملمس معدني مع تحكم أكثر مرونة في الطول. وتنظم Weiwei Zipper هنا المقاسات الشائعة 3 و5 و8 حتى يتمكن العملاء من تأكيد لون الأسنان والشريط واتجاه السحاب قبل الانتقال إلى المعالجة اللاحقة.',
-    keyFeatures: ['توريد بالرول لتسهيل القص على دفعات', 'تحافظ على الملمس المعدني والمتانة', 'مناسبة لتركيب السحاب لاحقا ومعالجة المنتج', 'مفيدة لمشاريع الحقائب والأحذية وملابس العمل'],
+    keyFeatures: ['يورد من دون نقاط توقف علوية أو سفلية أو أجزاء إدخال، فلا يصبح سحابا جاهزا إلا بعد القص وتركيب السحابات', 'يسعّر بالرول بشكل منفصل، ولا ينطبق عليه الحد الأدنى البالغ 1000 قطعة الخاص بالسحابات الجاهزة', 'الطول يحدده القص في مصنعك، وليس طولا جاهزا ثابتا', 'يحافظ على مظهر الأسنان المعدنية ومتانتها، وهو ما يناسب المعالجة اللاحقة في الحقائب والأحذية وملابس العمل'],
+    applications: {
+      title: 'الاستخدامات النموذجية',
+      items: [
+        {
+          title: 'القص والمعالجة حسب الطول',
+          description: 'يقص على دفعات حسب الأطوال التي يحتاجها التصميم، ثم تركب السحابات في مرحلة واحدة، وهو ما يفيد التصاميم التي تغطي أكثر من طول.',
+        },
+        {
+          title: 'تركيب السحابات ومطابقة القطع المعدنية',
+          description: 'تؤكد السحابات ونقاط التوقف وأجزاء الإدخال بشكل منفصل، فيمكن تعديل اتجاه القطع المعدنية حسب أسلوب التصميم دون تغيير السلسلة.',
+        },
+        {
+          title: 'تجهيز المواد لتطوير السلاسل',
+          description: 'تكفي دفعة واحدة من سلسلة الرول لتغطية عدة أطوال في مجموعة منتجات واحدة، فيمكن تأمين المواد في مرحلة التطوير قبل تثبيت التصاميم.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'دليل الاختيار',
+      description: 'سحابات الرول ليست سحابات جاهزة بطول ثابت، ولذلك لا تبدأ الخطوة الأولى من المقاس، بل من تأكيد قدرتك على المعالجة اللاحقة التي تحولها إلى منتج نهائي.',
+      factors: [
+        {
+          title: 'ابدأ من قدرتك على المعالجة اللاحقة',
+          description: 'تحتاج سحابات الرول إلى القص وتركيب السحابات. وإذا لم تتوفر لديك هذه المعدات أو جهة معالجة خارجية تقوم بها، فاختيار السحاب الجاهز أبسط.',
+        },
+        {
+          title: 'ثم حدد الخامة المناسبة',
+          description: 'السحاب المعدني بالرول يحافظ على الملمس المعدني والمتانة، وهو أنسب للحقائب والأحذية وملابس العمل، أما مشاريع الملابس الخفيفة فيخدمها عادة رول الراتنج أو النايلون بشكل أفضل.',
+        },
+        {
+          title: 'وأخيرا أكد المقاس وطول اللفة',
+          description: 'المقاسات الشائعة هي 3 و5 و8، بعرض سلسلة مغلقة نحو 3 / 5 / 8 مم. أما طول اللفة فنرجو تأكيده مع طلب عرض السعر حتى نرتبه بما يتناسب مع كمية مشروعك.',
+        },
+      ],
+    },
   },
   resinRolls: {
     key: 'resinRolls',
@@ -2086,7 +2436,42 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     name: 'سحابات راتنج بالرول',
     description: 'مناسبة للملابس وملابس الأطفال والأحذية والمشاريع المشابهة التي تستخدم السلسلة بالرول ثم تقصها حسب الحاجة، خاصة بالمقاسات 3 / 5 / 8.',
     overview: 'تستخدم سحابات الراتنج بالرول أساسا في القص اللاحق وتركيب السحاب ومعالجة المنتج، وليس كسحابات جاهزة بطول ثابت. وتنظم Weiwei Zipper هنا المقاسات الشائعة 3 و5 و8 حتى يتمكن العملاء من تأكيد نوع الأسنان واللون واتجاه الشريط قبل ترتيب المعالجة النهائية.',
-    keyFeatures: ['توريد بالرول لتسهيل القص على دفعات', 'مناسبة لتركيب السحاب لاحقا والمعالجة بالقص حسب الطول', 'تنسيق ألوان مرن لتطوير السلاسل المتكررة', 'مناسبة للملابس والأحذية وغيرها من الاستخدامات الأخف'],
+    keyFeatures: ['يورد من دون نقاط توقف علوية أو سفلية أو أجزاء إدخال، فلا يصبح سحابا جاهزا إلا بعد القص وتركيب السحابات', 'يسعّر بالرول بشكل منفصل، ولا ينطبق عليه الحد الأدنى البالغ 1000 قطعة الخاص بالسحابات الجاهزة', 'الطول يحدده القص في مصنعك، وليس طولا جاهزا ثابتا', 'خفيف الوزن مع نطاق ألوان واسع، وهو ما يناسب تطوير السلاسل في الملابس وملابس الأطفال والإكسسوارات الخفيفة'],
+    applications: {
+      title: 'الاستخدامات النموذجية',
+      items: [
+        {
+          title: 'القص والمعالجة حسب الطول',
+          description: 'يقص على دفعات حسب الأطوال التي يحتاجها التصميم، ثم تركب السحابات في مرحلة واحدة، وهو ما يفيد الملابس وملابس الأطفال حيث يمتد التصميم الواحد على عدة مقاسات.',
+        },
+        {
+          title: 'تركيب السحابات ومطابقة المستلزمات',
+          description: 'تؤكد السحابات ونقاط التوقف بشكل منفصل، فتستوعب الدفعة الواحدة من السلسلة أنماط سحابات مختلفة.',
+        },
+        {
+          title: 'تجهيز المواد لتطوير السلاسل',
+          description: 'نطاق ألوان أسنان الراتنج واسع، فيمكن تأمين المواد حسب مجموعات الألوان في مرحلة التطوير، ثم القص حسب الطول بعد تثبيت التصاميم.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'دليل الاختيار',
+      description: 'سحابات الرول ليست سحابات جاهزة بطول ثابت، ولذلك لا تبدأ الخطوة الأولى من المقاس، بل من تأكيد قدرتك على المعالجة اللاحقة التي تحولها إلى منتج نهائي.',
+      factors: [
+        {
+          title: 'ابدأ من قدرتك على المعالجة اللاحقة',
+          description: 'تحتاج سحابات الرول إلى القص وتركيب السحابات. وإذا لم تتوفر لديك هذه المعدات أو جهة معالجة خارجية تقوم بها، فاختيار السحاب الجاهز أبسط.',
+        },
+        {
+          title: 'ثم حدد الخامة المناسبة',
+          description: 'سحاب الراتنج بالرول أخف وزنا وأكثر مرونة في اللون، وهو أنسب للملابس وملابس الأطفال والإكسسوارات الخفيفة، ويفضل السحاب المعدني بالرول عندما يحتاج التصميم إلى مظهر معدني أو إلى تحمل أعلى.',
+        },
+        {
+          title: 'وأخيرا أكد المقاس وطول اللفة',
+          description: 'المقاسات الشائعة هي 3 و5 و8، بعرض سلسلة مغلقة نحو 3 / 5 / 8 مم. أما طول اللفة فنرجو تأكيده مع طلب عرض السعر حتى نرتبه بما يتناسب مع كمية مشروعك.',
+        },
+      ],
+    },
   },
   nylonRolls: {
     key: 'nylonRolls',
@@ -2095,7 +2480,42 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     name: 'سحابات نايلون بالرول',
     description: 'مناسبة للملابس والحقائب والملابس الواقية من الشمس التي تستخدم السلسلة بالرول وتقضيها حسب الحاجة مع توازن بين السلاسة ومرونة المعالجة.',
     overview: 'تستخدم سحابات النايلون بالرول أساسا في القص اللاحق وتركيب السحاب ومعالجة المنتج، خاصة عندما تكون سلاسة الحركة والمرونة في التعامل مع الطول مهمتين معا. وتنظم Weiwei Zipper في هذه الفئة المقاسات الشائعة 3 و5 و8 حتى يتمكن العملاء من تأكيد اتجاه المقاس أولا، ثم الانتقال إلى العينات أو التسعير حول الطول والسحابات ومتطلبات المعالجة اللاحقة.',
-    keyFeatures: ['توريد بالرول لتسهيل القص حسب الطلب', 'سلاسة ثابتة في الفتح والإغلاق المتكرر', 'مناسبة لتركيب السحاب لاحقا ومعالجة المنتج النهائي', 'مفيدة لمشاريع الملابس والحقائب والملابس الواقية من الشمس'],
+    keyFeatures: ['يورد من دون نقاط توقف علوية أو سفلية أو أجزاء إدخال، فلا يصبح سحابا جاهزا إلا بعد القص وتركيب السحابات', 'يسعّر بالرول بشكل منفصل، ولا ينطبق عليه الحد الأدنى البالغ 1000 قطعة الخاص بالسحابات الجاهزة', 'الطول يحدده القص في مصنعك، وليس طولا جاهزا ثابتا', 'سلاسة ثابتة ومرونة جيدة، وهو ما يناسب المعالجة اللاحقة في الملابس والحقائب والملابس الواقية من الشمس كثيرة الفتح والإغلاق'],
+    applications: {
+      title: 'الاستخدامات النموذجية',
+      items: [
+        {
+          title: 'القص والمعالجة حسب الطول',
+          description: 'يقص على دفعات حسب الأطوال التي يحتاجها التصميم، ثم تركب السحابات في مرحلة واحدة، وهو ما يفيد الملابس الواقية من الشمس والجيوب الداخلية للحقائب حيث تتباعد الأطوال كثيرا.',
+        },
+        {
+          title: 'تركيب السحابات ومطابقة المستلزمات',
+          description: 'يمكن تأكيد السحابات وحدها بحسب الإحساس المطلوب في الاستخدام، فتخدم الدفعة الواحدة من السلسلة مواضع تختلف في تكرار الفتح والإغلاق.',
+        },
+        {
+          title: 'تجهيز المواد لتطوير السلاسل',
+          description: 'تغطي الدفعة الواحدة من سلسلة الرول احتياجات الطول في مواضع متعددة من الملابس والحقائب، وهو ما يسهل تجهيز المواد في مرة واحدة.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'دليل الاختيار',
+      description: 'سحابات الرول ليست سحابات جاهزة بطول ثابت، ولذلك لا تبدأ الخطوة الأولى من المقاس، بل من تأكيد قدرتك على المعالجة اللاحقة التي تحولها إلى منتج نهائي.',
+      factors: [
+        {
+          title: 'ابدأ من قدرتك على المعالجة اللاحقة',
+          description: 'تحتاج سحابات الرول إلى القص وتركيب السحابات. وإذا لم تتوفر لديك هذه المعدات أو جهة معالجة خارجية تقوم بها، فاختيار السحاب الجاهز أبسط.',
+        },
+        {
+          title: 'ثم حدد الخامة المناسبة',
+          description: 'سحاب النايلون بالرول ثابت السلاسة وجيد المرونة، وهو أنسب للملابس والحقائب والملابس الواقية من الشمس، أما التصاميم التي تركز على الملمس المعدني فيختار لها السحاب المعدني بالرول.',
+        },
+        {
+          title: 'وأخيرا أكد المقاس وطول اللفة',
+          description: 'المقاسات الشائعة هي 3 و5 و8، بعرض سلسلة مغلقة نحو 3 / 5 / 8 مم. أما طول اللفة فنرجو تأكيده مع طلب عرض السعر حتى نرتبه بما يتناسب مع كمية مشروعك.',
+        },
+      ],
+    },
   },
 };
 
@@ -2362,7 +2782,42 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     name: 'Металлические рулонные молнии',
     description: 'Подходят для сумок, обуви, рабочей одежды и других проектов, где цепочка используется в рулоне и режется по необходимости, главным образом в размерах 3 / 5 / 8.',
     overview: 'Металлические рулонные молнии используются в основном для последующей нарезки, установки бегунка и сборки изделия, поэтому подходят для проектов, где нужна металлическая фактура вместе с более гибким управлением длиной. Weiwei Zipper организует здесь популярные размеры 3, 5 и 8, чтобы клиент мог подтвердить цвет зубьев, тесьму и направление по бегункам до перехода к последующей обработке.',
-    keyFeatures: ['Поставка в рулоне для удобной нарезки партиями', 'Сохраняют металлическую фактуру и износостойкость', 'Подходят для последующей установки бегунка и обработки изделия', 'Удобны для проектов в сумках, обуви и рабочей одежде'],
+    keyFeatures: ['Поставляется без верхних и нижних стопоров и вставных элементов, поэтому становится готовой молнией только после нарезки и установки бегунка', 'Минимальный заказ и цена рассчитываются отдельно, по рулонам — условие от 1000 штук действует только для готовых молний', 'Длина определяется нарезкой и не ограничена фиксированной длиной готовой молнии', 'Сохраняет металлическую фактуру и износостойкость — подходит для последующей обработки сумок, обуви и рабочей одежды'],
+    applications: {
+      title: 'Типовое применение',
+      items: [
+        {
+          title: 'Нарезка под фиксированную длину',
+          description: 'Цепочку нарезают партиями под требуемые длины модели, а установку бегунков затем организуют одним этапом — это удобно, когда одна модель охватывает сразу несколько длин.',
+        },
+        {
+          title: 'Установка бегунка и подбор фурнитуры',
+          description: 'Бегунки, верхние и нижние стопоры и вставные элементы подтверждаются отдельно, поэтому направление по фурнитуре можно менять под стиль модели, не меняя саму цепочку.',
+        },
+        {
+          title: 'Запас материала для серии',
+          description: 'Одна партия цепочки закрывает сразу несколько длин внутри серии, поэтому на этапе разработки материал можно взять заранее, а модели закрепить позже.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Руководство по выбору',
+      description: 'Рулонная цепочка — не готовая молния фиксированной длины, поэтому выбор начинается не с размера, а с подтверждения того, есть ли у вас возможности для последующей обработки.',
+      factors: [
+        {
+          title: 'Начните с возможностей последующей обработки',
+          description: 'Рулонная цепочка требует последующих операций — нарезки, установки бегунка и других. Если такого оборудования или внешнего подрядчика нет, проще сразу взять готовую молнию.',
+        },
+        {
+          title: 'Затем определите направление по материалу',
+          description: 'Металлическая рулонная цепочка сохраняет ощущение фурнитуры и износостойкость, поэтому лучше подходит для сумок, обуви и рабочей одежды; для легкой одежды обычно удобнее смоляная или нейлоновая рулонная цепочка.',
+        },
+        {
+          title: 'В конце подтвердите размер и длину рулона',
+          description: 'Распространенные размеры — 3 / 5 / 8, ширина сомкнутой цепочки около 3 / 5 / 8 мм. Длину каждого рулона просим уточнить вместе с запросом: мы подберем ее с учетом объема проекта.',
+        },
+      ],
+    },
   },
   resinRolls: {
     key: 'resinRolls',
@@ -2371,7 +2826,42 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     name: 'Смоляные рулонные молнии',
     description: 'Подходят для одежды, детских изделий, обуви и схожих проектов, где цепочка используется в рулоне и затем нарезается по длине, главным образом в размерах 3 / 5 / 8.',
     overview: 'Смоляные рулонные молнии используются в основном для последующей нарезки, установки бегунка и обработки изделия, а не как готовые молнии фиксированной длины. Weiwei Zipper организует здесь популярные размеры 3, 5 и 8, чтобы клиент мог подтвердить тип зуба, цвет и направление тесьмы до организации итоговой обработки.',
-    keyFeatures: ['Поставка в рулоне для удобной нарезки партиями', 'Подходят для последующей установки бегунка и нарезки по длине', 'Гибкий подбор цвета для повторяющейся разработки серий', 'Подходят для одежды, обуви и других более легких сценариев использования'],
+    keyFeatures: ['Поставляется без верхних и нижних стопоров и вставных элементов, поэтому становится готовой молнией только после нарезки и установки бегунка', 'Минимальный заказ и цена рассчитываются отдельно, по рулонам — условие от 1000 штук действует только для готовых молний', 'Длина определяется нарезкой и не ограничена фиксированной длиной готовой молнии', 'Гибкий подбор цвета и небольшой вес — подходит для серийной разработки одежды, детских изделий и легких аксессуаров'],
+    applications: {
+      title: 'Типовое применение',
+      items: [
+        {
+          title: 'Нарезка под фиксированную длину',
+          description: 'Цепочку нарезают партиями под требуемые длины модели, а бегунки устанавливают одним этапом — это удобно для одежды и детских изделий, где одна модель идет в нескольких размерах.',
+        },
+        {
+          title: 'Установка бегунка и подбор комплектующих',
+          description: 'Бегунки, верхние и нижние стопоры подтверждаются отдельно, поэтому одна партия цепочки может сочетаться с разными стилями бегунков.',
+        },
+        {
+          title: 'Запас материала для серии',
+          description: 'У смоляной цепочки шире диапазон подбора цвета, поэтому на этапе разработки материал берут по цветовым группам, а длину определяют позже, когда модели закреплены.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Руководство по выбору',
+      description: 'Рулонная цепочка — не готовая молния фиксированной длины, поэтому выбор начинается не с размера, а с подтверждения того, есть ли у вас возможности для последующей обработки.',
+      factors: [
+        {
+          title: 'Начните с возможностей последующей обработки',
+          description: 'Рулонная цепочка требует последующих операций — нарезки, установки бегунка и других. Если такого оборудования или внешнего подрядчика нет, проще сразу взять готовую молнию.',
+        },
+        {
+          title: 'Затем определите направление по материалу',
+          description: 'Смоляная рулонная цепочка легче по весу и гибче по цвету, поэтому лучше подходит для одежды, детских изделий и легких аксессуаров; если нужен металлический вид или более высокая нагрузка, выбирают металлическую рулонную цепочку.',
+        },
+        {
+          title: 'В конце подтвердите размер и длину рулона',
+          description: 'Распространенные размеры — 3 / 5 / 8, ширина сомкнутой цепочки около 3 / 5 / 8 мм. Длину каждого рулона просим уточнить вместе с запросом: мы подберем ее с учетом объема проекта.',
+        },
+      ],
+    },
   },
   nylonRolls: {
     key: 'nylonRolls',
@@ -2380,7 +2870,42 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     name: 'Нейлоновые рулонные молнии',
     description: 'Подходят для одежды, сумок и солнцезащитной верхней одежды, где цепочка используется в рулоне и режется по необходимости, сочетая плавность хода и гибкость обработки.',
     overview: 'Нейлоновые рулонные молнии используются в основном для последующей нарезки, установки бегунка и обработки изделия, особенно когда одновременно важны плавность хода и гибкая работа с длиной. В этой категории Weiwei Zipper организует популярные размеры 3, 5 и 8, чтобы клиент мог сначала подтвердить направление по размеру, а затем перейти к образцам или расчету цены с учетом длины, бегунков и требований к последующей обработке.',
-    keyFeatures: ['Поставка в рулоне для удобной нарезки под заказ', 'Стабильная плавность при частом открывании и закрывании', 'Подходят для последующей установки бегунка и обработки готового изделия', 'Удобны для проектов в одежде, сумках и солнцезащитной верхней одежде'],
+    keyFeatures: ['Поставляется без верхних и нижних стопоров и вставных элементов, поэтому становится готовой молнией только после нарезки и установки бегунка', 'Минимальный заказ и цена рассчитываются отдельно, по рулонам — условие от 1000 штук действует только для готовых молний', 'Длина определяется нарезкой и не ограничена фиксированной длиной готовой молнии', 'Стабильная плавность хода и хорошая гибкость — подходит для последующей обработки одежды, сумок и солнцезащитной верхней одежды с частым открыванием и закрыванием'],
+    applications: {
+      title: 'Типовое применение',
+      items: [
+        {
+          title: 'Нарезка под фиксированную длину',
+          description: 'Цепочку нарезают партиями под требуемые длины модели, а бегунки устанавливают одним этапом — это удобно для солнцезащитной одежды и внутренних карманов сумок, где разброс длин большой.',
+        },
+        {
+          title: 'Установка бегунка и подбор комплектующих',
+          description: 'Бегунок можно подтвердить отдельно, по ощущениям от использования, поэтому одна партия цепочки подойдет для мест с разной частотой открывания и закрывания.',
+        },
+        {
+          title: 'Запас материала для серии',
+          description: 'Одна партия цепочки закрывает потребность в длинах сразу для нескольких мест в одежде и сумках, поэтому материал удобно заготавливать за один раз.',
+        },
+      ],
+    },
+    selectionGuide: {
+      title: 'Руководство по выбору',
+      description: 'Рулонная цепочка — не готовая молния фиксированной длины, поэтому выбор начинается не с размера, а с подтверждения того, есть ли у вас возможности для последующей обработки.',
+      factors: [
+        {
+          title: 'Начните с возможностей последующей обработки',
+          description: 'Рулонная цепочка требует последующих операций — нарезки, установки бегунка и других. Если такого оборудования или внешнего подрядчика нет, проще сразу взять готовую молнию.',
+        },
+        {
+          title: 'Затем определите направление по материалу',
+          description: 'Нейлоновая рулонная цепочка отличается стабильной плавностью хода и хорошей гибкостью, поэтому лучше подходит для одежды, сумок и солнцезащитной верхней одежды; если модель строится на фактуре фурнитуры, обычно выбирают металлическую рулонную цепочку.',
+        },
+        {
+          title: 'В конце подтвердите размер и длину рулона',
+          description: 'Распространенные размеры — 3 / 5 / 8, ширина сомкнутой цепочки около 3 / 5 / 8 мм. Длину каждого рулона просим уточнить вместе с запросом: мы подберем ее с учетом объема проекта.',
+        },
+      ],
+    },
   },
 };
 
