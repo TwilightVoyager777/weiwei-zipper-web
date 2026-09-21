@@ -44,6 +44,7 @@ export const homeContent = {
   hero: {
     badges: ['工厂直供', '支持打样', '支持来样定制'],
     title: '伟伟拉链',
+    titleTagline: '义乌 3 / 5 / 8 号金属、树脂、尼龙拉链工厂',
     subtitle: '作为长期深耕义乌拉链配套的拉链厂家，伟伟拉链面向服装、箱包、鞋帽客户提供金属拉链、树脂拉链、尼龙拉链服务，覆盖 3 号 / 5 号 / 8 号常用规格，可配合打样确认、批量采购与后续返单需求。',
     visualPath: '/hero/profile.png',
     visualAlt: '半开状态金属拉链透明背景主视觉图',
@@ -403,6 +404,7 @@ const homeContentEn = {
   hero: {
     badges: ['Factory Direct Supply', 'Sampling Support', 'Custom Development'],
     title: 'Weiwei Zipper',
+    titleTagline: 'Factory for Metal, Resin, and Nylon Zippers in Yiwu · Sizes 3 / 5 / 8',
     subtitle: 'Weiwei Zipper supplies metal, resin, and nylon zippers for garment, bag, and footwear projects, with common size 3, 5, and 8 options suited to sampling, bulk purchasing, and repeat orders.',
     visualPath: '/hero/profile.png',
     visualAlt: 'Main visual of a partially open metal zipper',
@@ -463,6 +465,7 @@ const homeContentEs = {
   hero: {
     badges: ['Suministro directo de fábrica', 'Soporte de muestras', 'Desarrollo a medida'],
     title: 'Weiwei Zipper',
+    titleTagline: 'Fábrica de cremalleras metálicas, de resina y de nylon en Yiwu · tamaños 3 / 5 / 8',
     subtitle: 'Weiwei Zipper suministra cremalleras metálicas, de resina y de nylon para proyectos de prendas, bolsos y calzado, con opciones comunes en tamaños 3, 5 y 8 adecuadas para muestreo, compras al por mayor y reposiciones.',
     visualPath: '/hero/profile.png',
     visualAlt: 'Visual principal de una cremallera metálica parcialmente abierta',
@@ -523,6 +526,7 @@ const homeContentAr = {
   hero: {
     badges: ['توريد مباشر من المصنع', 'دعم العينات', 'تطوير مخصص'],
     title: 'Weiwei Zipper',
+    titleTagline: 'مصنع سحابات معدنية وراتنج ونايلون في ييوو بمقاسات 3 / 5 / 8',
     subtitle: 'توفر Weiwei Zipper سحابات معدنية وراتنج ونايلون لمشاريع الملابس والحقائب والأحذية، مع خيارات شائعة بالمقاسات 3 و5 و8 مناسبة للعينات والشراء بالجملة وإعادة الطلب.',
     visualPath: '/hero/profile.png',
     visualAlt: 'صورة رئيسية لسحاب معدني مفتوح جزئيا',
@@ -583,6 +587,7 @@ const homeContentRu = {
   hero: {
     badges: ['Поставка напрямую с фабрики', 'Поддержка образцов', 'Индивидуальная разработка'],
     title: 'Weiwei Zipper',
+    titleTagline: 'Производитель металлических, смоляных и нейлоновых молний в Иу · размеры 3 / 5 / 8',
     subtitle: 'Weiwei Zipper поставляет металлические, смоляные и нейлоновые молнии для проектов в одежде, сумках и обуви, предлагая распространенные размеры 3, 5 и 8 для образцов, оптовых закупок и повторных заказов.',
     visualPath: '/hero/profile.png',
     visualAlt: 'Основное изображение частично раскрытой металлической молнии',

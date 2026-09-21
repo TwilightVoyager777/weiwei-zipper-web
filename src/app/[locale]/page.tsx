@@ -36,8 +36,16 @@ export default async function HomePage({ params }: Props) {
                   </span>
                 ))}
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                {homeContent.hero.title}
+              {/* The brand name alone told search engines nothing about what the
+                  company makes. The second line carries the category, the city
+                  and the sizes without changing the visual weight of the first. */}
+              <h1 className="mb-6 leading-tight">
+                <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                  {homeContent.hero.title}
+                </span>
+                <span className="mt-3 block text-base sm:text-lg md:text-xl font-medium text-blue-100">
+                  {homeContent.hero.titleTagline}
+                </span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
                 {homeContent.hero.subtitle}
