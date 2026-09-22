@@ -46,7 +46,7 @@ Se utiliza ampliamente en:
 * mochilas de uso diario
 * accesorios de resistencia media
 
-Si el cliente no tiene claro por donde empezar, el tamaño 5 suele ser la primera opción a revisar porque equilibra bien practicidad, resistencia y compatibilidad.
+Si el cliente no tiene claro por dónde empezar, el tamaño 5 suele ser la primera opción a revisar porque equilibra bien practicidad, resistencia y compatibilidad.
 
 ## Cuando el tamaño 8 tiene más sentido
 
@@ -77,7 +77,7 @@ Por eso, decir "necesito una cremallera tamaño 5" es un buen punto de partida, 
 
 ## Empiece por el uso final
 
-Si esta comparando tamaños 3, 5 y 8, la forma más sencilla es empezar por el producto terminado:
+Si está comparando tamaños 3, 5 y 8, la forma más sencilla es empezar por el producto terminado:
 
 * ¿Es para prendas, bolsos o accesorios de calzado?
 * ¿Se utiliza en una apertura frontal, un bolsillo o un compartimento principal?

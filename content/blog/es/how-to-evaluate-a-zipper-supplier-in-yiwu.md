@@ -11,9 +11,9 @@ Muchos compradores que visitan Yiwu International Trade City empiezan mirando co
 
 Eso importa, pero si su objetivo es encontrar un proveedor para proyectos de prendas, bolsos o calzado a largo plazo, esos puntos son solo el comienzo.
 
-## 1. Revise que trabaja el proveedor de forma constante
+## 1. Revise qué trabaja el proveedor de forma constante
 
-Un proveedor que trabaja durante años con [cremalleras metálicas, de resina y de nylon](/products) es muy diferente de un comerciante que solo reune stock temporal.
+Un proveedor que trabaja durante años con [cremalleras metálicas, de resina y de nylon](/products) es muy diferente de un comerciante que solo reúne stock temporal.
 
 La especialización a largo plazo suele significar:
 
@@ -46,7 +46,7 @@ Si esos puntos están claros, la cotización y la compra al por mayor suelen ava
 
 ## 4. Compruebe si el proveedor entiende el uso real del producto
 
-Un buen proveedor de cremalleras no solo conoce nombres de producto. También entiende donde se utilizan normalmente.
+Un buen proveedor de cremalleras no solo conoce nombres de producto. También entiende dónde se utilizan normalmente.
 
 Si puede hablar con claridad sobre:
 

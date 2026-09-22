@@ -7,9 +7,9 @@ category: "sourcing"
 readTime: 6
 ---
 
-Muchos compradores llegan a Yiwu para buscar proveedores de cremalleras, pero el verdadero reto no es encontrar productos. El reto real es decidir que proveedor resulta adecuado para una cooperación a largo plazo.
+Muchos compradores llegan a Yiwu para buscar proveedores de cremalleras, pero el verdadero reto no es encontrar productos. El reto real es decidir qué proveedor resulta adecuado para una cooperación a largo plazo.
 
-Si solo compara precios, el primer paso puede parecer rápido. Cuando empiezan las muestras, las reposiciones y la compra al por mayor, lo que realmente importa es que las especificaciones esten claras y que el suministro posterior sea estable.
+Si solo compara precios, el primer paso puede parecer rápido. Cuando empiezan las muestras, las reposiciones y la compra al por mayor, lo que realmente importa es que las especificaciones estén claras y que el suministro posterior sea estable.
 
 ## 1. Decida si necesita suministro inmediato o un proveedor a largo plazo
 
@@ -55,7 +55,7 @@ Si piensa buscar cremalleras en Yiwu International Trade City, sobre todo en el 
 
 Cuanto más claras sean las referencias, más fácil será acotar la dirección correcta desde la primera conversación.
 
-## 4. Que confirmar primero en el Distrito 3
+## 4. Qué confirmar primero en el Distrito 3
 
 Si su tiempo de visita es limitado, conviene revisar primero:
 
@@ -68,7 +68,7 @@ Estas preguntas dicen mucho más que preguntar solo si hay stock.
 
 ## 5. Un proveedor fiable en Yiwu se mide por su capacidad de seguimiento
 
-En muchos proyectos, el primer pedido no es lo más difícil. La verdadera prueba es que tan fluida puede ser la reposición posterior.
+En muchos proyectos, el primer pedido no es lo más difícil. La verdadera prueba es qué tan fluida puede ser la reposición posterior.
 
 Si una fábrica de cremalleras puede mantener claros los registros de:
 
