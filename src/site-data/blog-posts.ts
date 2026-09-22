@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { routing } from "@/localization/routing";
+import { listSlugs, readCorpus } from "@/lib/blog-corpus.mjs";
+import { isDue, shanghaiDate, shouldShowScheduled, validateCorpus } from "@/lib/blog-schedule.mjs";
 
 export interface BlogPostMeta {
   slug: string;
@@ -19,15 +22,38 @@ export interface BlogPost extends BlogPostMeta {
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
 /**
- * Get all blog post slugs (shared across locales — same filename per locale).
+ * Refuse to build a news section that would publish something broken: an
+ * article missing a language (the reader would get English text under /zh/),
+ * locales that disagree on the date, or a link to an article that is not live
+ * yet. Throwing here fails `next build`, so Vercel keeps serving the last good
+ * deployment instead.
+ */
+function assertPublishable(): void {
+  const errors = validateCorpus({ locales: routing.locales, articles: readCorpus(BLOG_DIR, routing.locales) });
+  if (errors.length > 0) {
+    throw new Error(`content/blog cannot be published:\n  - ${errors.join("\n  - ")}`);
+  }
+}
+
+assertPublishable();
+
+/**
+ * Slugs of the articles that are live (shared across locales — same filename).
+ *
+ * An article whose date has not yet arrived in Beijing time is left out, so it
+ * is absent from the index, the sitemap and the static routes — and, with
+ * `dynamicParams = false` on the article route, its URL is a real 404 — until
+ * the first build on or after its date. Vercel branch previews show every
+ * article so a batch can be reviewed early.
  */
 export function getBlogSlugs(): string[] {
-  const enDir = path.join(BLOG_DIR, "en");
-  if (!fs.existsSync(enDir)) return [];
-  return fs
-    .readdirSync(enDir)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
+  const slugs = listSlugs(BLOG_DIR);
+  if (shouldShowScheduled(process.env)) return slugs;
+  const today = shanghaiDate();
+  return slugs.filter((slug) => {
+    const { data } = matter(fs.readFileSync(path.join(BLOG_DIR, "en", `${slug}.md`), "utf-8"));
+    return isDue(data.date, today);
+  });
 }
 
 /**
