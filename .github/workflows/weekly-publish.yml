@@ -1,0 +1,55 @@
+name: weekly-publish
+
+# Every Monday at 08:30 Beijing time (00:30 UTC). Articles are dated to the
+# Monday they go live and the site hides them until then, so a rebuild is all
+# it takes to publish the week's article. Design:
+# docs/superpowers/specs/2026-09-21-weekly-blog-design.md
+on:
+  schedule:
+    - cron: '30 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Ask Vercel to rebuild production
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "::error::VERCEL_DEPLOY_HOOK is not set. See section 3.5 of docs/superpowers/specs/2026-09-21-weekly-blog-design.md"
+            exit 1
+          fi
+          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK"
+
+  # Independent of the rebuild, so the reminder still arrives if the rebuild fails.
+  queue-check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Count articles still waiting for their date
+        id: queue
+        run: echo "remaining=$(node scripts/blog-queue.mjs)" >> "$GITHUB_OUTPUT"
+      - name: Open a reminder when one scheduled article or fewer is left
+        if: fromJSON(steps.queue.outputs.remaining) <= 1
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REMAINING: ${{ steps.queue.outputs.remaining }}
+        run: |
+          title="资讯队列快空了"
+          open=$(gh issue list --state open --limit 100 --json title --jq "[.[] | select(.title == \"$title\")] | length")
+          if [ "$open" != "0" ]; then
+            echo "A reminder is already open."
+            exit 0
+          fi
+          gh issue create --title "$title" --body "排期里还剩 ${REMAINING} 篇未上线的资讯文章。按每周一篇的节奏，排完之后的那个周一就会空档。
+
+          请让 Claude 写下一批（8 篇）：写好并构建通过后推到一个分支，你在 Vercel 预览上看完中文版再合并。写作规则见 content/blog/STYLE.md。"
