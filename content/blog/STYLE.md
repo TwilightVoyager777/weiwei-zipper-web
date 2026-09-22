@@ -66,9 +66,11 @@ llmsSummary: "…"    # 仅英文文件：llms.txt 里的一句话简介
 | slider | 拉头 | cursor | бегунок | （翻译时核实并补充） |
 | top and bottom stops | 上下止 | topes superiores e inferiores | верхние и нижние стопоры | نقاط توقف علوية وسفلية |
 | insertion pin (open-end) | 插管（也叫插销） | pieza de inserción | вставной элемент | جزء الإدخال |
-| closed-end / open-end / two-way | 闭尾 / 开尾 / 双开 | cerrada / abierta / doble carro | закрытая / разъемная / двухзамковая | مغلق / مفتوح / مزدوج |
+| closed-end / open-end / two-way | 闭口 / 开口 / 双开 | cerrada / abierta / doble carro | закрытая / разъемная / двухзамковая | مغلق / مفتوح / مزدوج |
 | downstream processing | 后道加工 | procesamiento posterior | последующая обработка | المعالجة اللاحقة |
 | sampling / bulk | 打样 / 大货 | muestra / producción en volumen | образец / серийное производство | العينة / الإنتاج بالجملة |
+
+中文里闭口 / 开口是站长确认的叫法（2026-09-22），不用闭尾 / 开尾。
 
 ## 验收命令（每批合并前）
 
