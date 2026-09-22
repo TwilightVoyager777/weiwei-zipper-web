@@ -13,7 +13,7 @@
 ## Global Constraints
 
 - 语言：`en`、`zh`、`es`、`ru`、`ar`。每篇文章 5 个语言文件必须齐全、同名。
-- 上线：周一 08:30 北京时间；cron `30 0 * * 1`。
+- 上线：周一 08:30 北京时间；cron `30 0 * * 1`。**修订（2026-09-21，检查点 B 之后）：改为美西时间周一 08:30（`cron: '30 8 * * 1'` 加 `timezone: "America/Los_Angeles"`），`shanghaiDate` 改名 `scheduleDate`。下文凡写「北京时间」的地方，按美西时间执行。**
 - `date`：带引号的 `"YYYY-MM-DD"`，5 个语言一致，取值为上线那个周一。
 - 文章路由的 `dynamicParams = false` 不动。
 - 不新增 npm 依赖；测试用 `node --test`；YAML 校验用已装的 `js-yaml`。

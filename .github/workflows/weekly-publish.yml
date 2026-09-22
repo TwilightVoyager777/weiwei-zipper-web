@@ -1,12 +1,14 @@
 name: weekly-publish
 
-# Every Monday at 08:30 Beijing time (00:30 UTC). Articles are dated to the
-# Monday they go live and the site hides them until then, so a rebuild is all
-# it takes to publish the week's article. Design:
-# docs/superpowers/specs/2026-09-21-weekly-blog-design.md
+# Every Monday at 08:30 Los Angeles time; GitHub follows daylight saving time.
+# Articles are dated to the Monday they go live and the site hides them until
+# then, so a rebuild is all it takes to publish the week's article. The time
+# zone must match SCHEDULE_TIME_ZONE in src/lib/blog-schedule.mjs (npm test
+# checks). Design: docs/superpowers/specs/2026-09-21-weekly-blog-design.md
 on:
   schedule:
-    - cron: '30 0 * * 1'
+    - cron: '30 8 * * 1'
+      timezone: "America/Los_Angeles"
   workflow_dispatch:
 
 jobs:

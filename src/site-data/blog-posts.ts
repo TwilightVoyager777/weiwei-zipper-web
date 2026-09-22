@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { routing } from "@/localization/routing";
 import { listSlugs, readCorpus } from "@/lib/blog-corpus.mjs";
-import { isDue, shanghaiDate, shouldShowScheduled, validateCorpus } from "@/lib/blog-schedule.mjs";
+import { isDue, scheduleDate, shouldShowScheduled, validateCorpus } from "@/lib/blog-schedule.mjs";
 
 export interface BlogPostMeta {
   slug: string;
@@ -42,7 +42,7 @@ assertPublishable();
 /**
  * Slugs of the articles that are live (shared across locales — same filename).
  *
- * An article whose date has not yet arrived in Beijing time is left out, so it
+ * An article whose date has not yet arrived in Los Angeles is left out, so it
  * is absent from the index, the sitemap and the static routes — and, with
  * `dynamicParams = false` on the article route, its URL is a real 404 — until
  * the first build on or after its date. Vercel branch previews show every
@@ -51,7 +51,7 @@ assertPublishable();
 export function getBlogSlugs(): string[] {
   const slugs = listSlugs(BLOG_DIR);
   if (shouldShowScheduled(process.env)) return slugs;
-  const today = shanghaiDate();
+  const today = scheduleDate();
   return slugs.filter((slug) => {
     const { data } = matter(fs.readFileSync(path.join(BLOG_DIR, "en", `${slug}.md`), "utf-8"));
     return isDue(data.date, today);

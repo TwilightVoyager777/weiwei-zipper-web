@@ -6,7 +6,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { countScheduled, readFrontmatterDate, shanghaiDate } from '../src/lib/blog-schedule.mjs';
+import { countScheduled, readFrontmatterDate, scheduleDate } from '../src/lib/blog-schedule.mjs';
 
 const EN_DIR = path.join(process.cwd(), 'content/blog/en');
 const dates = fs
@@ -14,4 +14,4 @@ const dates = fs
   .filter((file) => file.endsWith('.md'))
   .map((file) => readFrontmatterDate(fs.readFileSync(path.join(EN_DIR, file), 'utf8')));
 
-console.log(countScheduled(dates, shanghaiDate()));
+console.log(countScheduled(dates, scheduleDate()));

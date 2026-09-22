@@ -1,23 +1,36 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import {
+  SCHEDULE_TIME_ZONE,
   countScheduled,
   extractBlogLinks,
   extractLocalePrefixedLinks,
   isDue,
   isValidDateString,
   readFrontmatterDate,
-  shanghaiDate,
+  scheduleDate,
   shouldShowScheduled,
   validateCorpus,
 } from './blog-schedule.mjs';
 
-test('shanghaiDate rolls over at midnight Beijing time, not UTC', () => {
-  // 2026-09-27 16:30 UTC is 00:30 on Monday 28 September in Beijing.
-  assert.equal(shanghaiDate(new Date('2026-09-27T16:30:00Z')), '2026-09-28');
-  assert.equal(shanghaiDate(new Date('2026-09-27T15:59:59Z')), '2026-09-27');
-  // The weekly job runs at 00:30 UTC, which is 08:30 in Beijing.
-  assert.equal(shanghaiDate(new Date('2026-09-28T00:30:00Z')), '2026-09-28');
+test('scheduleDate rolls over at midnight Los Angeles time, not UTC', () => {
+  // Summer (PDT, UTC-7): 06:59:59 UTC on 28 September is still Sunday 27 there.
+  assert.equal(scheduleDate(new Date('2026-09-28T06:59:59Z')), '2026-09-27');
+  assert.equal(scheduleDate(new Date('2026-09-28T07:00:00Z')), '2026-09-28');
+  // Winter (PST, UTC-8): midnight falls an hour later in UTC.
+  assert.equal(scheduleDate(new Date('2026-12-07T07:59:59Z')), '2026-12-06');
+  assert.equal(scheduleDate(new Date('2026-12-07T08:00:00Z')), '2026-12-07');
+  // The weekly job runs at 08:30 Los Angeles time, 15:30 UTC in summer.
+  assert.equal(scheduleDate(new Date('2026-09-28T15:30:00Z')), '2026-09-28');
+});
+
+test('the weekly job fires on Monday in the schedule time zone', () => {
+  // Articles are due from midnight in SCHEDULE_TIME_ZONE. A job scheduled in
+  // another zone can fire before that week's article is due and publish nothing.
+  const workflow = fs.readFileSync(new URL('../../.github/workflows/weekly-publish.yml', import.meta.url), 'utf8');
+  assert.match(workflow, /cron: '\d+ \d+ \* \* 1'/);
+  assert.ok(workflow.includes(`timezone: "${SCHEDULE_TIME_ZONE}"`), `workflow is not scheduled in ${SCHEDULE_TIME_ZONE}`);
 });
 
 test('isValidDateString accepts quoted calendar dates only', () => {
