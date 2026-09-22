@@ -5,6 +5,7 @@ date: "2026-03-06"
 author: "Weiwei Zipper"
 category: "guide"
 readTime: 6
+llmsSummary: "Which size fits which garment, bag, and accessory position."
 ---
 
 Choosing the right zipper size is usually the first step in narrowing down a practical sourcing direction. For most standard projects, the discussion starts with size 3, size 5, or size 8.

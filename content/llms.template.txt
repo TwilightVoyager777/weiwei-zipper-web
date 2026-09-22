@@ -1,0 +1,54 @@
+# Weiwei Zipper
+
+> Weiwei Zipper (Yiwu Weiwei Zipper Co., Ltd.) is a zipper supplier based in District 3 of Yiwu International Trade City, China, operating since 1992. We supply and customize metal, resin, and nylon zippers in sizes 3, 5, and 8, plus zipper rolls, for garment, bag, footwear, and sun-protective apparel projects.
+
+This is a quote-based catalog: no prices are published. Buyers send an inquiry through the quote form, WhatsApp, WeChat, phone, or email, and we reply with sampling and bulk terms for the specific project.
+
+The site is published in five languages. English URLs have no prefix; the other languages use a prefix: `/zh` (简体中文), `/ru` (Русский), `/es` (Español), `/ar` (العربية). Every page below exists in all five languages at the same path.
+
+## Core pages
+
+- [Home](https://www.weiweizipper.com/): Company overview, product categories, applications, and inquiry entry points.
+- [Products](https://www.weiweizipper.com/products): Six product directions — metal, resin, and nylon zippers, plus the matching zipper rolls.
+- [Applications](https://www.weiweizipper.com/industries): How the products are used across garment, bag, and footwear projects.
+- [Solutions](https://www.weiweizipper.com/services): How sampling, bulk purchasing, and repeat-order supply are handled.
+- [About Us](https://www.weiweizipper.com/about): Company background and what the factory supports.
+- [Yiwu Zipper Supplier](https://www.weiweizipper.com/yiwu-zipper-supplier): Wholesale zipper sourcing in Yiwu, for buyers working with Yiwu International Trade City.
+- [FAQ](https://www.weiweizipper.com/faq): Common questions on size 3 / 5 / 8 selection, closed-end and open-end structures, zipper rolls, sampling, color confirmation, and quotation.
+- [Contact](https://www.weiweizipper.com/contact): Phone, WhatsApp, WeChat, email, address, and business hours.
+- [Get Quote](https://www.weiweizipper.com/quote): Inquiry form for sampling and bulk requests.
+
+## Product categories
+
+- [Metal Zippers](https://www.weiweizipper.com/products/metal-zippers): For bags, footwear, workwear, and styles that need durability and a hardware finish.
+- [Resin Zippers](https://www.weiweizipper.com/products/resin-zippers): For garments, kidswear, and footwear, built around common size 3 / 5 / 8 demand.
+- [Nylon Zippers](https://www.weiweizipper.com/products/nylon-zippers): For garments, bags, and sun-protective outerwear, where a smoother pull matters.
+- [Metal Zipper Rolls](https://www.weiweizipper.com/products/metal-zipper-rolls): Continuous chain for projects that cut to length in-house.
+- [Resin Zipper Rolls](https://www.weiweizipper.com/products/resin-zipper-rolls): Continuous chain for garment, kidswear, and footwear projects.
+- [Nylon Zipper Rolls](https://www.weiweizipper.com/products/nylon-zipper-rolls): Continuous chain for garment, bag, and sun-protective outerwear projects.
+
+## Products
+
+- [Metal Closed-End Zipper](https://www.weiweizipper.com/products/metal-no-5-closed-end-zipper): For bag, footwear, and workwear positions that stay joined at the bottom.
+- [Metal Open-End Zipper](https://www.weiweizipper.com/products/metal-no-5-open-end-zipper): For jackets, workwear, and bag positions that open fully.
+- [Metal Zippers (Sizes 3 / 5 / 8)](https://www.weiweizipper.com/products/metal-zipper-3-5-8): Size comparison for metal zippers across the three common sizes.
+- [Metal Zipper Roll](https://www.weiweizipper.com/products/metal-zipper-roll-3-5-8): Metal continuous chain, cut to length as required.
+- [Resin Closed-End Zipper](https://www.weiweizipper.com/products/resin-no-5-closed-end-zipper): For garments, kidswear, and footwear accessories.
+- [Resin Open-End Zipper](https://www.weiweizipper.com/products/resin-no-5-open-end-zipper): For jackets, kidswear, and sun-protective outerwear.
+- [Resin Zippers (Sizes 3 / 5 / 8)](https://www.weiweizipper.com/products/resin-zipper-3-5-8): Size comparison for resin zippers across the three common sizes.
+- [Resin Zipper Roll](https://www.weiweizipper.com/products/resin-zipper-roll-3-5-8): Resin continuous chain, cut to length as required.
+- [Nylon Closed-End Zipper](https://www.weiweizipper.com/products/nylon-no-5-closed-end-zipper): For garment pockets and inner bag sections.
+- [Nylon Open-End Zipper](https://www.weiweizipper.com/products/nylon-no-5-open-end-zipper): For jackets, sun-protective outerwear, and sportswear.
+- [Nylon Zippers (Sizes 3 / 5 / 8)](https://www.weiweizipper.com/products/nylon-zipper-3-5-8): Size comparison for nylon zippers across the three common sizes.
+- [Nylon Zipper Roll](https://www.weiweizipper.com/products/nylon-zipper-roll-3-5-8): Nylon continuous chain, cut to length as required.
+
+## Guides
+
+{{BLOG_ARTICLES}}
+- [Insights](https://www.weiweizipper.com/blog): Index of all articles.
+
+## Optional
+
+- [Privacy Policy](https://www.weiweizipper.com/privacy-policy): How data submitted through the site is collected and used.
+- [Terms of Service](https://www.weiweizipper.com/terms-of-service): Website use terms, including trade terms referenced in inquiries.
+- [Sitemap](https://www.weiweizipper.com/sitemap.xml): All {{SITEMAP_URL_COUNT}} URLs across the five languages, with hreflang alternates.

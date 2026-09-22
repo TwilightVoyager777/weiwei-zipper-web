@@ -5,6 +5,7 @@ date: "2026-03-05"
 author: "Weiwei Zipper"
 category: "guide"
 readTime: 6
+llmsSummary: "How the two structures differ and where each is used."
 ---
 
 When customers discuss zipper structure, one of the most common questions is whether the project needs a closed-end zipper or an open-end zipper.

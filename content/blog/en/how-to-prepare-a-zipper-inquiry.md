@@ -5,6 +5,7 @@ date: "2026-03-04"
 author: "Weiwei Zipper"
 category: "sourcing"
 readTime: 6
+llmsSummary: "What to include so sampling and quotation move faster."
 ---
 
 Most slow zipper inquiries are not caused by late replies. They are caused by missing information in the first message.

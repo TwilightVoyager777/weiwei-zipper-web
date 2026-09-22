@@ -13,6 +13,8 @@ export interface BlogPostMeta {
   author: string;
   category: string;
   readTime: number;
+  /** One-line summary for llms.txt (English files only); the excerpt is the fallback. */
+  llmsSummary?: string;
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -63,7 +65,7 @@ export function getAllBlogPosts(locale: string): BlogPostMeta[] {
   const slugs = getBlogSlugs();
   const posts = slugs.map((slug) => getBlogPostMeta(slug, locale));
   return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime() || a.slug.localeCompare(b.slug)
   );
 }
 
@@ -86,6 +88,7 @@ export function getBlogPostMeta(slug: string, locale: string): BlogPostMeta {
     author: data.author ?? "",
     category: data.category ?? "general",
     readTime: data.readTime ?? 5,
+    llmsSummary: data.llmsSummary,
   };
 }
 

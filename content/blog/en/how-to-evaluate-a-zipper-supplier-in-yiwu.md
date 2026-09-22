@@ -5,6 +5,7 @@ date: "2026-03-07"
 author: "Weiwei Zipper"
 category: "sourcing"
 readTime: 5
+llmsSummary: "What to check when sourcing in District 3 of Yiwu International Trade City."
 ---
 
 Many buyers visiting Yiwu International Trade City start by looking at colors, styles, and prices.
