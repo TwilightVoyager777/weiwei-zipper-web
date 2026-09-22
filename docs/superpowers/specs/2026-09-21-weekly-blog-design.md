@@ -2,6 +2,7 @@
 
 - 日期：2026-09-21
 - 状态：设计已逐段确认，待实施计划
+- 修订（2026-09-21）：排期时区从北京时间改为美西时间（站长在美西），见 3.2、3.4、7。
 - 范围：`/blog`（导航显示为「资讯」）
 
 ## 1. 目标与非目标
@@ -39,7 +40,7 @@
 
 `src/site-data/blog-posts.ts` 的 `getBlogSlugs()` 是资讯列表、sitemap、文章页 `generateStaticParams`、结构化数据的共同入口。在这里加过滤：
 
-- 只保留 `date <= 今天` 的文章，「今天」按 **Asia/Shanghai** 计算。Vercel 构建在 UTC，不换算的话周一上午的文章会晚 8 小时。
+- 只保留 `date <= 今天` 的文章，「今天」按 **America/Los_Angeles**（美西时间）计算。Vercel 构建在 UTC，不换算的话美西周日傍晚之后的构建会把周一的文章提前放出。
 - 以下情况不过滤（显示全部排期文章）：
   - `VERCEL_ENV === 'preview'`（Vercel 分支预览，审稿用）
   - `BLOG_SHOW_SCHEDULED === '1'`（本地查看排期文章用）
@@ -61,10 +62,10 @@
 
 新增 `.github/workflows/weekly-publish.yml`：
 
-- 触发：`cron: '30 0 * * 1'`（周一 00:30 UTC = 北京时间 08:30），外加 `workflow_dispatch` 允许手动运行。
+- 触发：`cron: '30 8 * * 1'` 加 `timezone: "America/Los_Angeles"`（美西时间周一 08:30，夏令时由 GitHub 自动跟随），外加 `workflow_dispatch` 允许手动运行。时区必须与 3.2 相同，`npm test` 检查。
 - 两个**互相独立**的 job（一个失败不影响另一个）：
   - `rebuild`：`VERCEL_DEPLOY_HOOK` 为空则以错误退出（任务显示红色，不静默空跑）；否则 `curl -fsS -X POST` 调用。
-  - `queue-check`：检出仓库，按北京时间（`TZ=Asia/Shanghai`）统计 `content/blog/en/*.md` 中 `date` 晚于今天的篇数；**≤ 1** 且没有同标题的未关闭 Issue 时，开一个标题为「资讯队列快空了」的 Issue。
+  - `queue-check`：检出仓库，按与 3.2 相同的美西日期统计 `content/blog/en/*.md` 中 `date` 晚于今天的篇数；**≤ 1** 且没有同标题的未关闭 Issue 时，开一个标题为「资讯队列快空了」的 Issue。
   - 以每批最后一篇为例：它的前一周触发，距离第一个空档周一还有两周。
 - 权限：`contents: read`、`issues: write`。只用内置 `GITHUB_TOKEN`，不推送任何提交。
 
@@ -126,7 +127,7 @@
 
 - 本地：把一篇文章日期设为未来 → `next build && next start` 下该文 404、不在列表和 sitemap 中；设为今天 → 出现；`BLOG_SHOW_SCHEDULED=1` → 未来文章可见。
 - 校验：分别构造「缺一个语言」「日期不一致」「链接到更晚的文章」三种情况，确认 `next build` 失败且报错指明文件。
-- 时区：在 UTC 周日 16:30–23:59（北京时间周一 00:30–07:59）之间构造边界用例，确认按北京时间判定。
+- 时区：在美西午夜前后构造边界用例（夏令时 UTC 07:00、冬令时 UTC 08:00），确认按美西时间判定。
 - `llms.txt`：改造后与原文件逐行对比，非文章部分一字不差；未到期文章不出现，到期后出现。
 - 工作流：站长完成 §3.5 后手动运行一次，确认 Vercel 出现新部署；Issue 逻辑用 `workflow_dispatch` 在队列 ≤ 1 的状态下验证一次。
 - 每批合并前：全量重爬回归，核心零指标（canonical / hreflang / JSON-LD / 孤儿页）保持为 0。

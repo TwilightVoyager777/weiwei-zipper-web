@@ -10,18 +10,26 @@
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 /**
- * Today's date in Beijing time, as YYYY-MM-DD.
+ * The time zone the schedule runs in. The site owner is on the US West Coast,
+ * so an article dated Monday goes live on Monday morning there. The weekly job
+ * in .github/workflows/weekly-publish.yml is scheduled in the same zone.
+ */
+export const SCHEDULE_TIME_ZONE = 'America/Los_Angeles';
+
+/**
+ * Today's date in the schedule's time zone, as YYYY-MM-DD.
  *
- * Builds run in UTC, whose date lags Beijing's between 00:00 and 08:00 Beijing
- * time; a build in that window would otherwise hide an article dated that day.
+ * Builds run in UTC, whose date runs ahead of Los Angeles from 16:00 or 17:00
+ * local time until midnight; a build on a Sunday evening would otherwise
+ * publish Monday's article early.
  *
  * @param {Date} [now]
  * @returns {string}
  */
-export function shanghaiDate(now = new Date()) {
+export function scheduleDate(now = new Date()) {
   // The en-CA locale formats a date as YYYY-MM-DD.
   return new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Asia/Shanghai',
+    timeZone: SCHEDULE_TIME_ZONE,
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
