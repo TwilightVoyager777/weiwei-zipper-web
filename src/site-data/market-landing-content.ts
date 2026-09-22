@@ -117,7 +117,7 @@ const yiwuZipperLandingEn = {
     'Material direction: metal, resin, nylon, or zipper rolls.',
     'Size range: whether common sizes 3, 5, or 8 are suitable — their closed chain width is about 3, 5, and 8 mm.',
     'Structure: closed-end, open-end, two-way, or later cutting and assembly.',
-    'Length, color, slider style, and estimated order quantity — finished zippers start at 1,000 pieces, with colours mixable within one order.',
+    'Length, color, slider style, and estimated order quantity — finished zippers start at 1,000 pieces, with colors mixable within one order.',
     'Whether sampling, color matching, or reference samples are needed first.',
     'Timing: standard specifications sample in about 3 days, and bulk production usually takes about 10 days once the sample and order details are confirmed.',
   ],

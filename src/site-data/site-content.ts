@@ -433,12 +433,12 @@ const homeContentEn = {
       {
         title: 'Reliable Supply of Standard Sizes',
         description: 'We organize supply around the most commonly used size 3, 5, and 8 range, making development, bulk purchasing, and repeat orders easier to coordinate. Sizes 3, 5, and 8 correspond to a closed chain width of about 3, 5, and 8 mm.',
-        points: ['Supports both finished zippers and zipper rolls', 'Closed-end, open-end, and two-way structures can be matched as needed', 'Colors and sliders can be aligned with the style direction', 'Finished zippers start at 1,000 pieces, with colours mixable within one order'],
+        points: ['Supports both finished zippers and zipper rolls', 'Closed-end, open-end, and two-way structures can be matched as needed', 'Colors and sliders can be aligned with the style direction', 'Finished zippers start at 1,000 pieces, with colors mixable within one order'],
       },
       {
         title: 'Efficient Sample Confirmation',
         description: 'Samples can be reviewed against color cards, reference cards, garments, or old samples so key details are aligned before bulk scheduling.',
-        points: ['Supports color checking and basic sample review', 'Can follow old samples for common structures', 'Suitable for small-batch development sampling', 'Standard specifications sample in about 3 days; new colours or special structures take longer'],
+        points: ['Supports color checking and basic sample review', 'Can follow old samples for common structures', 'Suitable for small-batch development sampling', 'Standard specifications sample in about 3 days; new colors or special structures take longer'],
       },
       {
         title: 'More Predictable Delivery',
@@ -1165,8 +1165,8 @@ const quoteContentEn = {
   terms: {
     title: 'Order conditions',
     items: [
-      'For finished zippers the minimum order is usually 1,000 pieces. Colours can be mixed within one order — share the split you need and we will confirm it.',
-      'Dyeing is arranged per colour, so any colour ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that colour.',
+      'For finished zippers the minimum order is usually 1,000 pieces. Colors can be mixed within one order — share the split you need and we will confirm it.',
+      'Dyeing is arranged per color, so any color ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that color.',
       'Standard specifications sample in about 3 days; bulk production usually takes about 10 days once the sample and order details are confirmed. Zipper rolls are quoted separately.',
     ],
     faqLink: 'Read the full notes on minimum order, sampling, and lead time',

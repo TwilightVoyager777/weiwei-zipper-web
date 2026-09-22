@@ -1,8 +1,8 @@
 # Weiwei Zipper
 
-> Weiwei Zipper (Yiwu Weiwei Zipper Co., Ltd.) is a zipper supplier based in District 3 of Yiwu International Trade City, China, operating since 1992. We supply and customise metal, resin, and nylon zippers in sizes 3, 5, and 8, plus zipper rolls, for garment, bag, footwear, and sun-protective apparel projects.
+> Weiwei Zipper (Yiwu Weiwei Zipper Co., Ltd.) is a zipper supplier based in District 3 of Yiwu International Trade City, China, operating since 1992. We supply and customize metal, resin, and nylon zippers in sizes 3, 5, and 8, plus zipper rolls, for garment, bag, footwear, and sun-protective apparel projects.
 
-This is a quote-based catalogue: no prices are published. Buyers send an inquiry through the quote form, WhatsApp, WeChat, phone, or email, and we reply with sampling and bulk terms for the specific project.
+This is a quote-based catalog: no prices are published. Buyers send an inquiry through the quote form, WhatsApp, WeChat, phone, or email, and we reply with sampling and bulk terms for the specific project.
 
 The site is published in five languages. English URLs have no prefix; the other languages use a prefix: `/zh` (简体中文), `/ru` (Русский), `/es` (Español), `/ar` (العربية). Every page below exists in all five languages at the same path.
 
@@ -14,7 +14,7 @@ The site is published in five languages. English URLs have no prefix; the other 
 - [Solutions](https://www.weiweizipper.com/services): How sampling, bulk purchasing, and repeat-order supply are handled.
 - [About Us](https://www.weiweizipper.com/about): Company background and what the factory supports.
 - [Yiwu Zipper Supplier](https://www.weiweizipper.com/yiwu-zipper-supplier): Wholesale zipper sourcing in Yiwu, for buyers working with Yiwu International Trade City.
-- [FAQ](https://www.weiweizipper.com/faq): Common questions on size 3 / 5 / 8 selection, closed-end and open-end structures, zipper rolls, sampling, colour confirmation, and quotation.
+- [FAQ](https://www.weiweizipper.com/faq): Common questions on size 3 / 5 / 8 selection, closed-end and open-end structures, zipper rolls, sampling, color confirmation, and quotation.
 - [Contact](https://www.weiweizipper.com/contact): Phone, WhatsApp, WeChat, email, address, and business hours.
 - [Get Quote](https://www.weiweizipper.com/quote): Inquiry form for sampling and bulk requests.
 

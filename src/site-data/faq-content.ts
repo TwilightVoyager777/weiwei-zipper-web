@@ -85,15 +85,15 @@ const faqPageContentEn = {
     },
     {
       question: 'How is the sampling cycle usually arranged?',
-      answer: 'For standard specifications a sample usually takes about 3 days. New colours, special structures, or projects that need separate accessories take longer, and we confirm the actual timing once the requirement is clear.',
+      answer: 'For standard specifications a sample usually takes about 3 days. New colors, special structures, or projects that need separate accessories take longer, and we confirm the actual timing once the requirement is clear.',
     },
     {
       question: 'Is there a fixed MOQ?',
-      answer: 'For finished zippers the minimum order is usually 1,000 pieces. Colours can be mixed within one order; share the split you need and we will confirm it. Dyeing is arranged per colour, so any colour ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that colour. Zipper rolls are quoted separately.',
+      answer: 'For finished zippers the minimum order is usually 1,000 pieces. Colors can be mixed within one order; share the split you need and we will confirm it. Dyeing is arranged per color, so any color ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that color. Zipper rolls are quoted separately.',
     },
     {
       question: 'How is lead time usually judged?',
-      answer: 'Once the sample and order details are confirmed, bulk production usually takes about 10 days. New colours, special structures, or multi-style orders can take longer, and we confirm the schedule before the order is placed.',
+      answer: 'Once the sample and order details are confirmed, bulk production usually takes about 10 days. New colors, special structures, or multi-style orders can take longer, and we confirm the schedule before the order is placed.',
     },
     {
       question: 'How should color usually be confirmed?',
