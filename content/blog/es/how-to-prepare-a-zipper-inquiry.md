@@ -19,7 +19,7 @@ Weiwei Zipper se centra actualmente en:
 * [cremalleras de resina](/products/resin-zippers)
 * [cremalleras de nylon](/products/nylon-zippers)
 
-Si todavía no está seguro de cuál encaja mejor en su proyecto, empiece por el uso final. Indíquenos si el producto es para prendas, bolsos o accesorios de calzado, y en que posición se utilizará la cremallera.
+Si todavía no está seguro de cuál encaja mejor en su proyecto, empiece por el uso final. Indíquenos si el producto es para prendas, bolsos o accesorios de calzado, y en qué posición se utilizará la cremallera.
 
 Solo con eso ya es posible acotar rápidamente la dirección.
 

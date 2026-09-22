@@ -9,11 +9,11 @@ readTime: 6
 
 Cuando los clientes hablan de la estructura de una cremallera, una de las preguntas más comunes es si el proyecto necesita una cremallera cerrada o una cremallera abierta.
 
-Es una decisión práctica. Afecta la forma en que se abre el producto terminado, como se instala la cremallera y como deben prepararse más adelante el muestreo o la compra por volumen.
+Es una decisión práctica. Afecta la forma en que se abre el producto terminado, cómo se instala la cremallera y cómo deben prepararse más adelante el muestreo o la compra por volumen.
 
-## Que es una cremallera cerrada
+## Qué es una cremallera cerrada
 
-Una [cremallera cerrada](/products/metal-no-5-closed-end-zipper) tiene una base fija. Los dos lados permanecen unidos incluso cuando la cremallera esta completamente abierta.
+Una [cremallera cerrada](/products/metal-no-5-closed-end-zipper) tiene una base fija. Los dos lados permanecen unidos incluso cuando la cremallera está completamente abierta.
 
 Las cremalleras cerradas se usan con frecuencia en:
 
@@ -25,7 +25,7 @@ Las cremalleras cerradas se usan con frecuencia en:
 
 Si el producto no necesita separarse por completo, la cremallera cerrada suele ser la opción más directa.
 
-## Que es una cremallera abierta
+## Qué es una cremallera abierta
 
 Una [cremallera abierta](/products/metal-no-5-open-end-zipper) puede separarse totalmente en la parte inferior. Esta estructura se utiliza con frecuencia cuando el producto terminado necesita abrirse por completo.
 
@@ -58,7 +58,7 @@ La pregunta más sencilla no es "¿Qué estructura es más común?", sino "¿El 
 
 Si la respuesta es no, la opción cerrada suele ser la más adecuada.
 
-Si la respuesta es si, normalmente se requiere una cremallera abierta.
+Si la respuesta es sí, normalmente se requiere una cremallera abierta.
 
 A partir de ahí, la longitud, el tamaño, el estilo del cursor y la [dirección del material](/products) pueden confirmarse con mayor precisión.
 
