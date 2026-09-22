@@ -35,7 +35,8 @@ function blogIndexDate(locale: string): Date | undefined {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
-  const routes = ['', '/products', '/about', '/contact', '/quote', '/industries', '/services', '/faq', '/blog', '/yiwu-zipper-supplier', '/privacy-policy', '/terms-of-service'];
+  const routes = ['', '/products', '/about', '/contact', '/quote', '/industries', '/services', '/faq', '/blog', '/yiwu-zipper-supplier'];
+  // /privacy-policy and /terms-of-service are noindex, so they stay out of the sitemap.
   // Static and product pages have no per-page date source in the content model,
   // so they are published without a lastmod rather than with a fabricated one.
   const now = undefined;

@@ -25,12 +25,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'TermsOfService.meta' });
-  return pageMetadata({
-    locale,
-    path: '/terms-of-service',
-    title: t('title'),
-    description: t('description'),
-  });
+  return {
+    ...pageMetadata({
+      locale,
+      path: '/terms-of-service',
+      title: t('title'),
+      description: t('description'),
+    }),
+    // Boilerplate legal text: kept reachable and link-following, out of the index.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function TermsOfServicePage({ params }: Props) {
