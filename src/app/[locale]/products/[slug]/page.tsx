@@ -5,14 +5,11 @@ import { Link } from '@/localization/navigation';
 import ProductGallery from '@/components/ProductGallery';
 import ZoomableImage from '@/components/ZoomableImage';
 import { localizedUrl } from '@/seo/localized-urls';
-import { SCHEMA_ID, schemaRef } from '@/seo/schema';
-import { SITE_URL } from '@/config/site-constants';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import {
   ALL_PRODUCT_PAGE_SLUGS,
   CATEGORY_PRODUCTS,
-  PRODUCT_SPEC_KEYS,
   CATEGORY_SLUGS,
   CATEGORY_SLUG_TO_KEY,
   PRODUCT_IMAGES,
@@ -124,9 +121,6 @@ async function CategoryPage({ locale, slug }: { locale: string; slug: CategorySl
       position: index + 1,
       name: productItems[productSlug].name,
       url: localizedUrl(locale, `/products/${productSlug}`),
-      // The detail page emits the full Product node under this id, so a
-      // consumer that crawls both pages resolves them to one entity.
-      item: schemaRef(`${localizedUrl(locale, `/products/${productSlug}`)}#product`),
     })),
   } : null;
 
@@ -409,36 +403,12 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
   const ui = await getProductPageUi(locale);
   const product = productItems[slug];
 
-  const productSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `${localizedUrl(locale, `/products/${slug}`)}#product`,
-    isPartOf: schemaRef(SCHEMA_ID.website),
-    name: product.name,
-    description: product.overview,
-    image: `${SITE_URL}${PRODUCT_IMAGES[slug]}`,
-    // The Brand and Organization nodes are emitted once by the locale layout,
-    // which wraps this page; referencing them by `@id` keeps every product tied
-    // to the same two entities instead of declaring a fresh pair per page.
-    brand: schemaRef(SCHEMA_ID.brand),
-    manufacturer: schemaRef(SCHEMA_ID.organization),
-    category: 'Zippers',
-    material: product.specifications.material,
-    size: product.specifications.size,
-    // The spec table existed only as HTML, so a consumer of the structured
-    // data could not see the minimum order, the sampling cycle or the lead
-    // time — the three things a buyer screens on. Same values, same labels,
-    // just also expressed where machines read.
-    additionalProperty: PRODUCT_SPEC_KEYS.map((key: ProductSpecKey) => ({
-      '@type': 'PropertyValue',
-      name: productSpecLabels[key],
-      value: product.specifications[key],
-    })),
-    url: localizedUrl(locale, `/products/${slug}`),
-    // No `offers`: this is a quote-only catalogue with no published prices.
-    // A placeholder price of 0 would misrepresent the products as free.
-  };
-
+  // No Product node. Google treats every Product as a product-snippet
+  // candidate and flags it in Search Console unless it carries `offers`,
+  // `review` or `aggregateRating`. This is a quote-only catalogue with no
+  // published prices and no genuine reviews, and a placeholder price of 0
+  // would misrepresent the products as free — so the page emits only the
+  // breadcrumb (plus the layout's Organization and WebSite).
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -452,7 +422,6 @@ async function ProductDetailPage({ locale, slug }: { locale: string; slug: Produ
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="container mx-auto px-4 py-8">
