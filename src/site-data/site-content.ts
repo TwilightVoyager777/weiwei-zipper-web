@@ -494,7 +494,7 @@ const homeContentEs = {
       {
         title: 'Suministro estable de tamaños estándar',
         description: 'Organizamos el suministro alrededor de los tamaños 3, 5 y 8 de uso más frecuente, lo que facilita el desarrollo, las compras al por mayor y las reposiciones. Los tamaños 3, 5 y 8 corresponden a un ancho de cadena cerrada de unos 3, 5 y 8 mm.',
-        points: ['Soporta cremalleras terminadas y cremalleras por rollo', 'Las estructuras cerradas, abiertas y de doble carro pueden coordinarse según la necesidad', 'Los colores y cursores pueden alinearse con el estilo del producto', 'Las cremalleras terminadas parten de 1000 unidades y se pueden mezclar colores en un mismo pedido'],
+        points: ['Soporta cremalleras terminadas y cremalleras por rollo', 'Las estructuras cerradas, abiertas y de doble cursor pueden coordinarse según la necesidad', 'Los colores y cursores pueden alinearse con el estilo del producto', 'Las cremalleras terminadas parten de 1000 unidades y se pueden mezclar colores en un mismo pedido'],
       },
       {
         title: 'Confirmación de muestras más eficiente',
@@ -616,7 +616,7 @@ const homeContentRu = {
       {
         title: 'Стабильные поставки стандартных размеров',
         description: 'Мы выстраиваем поставки вокруг самых востребованных размеров 3, 5 и 8, чтобы упрощать разработку, оптовые закупки и повторные заказы. Размеры 3, 5 и 8 соответствуют ширине сомкнутой цепочки около 3, 5 и 8 мм.',
-        points: ['Поддерживаем как готовые молнии, так и рулонные цепочки', 'Можно согласовать закрытую, разъемную и двухзамковую конструкцию', 'Цвета и бегунки подбираются под стиль изделия', 'Готовые молнии — от 1000 штук, цвета можно комбинировать в одном заказе'],
+        points: ['Поддерживаем как готовые молнии, так и рулонные цепочки', 'Можно согласовать неразъемную, разъемную и двухзамковую конструкцию', 'Цвета и бегунки подбираются под стиль изделия', 'Готовые молнии — от 1000 штук, цвета можно комбинировать в одном заказе'],
       },
       {
         title: 'Более эффективное подтверждение образцов',
@@ -729,7 +729,7 @@ const useCasesContentEs = {
       imageAlt: 'Aplicación de cremallera en prendas',
       imagePosition: 'center 10%',
       description: 'Adecuadas para chaquetas, sudaderas, pantalones, ropa infantil y prendas con protección solar, donde suele prestarse mucha atención a la suavidad, el peso ligero, la combinación de color y la estabilidad en el uso repetido.',
-      focus: 'Los tamaños comunes son principalmente 3 y 5. Las opciones de resina y nylon se utilizan con frecuencia y pueden confirmarse según apertura frontal, bolsillos o si la estructura debe ser cerrada, abierta o de doble carro.',
+      focus: 'Los tamaños comunes son principalmente 3 y 5. Las opciones de resina y nylon se utilizan con frecuencia y pueden confirmarse según apertura frontal, bolsillos o si la estructura debe ser cerrada, abierta o de doble cursor.',
     },
     {
       slug: 'bags',
@@ -851,7 +851,7 @@ const useCasesContentRu = {
       imageAlt: 'Применение молнии в одежде',
       imagePosition: 'center 10%',
       description: 'Подходит для курток, худи, брюк, детской одежды и солнцезащитной верхней одежды, где важны плавный ход, легкость, совпадение цвета и стабильность при многократном использовании.',
-      focus: 'Наиболее распространены размеры 3 и 5. Часто используются смоляные и нейлоновые решения, а финальная конструкция определяется по передней планке, карману или тому, нужна ли закрытая, разъемная или двухзамковая схема.',
+      focus: 'Наиболее распространены размеры 3 и 5. Часто используются смоляные и нейлоновые решения, а финальная конструкция определяется по передней планке, карману или тому, нужна ли неразъемная, разъемная или двухзамковая схема.',
     },
     {
       slug: 'bags',
@@ -1546,7 +1546,7 @@ const inquiryFormContentRu = {
     message: 'Дополнительные примечания',
   },
   placeholders: {
-    productModel: 'Например: смоляная закрытая, нейлоновая двухзамковая, декоративная металлическая молния',
+    productModel: 'Например: смоляная неразъемная, нейлоновая двухзамковая, декоративная металлическая молния',
     productSize: 'Например: размер 5, 60 см, разъемная',
     quantity: 'Например: 3000 штук, или 3 модели сначала на образцы',
     message: 'Здесь можно указать цвет, длину, тип бегунка, упаковку, желаемый срок и любые другие детали.',
