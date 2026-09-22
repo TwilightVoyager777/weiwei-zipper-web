@@ -184,7 +184,7 @@ const yiwuZipperLandingEs = {
   checklist: [
     'Tipo de material: metal, resina, nylon o rollo.',
     'Tamaño: si las medidas comunes 3, 5 u 8 son adecuadas; su ancho de cadena cerrada es de unos 3, 5 y 8 mm.',
-    'Estructura: cerrada, abierta, doble carro o para corte posterior.',
+    'Estructura: cerrada, abierta, doble cursor o para corte posterior.',
     'Longitud, color, cursor y cantidad estimada: las cremalleras terminadas parten de 1000 unidades y se pueden mezclar colores en un mismo pedido.',
     'Si primero se necesita muestra, revisión de color o referencia previa.',
     'Plazos: las especificaciones estándar se muestrean en unos 3 días y la producción en volumen suele tardar unos 10 días una vez confirmados la muestra y los detalles del pedido.',
@@ -320,7 +320,7 @@ const yiwuZipperLandingRu = {
   checklist: [
     'Материал: металл, смола, нейлон или рулонная цепочка.',
     'Размер: подходят ли распространенные размеры 3, 5 или 8 — ширина их сомкнутой цепочки около 3, 5 и 8 мм.',
-    'Конструкция: закрытая, разъемная, двухзамковая или под дальнейшую резку и сборку.',
+    'Конструкция: неразъемная, разъемная, двухзамковая или под дальнейшую резку и сборку.',
     'Длина, цвет, тип бегунка и примерный объем заказа: готовые молнии — от 1000 штук, цвета можно комбинировать в одном заказе.',
     'Нужны ли сначала образцы, проверка цвета или старый референс.',
     'Сроки: образец по стандартным спецификациям обычно готов примерно за 3 дня, а серийное производство занимает около 10 дней после подтверждения образца и деталей заказа.',
