@@ -63,14 +63,26 @@ llmsSummary: "…"    # 仅英文文件：llms.txt 里的一句话简介
 |---|---|---|---|---|
 | zipper roll / roll chain | 码装 | cremallera por rollo / cadena por rollo | рулонная цепочка | سحاب بالرول |
 | finished zipper | 成品拉链 | cremallera terminada | готовая молния | السحابات الجاهزة |
-| slider | 拉头 | cursor | бегунок | （翻译时核实并补充） |
+| slider | 拉头 | cursor | бегунок | المنزلق |
 | top and bottom stops | 上下止 | topes superiores e inferiores | верхние и нижние стопоры | نقاط توقف علوية وسفلية |
 | insertion pin (open-end) | 插管（也叫插销） | pieza de inserción | вставной элемент | جزء الإدخال |
-| closed-end / open-end / two-way | 闭口 / 开口 / 双开 | cerrada / abierta / doble carro | закрытая / разъемная / двухзамковая | مغلق / مفتوح / مزدوج |
+| closed-end / open-end / two-way | 闭口 / 开口 / 双开 | cerrada / abierta / doble cursor | неразъемная / разъемная / двухзамковая | مغلق / مفتوح / مزدوج |
 | downstream processing | 后道加工 | procesamiento posterior | последующая обработка | المعالجة اللاحقة |
 | sampling / bulk | 打样 / 大货 | muestra / producción en volumen | образец / серийное производство | العينة / الإنتاج بالجملة |
+| teeth (elements) | 链牙 | dientes | зубья（别名 звенья） | الأسنان |
+| tape | 布带 | cinta | тесьма | الشريط |
+| chain | 链条 | cadena | цепочка | السلسلة |
+| puller / pull tab | 拉片 | tirador | пуллер（别名 язычок） | لسان السحب |
+| box / retainer box (open-end) | 插座（也叫方块） | caja（caja retenedora） | гнездо（别名 коробочка） | صندوق التثبيت |
+| coil (nylon) | 螺旋线 | espiral | спираль | حلزون |
+| locking / non-locking slider | 带锁 / 不带锁拉头 | cursor con bloqueo / sin bloqueo | бегунок с фиксатором / без фиксатора | المنزلق ذو القفل / بلا قفل |
+| reinforced section (base of a two-way open-end chain) | 底部加固胶片 | refuerzo | усиленный участок | شريط التعزيز |
+| closed chain width | 闭合链牙宽度 | ancho de la cadena cerrada | ширина сомкнутой цепочки | عرض السلسلة المغلقة |
 
-中文里闭口 / 开口是站长确认的叫法（2026-09-22），不用闭尾 / 开尾。
+- 中文里闭口 / 开口是站长确认的叫法（2026-09-22），不用闭尾 / 开尾。
+- 西语双开统一用 doble cursor，俄语闭口统一用 неразъемная——都是站内原本占多数的说法（第一批时统一）。
+- 表中第一批新增的术语由翻译时核实，来源网址记在 `pipe/claudecode/log/2026-09-21.md`（部分来源是其他拉链厂的外文站，只作术语参考，不进文章，也不放在这个公开仓库里）。
+- 待统一：阿语产品规格表和 FAQ 把 slider 译成了 السحاب（意为「拉链」），两篇旧文章用了 الساحب（意为「拉片」），应改为 المنزلق。
 
 ## 验收命令（每批合并前）
 
