@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node --test src/lib/blog-schedule.test.mjs src/lib/blog-corpus.test.mjs src/lib/llms-txt.test.mjs"
+    "test": "node --test src/lib/blog-schedule.test.mjs src/lib/blog-corpus.test.mjs src/lib/llms-txt.test.mjs src/lib/content-checks.test.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",

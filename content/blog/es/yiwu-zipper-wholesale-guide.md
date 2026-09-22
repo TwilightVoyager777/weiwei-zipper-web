@@ -85,3 +85,5 @@ entonces las siguientes cotizaciones, muestras y pedidos en volumen avanzan con 
 Lo más difícil de la compra al por mayor de cremalleras en Yiwu no suele ser la falta de opciones, sino la lentitud en la confirmación y la información dispersa.
 
 Si está buscando un [proveedor de cremalleras en Yiwu International Trade City](/yiwu-zipper-supplier), vale la pena centrarse en empresas que conozcan bien las cremalleras metálicas, de resina y de nylon y que puedan apoyar muestras, cotizaciones y reposiciones con comunicación clara.
+
+Si ya tiene una muestra antigua, una imagen de referencia o un requerimiento de compra, también puede ir directamente a nuestra [página de cotización](/quote) y enviar primero los datos principales.
