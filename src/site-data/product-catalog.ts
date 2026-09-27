@@ -1186,7 +1186,7 @@ const productDetailLabelsEn = {
   value: 'Details',
   applications: 'Applications',
   galleryTitle: 'Product Photos',
-  faqTitle: 'FAQ',
+  faqTitle: 'Frequently Asked Questions',
   inquiryCta: 'Do You Have Samples, Reference Images, or Specifications?',
   inquiryCtaDescription: 'You are welcome to share the application, target specifications, or reference images first. We can help narrow the selection direction before moving into solution and quotation discussion.',
   inquiryButton: 'Send Inquiry',
