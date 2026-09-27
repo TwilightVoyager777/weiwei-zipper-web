@@ -13,6 +13,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 import '../globals.css';
 
 const ICON_CACHE_BUST = '20260302a';
@@ -254,6 +255,9 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Footer />
           <WhatsAppFloat />
           <SpeedInsights />
+          {/* Cookieless: no consent banner needed, and nothing to disclose as a
+              tracking cookie in the privacy policy. */}
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>

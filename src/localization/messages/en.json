@@ -90,12 +90,12 @@
     },
     "cookies": {
       "title": "Cookies and Tracking",
-      "paragraph1": "We use cookies to improve your browsing experience. Cookies are small text files stored in your browser.",
+      "paragraph1": "This site does not set cookies. Nothing is stored in your browser to identify you, and there is no cookie banner to accept or decline.",
       "items": {
-        "essential": "Essential cookies — ensure basic site functions (e.g., language selection)",
-        "analytics": "Analytics cookies — help us understand visitor behavior and improve experience"
+        "essential": "Visitor statistics (Vercel Web Analytics) — counts page views, referring sites and countries in aggregate, without cookies and without tracking you across other websites",
+        "analytics": "Performance monitoring (Vercel Speed Insights) — measures page loading speed so we can keep the site fast"
       },
-      "paragraph2": "You can manage cookies in your browser settings, but disabling them may affect some features."
+      "paragraph2": "These statistics are aggregate only and are never linked to an individual visitor. Information you type into the inquiry form is separate and is handled as described above."
     },
     "dataProtection": {
       "title": "Data Protection",

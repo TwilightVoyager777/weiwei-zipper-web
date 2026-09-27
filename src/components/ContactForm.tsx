@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { track } from '@vercel/analytics';
 import { useLocale } from 'next-intl';
 import { CheckCircleIcon } from '@/components/Icons';
 import { getInquiryFormContent } from '@/site-data/site-content';
@@ -116,6 +117,12 @@ export default function ContactForm() {
 
       if (res.ok) {
         setStatus('success');
+        // The only conversion this site has. Locale and material only: no name,
+        // email, company or message ever reaches the analytics event.
+        track('inquiry_submitted', {
+          locale,
+          productInterest: formData.productInterest || 'unspecified',
+        });
         setFormData({
           name: '',
           email: '',

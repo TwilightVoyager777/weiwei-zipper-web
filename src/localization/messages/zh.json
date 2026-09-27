@@ -90,12 +90,12 @@
     },
     "cookies": {
       "title": "Cookies与追踪技术",
-      "paragraph1": "我们使用Cookies来增强浏览体验。Cookies是存储在浏览器中的小型文本文件。",
+      "paragraph1": "本站不设置 Cookies，不会在您的浏览器中存储任何用于识别您身份的信息，因此也没有需要您同意或拒绝的 Cookie 提示。",
       "items": {
-        "essential": "必要Cookies — 确保网站基本功能（如语言选择）",
-        "analytics": "分析Cookies — 帮助我们了解访问者行为并优化体验"
+        "essential": "访问统计（Vercel Web Analytics）— 汇总统计页面浏览量、来源网站和国家/地区，不使用 Cookies，也不会跨网站追踪您",
+        "analytics": "性能监测（Vercel Speed Insights）— 测量页面加载速度，帮助我们保持网站流畅"
       },
-      "paragraph2": "您可通过浏览器设置管理Cookies，但禁用可能影响部分功能。"
+      "paragraph2": "上述统计仅为汇总数据，不会关联到具体访问者。您在询价表单中填写的信息与此无关，按上文所述方式处理。"
     },
     "dataProtection": {
       "title": "信息保护",

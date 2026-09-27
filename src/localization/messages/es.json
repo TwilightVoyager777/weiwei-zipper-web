@@ -90,12 +90,12 @@
     },
     "cookies": {
       "title": "Cookies y seguimiento",
-      "paragraph1": "Utilizamos cookies para mejorar su experiencia de navegación. Las cookies son pequeños archivos de texto almacenados en su navegador.",
+      "paragraph1": "Este sitio no utiliza cookies. No se almacena nada en su navegador que permita identificarle, por lo que tampoco hay ningún aviso de cookies que aceptar o rechazar.",
       "items": {
-        "essential": "Cookies esenciales — garantizan funciones básicas del sitio, como la selección de idioma",
-        "analytics": "Cookies de analítica — nos ayudan a entender el comportamiento de los visitantes y mejorar la experiencia"
+        "essential": "Estadísticas de visitas (Vercel Web Analytics) — contabiliza de forma agregada las páginas vistas, los sitios de procedencia y los países, sin cookies y sin seguirle por otros sitios web",
+        "analytics": "Monitorización del rendimiento (Vercel Speed Insights) — mide la velocidad de carga de las páginas para mantener el sitio rápido"
       },
-      "paragraph2": "Puede gestionar las cookies desde la configuración de su navegador, aunque desactivarlas puede afectar algunas funciones."
+      "paragraph2": "Estas estadísticas son únicamente agregadas y nunca se vinculan a un visitante concreto. Los datos que introduce en el formulario de consulta se tratan aparte, según lo descrito anteriormente."
     },
     "dataProtection": {
       "title": "Protección de datos",
