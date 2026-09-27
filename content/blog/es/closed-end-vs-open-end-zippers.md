@@ -1,6 +1,6 @@
 ---
-title: "Cremalleras cerradas y abiertas: ¿cuál es la diferencia?"
-excerpt: "La cremallera cerrada queda unida por abajo: bolsillos, pantalones y bolsos. La abierta se separa por completo: chaquetas, abrigos y sudaderas."
+title: "Cremallera cerrada o abierta: cuál elegir"
+excerpt: "La cerrada queda unida abajo: bolsillos, pantalones, bolsos. La abierta se separa del todo: chaquetas, abrigos. Y en qué se distingue la de doble cursor."
 date: "2026-03-05"
 updated: "2026-09-26"
 author: "Weiwei Zipper"
