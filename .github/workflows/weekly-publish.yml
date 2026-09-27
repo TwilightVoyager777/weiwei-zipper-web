@@ -26,6 +26,24 @@ jobs:
           fi
           curl -fsS -X POST "$VERCEL_DEPLOY_HOOK"
 
+  # Bing crawls a small site rarely, and ChatGPT and Copilot search Bing's
+  # index, so the week's article is pushed to IndexNow once the rebuild has had
+  # time to go live. Needs no account or secret; the key file is in public/.
+  indexnow:
+    needs: rebuild
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Wait for the rebuild to go live
+        run: sleep 300
+      - name: Submit this week's URLs
+        run: node scripts/indexnow.mjs
+
   # Independent of the rebuild, so the reminder still arrives if the rebuild fails.
   queue-check:
     runs-on: ubuntu-latest
