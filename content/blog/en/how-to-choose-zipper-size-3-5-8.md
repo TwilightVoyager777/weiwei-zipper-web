@@ -1,6 +1,6 @@
 ---
 title: "How to Choose Zipper Size 3, 5, or 8"
-excerpt: "Size 3, 5, and 8 each fit different garment, bag, and accessory projects. The right choice depends on use position, material, and durability requirements."
+excerpt: "Size 3 (about 3 mm) suits light apparel and pockets, size 5 is the all-round choice for jackets and bags, and size 8 handles luggage and workwear."
 date: "2026-03-06"
 author: "Weiwei Zipper"
 category: "guide"

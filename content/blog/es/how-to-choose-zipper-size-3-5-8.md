@@ -1,6 +1,6 @@
 ---
 title: "Cómo elegir cremalleras tamaño 3, 5 u 8"
-excerpt: "Los tamaños 3, 5 y 8 se adaptan a distintos proyectos de prendas, bolsos y accesorios. La elección correcta depende de la posición de uso, el material y el nivel de resistencia requerido."
+excerpt: "El tamaño 3 (unos 3 mm) sirve para prendas ligeras y bolsillos; el 5 es el más versátil, para chaquetas y bolsos; el 8, para maletas y ropa de trabajo."
 date: "2026-03-06"
 author: "Weiwei Zipper"
 category: "guide"

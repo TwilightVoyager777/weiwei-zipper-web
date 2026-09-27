@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pageMetadata({
       locale,
       path: `/products/${slug}`,
-      title: category.name,
+      title: category.seoTitle ?? category.name,
       description: category.description,
       image: category.featureImage,
       imageAlt: category.name,

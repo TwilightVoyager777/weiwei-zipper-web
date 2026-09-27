@@ -112,6 +112,12 @@ export type ProductCategoryContent = {
   key: ProductCategory;
   slug: CategorySlug;
   name: string;
+  /**
+   * The <title> in search results, when it should say more than `name`.
+   * `name` stays the H1, the breadcrumb and the menu label; a search result
+   * has to earn a click next to nine others, so it can carry sizes and terms.
+   */
+  seoTitle?: string;
   description: string;
   overview: string;
   keyFeatures: string[];
@@ -189,8 +195,9 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     key: 'resinZippers',
     slug: 'resin-zippers',
     name: '树脂拉链',
+    seoTitle: '树脂拉链批发：3 号 / 5 号 / 8 号',
     featureImage: '/products/resin/resin-feature-poster.webp',
-    description: '主推 3 号 / 5 号 / 8 号常用规格，适合服装、童装、鞋帽等轻量项目配套。',
+    description: '树脂拉链 3 号、5 号、8 号，闭口、开口、双开都能配，适合服装、童装、鞋帽。成品 1000 条起订，同一订单可混色。',
     overview: '树脂拉链是伟伟拉链当前的重要供应品类之一，主要适用于服装及轻量配件场景。常用 3 号、5 号、8 号规格，便于按款式进一步确认颜色、长度与拉头搭配，适合日常开发、批量采购与返单跟进。',
     keyFeatures: ['配色灵活，适合做常规成衣颜色匹配', '3 号 / 5 号 / 8 号常用规格覆盖完整', '闭口、开口、双开方式都可配', '适合服装与鞋帽等轻量使用场景'],
     specifications: {
@@ -1354,8 +1361,9 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     key: 'resinZippers',
     slug: 'resin-zippers',
     name: 'Resin Zippers',
+    seoTitle: 'Wholesale Resin Zippers in Sizes 3, 5 and 8',
     featureImage: '/products/resin/resin-feature-poster.webp',
-    description: 'Built around common size 3 / 5 / 8 demand for garments, kidswear, footwear, and other lightweight projects.',
+    description: 'Resin zippers in sizes 3, 5 and 8, closed-end, open-end or two-way, for garments, kidswear and footwear. From 1,000 pieces per order, colors mixable.',
     overview: 'Resin zippers are one of Weiwei Zipper’s core product lines and are widely used in garments and lightweight accessory projects. Common size 3, 5, and 8 options are organized in a way that makes it easier to confirm color, length, and slider matching for development, bulk purchasing, and repeat orders.',
     keyFeatures: ['Flexible color matching for routine garment projects', 'Clear coverage across size 3 / 5 / 8 demand', 'Closed-end, open-end, and two-way options can all be supported', 'Suitable for garments, footwear, and other lighter-use scenarios'],
     specifications: {

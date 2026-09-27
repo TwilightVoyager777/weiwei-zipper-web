@@ -1,6 +1,6 @@
 ---
 title: "Cremalleras cerradas y abiertas: ¿cuál es la diferencia?"
-excerpt: "Las cremalleras cerradas y abiertas se utilizan en posiciones y productos distintos. La estructura correcta depende de si la cremallera necesita separarse por completo."
+excerpt: "La cremallera cerrada queda unida por abajo: bolsillos, pantalones y bolsos. La abierta se separa por completo: chaquetas, abrigos y sudaderas."
 date: "2026-03-05"
 author: "Weiwei Zipper"
 category: "guide"
