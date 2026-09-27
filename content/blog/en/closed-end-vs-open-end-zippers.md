@@ -62,7 +62,7 @@ If the answer is no, closed-end is often more suitable.
 
 If the answer is yes, open-end is usually required.
 
-From there, length, size, slider style, and [material direction](/products) can be confirmed more accurately.
+From there, length, size, slider style, and material — [metal zippers](/products/metal-zippers), [resin zippers](/products/resin-zippers) or [nylon zippers](/products/nylon-zippers) — can be confirmed more accurately.
 
 ## Garments and bags often differ here
 

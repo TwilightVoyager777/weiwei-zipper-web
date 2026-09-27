@@ -61,7 +61,7 @@ Si la respuesta es no, la opción cerrada suele ser la más adecuada.
 
 Si la respuesta es sí, normalmente se requiere una cremallera abierta.
 
-A partir de ahí, la longitud, el tamaño, el estilo del cursor y la [dirección del material](/products) pueden confirmarse con mayor precisión.
+A partir de ahí, la longitud, el tamaño, el estilo del cursor y el material —[cremalleras metálicas](/products/metal-zippers), [cremalleras de resina](/products/resin-zippers) o [cremalleras de nylon](/products/nylon-zippers)— pueden confirmarse con mayor precisión.
 
 ## Prendas y bolsos suelen diferir en este punto
 

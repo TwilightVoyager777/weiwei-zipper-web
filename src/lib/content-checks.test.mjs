@@ -4,8 +4,24 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { findGuardrailViolations, internalLinks, numbersIn } from './content-checks.mjs';
+import { scheduleDate } from './blog-schedule.mjs';
 
 const BLOG_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../../content/blog');
+
+/**
+ * Translations deliberately left behind English for a while, each with an end
+ * date. After that date the hold no longer applies and link parity fails again,
+ * so the translation cannot be forgotten.
+ */
+const LINK_PARITY_HOLDS = [
+  {
+    locale: 'zh',
+    file: 'closed-end-vs-open-end-zippers.md',
+    until: '2026-10-24',
+    why: 'Control page for the 2026-09-26 title and description rewrite: the Chinese version stays exactly as it was for 28 days (plan: seo-audit/weiweizipper-prod-2026-09-21/TITLE-REWRITE-PLAN.md). Afterwards, add the three category links the other locales got.',
+  },
+];
+const onHold = (locale, file) => LINK_PARITY_HOLDS.some((hold) => hold.locale === locale && hold.file === file && scheduleDate() < hold.until);
 const LOCALES = fs.readdirSync(BLOG_DIR, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name);
 const body = (file) => fs.readFileSync(file, 'utf8').replace(/^---[\s\S]*?\n---\n/, '');
 
@@ -55,6 +71,11 @@ test('no article in any language makes a claim the site does not make', () => {
   assert.deepEqual(problems, []);
 });
 
+test('no link-parity hold has outlived its end date', () => {
+  const expired = LINK_PARITY_HOLDS.filter((hold) => scheduleDate() >= hold.until);
+  assert.deepEqual(expired.map((hold) => `${hold.locale}/${hold.file} (until ${hold.until}): ${hold.why}`), []);
+});
+
 test('every translation links to the same pages as its English original', () => {
   const problems = [];
   for (const file of fs.readdirSync(path.join(BLOG_DIR, 'en')).filter((f) => f.endsWith('.md'))) {
@@ -62,6 +83,7 @@ test('every translation links to the same pages as its English original', () => 
     for (const locale of LOCALES.filter((l) => l !== 'en')) {
       const target = path.join(BLOG_DIR, locale, file);
       if (!fs.existsSync(target)) continue; // a missing file is the build validator's concern
+      if (onHold(locale, file)) continue;
       const actual = internalLinks(body(target));
       if (JSON.stringify(actual) !== JSON.stringify(expected)) {
         problems.push(`${locale}/${file}: ${JSON.stringify(actual)} ≠ en ${JSON.stringify(expected)}`);
