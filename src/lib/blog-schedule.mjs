@@ -130,6 +130,7 @@ export function extractLocalePrefixedLinks(markdown, locales) {
  * @property {string} slug
  * @property {string} locale
  * @property {unknown} date     frontmatter `date` as parsed
+ * @property {unknown} [updated] frontmatter `updated` as parsed, if the file has one
  * @property {string} content  markdown body
  */
 
@@ -163,6 +164,14 @@ export function validateCorpus({ locales, articles }) {
         dates.add(article.date);
       } else {
         errors.push(`${slug} [${locale}]: date must be a quoted "YYYY-MM-DD" string, got ${JSON.stringify(article.date)}`);
+      }
+      // `updated` is optional and per locale: a fix to one translation dates only that file.
+      if (article.updated !== undefined) {
+        if (!isValidDateString(article.updated)) {
+          errors.push(`${slug} [${locale}]: updated must be a quoted "YYYY-MM-DD" string, got ${JSON.stringify(article.updated)}`);
+        } else if (isValidDateString(article.date) && article.updated < article.date) {
+          errors.push(`${slug} [${locale}]: updated (${article.updated}) is earlier than the date (${article.date})`);
+        }
       }
     }
     if (dates.size > 1) errors.push(`${slug}: locales disagree on the date (${[...dates].sort().join(', ')})`);

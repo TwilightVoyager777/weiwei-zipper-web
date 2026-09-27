@@ -10,6 +10,8 @@ export interface BlogPostMeta {
   title: string;
   excerpt: string;
   date: string;
+  /** Last substantive edit, "YYYY-MM-DD"; feeds the sitemap lastmod and dateModified. */
+  updated?: string;
   author: string;
   category: string;
   readTime: number;
@@ -85,6 +87,7 @@ export function getBlogPostMeta(slug: string, locale: string): BlogPostMeta {
     title: data.title ?? slug,
     excerpt: data.excerpt ?? "",
     date: data.date ?? "",
+    updated: data.updated,
     author: data.author ?? "",
     category: data.category ?? "general",
     readTime: data.readTime ?? 5,
@@ -108,6 +111,7 @@ export function getBlogPost(slug: string, locale: string): BlogPost | null {
     title: data.title ?? slug,
     excerpt: data.excerpt ?? "",
     date: data.date ?? "",
+    updated: data.updated,
     author: data.author ?? "",
     category: data.category ?? "general",
     readTime: data.readTime ?? 5,

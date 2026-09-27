@@ -5,15 +5,18 @@ import { PRODUCT_SLUGS, CATEGORY_SLUGS } from '@/site-data/product-catalog';
 import { BLOG_SLUGS, getBlogPostMeta } from '@/site-data/blog-posts';
 
 /**
- * Real publication date for a post, or undefined when the frontmatter has none.
+ * When a post last really changed: its `updated` date, else its publication
+ * date, or undefined when the frontmatter has neither.
  *
  * Every URL used to carry the build timestamp as its lastModified, which made
  * the whole sitemap claim that all 175 pages changed on every deploy. Google
  * ignores a lastmod it cannot trust, so an absent date is worth more than a
- * wrong one — hence undefined rather than a fallback to `now`.
+ * wrong one — hence undefined rather than a fallback to `now`. `updated` is set
+ * by hand only for substantive edits, so the date stays trustworthy.
  */
 function blogPostDate(slug: string, locale: string): Date | undefined {
-  const raw = getBlogPostMeta(slug, locale).date;
+  const meta = getBlogPostMeta(slug, locale);
+  const raw = meta.updated ?? meta.date;
   if (!raw) return undefined;
   const parsed = new Date(raw);
   return Number.isNaN(parsed.getTime()) ? undefined : parsed;

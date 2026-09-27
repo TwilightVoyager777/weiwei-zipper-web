@@ -33,6 +33,23 @@ test('the weekly job fires on Monday in the schedule time zone', () => {
   assert.ok(workflow.includes(`timezone: "${SCHEDULE_TIME_ZONE}"`), `workflow is not scheduled in ${SCHEDULE_TIME_ZONE}`);
 });
 
+test('validateCorpus accepts an updated date on or after the publication date', () => {
+  const articles = ['en', 'zh'].map((locale) => ({ slug: 'a', locale, date: '2026-03-05', updated: '2026-09-26', content: '' }));
+  assert.deepEqual(validateCorpus({ locales: ['en', 'zh'], articles }), []);
+});
+
+test('validateCorpus rejects an unquoted or backdated updated date', () => {
+  const articles = [
+    // gray-matter turns an unquoted YAML date into a Date object.
+    { slug: 'a', locale: 'en', date: '2026-03-05', updated: new Date('2026-09-26'), content: '' },
+    { slug: 'a', locale: 'zh', date: '2026-03-05', updated: '2026-03-01', content: '' },
+  ];
+  const errors = validateCorpus({ locales: ['en', 'zh'], articles });
+  assert.equal(errors.length, 2);
+  assert.match(errors[0], /a \[en\]: updated must be a quoted "YYYY-MM-DD" string/);
+  assert.match(errors[1], /a \[zh\]: updated \(2026-03-01\) is earlier than the date \(2026-03-05\)/);
+});
+
 test('isValidDateString accepts quoted calendar dates only', () => {
   assert.equal(isValidDateString('2026-09-28'), true);
   assert.equal(isValidDateString('2026-02-30'), false);

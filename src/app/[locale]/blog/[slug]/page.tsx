@@ -75,7 +75,7 @@ export default async function BlogArticlePage({ params }: Props) {
         ? schemaRef(SCHEMA_ID.organization)
         : { '@type': 'Organization', name: post.author, url: SITE_URL },
     publisher: schemaRef(SCHEMA_ID.organization),
-    ...(post.date ? { datePublished: post.date, dateModified: post.date } : {}),
+    ...(post.date ? { datePublished: post.date, dateModified: post.updated ?? post.date } : {}),
   };
 
   const breadcrumbSchema = {

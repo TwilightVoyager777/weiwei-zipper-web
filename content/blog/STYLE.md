@@ -15,6 +15,7 @@
 title: "…"          # 英文 ≤ 50 字符
 excerpt: "…"        # 英文 ≤ 155 字符，中文 ≤ 60 字；同时用作 meta description
 date: "YYYY-MM-DD"  # 周一
+updated: "YYYY-MM-DD"  # 可选：实质性修改（标题、摘要、正文）的日期，不早于 date；只改错字不用加
 author: "Weiwei Zipper"   # zh 写 "伟伟拉链"
 category: "guide"   # guide | sourcing | general
 readTime: 6         # max(4, round(英文正文词数 / 110))，5 个语言相同

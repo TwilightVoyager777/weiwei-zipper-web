@@ -41,7 +41,7 @@ export function readCorpus(blogDir, locales) {
       const file = path.join(blogDir, locale, `${slug}.md`);
       if (!fs.existsSync(file)) continue;
       const { data, content } = matter(fs.readFileSync(file, 'utf8'));
-      articles.push({ slug, locale, date: data.date, content });
+      articles.push({ slug, locale, date: data.date, updated: data.updated, content });
     }
   }
   return articles;
