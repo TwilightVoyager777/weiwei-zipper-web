@@ -250,6 +250,12 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
         },
       ],
     },
+    faq: [
+      { question: '树脂拉链是什么？', answer: '树脂拉链的塑料链牙是逐颗注塑在布带上的。牙形饱满，而且因为是注塑成型，可以做成很多颜色来配合服装。' },
+      { question: '3 号、5 号、8 号该选哪个？', answer: '3 号约 3 毫米，适合轻薄服装和口袋；5 号最通用，夹克、卫衣、箱包都常用；8 号用于更受力的位置。尺寸还没定的话，发一个旧样品或照片过来，我们一起确认方向。' },
+      { question: '起订量是固定的吗？', answer: '成品拉链通常 1000 条起订。一个订单内可以混色，把配比告诉我们即可确认。染色按颜色安排，因此单一颜色数量低于 2000 条时，该颜色需另付 150 元染色费。' },
+      { question: '打样和大货一般多久？', answer: '常规规格通常 3 天可以完成打样。确认样品与订单细节后，大货通常 10 天。新色、特殊结构或多款混单可能更长，下单前会先同步具体排期。' },
+    ],
     gallery: {
       title: '颜色与结构实拍',
       description: '树脂拉链的优势在于配色灵活。以下为常用颜色与结构的实拍参考，链带与链齿颜色均可按色卡定染。',
@@ -335,6 +341,12 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
         },
       ],
     },
+    faq: [
+      { question: '尼龙拉链是什么？', answer: '尼龙拉链的链牙是一条连续的螺旋线，缝合或织在布带上。这让尼龙成为三种材质里最轻、最软的：拉合顺滑，能随柔软的面料弯曲，也能顺着弧线走，比如箱包的圆角。' },
+      { question: '闭口还是开口，我该选哪个？', answer: '闭口拉链底部相连，适合口袋、箱包夹层和内袋；开口拉链能完全分开，用于外套、卫衣等需要整件敞开的前门襟。' },
+      { question: '起订量是固定的吗？', answer: '成品拉链通常 1000 条起订。一个订单内可以混色，把配比告诉我们即可确认。染色按颜色安排，因此单一颜色数量低于 2000 条时，该颜色需另付 150 元染色费。' },
+      { question: '打样和大货一般多久？', answer: '常规规格通常 3 天可以完成打样。确认样品与订单细节后，大货通常 10 天。新色、特殊结构或多款混单可能更长，下单前会先同步具体排期。' },
+    ],
     gallery: {
       title: '颜色与工艺实拍',
       description: '尼龙拉链顺滑轻量、配色空间大。以下为常用颜色与工艺的实拍参考，均可结合拉头样式进一步确认。',
@@ -420,6 +432,12 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
         },
       ],
     },
+    faq: [
+      { question: '金属拉链是什么？', answer: '金属拉链的每一颗链牙都是单独的金属件，压装在布带上。这种做法让金属成为三种材质里最结实、最耐磨的，也让拉链带上看得见的五金质感，常常本身就是设计的一部分。' },
+      { question: '齿色和拉头能按我的设计来配吗？', answer: '可以。齿面处理、拉头款式和布带颜色都按项目确认。提供色卡号、旧样品或参考图，我们再确认能配到什么程度。' },
+      { question: '起订量是固定的吗？', answer: '成品拉链通常 1000 条起订。一个订单内可以混色，把配比告诉我们即可确认。染色按颜色安排，因此单一颜色数量低于 2000 条时，该颜色需另付 150 元染色费。' },
+      { question: '打样和大货一般多久？', answer: '常规规格通常 3 天可以完成打样。确认样品与订单细节后，大货通常 10 天。新色、特殊结构或多款混单可能更长，下单前会先同步具体排期。' },
+    ],
     gallery: {
       title: '齿色与工艺实拍',
       description: '金属拉链的风格差异主要来自齿色。以下为常用四种齿色的实拍参考，均可结合织带颜色与拉头样式进一步确认。',
@@ -1416,6 +1434,12 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'What is a resin zipper?', answer: 'A resin zipper has plastic teeth molded one by one onto the tape. The teeth are bold and chunky, and because they are molded, they can be produced in a wide range of colors to match a garment.' },
+      { question: 'Should I choose size 3, 5 or 8?', answer: 'Size 3 (about 3 mm) suits light apparel and pockets, size 5 is the all-round choice for jackets and bags, and size 8 is used where the position takes more stress. If the size is not decided yet, send an old sample or a photo and we will confirm the direction with you.' },
+      { question: 'Is there a minimum order quantity?', answer: 'For finished zippers the minimum order is usually 1,000 pieces. Colors can be mixed within one order; share the split you need and we will confirm it. Dyeing is arranged per color, so any color ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that color.' },
+      { question: 'How long do sampling and bulk production take?', answer: 'For standard specifications a sample usually takes about 3 days. Once the sample and order details are confirmed, bulk production usually takes about 10 days. New colors, special structures, or multi-style orders can take longer, and we confirm the schedule before the order is placed.' },
+    ],
     gallery: {
       title: 'Colors and Structures',
       description: 'Color flexibility is the main strength of resin zippers. Below are photos of common colors and structures; tape and teeth colors can all be dyed to color cards.',
@@ -1501,6 +1525,12 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'What is a nylon zipper?', answer: 'The teeth of a nylon zipper are a continuous coil sewn or woven onto the tape. That makes nylon the lightest and most flexible of the three materials: it runs smoothly, bends with soft fabrics, and follows curves such as the rounded corners of a bag.' },
+      { question: 'Closed-end or open-end, which one do I need?', answer: 'A closed-end zipper stays joined at the bottom and suits pockets, bag compartments and inner bags. An open-end zipper separates completely and is used on jackets, hoodies and other front-opening apparel.' },
+      { question: 'Is there a minimum order quantity?', answer: 'For finished zippers the minimum order is usually 1,000 pieces. Colors can be mixed within one order; share the split you need and we will confirm it. Dyeing is arranged per color, so any color ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that color.' },
+      { question: 'How long do sampling and bulk production take?', answer: 'For standard specifications a sample usually takes about 3 days. Once the sample and order details are confirmed, bulk production usually takes about 10 days. New colors, special structures, or multi-style orders can take longer, and we confirm the schedule before the order is placed.' },
+    ],
     gallery: {
       title: 'Colors and Finishes',
       description: 'Nylon zippers are smooth, lightweight, and offer a wide color range. Below are photos of common colors and finishes, all of which can be matched with slider styles.',
@@ -1586,6 +1616,12 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'What is a metal zipper?', answer: 'Each tooth of a metal zipper is a separate metal piece clamped onto the tape. That construction makes metal the strongest and most hard-wearing of the three materials, and it gives the zipper a visible hardware finish that often becomes part of the design.' },
+      { question: 'Can the tooth finish and slider be matched to my design?', answer: 'Yes. Tooth finish, slider style and tape color are confirmed per project. Send a color card number, an old sample or a reference photo and we will confirm what can be matched.' },
+      { question: 'Is there a minimum order quantity?', answer: 'For finished zippers the minimum order is usually 1,000 pieces. Colors can be mixed within one order; share the split you need and we will confirm it. Dyeing is arranged per color, so any color ordered in a quantity below 2,000 pieces carries a dyeing fee of RMB 150 for that color.' },
+      { question: 'How long do sampling and bulk production take?', answer: 'For standard specifications a sample usually takes about 3 days. Once the sample and order details are confirmed, bulk production usually takes about 10 days. New colors, special structures, or multi-style orders can take longer, and we confirm the schedule before the order is placed.' },
+    ],
     gallery: {
       title: 'Tooth Colors and Finishes',
       description: 'Most of the style variation in metal zippers comes from the tooth color. Below are photos of the four most common finishes, all of which can be further matched with tape colors and slider styles.',
@@ -1806,6 +1842,12 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: '¿Qué es una cremallera metálica?', answer: 'Cada diente de una cremallera metálica es una pieza de metal independiente prensada sobre la cinta. Esa construcción hace del metal la opción más fuerte y resistente al desgaste de las tres, y da a la cremallera un acabado metálico visible que a menudo pasa a formar parte del diseño.' },
+      { question: '¿Se puede ajustar el acabado de los dientes y el cursor a mi diseño?', answer: 'Sí. El acabado de los dientes, el estilo del cursor y el color de la cinta se confirman por proyecto. Envíenos un número de carta de color, una muestra antigua o una foto de referencia y le confirmamos qué se puede igualar.' },
+      { question: '¿Existe un pedido mínimo?', answer: 'Para cremalleras terminadas el pedido mínimo suele ser de 1000 unidades. Se pueden mezclar colores dentro de un mismo pedido; indíquenos el reparto que necesita y se lo confirmamos. El teñido se organiza por color, por lo que cualquier color con una cantidad inferior a 2000 unidades lleva una tasa de teñido de 150 RMB para ese color.' },
+      { question: '¿Cuánto tardan la muestra y la producción en serie?', answer: 'Para especificaciones estándar la muestra suele tardar unos 3 días. Una vez confirmados la muestra y los detalles del pedido, la producción en serie suele tardar unos 10 días. Los colores nuevos, las estructuras especiales o los pedidos con varios modelos llevan más tiempo, y confirmamos el calendario antes de cerrar el pedido.' },
+    ],
     gallery: {
       title: 'Colores de dientes y acabados',
       description: 'La mayor parte de la variación de estilo en las cremalleras metálicas proviene del color de los dientes. A continuación se muestran fotos de los cuatro acabados más comunes, que pueden combinarse con colores de cinta y estilos de cursor.',
@@ -1891,6 +1933,12 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: '¿Qué es una cremallera de resina?', answer: 'Una cremallera de resina tiene dientes de plástico moldeados uno a uno sobre la cinta. Los dientes son gruesos y llamativos y, como se moldean, pueden fabricarse en una amplia gama de colores para combinar con la prenda.' },
+      { question: '¿Debo elegir el tamaño 3, 5 u 8?', answer: 'El tamaño 3 (unos 3 mm) es para prendas ligeras y bolsillos, el 5 es la opción polivalente para chaquetas y bolsos, y el 8 se usa donde la posición soporta más esfuerzo. Si aún no ha decidido el tamaño, envíenos una muestra antigua o una foto y confirmamos la dirección con usted.' },
+      { question: '¿Existe un pedido mínimo?', answer: 'Para cremalleras terminadas el pedido mínimo suele ser de 1000 unidades. Se pueden mezclar colores dentro de un mismo pedido; indíquenos el reparto que necesita y se lo confirmamos. El teñido se organiza por color, por lo que cualquier color con una cantidad inferior a 2000 unidades lleva una tasa de teñido de 150 RMB para ese color.' },
+      { question: '¿Cuánto tardan la muestra y la producción en serie?', answer: 'Para especificaciones estándar la muestra suele tardar unos 3 días. Una vez confirmados la muestra y los detalles del pedido, la producción en serie suele tardar unos 10 días. Los colores nuevos, las estructuras especiales o los pedidos con varios modelos llevan más tiempo, y confirmamos el calendario antes de cerrar el pedido.' },
+    ],
     gallery: {
       title: 'Colores y estructuras',
       description: 'La flexibilidad de color es la principal fortaleza de las cremalleras de resina. A continuación, fotos de colores y estructuras comunes; la cinta y los dientes pueden teñirse según carta de colores.',
@@ -1976,6 +2024,12 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: '¿Qué es una cremallera de nylon?', answer: 'Los dientes de una cremallera de nylon forman una espiral continua cosida o tejida en la cinta. Eso convierte al nylon en la opción más ligera y flexible de las tres: se desliza con suavidad, se dobla con los tejidos blandos y sigue curvas como las esquinas redondeadas de un bolso.' },
+      { question: '¿Cerrada o abierta, cuál necesito?', answer: 'La cremallera cerrada queda unida por abajo y sirve para bolsillos, compartimentos de bolsos y bolsillos interiores. La abierta se separa por completo y se usa en chaquetas, sudaderas y otras prendas de abertura frontal.' },
+      { question: '¿Existe un pedido mínimo?', answer: 'Para cremalleras terminadas el pedido mínimo suele ser de 1000 unidades. Se pueden mezclar colores dentro de un mismo pedido; indíquenos el reparto que necesita y se lo confirmamos. El teñido se organiza por color, por lo que cualquier color con una cantidad inferior a 2000 unidades lleva una tasa de teñido de 150 RMB para ese color.' },
+      { question: '¿Cuánto tardan la muestra y la producción en serie?', answer: 'Para especificaciones estándar la muestra suele tardar unos 3 días. Una vez confirmados la muestra y los detalles del pedido, la producción en serie suele tardar unos 10 días. Los colores nuevos, las estructuras especiales o los pedidos con varios modelos llevan más tiempo, y confirmamos el calendario antes de cerrar el pedido.' },
+    ],
     gallery: {
       title: 'Colores y acabados',
       description: 'Las cremalleras de nylon son suaves, ligeras y ofrecen una amplia gama de colores. A continuación, fotos de colores y acabados comunes.',
@@ -2196,6 +2250,12 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'ما هو السحاب المعدني؟', answer: 'كل سن في السحاب المعدني قطعة معدنية مستقلة مثبتة بالضغط على الشريط. وهذه البنية تجعل المعدن الأقوى والأكثر مقاومة للاهتراء بين الخامات الثلاث، وتمنح السحاب لمسة نهائية معدنية ظاهرة تصبح غالبا جزءا من التصميم.' },
+      { question: 'هل يمكن مطابقة تشطيب الأسنان والزلاق لتصميمي؟', answer: 'نعم. تشطيب الأسنان وطراز الزلاق ولون الشريط تُحدد حسب المشروع. أرسل رقم بطاقة اللون أو عينة قديمة أو صورة مرجعية ونؤكد ما يمكن مطابقته.' },
+      { question: 'هل توجد كمية طلب دنيا؟', answer: 'بالنسبة للسحابات الجاهزة يكون الحد الأدنى للطلب عادة 1000 قطعة. يمكن مزج الألوان ضمن الطلب الواحد؛ أخبرنا بالتوزيع المطلوب وسنؤكده. تتم الصباغة حسب اللون، لذلك يضاف رسم صباغة قدره 150 يوان صيني لأي لون تقل كميته عن 2000 قطعة.' },
+      { question: 'كم تستغرق العينة والإنتاج بالجملة؟', answer: 'للمواصفات القياسية تستغرق العينة عادة نحو 3 أيام. وبعد تأكيد العينة وتفاصيل الطلب يستغرق الإنتاج بالجملة نحو 10 أيام. الألوان الجديدة أو الهياكل الخاصة أو الطلبات متعددة الموديلات تحتاج وقتا أطول، ونؤكد الجدول قبل تثبيت الطلب.' },
+    ],
     gallery: {
       title: 'ألوان الأسنان واللمسات النهائية',
       description: 'يأتي معظم التنوع في أسلوب السحابات المعدنية من لون الأسنان. فيما يلي صور لأكثر أربع لمسات نهائية شيوعا، ويمكن تنسيقها جميعا مع ألوان الأشرطة وأنماط السحابات.',
@@ -2281,6 +2341,12 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'ما هو سحاب الراتنج؟', answer: 'في سحاب الراتنج أسنان بلاستيكية تقولب واحدة تلو الأخرى على الشريط. والأسنان بارزة وممتلئة، ولأنها مقولبة يمكن إنتاجها بمجموعة واسعة من الألوان لتطابق قطعة الملابس.' },
+      { question: 'هل أختار المقاس 3 أم 5 أم 8؟', answer: 'المقاس 3 (نحو 3 مم) يناسب الملابس الخفيفة والجيوب، والمقاس 5 هو الخيار الأشمل للجاكيتات والحقائب، والمقاس 8 يُستخدم حيث يتحمل الموضع جهدا أكبر. إن لم يتحدد المقاس بعد، أرسل عينة قديمة أو صورة ونؤكد الاتجاه معك.' },
+      { question: 'هل توجد كمية طلب دنيا؟', answer: 'بالنسبة للسحابات الجاهزة يكون الحد الأدنى للطلب عادة 1000 قطعة. يمكن مزج الألوان ضمن الطلب الواحد؛ أخبرنا بالتوزيع المطلوب وسنؤكده. تتم الصباغة حسب اللون، لذلك يضاف رسم صباغة قدره 150 يوان صيني لأي لون تقل كميته عن 2000 قطعة.' },
+      { question: 'كم تستغرق العينة والإنتاج بالجملة؟', answer: 'للمواصفات القياسية تستغرق العينة عادة نحو 3 أيام. وبعد تأكيد العينة وتفاصيل الطلب يستغرق الإنتاج بالجملة نحو 10 أيام. الألوان الجديدة أو الهياكل الخاصة أو الطلبات متعددة الموديلات تحتاج وقتا أطول، ونؤكد الجدول قبل تثبيت الطلب.' },
+    ],
     gallery: {
       title: 'الألوان والبنى',
       description: 'مرونة الألوان هي أبرز مزايا سحابات الراتنج. فيما يلي صور للألوان والبنى الشائعة، ويمكن صباغة الشريط والأسنان حسب بطاقة الألوان.',
@@ -2366,6 +2432,12 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'ما هو سحاب النايلون؟', answer: 'أسنان سحاب النايلون حلزون متصل يخاط على الشريط أو ينسج فيه. وهذا يجعل النايلون الأخف والأكثر مرونة بين الخامات الثلاث: ينزلق بسلاسة، وينثني مع الأقمشة الناعمة، ويتبع المنحنيات مثل الزوايا المستديرة للحقيبة.' },
+      { question: 'مغلق أم مفتوح، أيهما أحتاج؟', answer: 'السحاب المغلق يبقى متصلا من الأسفل ويناسب الجيوب وأقسام الحقائب والجيوب الداخلية. أما السحاب المفتوح فينفصل تماما ويُستخدم في الجاكيتات والهوديز وغيرها من الملابس ذات الفتحة الأمامية.' },
+      { question: 'هل توجد كمية طلب دنيا؟', answer: 'بالنسبة للسحابات الجاهزة يكون الحد الأدنى للطلب عادة 1000 قطعة. يمكن مزج الألوان ضمن الطلب الواحد؛ أخبرنا بالتوزيع المطلوب وسنؤكده. تتم الصباغة حسب اللون، لذلك يضاف رسم صباغة قدره 150 يوان صيني لأي لون تقل كميته عن 2000 قطعة.' },
+      { question: 'كم تستغرق العينة والإنتاج بالجملة؟', answer: 'للمواصفات القياسية تستغرق العينة عادة نحو 3 أيام. وبعد تأكيد العينة وتفاصيل الطلب يستغرق الإنتاج بالجملة نحو 10 أيام. الألوان الجديدة أو الهياكل الخاصة أو الطلبات متعددة الموديلات تحتاج وقتا أطول، ونؤكد الجدول قبل تثبيت الطلب.' },
+    ],
     gallery: {
       title: 'الألوان واللمسات النهائية',
       description: 'سحابات النايلون سلسة وخفيفة وتوفر نطاقا واسعا من الألوان. فيما يلي صور للألوان واللمسات الشائعة.',
@@ -2586,6 +2658,12 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'Что такое металлическая молния?', answer: 'Каждый зуб металлической молнии — это отдельная металлическая деталь, закрепленная на тесьме обжимом. Благодаря такой конструкции металл самый прочный и износостойкий из трех вариантов, а заметная фурнитура часто становится частью дизайна.' },
+      { question: 'Можно ли подобрать отделку зубьев и бегунок под мой дизайн?', answer: 'Да. Отделка зубьев, тип бегунка и цвет тесьмы подтверждаются по проекту. Пришлите номер по цветовой карте, старый образец или референсное фото, и мы подтвердим, что можно подобрать.' },
+      { question: 'Есть ли минимальный заказ?', answer: 'Для готовых молний минимальный заказ обычно составляет 1000 штук. Цвета можно комбинировать в одном заказе — сообщите нужное распределение, и мы его подтвердим. Окрашивание организуется по цветам, поэтому для любого цвета в количестве менее 2000 штук взимается плата за окрашивание 150 юаней за этот цвет.' },
+      { question: 'Сколько занимают образец и массовое производство?', answer: 'Для стандартных спецификаций образец обычно готов примерно за 3 дня. После подтверждения образца и деталей заказа массовое производство обычно занимает около 10 дней. Новые цвета, особые конструкции или многомодельные заказы требуют больше времени — график мы подтверждаем до размещения заказа.' },
+    ],
     gallery: {
       title: 'Цвета зубьев и покрытия',
       description: 'Основное стилевое разнообразие металлических молний определяется цветом зубьев. Ниже показаны четыре самых распространенных покрытия; каждое можно дополнительно сочетать с цветом тесьмы и стилем бегунка.',
@@ -2671,6 +2749,12 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'Что такое смоляная молния?', answer: 'У смоляной молнии пластиковые зубья отливаются на тесьму по одному. Зубья получаются крупными и выразительными, а поскольку они литые, их можно выпускать в широкой гамме цветов под цвет одежды.' },
+      { question: 'Какой размер выбрать: 3, 5 или 8?', answer: 'Размер 3 (около 3 мм) подходит для легкой одежды и карманов, 5 — самый универсальный, для курток и сумок, а 8 используется там, где на узел приходится большая нагрузка. Если размер еще не определен, пришлите старый образец или фото, и мы вместе подтвердим направление.' },
+      { question: 'Есть ли минимальный заказ?', answer: 'Для готовых молний минимальный заказ обычно составляет 1000 штук. Цвета можно комбинировать в одном заказе — сообщите нужное распределение, и мы его подтвердим. Окрашивание организуется по цветам, поэтому для любого цвета в количестве менее 2000 штук взимается плата за окрашивание 150 юаней за этот цвет.' },
+      { question: 'Сколько занимают образец и массовое производство?', answer: 'Для стандартных спецификаций образец обычно готов примерно за 3 дня. После подтверждения образца и деталей заказа массовое производство обычно занимает около 10 дней. Новые цвета, особые конструкции или многомодельные заказы требуют больше времени — график мы подтверждаем до размещения заказа.' },
+    ],
     gallery: {
       title: 'Цвета и конструкции',
       description: 'Гибкость по цвету — главное преимущество смоляных молний. Ниже фотографии распространенных цветов и конструкций; тесьма и зубья окрашиваются по цветовым картам.',
@@ -2756,6 +2840,12 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
         },
       ],
     },
+    faq: [
+      { question: 'Что такое нейлоновая молния?', answer: 'Зубья нейлоновой молнии — это непрерывная спираль, пришитая к тесьме или вплетенная в нее. Поэтому нейлон самый легкий и гибкий из трех вариантов: такая молния ходит плавно, изгибается вместе с мягкими тканями и повторяет изгибы, например скругленные углы сумки.' },
+      { question: 'Неразъемная или разъемная — какая нужна?', answer: 'Неразъемная молния внизу остается соединенной и подходит для карманов, отделений сумок и внутренних карманов. Разъемная расходится полностью и применяется на куртках, худи и другой одежде с передней застежкой.' },
+      { question: 'Есть ли минимальный заказ?', answer: 'Для готовых молний минимальный заказ обычно составляет 1000 штук. Цвета можно комбинировать в одном заказе — сообщите нужное распределение, и мы его подтвердим. Окрашивание организуется по цветам, поэтому для любого цвета в количестве менее 2000 штук взимается плата за окрашивание 150 юаней за этот цвет.' },
+      { question: 'Сколько занимают образец и массовое производство?', answer: 'Для стандартных спецификаций образец обычно готов примерно за 3 дня. После подтверждения образца и деталей заказа массовое производство обычно занимает около 10 дней. Новые цвета, особые конструкции или многомодельные заказы требуют больше времени — график мы подтверждаем до размещения заказа.' },
+    ],
     gallery: {
       title: 'Цвета и исполнения',
       description: 'Нейлоновые молнии плавные, легкие и предлагают широкую цветовую гамму. Ниже фотографии распространенных цветов и исполнений.',
