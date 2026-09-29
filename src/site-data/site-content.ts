@@ -409,8 +409,8 @@ const navigationContentRu = {
 
 const homeContentEn = {
   metadata: {
-    title: 'Weiwei Zipper | Factory for Metal, Resin, and Nylon Zippers in Sizes 3 / 5 / 8',
-    description: 'Weiwei Zipper supplies and customizes metal, resin, and nylon zippers in common size 3, 5, and 8 specifications for garments, bags, footwear, and sun-protective outerwear.',
+    title: 'Weiwei Zipper | Yiwu Metal, Resin and Nylon Zipper Factory',
+    description: 'Metal, resin and nylon zippers in sizes 3, 5 and 8, supplied and customized in Yiwu for garments, bags, footwear and sun-protective outerwear.',
   },
   hero: {
     badges: ['Factory Direct Supply', 'Sampling Support', 'Custom Development'],
@@ -470,8 +470,8 @@ const homeContentEn = {
 
 const homeContentEs = {
   metadata: {
-    title: 'Weiwei Zipper | Fábrica de cremalleras metálicas, de resina y de nylon en tamaños 3 / 5 / 8',
-    description: 'Weiwei Zipper suministra y personaliza cremalleras metálicas, de resina y de nylon en tamaños comunes 3, 5 y 8 para prendas, bolsos, calzado y ropa con protección solar.',
+    title: 'Weiwei Zipper | Fábrica de cremalleras en Yiwu 3/5/8',
+    description: 'Cremalleras metálicas, de resina y de nylon en tamaños 3, 5 y 8, suministradas y personalizadas en Yiwu para prendas, bolsos y calzado.',
   },
   hero: {
     badges: ['Suministro directo de fábrica', 'Soporte de muestras', 'Desarrollo a medida'],
@@ -531,8 +531,8 @@ const homeContentEs = {
 
 const homeContentAr = {
   metadata: {
-    title: 'Weiwei Zipper | مصنع سحابات معدنية وراتنج ونايلون بمقاسات 3 / 5 / 8',
-    description: 'توفر Weiwei Zipper سحابات معدنية وسحابات راتنج وسحابات نايلون مع خدمات التوريد والتخصيص للمقاسات الشائعة 3 و5 و8 لمنتجات الملابس والحقائب والأحذية والملابس الواقية من الشمس.',
+    title: 'Weiwei Zipper | مصنع سحابات في ييوو بمقاسات 3 / 5 / 8',
+    description: 'سحابات معدنية وراتنج ونايلون بمقاسات 3 و5 و8، توريد وتخصيص من ييوو لمنتجات الملابس والحقائب والأحذية.',
   },
   hero: {
     badges: ['توريد مباشر من المصنع', 'دعم العينات', 'تطوير مخصص'],
@@ -592,8 +592,8 @@ const homeContentAr = {
 
 const homeContentRu = {
   metadata: {
-    title: 'Weiwei Zipper | Производитель металлических, смоляных и нейлоновых молний размеров 3 / 5 / 8',
-    description: 'Weiwei Zipper поставляет и изготавливает на заказ металлические, смоляные и нейлоновые молнии распространенных размеров 3, 5 и 8 для одежды, сумок, обуви и солнцезащитной верхней одежды.',
+    title: 'Weiwei Zipper | Фабрика молний в Иу, размеры 3/5/8',
+    description: 'Металлические, смоляные и нейлоновые молнии размеров 3, 5 и 8: поставка и изготовление на заказ в Иу для одежды, сумок и обуви.',
   },
   hero: {
     badges: ['Поставка напрямую с фабрики', 'Поддержка образцов', 'Индивидуальная разработка'],
@@ -898,7 +898,7 @@ const useCasesContentRu = {
 const aboutContentEn = {
   metadata: {
     title: 'About Us',
-    description: 'Learn how Weiwei Zipper has supported metal, resin, and nylon zipper projects since 1992 from Yiwu International Trade City, serving garment, bag, and footwear customers.',
+    description: 'How Weiwei Zipper has supplied metal, resin and nylon zippers since 1992 from Yiwu International Trade City, for garment, bag and footwear buyers.',
   },
   title: 'About Us',
   subtitle: 'Founded in 1992, Weiwei Zipper has long focused on metal, resin, and nylon zipper supply from Yiwu International Trade City for garment, bag, and footwear customers across development, sampling, purchasing, and repeat orders.',
@@ -944,7 +944,7 @@ const aboutContentEn = {
 const aboutContentEs = {
   metadata: {
     title: 'Nosotros',
-    description: 'Descubra cómo Weiwei Zipper ha apoyado proyectos de cremalleras metálicas, de resina y de nylon desde 1992 desde el Distrito 3 de Yiwu International Trade City, sirviendo a clientes de prendas, bolsos y calzado.',
+    description: 'Cómo Weiwei Zipper suministra cremalleras metálicas, de resina y de nylon desde 1992 en el Distrito 3 de Yiwu, para prendas, bolsos y calzado.',
   },
   title: 'Nosotros',
   subtitle: 'Fundada en 1992, Weiwei Zipper se ha centrado durante muchos años en el suministro de cremalleras metálicas, de resina y de nylon desde Yiwu International Trade City para clientes de prendas, bolsos y calzado en desarrollo, muestreo, compras y reposiciones.',
@@ -990,7 +990,7 @@ const aboutContentEs = {
 const aboutContentAr = {
   metadata: {
     title: 'من نحن',
-    description: 'تعرف على كيفية دعم Weiwei Zipper لمشاريع السحابات المعدنية والراتنجية والنايلون منذ عام 1992 من المنطقة الثالثة في مدينة ييوو التجارية الدولية، مع خدمة عملاء الملابس والحقائب والأحذية.',
+    description: 'كيف توفر Weiwei Zipper سحابات معدنية وراتنج ونايلون منذ 1992 من المنطقة الثالثة بمدينة ييوو، لعملاء الملابس والحقائب والأحذية.',
   },
   title: 'من نحن',
   subtitle: 'تأسست Weiwei Zipper في عام 1992، وركزت لسنوات طويلة على توريد السحابات المعدنية والراتنجية والنايلون من مدينة ييوو التجارية الدولية لعملاء الملابس والحقائب والأحذية في مراحل التطوير والعينات والشراء وإعادة الطلب.',
@@ -1036,7 +1036,7 @@ const aboutContentAr = {
 const aboutContentRu = {
   metadata: {
     title: 'О нас',
-    description: 'Узнайте, как Weiwei Zipper с 1992 года поддерживает проекты по металлическим, смоляным и нейлоновым молниям из района 3 Yiwu International Trade City для клиентов в одежде, сумках и обуви.',
+    description: 'Как Weiwei Zipper с 1992 года поставляет металлические, смоляные и нейлоновые молнии из района 3 рынка Иу для одежды, сумок и обуви.',
   },
   title: 'О нас',
   subtitle: 'Компания Weiwei Zipper была основана в 1992 году и уже много лет специализируется на поставках металлических, смоляных и нейлоновых молний из Yiwu International Trade City для клиентов из сегментов одежды, сумок и обуви на этапах разработки, образцов, закупок и повторных заказов.',

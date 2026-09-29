@@ -58,7 +58,7 @@ export const faqPageContent = {
 const faqPageContentEn = {
   metadata: {
     title: 'FAQ',
-    description: 'Read common questions about choosing size 3 / 5 / 8 zippers, understanding closed-end and open-end structures, ordering zipper rolls, sampling, lead time, color approval, and quotation preparation.',
+    description: 'Common questions on choosing size 3, 5 or 8, closed-end vs open-end, zipper rolls, MOQ, sampling, lead time and color approval.',
   },
   title: 'FAQ',
   subtitle: 'This page summarizes the questions customers ask most often around zipper selection, sampling, quotations, zipper rolls, lead time, and color confirmation.',
@@ -113,7 +113,7 @@ const faqPageContentEn = {
 const faqPageContentEs = {
   metadata: {
     title: 'Preguntas frecuentes',
-    description: 'Revise las preguntas comunes sobre la selección de tamaños 3 / 5 / 8, estructuras cerradas y abiertas, cremalleras por rollo, muestreo, plazos, confirmación de color y preparación de cotizaciones.',
+    description: 'Preguntas frecuentes sobre tamaños 3, 5 y 8, cremalleras cerradas o abiertas, rollos, pedido mínimo, muestras, plazos y color.',
   },
   title: 'Preguntas frecuentes',
   subtitle: 'Esta página resume las preguntas que los clientes hacen con más frecuencia sobre selección de cremalleras, muestreo, cotizaciones, cremalleras por rollo, plazos y confirmación de color.',
@@ -223,7 +223,7 @@ const faqPageContentAr = {
 const faqPageContentRu = {
   metadata: {
     title: 'Частые вопросы',
-    description: 'Посмотрите частые вопросы о выборе размеров 3 / 5 / 8, разнице между разъемной и неразъемной конструкцией, рулонных молниях, образцах, сроках, подтверждении цвета и подготовке к расчету цены.',
+    description: 'Частые вопросы о размерах 3, 5 и 8, разъемной и неразъемной конструкции, рулонах, минимальном заказе, образцах и сроках.',
   },
   title: 'Частые вопросы',
   subtitle: 'Здесь собраны вопросы, которые клиенты чаще всего задают по выбору молний, образцам, расчету цены, рулонным цепочкам, срокам и подтверждению цвета.',
