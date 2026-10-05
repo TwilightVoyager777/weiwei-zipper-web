@@ -1,5 +1,5 @@
 ---
-title: "Cremalleras metálicas, de resina o de nylon: cómo elegir"
+title: "Cremallera metálica, de resina o nylon"
 excerpt: "Cremalleras metálicas, de resina y de nylon: diferencias de aspecto, resistencia, peso y flexibilidad, y cuál usar en chaquetas, bolsillos, bolsos y zapatos."
 date: "2026-10-12"
 author: "Weiwei Zipper"

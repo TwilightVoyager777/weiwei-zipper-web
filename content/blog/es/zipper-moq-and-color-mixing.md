@@ -1,5 +1,5 @@
 ---
-title: "MOQ y mezcla de colores en cremalleras: cómo funcionan"
+title: "MOQ y mezcla de colores en cremalleras"
 excerpt: "Pedido mínimo de 1000 cremalleras terminadas, colores mezclables y tasa de teñido de 150 RMB por color con menos de 2000 unidades. Cómo planificar el reparto."
 date: "2026-10-19"
 author: "Weiwei Zipper"
