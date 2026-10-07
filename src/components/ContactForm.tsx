@@ -67,10 +67,15 @@ export default function ContactForm() {
         landingPage: window.location.pathname,
       });
 
-      // Product pages link here as /quote?product=<slug>, so the buyer does not
-      // have to restate what they were just looking at. Anything that is not a
-      // recognisable material leaves the fields untouched.
-      const productSlug = (params.get('product') || '').slice(0, 64);
+      // Product pages link here as /quote#product=<slug>, so the buyer does not
+      // have to restate what they were just looking at. A fragment rather than
+      // ?product= because every query variant was a separate URL to Google: 90
+      // of them, all canonicalising to /quote and piling up as "alternate page"
+      // in Search Console. The query form is still read for links already out
+      // there. Anything that is not a recognisable material leaves the fields
+      // untouched.
+      const hashParams = new URLSearchParams(window.location.hash.slice(1));
+      const productSlug = (hashParams.get('product') || params.get('product') || '').slice(0, 64);
       const material = materialFromSlug(productSlug);
       if (material) {
         setFormData((prev) => ({
