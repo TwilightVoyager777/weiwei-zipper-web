@@ -440,7 +440,7 @@ export const categoryContent: Record<ProductCategory, ProductCategoryContent> = 
     ],
     gallery: {
       title: '齿色与工艺实拍',
-      description: '金属拉链的风格差异主要来自齿色。以下为常用四种齿色的实拍参考，均可结合织带颜色与拉头样式进一步确认。',
+      description: '金属拉链的风格差异主要来自齿色。以下为常用四种齿色的实拍参考，均可结合织带颜色与拉头样式进一步确认。此外也可做黑镍齿。',
       items: [
         {
           image: '/products/metal/black-silver-open-end.webp',
@@ -978,9 +978,9 @@ export const productItems: Record<ProductSlug, ProductItemContent> = {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
     name: '金属开口拉链',
-    description: '适合外套、工装、箱包等常见开口结构，可选银齿、金齿、古铜齿、青古铜齿等多种齿色。',
-    overview: '金属开口拉链适合前中门襟等需要完全分开的开合位置，兼顾五金质感与耐用度。伟伟拉链可提供银齿、金齿、古铜齿、青古铜齿等常用齿色，并围绕长度、织带颜色与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
-    features: ['5 号规格适合常规外套与中等厚度款式', '开口结构适合前中门襟与需要完全分开的开合位', '银齿 / 金齿 / 古铜齿 / 青古铜齿多种齿色可选', '支持常规颜色、长度与拉头搭配确认'],
+    description: '适合外套、工装、箱包等常见开口结构，可选银齿、金齿、古铜齿、青古铜齿、黑镍齿等多种齿色。',
+    overview: '金属开口拉链适合前中门襟等需要完全分开的开合位置，兼顾五金质感与耐用度。伟伟拉链可提供银齿、金齿、古铜齿、青古铜齿、黑镍齿等常用齿色，并围绕长度、织带颜色与拉头搭配做常规配套，便于客户先完成样品确认，再进入批量采购与返单安排。',
+    features: ['5 号规格适合常规外套与中等厚度款式', '开口结构适合前中门襟与需要完全分开的开合位', '银齿 / 金齿 / 古铜齿 / 青古铜齿 / 黑镍齿多种齿色可选', '支持常规颜色、长度与拉头搭配确认'],
     applications: ['外套门襟', '工装前中', '箱包配件'],
     specifications: {
       type: '金属开口拉链',
@@ -1624,7 +1624,7 @@ const categoryContentEn: Record<ProductCategory, ProductCategoryContent> = {
     ],
     gallery: {
       title: 'Tooth Colors and Finishes',
-      description: 'Most of the style variation in metal zippers comes from the tooth color. Below are photos of the four most common finishes, all of which can be further matched with tape colors and slider styles.',
+      description: 'Most of the style variation in metal zippers comes from the tooth color. Below are photos of the four most common finishes, all of which can be further matched with tape colors and slider styles. Black nickel teeth are also available.',
       items: [
         {
           image: '/products/metal/black-silver-open-end.webp',
@@ -1850,7 +1850,7 @@ const categoryContentEs: Record<ProductCategory, ProductCategoryContent> = {
     ],
     gallery: {
       title: 'Colores de dientes y acabados',
-      description: 'La mayor parte de la variación de estilo en las cremalleras metálicas proviene del color de los dientes. A continuación se muestran fotos de los cuatro acabados más comunes, que pueden combinarse con colores de cinta y estilos de cursor.',
+      description: 'La mayor parte de la variación de estilo en las cremalleras metálicas proviene del color de los dientes. A continuación se muestran fotos de los cuatro acabados más comunes, que pueden combinarse con colores de cinta y estilos de cursor. También hay dientes de níquel negro.',
       items: [
         {
           image: '/products/metal/black-silver-open-end.webp',
@@ -2258,7 +2258,7 @@ const categoryContentAr: Record<ProductCategory, ProductCategoryContent> = {
     ],
     gallery: {
       title: 'ألوان الأسنان واللمسات النهائية',
-      description: 'يأتي معظم التنوع في أسلوب السحابات المعدنية من لون الأسنان. فيما يلي صور لأكثر أربع لمسات نهائية شيوعا، ويمكن تنسيقها جميعا مع ألوان الأشرطة وأنماط السحابات.',
+      description: 'يأتي معظم التنوع في أسلوب السحابات المعدنية من لون الأسنان. فيما يلي صور لأكثر أربع لمسات نهائية شيوعا، ويمكن تنسيقها جميعا مع ألوان الأشرطة وأنماط السحابات. وتتوفر أيضا أسنان بالنيكل الأسود.',
       items: [
         {
           image: '/products/metal/black-silver-open-end.webp',
@@ -2666,7 +2666,7 @@ const categoryContentRu: Record<ProductCategory, ProductCategoryContent> = {
     ],
     gallery: {
       title: 'Цвета зубьев и покрытия',
-      description: 'Основное стилевое разнообразие металлических молний определяется цветом зубьев. Ниже показаны четыре самых распространенных покрытия; каждое можно дополнительно сочетать с цветом тесьмы и стилем бегунка.',
+      description: 'Основное стилевое разнообразие металлических молний определяется цветом зубьев. Ниже показаны четыре самых распространенных покрытия; каждое можно дополнительно сочетать с цветом тесьмы и стилем бегунка. Также доступны зубья с покрытием из черного никеля.',
       items: [
         {
           image: '/products/metal/black-silver-open-end.webp',
@@ -3386,9 +3386,9 @@ const productItemsEn: Record<ProductSlug, ProductItemContent> = {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
     name: 'Metal Open-End Zipper',
-    description: 'Suitable for jackets, workwear, and bag positions that use open-end structures, with silver, golden, antique brass, and antique bronze tooth colors available.',
-    overview: 'The metal open-end zipper suits center-front openings and other positions that need to separate completely, balancing hardware texture with durability. Weiwei Zipper offers common tooth colors including silver, golden, antique brass, and antique bronze, and can coordinate routine matching around length, tape color, and slider combinations so customers can complete sample confirmation first and then move into bulk purchasing and repeat orders.',
-    features: ['Size 5 suits routine jackets and medium-thickness styles', 'Open-end structure suits center-front plackets and fully separating openings', 'Multiple tooth colors available: silver / golden / antique brass / antique bronze', 'Routine colors, lengths, and slider combinations can be confirmed'],
+    description: 'Metal open-end zipper for jackets, workwear, and bags, with silver, golden, antique brass, antique bronze, or black nickel teeth.',
+    overview: 'The metal open-end zipper suits center-front openings and other positions that need to separate completely, balancing hardware texture with durability. Weiwei Zipper offers common tooth colors including silver, golden, antique brass, antique bronze, and black nickel, and can coordinate routine matching around length, tape color, and slider combinations so customers can complete sample confirmation first and then move into bulk purchasing and repeat orders.',
+    features: ['Size 5 suits routine jackets and medium-thickness styles', 'Open-end structure suits center-front plackets and fully separating openings', 'Multiple tooth colors available: silver / golden / antique brass / antique bronze / black nickel', 'Routine colors, lengths, and slider combinations can be confirmed'],
     applications: ['Jacket plackets', 'Workwear center fronts', 'Bag accessories'],
     specifications: {
       type: 'Metal Open-End Zipper',
@@ -3855,9 +3855,9 @@ const productItemsEs: Record<ProductSlug, ProductItemContent> = {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
     name: 'Cremallera abierta metálica',
-    description: 'Adecuada para chaquetas, ropa de trabajo y posiciones de bolsos con estructura abierta, con dientes plateados, dorados, de latón envejecido y de bronce envejecido disponibles.',
-    overview: 'La cremallera abierta metálica se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando la textura del herraje con la durabilidad. Weiwei Zipper ofrece colores de diente comunes como plateado, dorado, latón envejecido y bronce envejecido, y puede coordinar longitud, color de cinta y combinación de cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposición.',
-    features: ['El tamaño 5 se adapta a chaquetas habituales y estilos de grosor medio', 'La estructura abierta funciona bien en aperturas centrales delanteras y posiciones de separación completa', 'Varios colores de diente disponibles: plateado / dorado / latón envejecido / bronce envejecido', 'Pueden confirmarse colores, longitudes y cursores habituales'],
+    description: 'Cremallera metálica abierta para chaquetas, ropa de trabajo y bolsos, con dientes plateados, dorados, de latón o bronce envejecido, o de níquel negro.',
+    overview: 'La cremallera abierta metálica se adapta a aperturas centrales delanteras y otras posiciones que necesitan separarse por completo, equilibrando la textura del herraje con la durabilidad. Weiwei Zipper ofrece colores de diente comunes como plateado, dorado, latón envejecido, bronce envejecido y níquel negro, y puede coordinar longitud, color de cinta y combinación de cursor para que el cliente confirme primero la muestra y luego avance a compras por volumen y reposición.',
+    features: ['El tamaño 5 se adapta a chaquetas habituales y estilos de grosor medio', 'La estructura abierta funciona bien en aperturas centrales delanteras y posiciones de separación completa', 'Varios colores de diente disponibles: plateado / dorado / latón envejecido / bronce envejecido / níquel negro', 'Pueden confirmarse colores, longitudes y cursores habituales'],
     applications: ['Aperturas de chaquetas', 'Frentes de ropa de trabajo', 'Accesorios de bolsos'],
     specifications: {
       type: 'Cremallera abierta metálica',
@@ -4324,9 +4324,9 @@ const productItemsAr: Record<ProductSlug, ProductItemContent> = {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
     name: 'سحاب معدني مفتوح',
-    description: 'مناسب للسترات وملابس العمل ومواضع الحقائب ذات البنية المفتوحة، مع توفر أسنان فضية وذهبية ونحاس عتيق وبرونز عتيق.',
-    overview: 'يناسب السحاب المعدني المفتوح الفتحات الأمامية الوسطى وغيرها من المواضع التي تحتاج إلى فصل كامل، مع توازن بين الملمس المعدني والمتانة. وتوفر Weiwei Zipper ألوان أسنان شائعة تشمل الفضي والذهبي والنحاس العتيق والبرونز العتيق، ويمكنها تنسيق الطول ولون الشريط وتركيبة السحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
-    features: ['المقاس 5 مناسب للسترات الشائعة والتصاميم متوسطة السماكة', 'البنية المفتوحة مناسبة للفتحات الأمامية الوسطى ومواضع الفصل الكامل', 'ألوان أسنان متعددة متاحة: فضي / ذهبي / نحاس عتيق / برونز عتيق', 'يمكن تأكيد الألوان والأطوال والسحابات الشائعة'],
+    description: 'مناسب للسترات وملابس العمل ومواضع الحقائب ذات البنية المفتوحة، مع توفر أسنان فضية وذهبية ونحاس عتيق وبرونز عتيق ونيكل أسود.',
+    overview: 'يناسب السحاب المعدني المفتوح الفتحات الأمامية الوسطى وغيرها من المواضع التي تحتاج إلى فصل كامل، مع توازن بين الملمس المعدني والمتانة. وتوفر Weiwei Zipper ألوان أسنان شائعة تشمل الفضي والذهبي والنحاس العتيق والبرونز العتيق والنيكل الأسود، ويمكنها تنسيق الطول ولون الشريط وتركيبة السحاب بحيث يؤكد العميل العينة أولا ثم ينتقل إلى الشراء بالجملة وإعادة الطلب.',
+    features: ['المقاس 5 مناسب للسترات الشائعة والتصاميم متوسطة السماكة', 'البنية المفتوحة مناسبة للفتحات الأمامية الوسطى ومواضع الفصل الكامل', 'ألوان أسنان متعددة متاحة: فضي / ذهبي / نحاس عتيق / برونز عتيق / نيكل أسود', 'يمكن تأكيد الألوان والأطوال والسحابات الشائعة'],
     applications: ['فتحات السترات', 'الفتحات الأمامية لملابس العمل', 'إكسسوارات الحقائب'],
     specifications: {
       type: 'سحاب معدني مفتوح',
@@ -4793,9 +4793,9 @@ const productItemsRu: Record<ProductSlug, ProductItemContent> = {
     slug: 'metal-no-5-open-end-zipper',
     category: 'metalZippers',
     name: 'Металлическая разъемная молния',
-    description: 'Подходит для курток, рабочей одежды и сумок с разъемной конструкцией; доступны серебристые, золотистые зубья, а также покрытия под античную латунь и бронзу.',
-    overview: 'Металлическая разъемная молния подходит для центральных застежек и других зон, где нужно полное разделение, сочетая металлическую фактуру с долговечностью. Weiwei Zipper предлагает распространенные цвета зубьев — серебристый, золотистый, античную латунь и античную бронзу — и помогает координировать длину, цвет тесьмы и комбинацию бегунка, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
-    features: ['Размер 5 подходит для типовых курток и моделей средней плотности', 'Разъемная конструкция удобна для центральных застежек и зон полного разделения', 'Несколько цветов зубьев: серебристый / золотистый / античная латунь / античная бронза', 'Можно подтверждать типовые цвета, длины и бегунки'],
+    description: 'Металлическая разъемная молния для курток, рабочей одежды и сумок: серебристые и золотистые зубья, античная латунь, античная бронза или черный никель.',
+    overview: 'Металлическая разъемная молния подходит для центральных застежек и других зон, где нужно полное разделение, сочетая металлическую фактуру с долговечностью. Weiwei Zipper предлагает распространенные цвета зубьев — серебристый, золотистый, античную латунь, античную бронзу и черный никель — и помогает координировать длину, цвет тесьмы и комбинацию бегунка, чтобы клиент сначала подтвердил образец, а затем перешел к оптовой закупке и повторным заказам.',
+    features: ['Размер 5 подходит для типовых курток и моделей средней плотности', 'Разъемная конструкция удобна для центральных застежек и зон полного разделения', 'Несколько цветов зубьев: серебристый / золотистый / античная латунь / античная бронза / черный никель', 'Можно подтверждать типовые цвета, длины и бегунки'],
     applications: ['Застежки курток', 'Центральные застежки рабочей одежды', 'Фурнитура для сумок'],
     specifications: {
       type: 'Металлическая разъемная молния',
