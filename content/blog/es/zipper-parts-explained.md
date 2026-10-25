@@ -1,13 +1,14 @@
 ---
-title: "Partes de una cremallera: cómo se llaman y para qué sirven"
-excerpt: "Dientes, cinta, cursor, tirador, topes superiores e inferiores, pieza de inserción y caja: qué hace cada parte y cuáles indicar al especificar un pedido."
+title: "Partes de una cremallera o cierre: nombres"
+excerpt: "La pieza que sube y baja es el cursor; el tirador, de donde se tira. Dientes, cinta, topes, pieza de inserción y caja: para qué sirve cada parte."
 date: "2026-09-28"
+updated: "2026-10-25"
 author: "Weiwei Zipper"
 category: "guide"
 readTime: 8
 ---
 
-Una cremallera parece una sola pieza, pero en realidad es un pequeño conjunto de piezas, cada una con su nombre. Conocer esos nombres hace que una especificación no deje lugar a dudas: el tirador y el cursor no son lo mismo, y un comprador que pide "una cremallera que se separe del todo" en realidad está pidiendo una pieza de inserción y una caja.
+Una cremallera (en buena parte de Latinoamérica, un cierre) parece una sola pieza, pero en realidad es un pequeño conjunto de piezas, cada una con su nombre. Conocer esos nombres hace que una especificación no deje lugar a dudas: el tirador y el cursor no son lo mismo, y un comprador que pide "una cremallera que se separe del todo" en realidad está pidiendo una pieza de inserción y una caja.
 
 Esta guía repasa cada parte y cuáles conviene nombrar en un pedido o una consulta.
 
