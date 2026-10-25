@@ -62,7 +62,7 @@ readTime: 6
 
 如果需要，开口通常就是正确方向。
 
-在这个基础上，再去确认长度、规格、拉头和[材质方向](/products)，会更顺。
+在这个基础上，再去确认长度、规格、拉头和材质——[金属拉链](/products/metal-zippers)、[树脂拉链](/products/resin-zippers)还是[尼龙拉链](/products/nylon-zippers)，会更顺。
 
 ## 服装和箱包的常见区别
 

@@ -13,14 +13,8 @@ const BLOG_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../../
  * date. After that date the hold no longer applies and link parity fails again,
  * so the translation cannot be forgotten.
  */
-const LINK_PARITY_HOLDS = [
-  {
-    locale: 'zh',
-    file: 'closed-end-vs-open-end-zippers.md',
-    until: '2026-10-24',
-    why: 'Control page for the 2026-09-26 title and description rewrite: the Chinese version stays exactly as it was for 28 days (plan: seo-audit/weiweizipper-prod-2026-09-21/TITLE-REWRITE-PLAN.md). Afterwards, add the three category links the other locales got.',
-  },
-];
+/** @type {{locale: string, file: string, until: string, why: string}[]} */
+const LINK_PARITY_HOLDS = [];
 const onHold = (locale, file) => LINK_PARITY_HOLDS.some((hold) => hold.locale === locale && hold.file === file && scheduleDate() < hold.until);
 const LOCALES = fs.readdirSync(BLOG_DIR, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name);
 const body = (file) => fs.readFileSync(file, 'utf8').replace(/^---[\s\S]*?\n---\n/, '');
